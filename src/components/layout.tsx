@@ -24,9 +24,9 @@ export const Layout: React.FC<Props> = ({ children, location }) => {
   const title = data.site.siteMetadata?.title
 
   return (
-    <div className="homepage">
+    <div className="layout">
       <Navbar location={location} siteTitle={title} />
-      <div className="min-h-adjusted mx-auto p-6">{children}</div>
+      <div className="content">{children}</div>
     </div>
   )
 }

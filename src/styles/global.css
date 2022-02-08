@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.homepage {
-  @apply min-h-screen bg-slate-200 dark:bg-slate-700 font-sans font-medium text-base;
+.layout {
+  @apply min-h-screen bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white font-sans font-medium text-base;
+}
+
+.content {
+  @apply min-h-adjusted mx-auto p-6;
 }
 
 .min-h-adjusted {

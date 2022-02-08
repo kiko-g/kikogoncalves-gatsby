@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch } from '@headlessui/react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
-import useDarkMode from '../../hooks/useDarkMode'
+import useDarkMode from '../hooks/useDarkMode'
 
 export const DarkModeSwitch: React.FC = ({}) => {
   const [darkTheme, setDarkTheme] = useDarkMode()
@@ -14,14 +14,14 @@ export const DarkModeSwitch: React.FC = ({}) => {
           {darkTheme ? (
             <MoonIcon className="block h-6 w-6 transition duration-200 ease text-slate-300" aria-hidden="true" />
           ) : (
-            <SunIcon className="block h-6 w-6 transition duration-200 ease text-orange-300" aria-hidden="true" />
+            <SunIcon className="block h-6 w-6 transition duration-200 ease text-amber-300" aria-hidden="true" />
           )}
         </Switch.Label>
         <Switch
           checked={darkTheme}
           onChange={handleMode}
           className={`${
-            darkTheme ? 'bg-blue-300' : 'bg-slate-400'
+            darkTheme ? 'bg-blue-300' : 'bg-slate-200'
           } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none`}
         >
           <span
