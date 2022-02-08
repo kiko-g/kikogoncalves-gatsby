@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Layout } from "../components/layout"
 import Seo from "../components/seo"
 
-export const Home = () => (
+const IndexPage = () => (
   <Layout location="Home">
     <Seo title="Home" />
     <h1>Hi people</h1>
@@ -26,3 +26,5 @@ export const Home = () => (
     </p>
   </Layout>
 )
+
+export default IndexPage
