@@ -1,31 +1,31 @@
-import React from "react"
-import { Icon } from "@iconify/react"
-import { FaBook, FaBriefcase, FaFile, FaHome, FaUser } from "react-icons/fa"
+import React from 'react'
+import { Icon } from '@iconify/react'
+import { FaBook, FaBriefcase, FaFile, FaHome, FaUser } from 'react-icons/fa'
 
 export function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
 export const classNames = (...classes) => {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(' ')
 }
 
 export const toggleText = e => {
   e.preventDefault()
-  let textDiv = document.getElementsByClassName("minimized")
-  let toggleBtn = document.getElementById("toggleDescription")
-  if (textDiv[0].classList.contains("hidden")) {
-    textDiv[0].classList.remove("hidden")
-    toggleBtn.innerHTML = "less"
+  let textDiv = document.getElementsByClassName('minimized')
+  let toggleBtn = document.getElementById('toggleDescription')
+  if (textDiv[0].classList.contains('hidden')) {
+    textDiv[0].classList.remove('hidden')
+    toggleBtn.innerHTML = 'less'
   } else {
-    textDiv[0].classList.add("hidden")
-    toggleBtn.innerHTML = "more"
+    textDiv[0].classList.add('hidden')
+    toggleBtn.innerHTML = 'more'
   }
 }
 
 export const setCurrent = (url, navigation) => {
-  let i = url.lastIndexOf("/")
-  let j = url.lastIndexOf("/", url.lastIndexOf("/") - 1)
+  let i = url.lastIndexOf('/')
+  let j = url.lastIndexOf('/', url.lastIndexOf('/') - 1)
   let token = url.substring(i + 1)
   let special = url.substring(j + 1)
 
@@ -34,7 +34,7 @@ export const setCurrent = (url, navigation) => {
     let t = token.toLowerCase()
     let s = special.toLowerCase()
     let mt = item.name.toLowerCase()
-    let ms = mt + "/"
+    let ms = mt + '/'
 
     if (t === mt || s === ms) {
       navigation[index].current = true
@@ -51,17 +51,17 @@ export const setCurrent = (url, navigation) => {
 
 export const buildItems = special => {
   let colors = [
-    "blue-300",
-    "teal-300",
-    "purple-300",
-    "rose-300",
-    "slate-300",
-    "orange-300",
-    "green-300",
-    "indigo-300",
-    "amber-200",
-    "pink-300",
-    "sky-300",
+    'blue-300',
+    'teal-300',
+    'purple-300',
+    'rose-300',
+    'slate-300',
+    'orange-300',
+    'green-300',
+    'indigo-300',
+    'amber-200',
+    'pink-300',
+    'sky-300',
   ]
 
   let globs = []
@@ -69,9 +69,9 @@ export const buildItems = special => {
     let odd = i % 2
     globs.push({
       top: i * 10,
-      class: `bg-${colors[i]} absolute -${
-        odd ? `right` : `left`
-      }-80 w-64 h-64 rounded-5xl filter blur-lg animate-${odd ? `a` : `b`}`,
+      class: `bg-${colors[i]} absolute -${odd ? `right` : `left`}-80 w-64 h-64 rounded-5xl filter blur-lg animate-${
+        odd ? `a` : `b`
+      }`,
     })
   }
 
@@ -91,79 +91,55 @@ export const buildItems = special => {
 
 export const links = [
   {
-    name: "Github",
-    icon: (
-      <Icon
-        icon="akar-icons:github-fill"
-        color="#333"
-        className="text-lg lg:text-3xl sm:text-2xl"
-      />
-    ),
-    href: "https://github.com/kiko-g",
+    name: 'Github',
+    icon: <Icon icon="akar-icons:github-fill" color="#333" className="text-lg lg:text-3xl sm:text-2xl" />,
+    href: 'https://github.com/kiko-g',
   },
   {
-    name: "Linkedin",
-    icon: (
-      <Icon
-        icon="logos:linkedin-icon"
-        color="#39e09b"
-        className="text-lg lg:text-3xl sm:text-2xl"
-      />
-    ),
-    href: "https://linkedin.com/in/kikogoncalves",
+    name: 'Linkedin',
+    icon: <Icon icon="logos:linkedin-icon" color="#39e09b" className="text-lg lg:text-3xl sm:text-2xl" />,
+    href: 'https://linkedin.com/in/kikogoncalves',
   },
   {
-    name: "Twitter",
-    icon: (
-      <Icon
-        icon="simple-icons:twitter"
-        color="#1da1f2"
-        className="text-lg lg:text-3xl sm:text-2xl"
-      />
-    ),
-    href: "https://twitter.com/kikogoncalves_",
+    name: 'Twitter',
+    icon: <Icon icon="simple-icons:twitter" color="#1da1f2" className="text-lg lg:text-3xl sm:text-2xl" />,
+    href: 'https://twitter.com/kikogoncalves_',
   },
   {
-    name: "Linktree",
-    icon: (
-      <Icon
-        icon="simple-icons:linktree"
-        color="#39e09b"
-        className="text-lg lg:text-3xl sm:text-2xl"
-      />
-    ),
-    href: "https://linktr.ee/kikogoncalves",
+    name: 'Linktree',
+    icon: <Icon icon="simple-icons:linktree" color="#39e09b" className="text-lg lg:text-3xl sm:text-2xl" />,
+    href: 'https://linktr.ee/kikogoncalves',
   },
 ]
 
 export const navigation = [
   {
-    name: "Home",
-    href: "/",
+    name: 'Home',
+    href: '/',
     icon: <FaHome className="text-slate-200 mt-2 mr-1.5" size="13" />,
     current: true,
   },
   {
-    name: "Me",
-    href: "/me",
+    name: 'Me',
+    href: '/me',
     icon: <FaUser className="text-slate-200 mt-2 mr-1.5" size="13" />,
     current: false,
   },
   {
-    name: "CV",
-    href: "/cv",
+    name: 'CV',
+    href: '/cv',
     icon: <FaFile className="text-slate-200 mt-2 mr-1.5" size="13" />,
     current: false,
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: 'Blog',
+    href: '/blog',
     icon: <FaBook className="text-slate-200 mt-2 mr-1.5" size="13" />,
     current: false,
   },
   {
-    name: "Portfolio",
-    href: "/portfolio",
+    name: 'Portfolio',
+    href: '/portfolio',
     icon: <FaBriefcase className="text-slate-200 mt-2 mr-1.5" size="13" />,
     current: false,
   },

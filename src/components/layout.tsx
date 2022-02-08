@@ -1,6 +1,6 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Navbar from "./navbar"
+import * as React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Navbar from './navbar'
 
 type Props = {
   children: any
@@ -32,5 +32,5 @@ export const Layout: React.FC<Props> = ({ children, location }) => {
 }
 
 Layout.defaultProps = {
-  location: "Page Name",
+  location: 'Page Name',
 }
