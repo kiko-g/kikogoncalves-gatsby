@@ -21,7 +21,7 @@ export const DarkModeSwitch: React.FC = ({}) => {
           checked={darkTheme}
           onChange={handleMode}
           className={`${
-            darkTheme ? 'bg-blue-300' : 'bg-slate-200'
+            darkTheme ? 'bg-blue-300' : 'bg-slate-400'
           } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none`}
         >
           <span
