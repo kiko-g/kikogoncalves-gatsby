@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .layout {
-  @apply min-h-screen bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white font-sans font-medium text-base;
+  @apply min-h-screen bg-slate-200 dark:bg-primary text-slate-800 dark:text-white font-sans font-medium text-base;
+}
+
+.navbar {
+  @apply bg-primary text-white space-x-4 px-3;
 }
 
 .content {

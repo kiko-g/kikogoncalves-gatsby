@@ -5,6 +5,12 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      colors: {
+        primary: '#001e28',
+        secondary: '#66c9ff',
+        tertiary: '#60ebbf',
+        fourth: '#ff0046',
+      },
       fontSize: {
         xxs: '0.6rem',
       },

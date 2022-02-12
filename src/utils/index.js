@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
-import { FaBook, FaBriefcase, FaFile, FaHome, FaUser } from 'react-icons/fa'
+import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/solid'
 
 export function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min)) + min
@@ -89,7 +89,7 @@ export const buildItems = special => {
   }
 }
 
-export const links = [
+export const socials = [
   {
     name: 'Github',
     icon: <Icon icon="akar-icons:github-fill" color="#333" className="text-lg lg:text-3xl sm:text-2xl" />,
@@ -112,35 +112,10 @@ export const links = [
   },
 ]
 
-export const navigation = [
-  {
-    name: 'Home',
-    href: '/',
-    icon: <FaHome className="text-slate-200 mt-2 mr-1.5" size="13" />,
-    current: true,
-  },
-  {
-    name: 'Me',
-    href: '/me',
-    icon: <FaUser className="text-slate-200 mt-2 mr-1.5" size="13" />,
-    current: false,
-  },
-  {
-    name: 'CV',
-    href: '/cv',
-    icon: <FaFile className="text-slate-200 mt-2 mr-1.5" size="13" />,
-    current: false,
-  },
-  {
-    name: 'Blog',
-    href: '/blog',
-    icon: <FaBook className="text-slate-200 mt-2 mr-1.5" size="13" />,
-    current: false,
-  },
-  {
-    name: 'Portfolio',
-    href: '/portfolio',
-    icon: <FaBriefcase className="text-slate-200 mt-2 mr-1.5" size="13" />,
-    current: false,
-  },
+export const links = [
+  { title: 'Home', location: '/', icon: <HomeIcon className="w-5 h-5 mr-1.5" /> },
+  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="w-5 h-5 mr-1.5" /> },
+  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="w-5 h-5 mr-1.5" /> },
+  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="w-5 h-5 mr-1.5" /> },
+  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="w-5 h-5 mr-1.5" /> },
 ]

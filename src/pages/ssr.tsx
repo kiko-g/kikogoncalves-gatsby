@@ -6,7 +6,7 @@ import Seo from '../components/seo'
 
 const UsingSSR = ({ serverData }) => {
   return (
-    <Layout>
+    <Layout location="SSR">
       <Seo title="Using SSR" />
       <h1>SSR page</h1>
       <img style={{ width: '300px' }} alt="A random dog" src={serverData.message} />
