@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Navbar from './navbar'
+import { Navbar } from './navbar'
 
 type Props = {
   children: any

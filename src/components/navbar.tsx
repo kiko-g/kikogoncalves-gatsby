@@ -6,7 +6,12 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { DarkModeSwitch } from './darkModeSwitch'
 import { links } from '../utils'
 
-export default function Navbar({ siteTitle, location }) {
+type Props = {
+  siteTitle: string
+  location: string
+}
+
+export const Navbar: React.FC<Props> = ({ siteTitle, location }) => {
   return (
     <Disclosure as="nav" className="navbar">
       {({ open }) => {
@@ -26,7 +31,7 @@ export default function Navbar({ siteTitle, location }) {
 
 const Hamburger = ({ open }) => (
   <div
-    className={`z-50 min-h-[3rem] md:hidden ${
+    className={`z-50 min-h-[3.5rem] md:hidden ${
       open ? 'absolute top-4 right-2 space-x-1' : 'flex w-full items-center justify-between px-2'
     }`}
   >

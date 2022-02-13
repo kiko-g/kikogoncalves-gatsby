@@ -2,16 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.min-h-adjusted {
+  min-height: calc(100vh - 3.5rem) !important;
+}
+
 .layout {
-  @apply min-h-screen bg-slate-200 font-sans text-base font-medium text-slate-800 dark:bg-primary dark:text-white;
+  @apply min-h-screen bg-light font-sans text-base font-medium text-slate-800 opacity-[99.9%] dark:bg-dark dark:text-white;
 }
 
 .content {
-  @apply mx-auto p-6;
+  @apply min-h-adjusted mx-auto p-6;
 }
 
 .navbar {
-  @apply min-h-[3rem] space-x-4 bg-primary px-1.5 text-white md:px-3;
+  @apply z-10 min-h-[3.5rem] space-x-4 bg-dark px-1.5 text-white backdrop-blur md:px-3;
 }
 
 .hamburger {
@@ -26,6 +30,6 @@
   @apply rounded-full transition hover:opacity-80 md:hidden;
 }
 
-.min-h-adjusted {
-  min-height: calc(100vh - 3rem) !important;
+.blob {
+  @apply absolute h-72 w-72 rounded-full opacity-70 mix-blend-multiply blur-xl filter;
 }
