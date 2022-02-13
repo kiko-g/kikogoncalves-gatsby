@@ -12,9 +12,9 @@ export const DarkModeSwitch: React.FC = ({}) => {
       <div className="flex items-center">
         <Switch.Label passive className="mr-2">
           {darkTheme ? (
-            <MoonIcon className="block h-6 w-6 transition duration-200 ease text-slate-300" aria-hidden="true" />
+            <MoonIcon className="block h-6 w-6 transition duration-200 ease text-gray-300" aria-hidden="true" />
           ) : (
-            <SunIcon className="block h-6 w-6 transition duration-200 ease text-amber-300" aria-hidden="true" />
+            <SunIcon className="block h-6 w-6 transition duration-200 ease text-orange-400" aria-hidden="true" />
           )}
         </Switch.Label>
         <Switch
