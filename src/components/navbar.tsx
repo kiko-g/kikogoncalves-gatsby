@@ -25,22 +25,19 @@ export default function Navbar({ siteTitle, location }) {
 }
 
 const Hamburger = ({ open }) => (
-  <>
+  <div
+    className={`z-50 min-h-[3rem] md:hidden ${
+      open ? 'absolute top-4 right-2 space-x-1' : 'flex w-full items-center justify-between px-2'
+    }`}
+  >
     <Link to="https://linktr.ee/kikogoncalves" target="_blank">
       {open ? (
-        <StaticImage
-          className="avatar absolute inset-y-0 top-2.5 right-7"
-          src="../images/avatar.png"
-          alt="Francisco Gonçalves"
-        />
+        <StaticImage className="avatar top-0.5 h-5 w-5" src="../images/avatar.png" alt="Francisco Gonçalves" />
       ) : (
-        <StaticImage
-          className="avatar absolute inset-y-0 top-2.5 left-0"
-          src="../images/avatar.png"
-          alt="Francisco Gonçalves"
-        />
+        <StaticImage className="avatar h-6 w-6" src="../images/avatar.png" alt="Francisco Gonçalves" />
       )}
     </Link>
+
     <Disclosure.Button className="hamburger group">
       <span className="sr-only">Open nav menu</span>
       {open ? (
@@ -49,7 +46,7 @@ const Hamburger = ({ open }) => (
         <MenuIcon className="ease block h-6 w-6 transition duration-200 group-hover:text-white/50" aria-hidden="true" />
       )}
     </Disclosure.Button>
-  </>
+  </div>
 )
 
 const Header = ({ title, location }) => (
@@ -61,7 +58,7 @@ const Header = ({ title, location }) => (
           src="../images/avatar.png"
           alt="Francisco Gonçalves"
         />
-        <h2 className="font-bold tracking-tighter text-white duration-150">{title}</h2>
+        <h2 className="text-xs font-bold tracking-tighter text-white duration-150 lg:text-base">{title}</h2>
       </Link>
     </div>
 
