@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Navbar } from './navbar'
+import { Background } from './background'
 
 type Props = {
   children: any
@@ -25,6 +26,7 @@ export const Layout: React.FC<Props> = ({ children, location }) => {
 
   return (
     <div className="layout">
+      <Background />
       <Navbar location={location} siteTitle={title} />
       <div className="content">{children}</div>
     </div>

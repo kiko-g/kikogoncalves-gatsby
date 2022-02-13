@@ -7,11 +7,11 @@
 }
 
 .layout {
-  @apply min-h-screen bg-light font-sans text-base font-medium text-slate-800 opacity-[99.9%] dark:bg-dark dark:text-white;
+  @apply min-h-screen bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-light;
 }
 
 .content {
-  @apply min-h-adjusted mx-auto p-6;
+  @apply min-h-adjusted mx-auto w-full xl:w-4/5;
 }
 
 .navbar {
@@ -28,6 +28,10 @@
 
 .avatar {
   @apply rounded-full transition hover:opacity-80 md:hidden;
+}
+
+.background {
+  @apply absolute -z-10 flex h-screen w-screen items-start justify-center overflow-hidden;
 }
 
 .blob {
