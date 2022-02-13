@@ -25,46 +25,62 @@ export default function Navbar({ siteTitle, location }) {
 }
 
 const Hamburger = ({ open }) => (
-  <Disclosure.Button className="hamburger group">
-    <span className="sr-only">Open nav menu</span>
-    {open ? (
-      <XIcon className="block h-6 w-6 transition duration-200 ease group-hover:text-fourth" aria-hidden="true" />
-    ) : (
-      <MenuIcon className="block h-6 w-6 transition duration-200 ease group-hover:text-white/50" aria-hidden="true" />
-    )}
-  </Disclosure.Button>
+  <>
+    <Link to="https://linktr.ee/kikogoncalves" target="_blank">
+      {open ? (
+        <StaticImage
+          className="avatar absolute inset-y-0 top-2.5 right-7"
+          src="../images/avatar.png"
+          alt="Francisco Gonçalves"
+        />
+      ) : (
+        <StaticImage
+          className="avatar absolute inset-y-0 top-2.5 left-0"
+          src="../images/avatar.png"
+          alt="Francisco Gonçalves"
+        />
+      )}
+    </Link>
+    <Disclosure.Button className="hamburger group">
+      <span className="sr-only">Open nav menu</span>
+      {open ? (
+        <XIcon className="block h-6 w-6 transition duration-200 ease group-hover:text-fourth" aria-hidden="true" />
+      ) : (
+        <MenuIcon className="block h-6 w-6 transition duration-200 ease group-hover:text-white/50" aria-hidden="true" />
+      )}
+    </Disclosure.Button>
+  </>
 )
 
 const Header = ({ title, location }) => (
   <div className="header">
     <div className="hidden self-center md:inline-flex hover:opacity-80 duration-200 relative h-auto space-x-12">
       <Link to="/" className="flex items-center space-x-2">
+        <StaticImage
+          className="inline-flex w-6 h-6 rounded-full transition z-20"
+          src="../images/avatar.png"
+          alt="Francisco Gonçalves"
+        />
         <h2 className="font-bold text-white tracking-tighter duration-150">{title}</h2>
       </Link>
     </div>
 
     <div className="hidden self-center md:inline-flex md:space-x-6">
       {links.map((link, index) => (
-        <span className="relative">
-          <Link
-            to={link.location}
-            key={`location-${index}`}
-            className="hover:bg-slate-400/50 duration-200 rounded py-1"
+        <Link to={link.location} key={`nav-${index}`} className="relative py-1">
+          <button
+            type="button"
+            className={`flex items-center justify-center font-medium tracking-wider uppercase transition h-12 ${
+              location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
+            }`}
           >
-            <button
-              type="button"
-              className={`flex items-center justify-center font-medium tracking-wider uppercase transition h-12 ${
-                location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
-              }`}
-            >
-              <span className="flex items-center justify-center">
-                {link.icon}
-                {link.title}
-              </span>
-            </button>
-          </Link>
+            <span className="flex items-center justify-center">
+              {link.icon}
+              {link.title}
+            </span>
+          </button>
           {location === link.title ? <span className="absolute bottom-0 w-full h-1 rounded-t-sm bg-secondary" /> : null}
-        </span>
+        </Link>
       ))}
     </div>
 
