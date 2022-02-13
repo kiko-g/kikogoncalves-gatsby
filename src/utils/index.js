@@ -92,30 +92,30 @@ export const buildItems = special => {
 export const socials = [
   {
     name: 'Github',
-    icon: <Icon icon="akar-icons:github-fill" color="#333" className="text-lg lg:text-3xl sm:text-2xl" />,
+    icon: <Icon icon="akar-icons:github-fill" color="#333" className="text-lg sm:text-2xl lg:text-3xl" />,
     href: 'https://github.com/kiko-g',
   },
   {
     name: 'Linkedin',
-    icon: <Icon icon="logos:linkedin-icon" color="#39e09b" className="text-lg lg:text-3xl sm:text-2xl" />,
+    icon: <Icon icon="logos:linkedin-icon" color="#39e09b" className="text-lg sm:text-2xl lg:text-3xl" />,
     href: 'https://linkedin.com/in/kikogoncalves',
   },
   {
     name: 'Twitter',
-    icon: <Icon icon="simple-icons:twitter" color="#1da1f2" className="text-lg lg:text-3xl sm:text-2xl" />,
+    icon: <Icon icon="simple-icons:twitter" color="#1da1f2" className="text-lg sm:text-2xl lg:text-3xl" />,
     href: 'https://twitter.com/kikogoncalves_',
   },
   {
     name: 'Linktree',
-    icon: <Icon icon="simple-icons:linktree" color="#39e09b" className="text-lg lg:text-3xl sm:text-2xl" />,
+    icon: <Icon icon="simple-icons:linktree" color="#39e09b" className="text-lg sm:text-2xl lg:text-3xl" />,
     href: 'https://linktr.ee/kikogoncalves',
   },
 ]
 
 export const links = [
-  { title: 'Home', location: '/', icon: <HomeIcon className="w-5 h-5 mr-1.5" /> },
-  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="w-5 h-5 mr-1.5" /> },
-  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="w-5 h-5 mr-1.5" /> },
-  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="w-5 h-5 mr-1.5" /> },
-  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="w-5 h-5 mr-1.5" /> },
+  { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="mr-1.5 h-5 w-5" /> },
 ]

@@ -44,9 +44,9 @@ const Hamburger = ({ open }) => (
     <Disclosure.Button className="hamburger group">
       <span className="sr-only">Open nav menu</span>
       {open ? (
-        <XIcon className="block h-6 w-6 transition duration-200 ease group-hover:text-fourth" aria-hidden="true" />
+        <XIcon className="ease block h-6 w-6 transition duration-200 group-hover:text-fourth" aria-hidden="true" />
       ) : (
-        <MenuIcon className="block h-6 w-6 transition duration-200 ease group-hover:text-white/50" aria-hidden="true" />
+        <MenuIcon className="ease block h-6 w-6 transition duration-200 group-hover:text-white/50" aria-hidden="true" />
       )}
     </Disclosure.Button>
   </>
@@ -54,14 +54,14 @@ const Hamburger = ({ open }) => (
 
 const Header = ({ title, location }) => (
   <div className="header">
-    <div className="hidden self-center md:inline-flex hover:opacity-80 duration-200 relative h-auto space-x-12">
+    <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-80 md:inline-flex">
       <Link to="/" className="flex items-center space-x-2">
         <StaticImage
-          className="inline-flex w-6 h-6 rounded-full transition z-20"
+          className="z-20 inline-flex h-6 w-6 rounded-full transition"
           src="../images/avatar.png"
           alt="Francisco Gonçalves"
         />
-        <h2 className="font-bold text-white tracking-tighter duration-150">{title}</h2>
+        <h2 className="font-bold tracking-tighter text-white duration-150">{title}</h2>
       </Link>
     </div>
 
@@ -70,7 +70,7 @@ const Header = ({ title, location }) => (
         <Link to={link.location} key={`nav-${index}`} className="relative py-1">
           <button
             type="button"
-            className={`flex items-center justify-center font-medium tracking-wider uppercase transition h-12 ${
+            className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
             }`}
           >
@@ -79,7 +79,7 @@ const Header = ({ title, location }) => (
               {link.title}
             </span>
           </button>
-          {location === link.title ? <span className="absolute bottom-0 w-full h-1 rounded-t-sm bg-secondary" /> : null}
+          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-secondary" /> : null}
         </Link>
       ))}
     </div>
@@ -91,12 +91,12 @@ const Header = ({ title, location }) => (
 )
 
 const Mobile = ({ location }) => (
-  <Disclosure.Panel className="md:hidden flex flex-col py-4 space-y-3">
+  <Disclosure.Panel className="flex flex-col space-y-3 py-4 md:hidden">
     {links.map((link, index) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
         <button
           type="button"
-          className={`flex items-center justify-center font-medium tracking-wider uppercase h-auto ${
+          className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider ${
             location === link.title ? 'text-secondary hover:text-secondary/80' : 'text-white/80 hover:text-white'
           }`}
         >
@@ -109,4 +109,3 @@ const Mobile = ({ location }) => (
     ))}
   </Disclosure.Panel>
 )
-11

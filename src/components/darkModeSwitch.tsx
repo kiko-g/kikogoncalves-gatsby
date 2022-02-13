@@ -12,9 +12,9 @@ export const DarkModeSwitch: React.FC = ({}) => {
       <div className="flex items-center">
         <Switch.Label passive className="mr-2">
           {darkTheme ? (
-            <MoonIcon className="block h-6 w-6 transition duration-200 ease text-gray-300" aria-hidden="true" />
+            <MoonIcon className="ease block h-6 w-6 text-gray-300 transition duration-200" aria-hidden="true" />
           ) : (
-            <SunIcon className="block h-6 w-6 transition duration-200 ease text-orange-400" aria-hidden="true" />
+            <SunIcon className="ease block h-6 w-6 text-orange-400 transition duration-200" aria-hidden="true" />
           )}
         </Switch.Label>
         <Switch
@@ -22,12 +22,12 @@ export const DarkModeSwitch: React.FC = ({}) => {
           onChange={handleMode}
           className={`${
             darkTheme ? 'bg-blue-300' : 'bg-slate-400'
-          } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none`}
+          } relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none`}
         >
           <span
             className={`${
               darkTheme ? 'translate-x-6' : 'translate-x-1'
-            } inline-block w-4 h-4 transform bg-white rounded-full transition-transform`}
+            } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
           />
         </Switch>
       </div>
