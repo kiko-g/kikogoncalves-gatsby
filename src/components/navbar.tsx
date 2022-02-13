@@ -52,7 +52,7 @@ const Hamburger = ({ open }) => (
 const Header = ({ title, location }) => (
   <div className="header">
     <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-80 md:inline-flex">
-      <Link to="/" className="flex items-center space-x-2">
+      <Link to="https://linktr.ee/kikogoncalves" target="_blank" className="flex items-center space-x-2">
         <StaticImage
           className="z-20 inline-flex h-6 w-6 rounded-full transition"
           src="../images/avatar.png"
@@ -94,7 +94,7 @@ const Mobile = ({ location }) => (
         <button
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider ${
-            location === link.title ? 'text-secondary hover:text-secondary/80' : 'text-white/80 hover:text-white'
+            location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">
