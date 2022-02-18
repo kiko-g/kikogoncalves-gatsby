@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General */
 .min-h-adjusted {
   min-height: calc(100vh - 3.5rem) !important;
 }
 
+/* Layout */
 .layout {
   @apply min-h-screen bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-light;
 }
 
 .content {
-  @apply min-h-adjusted mx-auto w-full xl:w-4/5;
+  @apply min-h-adjusted mx-auto max-w-7xl p-4;
 }
 
 .navbar {
@@ -30,10 +32,29 @@
   @apply rounded-full transition hover:opacity-80 md:hidden;
 }
 
+/* Background */
 .background {
   @apply absolute -z-10 flex h-screen w-screen items-start justify-center overflow-hidden;
 }
 
 .blob {
   @apply absolute h-72 w-72 rounded-full opacity-70 mix-blend-multiply blur-xl filter;
+}
+
+/* Tabs */
+.hero-tabs {
+  @apply w-full text-dark dark:bg-dark sm:px-0;
+}
+
+.hero-tab-list {
+  @apply flex space-x-1 rounded-xl bg-white p-1.5 dark:bg-light;
+}
+
+.hero-tab {
+  @apply w-full rounded-lg py-2.5 text-sm font-medium leading-5 
+  ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 transition focus:outline-none focus:ring-2;
+}
+
+.hero-tab-panel {
+  @apply rounded-xl bg-white p-3;
 }

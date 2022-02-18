@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Layout } from '../components/layout'
-import Seo from '../components/seo'
+import { Layout } from '../components/Layout'
+import Seo from '../components/Seo'
 
 const BlogPage = () => (
   <Layout location="Blog">
-    <Seo title="Blog | Francisco Gonçalves" />
+    <Seo title="Blog" />
   </Layout>
 )
 

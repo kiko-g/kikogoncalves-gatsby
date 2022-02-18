@@ -1,5 +1,4 @@
 import React from 'react'
-import { Icon } from '@iconify/react'
 import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/solid'
 
 export function randomNum(min, max) {
@@ -88,29 +87,6 @@ export const buildItems = special => {
     return items
   }
 }
-
-export const socials = [
-  {
-    name: 'Github',
-    icon: <Icon icon="akar-icons:github-fill" color="#333" className="text-lg sm:text-2xl lg:text-3xl" />,
-    href: 'https://github.com/kiko-g',
-  },
-  {
-    name: 'Linkedin',
-    icon: <Icon icon="logos:linkedin-icon" color="#39e09b" className="text-lg sm:text-2xl lg:text-3xl" />,
-    href: 'https://linkedin.com/in/kikogoncalves',
-  },
-  {
-    name: 'Twitter',
-    icon: <Icon icon="simple-icons:twitter" color="#1da1f2" className="text-lg sm:text-2xl lg:text-3xl" />,
-    href: 'https://twitter.com/kikogoncalves_',
-  },
-  {
-    name: 'Linktree',
-    icon: <Icon icon="simple-icons:linktree" color="#39e09b" className="text-lg sm:text-2xl lg:text-3xl" />,
-    href: 'https://linktr.ee/kikogoncalves',
-  },
-]
 
 export const links = [
   { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 h-5 w-5" /> },

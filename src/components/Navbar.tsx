@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { DarkModeSwitch } from './darkModeSwitch'
+import { DarkModeSwitch } from './DarkModeSwitch'
 import { links } from '../utils'
 
 type Props = {
@@ -31,10 +31,14 @@ export const Navbar: React.FC<Props> = ({ siteTitle, location }) => {
 
 const Hamburger = ({ open }) => (
   <div
-    className={`z-50 min-h-[3.5rem] md:hidden ${
-      open ? 'absolute top-4 right-2 space-x-1' : 'flex w-full items-center justify-between px-2'
+    className={`z-50 md:hidden ${
+      open
+        ? 'absolute top-4 right-2 my-auto flex h-6 items-center justify-end space-x-2'
+        : 'flex min-h-[3.5rem] w-full items-center justify-between px-2'
     }`}
   >
+    {open ? <DarkModeSwitch /> : null}
+
     <Link to="https://linktr.ee/kikogoncalves" target="_blank">
       {open ? (
         <StaticImage className="avatar top-0.5 h-5 w-5" src="../images/avatar.png" alt="Francisco Gonçalves" />
@@ -98,7 +102,7 @@ const Mobile = ({ location }) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
         <button
           type="button"
-          className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider ${
+          className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
           }`}
         >
