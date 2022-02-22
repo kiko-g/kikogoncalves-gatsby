@@ -17,11 +17,11 @@
 }
 
 .navbar {
-  @apply z-10 min-h-[3.5rem] space-x-4 bg-dark px-1.5 text-white backdrop-blur md:px-3;
+  @apply z-10 min-h-[3.5rem] space-x-4 bg-light px-1.5 text-dark backdrop-blur dark:bg-dark dark:text-white md:px-3;
 }
 
 .hamburger {
-  @apply text-white transition duration-200 ease-in md:hidden;
+  @apply text-dark transition duration-200 ease-in dark:text-white md:hidden;
 }
 
 .header {

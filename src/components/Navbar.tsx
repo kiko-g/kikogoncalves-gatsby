@@ -4,6 +4,7 @@ import { Disclosure } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { DarkModeSwitch } from './DarkModeSwitch'
+import { DarkModeSwitchMinimal } from './DarkModeSwitchMinimal'
 import { links } from '../utils'
 
 type Props = {
@@ -37,8 +38,6 @@ const Hamburger = ({ open }) => (
         : 'flex min-h-[3.5rem] w-full items-center justify-between px-2'
     }`}
   >
-    {open ? <DarkModeSwitch /> : null}
-
     <Link to="https://linktr.ee/kikogoncalves" target="_blank">
       {open ? (
         <StaticImage className="avatar top-0.5 h-5 w-5" src="../images/avatar.png" alt="Francisco Gonçalves" />
@@ -47,27 +46,36 @@ const Hamburger = ({ open }) => (
       )}
     </Link>
 
-    <Disclosure.Button className="hamburger group">
-      <span className="sr-only">Open nav menu</span>
-      {open ? (
-        <XIcon className="ease block h-6 w-6 transition duration-200 group-hover:text-fourth" aria-hidden="true" />
-      ) : (
-        <MenuIcon className="ease block h-6 w-6 transition duration-200 group-hover:text-white/50" aria-hidden="true" />
-      )}
-    </Disclosure.Button>
+    <div className="flex items-center space-x-1">
+      <DarkModeSwitchMinimal />
+      <Disclosure.Button className="hamburger group">
+        <span className="sr-only">Open nav menu</span>
+        {open ? (
+          <XIcon
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-crimson/75 dark:group-hover:text-crimson/75"
+            aria-hidden="true"
+          />
+        ) : (
+          <MenuIcon
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-dark/75 dark:group-hover:text-dark/75"
+            aria-hidden="true"
+          />
+        )}
+      </Disclosure.Button>
+    </div>
   </div>
 )
 
 const Header = ({ title, location }) => (
   <div className="header">
-    <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-80 md:inline-flex">
+    <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
       <Link to="https://linktr.ee/kikogoncalves" target="_blank" className="flex items-center space-x-2">
         <StaticImage
           className="z-20 inline-flex h-6 w-6 rounded-full transition"
           src="../images/avatar.png"
           alt="Francisco Gonçalves"
         />
-        <h2 className="text-xs font-bold tracking-tighter text-white duration-150 lg:text-base">{title}</h2>
+        <h2 className="text-xs font-bold tracking-tighter duration-150 lg:text-base">{title}</h2>
       </Link>
     </div>
 
@@ -77,7 +85,9 @@ const Header = ({ title, location }) => (
           <button
             type="button"
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
-              location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
+              location === link.title
+                ? 'text-crimson hover:text-crimson/75'
+                : 'text-dark/75 hover:text-dark dark:text-white/75 dark:hover:text-white'
             }`}
           >
             <span className="flex items-center justify-center">
@@ -85,7 +95,7 @@ const Header = ({ title, location }) => (
               {link.title}
             </span>
           </button>
-          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-secondary" /> : null}
+          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-crimson" /> : null}
         </Link>
       ))}
     </div>
@@ -103,7 +113,7 @@ const Mobile = ({ location }) => (
         <button
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
-            location === link.title ? 'text-secondary hover:text-secondary/75' : 'text-white/75 hover:text-white'
+            location === link.title ? 'text-crimson hover:text-crimson/75' : 'text-white/75 hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">
