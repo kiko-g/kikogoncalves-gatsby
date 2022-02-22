@@ -113,7 +113,9 @@ const Mobile = ({ location }) => (
         <button
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
-            location === link.title ? 'text-crimson hover:text-crimson/75' : 'text-white/75 hover:text-white'
+            location === link.title
+              ? 'text-crimson hover:text-crimson/75'
+              : 'text-dark/75 hover:text-dark dark:text-white/75 dark:hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">

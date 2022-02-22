@@ -6,9 +6,10 @@ import { Background } from './Background'
 type Props = {
   children: any
   location: string
+  padding: boolean
 }
 
-export const Layout: React.FC<Props> = ({ children, location }) => {
+export const Layout: React.FC<Props> = ({ children, padding, location }) => {
   /**
    * Layout component that queries for data * with Gatsby's useStaticQuery component
    * See: https://www.gatsbyjs.com/docs/use-static-query/
@@ -27,11 +28,16 @@ export const Layout: React.FC<Props> = ({ children, location }) => {
   return (
     <div className="layout">
       <Navbar location={location} siteTitle={title} />
-      <div className="content">{children}</div>
+      {padding ? (
+        <div className="min-h-adjusted mx-auto max-w-7xl p-4">{children}</div>
+      ) : (
+        <div className="min-h-adjusted mx-auto">{children}</div>
+      )}
     </div>
   )
 }
 
 Layout.defaultProps = {
-  location: 'Page Name',
+  location: 'Unknown',
+  padding: true,
 }

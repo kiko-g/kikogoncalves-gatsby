@@ -9,15 +9,11 @@
 
 /* Layout */
 .layout {
-  @apply min-h-screen bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-light;
-}
-
-.content {
-  @apply min-h-adjusted mx-auto max-w-7xl p-4;
+  @apply min-h-screen bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-white;
 }
 
 .navbar {
-  @apply z-10 min-h-[3.5rem] space-x-4 bg-light px-1.5 text-dark backdrop-blur dark:bg-dark dark:text-white md:px-3;
+  @apply z-10 min-h-[3.5rem] space-x-4 bg-light px-1.5 text-dark shadow backdrop-blur dark:bg-dark dark:text-white md:px-3;
 }
 
 .hamburger {
