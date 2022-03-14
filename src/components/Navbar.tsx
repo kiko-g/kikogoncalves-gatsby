@@ -57,7 +57,7 @@ const Hamburger = ({ open }) => (
           />
         ) : (
           <MenuIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-dark/75 dark:group-hover:text-dark/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-dark/75 dark:group-hover:text-light/75"
             aria-hidden="true"
           />
         )}

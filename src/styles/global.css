@@ -9,7 +9,7 @@
 
 /* Layout */
 .layout {
-  @apply min-h-screen bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-white;
+  @apply flex min-h-screen flex-col bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-white;
 }
 
 .navbar {

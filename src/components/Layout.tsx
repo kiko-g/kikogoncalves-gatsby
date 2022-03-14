@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Navbar } from './Navbar'
+import { Footer } from './Footer'
 import { Background } from './Background'
 
 type Props = {
@@ -29,10 +30,11 @@ export const Layout: React.FC<Props> = ({ children, padding, location }) => {
     <div className="layout">
       <Navbar location={location} siteTitle={title} />
       {padding ? (
-        <div className="min-h-adjusted mx-auto max-w-7xl p-4">{children}</div>
+        <div className="min-h-adjusted mx-auto mb-auto max-w-7xl p-4">{children}</div>
       ) : (
-        <div className="min-h-adjusted mx-auto">{children}</div>
+        <div className="min-h-adjusted mx-auto mb-auto">{children}</div>
       )}
+      <Footer />
     </div>
   )
 }

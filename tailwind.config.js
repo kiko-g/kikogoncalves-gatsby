@@ -7,8 +7,10 @@ module.exports = {
     extend: {
       colors: {
         dark: '#1a202c',
+        'dark-aux': '#2d3748',
+        'dark-typo': '#cbd5e0',
         light: '#f8fafc',
-        skyish: '#BAE6FD',
+        skyish: '#bae6fd',
         tealish: '#60ebbf',
         crimson: '#ff0046',
       },
@@ -16,7 +18,7 @@ module.exports = {
         xxs: '0.6rem',
       },
       fontFamily: {
-        sans: ['Inter, sans-serif', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
         code: ['Fira Code', ...defaultTheme.fontFamily.mono],
         mono: ['Fira Code', ...defaultTheme.fontFamily.mono],
         source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
