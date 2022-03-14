@@ -35,7 +35,7 @@ const Hamburger = ({ open }) => (
     className={`z-50 md:hidden ${
       open
         ? 'absolute top-4 right-2 my-auto flex h-6 items-center justify-end space-x-2'
-        : 'flex min-h-[3.5rem] w-full items-center justify-between px-2'
+        : 'flex w-full items-center justify-between'
     }`}
   >
     <Link to="https://linktr.ee/kikogoncalves" target="_blank">
@@ -52,7 +52,7 @@ const Hamburger = ({ open }) => (
         <span className="sr-only">Open nav menu</span>
         {open ? (
           <XIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-crimson/75 dark:group-hover:text-crimson/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-lilac/75 dark:group-hover:text-lilac/75"
             aria-hidden="true"
           />
         ) : (
@@ -86,7 +86,7 @@ const Header = ({ title, location }) => (
             type="button"
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title
-                ? 'text-crimson hover:text-crimson/75'
+                ? 'text-lilac hover:text-lilac/75'
                 : 'text-dark/75 hover:text-dark dark:text-white/75 dark:hover:text-white'
             }`}
           >
@@ -95,7 +95,7 @@ const Header = ({ title, location }) => (
               {link.title}
             </span>
           </button>
-          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-crimson" /> : null}
+          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-lilac" /> : null}
         </Link>
       ))}
     </div>
@@ -114,7 +114,7 @@ const Mobile = ({ location }) => (
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
-              ? 'text-crimson hover:text-crimson/75'
+              ? 'text-lilac hover:text-lilac/75'
               : 'text-dark/75 hover:text-dark dark:text-white/75 dark:hover:text-white'
           }`}
         >

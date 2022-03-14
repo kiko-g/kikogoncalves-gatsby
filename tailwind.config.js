@@ -10,6 +10,7 @@ module.exports = {
         'dark-aux': '#2d3748',
         'dark-typo': '#cbd5e0',
         light: '#f8fafc',
+        lilac: '#9f7aea',
         skyish: '#bae6fd',
         tealish: '#60ebbf',
         crimson: '#ff0046',
