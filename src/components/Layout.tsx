@@ -7,7 +7,11 @@ import { Background } from './Background'
 type Props = {
   children: any
   location: string
-  padding: boolean
+  padding?: boolean
+}
+
+function classNames(...classes: any[]) {
+  return classes.filter(Boolean).join(' ')
 }
 
 export const Layout: React.FC<Props> = ({ children, padding, location }) => {
@@ -29,17 +33,13 @@ export const Layout: React.FC<Props> = ({ children, padding, location }) => {
   return (
     <div className="layout">
       <Navbar location={location} siteTitle={title} />
-      {padding ? (
-        <div className="mx-auto mb-auto max-w-7xl p-4">{children}</div>
-      ) : (
-        <div className="mx-auto mb-auto">{children}</div>
-      )}
+      <div className={classNames('mx-auto mb-auto', padding ? 'max-w-7xl p-4' : '')}>{children}</div>
       <Footer />
     </div>
   )
 }
 
 Layout.defaultProps = {
-  location: 'Unknown',
   padding: true,
+  location: 'Unknown',
 }

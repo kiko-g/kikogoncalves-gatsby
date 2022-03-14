@@ -40,9 +40,13 @@ const Hamburger = ({ open }) => (
   >
     <Link to="https://linktr.ee/kikogoncalves" target="_blank">
       {open ? (
-        <StaticImage className="avatar top-0.5 h-5 w-5" src="../images/avatar.png" alt="Francisco Gonçalves" />
+        <StaticImage
+          className="avatar top-0.5 h-5 w-5"
+          src="../../static/images/avatar.png"
+          alt="Francisco Gonçalves"
+        />
       ) : (
-        <StaticImage className="avatar h-6 w-6" src="../images/avatar.png" alt="Francisco Gonçalves" />
+        <StaticImage className="avatar h-6 w-6" src="../../static/images/avatar.png" alt="Francisco Gonçalves" />
       )}
     </Link>
 
@@ -72,7 +76,7 @@ const Header = ({ title, location }) => (
       <Link to="https://linktr.ee/kikogoncalves" target="_blank" className="flex items-center space-x-2">
         <StaticImage
           className="z-20 inline-flex h-6 w-6 rounded-full transition"
-          src="../images/avatar.png"
+          src="../../static/images/avatar.png"
           alt="Francisco Gonçalves"
         />
         <h2 className="text-xs font-bold tracking-tighter duration-150 lg:text-base">{title}</h2>
