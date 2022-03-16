@@ -34,7 +34,7 @@ const Hamburger = ({ open }) => (
   <div
     className={`z-50 md:hidden ${
       open
-        ? 'absolute top-4 right-2 my-auto flex h-6 items-center justify-end space-x-2'
+        ? 'absolute top-2 right-2 my-auto flex h-6 items-center justify-end space-x-2'
         : 'flex w-full items-center justify-between'
     }`}
   >
@@ -111,7 +111,7 @@ const Header = ({ title, location }) => (
 )
 
 const Mobile = ({ location }) => (
-  <Disclosure.Panel className="flex flex-col space-y-3 py-4 md:hidden">
+  <Disclosure.Panel className="flex flex-col space-y-3 py-2 md:hidden">
     {links.map((link, index) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
         <button
