@@ -36,7 +36,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
-            cover {
+            featuredImage {
               childImageSharp {
                 fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid

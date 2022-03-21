@@ -11,9 +11,7 @@ export default function Template({ data }) {
   return (
     <Layout location={frontmatter.title}>
       <div className="blogpost">
-        <header>
-          <h1>{frontmatter.title}</h1>
-        </header>
+        <header>{frontmatter.title}</header>
         <article dangerouslySetInnerHTML={{ __html: html }} />
         <footer>
           <span>{frontmatter.title}</span>
@@ -32,6 +30,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          publicURL
+          extension
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 }
 
 .blogpost header {
-  @apply mb-2 border-b py-2 text-5xl;
+  @apply mb-2 border-b py-2 text-4xl;
 }
 
 .blogpost article {
