@@ -38,7 +38,7 @@ const Hamburger = ({ open }) => (
         : 'flex w-full items-center justify-between'
     }`}
   >
-    <Link to="https://linktr.ee/kikogoncalves" target="_blank">
+    <a href="https://linktr.ee/kikogoncalves" target="_blank">
       {open ? (
         <StaticImage
           className="avatar top-0.5 h-5 w-5"
@@ -48,7 +48,7 @@ const Hamburger = ({ open }) => (
       ) : (
         <StaticImage className="avatar h-6 w-6" src="../../static/images/avatar.png" alt="Francisco Gonçalves" />
       )}
-    </Link>
+    </a>
 
     <div className="flex items-center space-x-1">
       <DarkModeSwitchMinimal />
@@ -73,14 +73,14 @@ const Hamburger = ({ open }) => (
 const Header = ({ title, location }) => (
   <div className="header">
     <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
-      <Link to="https://linktr.ee/kikogoncalves" target="_blank" className="flex items-center space-x-2">
+      <a href="https://linktr.ee/kikogoncalves" target="_blank" className="flex items-center space-x-2">
         <StaticImage
           className="z-20 inline-flex h-6 w-6 rounded-full transition"
           src="../../static/images/avatar.png"
           alt="Francisco Gonçalves"
         />
         <h2 className="text-xs font-bold tracking-tighter duration-150 lg:text-base">{title}</h2>
-      </Link>
+      </a>
     </div>
 
     <div className="hidden self-center md:inline-flex md:space-x-6">

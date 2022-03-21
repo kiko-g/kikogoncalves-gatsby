@@ -9,14 +9,16 @@ const BlogPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-
   return (
     <Layout location="Blog">
       <Seo title="Blog" />
-      <div>{Posts}</div>
+      <div className="grid grid-cols-3 gap-4">
+        {edges
+          .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
+          .map((edge: { node: { id: React.Key } }) => (
+            <PostLink key={edge.node.id} post={edge.node} />
+          ))}
+      </div>
     </Layout>
   )
 }
@@ -34,6 +36,15 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+              publicURL
+              extension
+            }
           }
         }
       }

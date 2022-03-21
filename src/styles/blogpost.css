@@ -1,3 +1,53 @@
 .blogpost {
-  @apply p-2;
+  @apply flex flex-col justify-between space-y-2;
+}
+
+.blogpost header {
+  @apply mb-2 border-b py-2 text-5xl;
+}
+
+.blogpost article {
+  @apply p-0 text-dark dark:text-light;
+}
+
+.blogpost footer {
+  @apply flex items-center justify-between py-2 text-xs text-gray-400 dark:text-gray-300 md:py-3 md:text-sm;
+}
+
+.blogpost footer > span {
+  @apply text-gray-400 dark:text-gray-500 sm:text-center;
+}
+
+.blogpost h1 {
+  @apply text-4xl;
+}
+
+.blogpost h2 {
+  @apply text-3xl;
+}
+
+.blogpost h3 {
+  @apply text-2xl;
+}
+
+.blogpost h4 {
+  @apply text-xl;
+}
+
+.blogpost p,
+.blogpost .gatsby-resp-image-wrapper {
+  @apply my-3;
+}
+
+.blogpost ul,
+.blogpost ol {
+  @apply mt-5 mb-7;
+}
+
+.blogpost blockquote {
+  @apply my-8 border-lilac md:mx-12;
+}
+
+.blogpost code {
+  @apply p-2 text-xs;
 }

@@ -10,9 +10,16 @@ export default function Template({ data }) {
 
   return (
     <Layout location={frontmatter.title}>
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="blogpost">
+        <header>
+          <h1>{frontmatter.title}</h1>
+        </header>
+        <article dangerouslySetInnerHTML={{ __html: html }} />
+        <footer>
+          <span>{frontmatter.title}</span>
+          <span>{frontmatter.date}</span>
+        </footer>
+      </div>
     </Layout>
   )
 }

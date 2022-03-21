@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { Background } from './Background'
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 
 type Props = {
   children: any
@@ -30,10 +31,12 @@ export const Layout: React.FC<Props> = ({ children, padding, location }) => {
   `)
   const title = data.site.siteMetadata?.title
 
+  deckDeckGoHighlightElement()
+
   return (
     <div className="layout">
       <Navbar location={location} siteTitle={title} />
-      <div className={classNames('mx-auto mb-auto', padding ? 'max-w-7xl p-4' : '')}>{children}</div>
+      <div className={classNames('mx-auto my-auto', padding ? 'max-w-7xl p-4' : '')}>{children}</div>
       <Footer />
     </div>
   )
