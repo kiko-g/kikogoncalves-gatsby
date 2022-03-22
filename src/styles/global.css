@@ -9,11 +9,11 @@
 
 /* Layout */
 .layout {
-  @apply flex min-h-screen flex-col bg-light font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark dark:text-white;
+  @apply flex min-h-screen flex-col bg-light2 font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark2 dark:text-white;
 }
 
 .navbar {
-  @apply sticky top-0 z-20 space-x-4 bg-light px-3 py-4 text-dark opacity-95 shadow dark:bg-dark dark:text-white md:py-0 md:px-3;
+  @apply sticky top-0 z-20 space-x-4 border-b border-zinc-200 bg-light1 px-3 py-4 text-dark opacity-95 shadow dark:border-zinc-800 dark:bg-dark1 dark:text-white md:py-0 md:px-3;
 }
 
 .hamburger {
@@ -30,7 +30,7 @@
 
 /* Tabs */
 .hero-tabs {
-  @apply w-full text-dark dark:bg-dark sm:px-0;
+  @apply w-full text-dark dark:bg-dark2 sm:px-0;
 }
 
 .hero-tab-list {

@@ -5,7 +5,7 @@ type Props = {}
 
 export const Footer: React.FC<Props> = () => {
   return (
-    <footer className="flex items-center justify-between bg-light p-2 text-xs text-gray-400 dark:bg-dark dark:text-gray-300 md:p-3 md:text-sm">
+    <footer className="flex items-center justify-between bg-light2 p-2 text-xs text-gray-400 dark:bg-dark2 dark:text-gray-300 md:p-3 md:text-sm">
       <span className="text-gray-700 dark:text-gray-300 sm:text-center">© 2022 Francisco Gonçalves™</span>
       <div className="flex space-x-2 sm:justify-center md:mt-0 md:space-x-4">
         {socials

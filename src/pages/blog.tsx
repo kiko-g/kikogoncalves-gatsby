@@ -13,7 +13,7 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
   return (
     <Layout location="Blog">
       <Seo title="Blog" />
-      <div className="container flex-1 flex-col justify-between space-y-6 p-4">
+      <div className="container flex-1 flex-col justify-between space-y-6 px-4 py-6">
         <header>
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h2>
           <p className="mt-4 text-lg font-normal">{description}</p>

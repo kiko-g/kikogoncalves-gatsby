@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 export const Postcard = ({ post }) => (
   <Link
-    className="h-auto w-full max-w-7xl space-y-2 rounded-xl bg-light3 p-3 shadow transition hover:bg-light3/30 dark:bg-dark3 hover:dark:bg-dark3/30"
+    className="h-auto w-full max-w-7xl space-y-2 rounded-xl bg-light3 p-3 shadow transition hover:bg-lilac/5 dark:bg-dark3 hover:dark:bg-lilac/20"
     to={post.frontmatter.slug}
   >
     <div className="flex h-auto flex-col items-center justify-between rounded-lg bg-purple-300 bg-opacity-90 p-4 md:col-span-1" />
