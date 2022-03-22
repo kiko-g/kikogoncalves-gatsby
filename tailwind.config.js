@@ -7,7 +7,13 @@ module.exports = {
     extend: {
       colors: {
         dark: '#1a202c',
+        dark1: '#1a1c23',
+        dark2: '#1e2028',
+        dark3: '#242731',
         light: '#f8fafc',
+        light1: '#fafbfd',
+        light2: '#f2f4f7',
+        light3: '#ffffff',
         lilac: '#9f7aea',
         skyish: '#bae6fd',
         tealish: '#60ebbf',
