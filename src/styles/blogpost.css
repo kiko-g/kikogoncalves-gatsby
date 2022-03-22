@@ -1,37 +1,44 @@
 .blogpost {
-  @apply flex flex-col justify-between space-y-2;
+  @apply mb-5 flex min-w-[70vw] flex-col justify-between px-4 font-normal md:px-0;
 }
 
 .blogpost header {
-  @apply mb-2 border-b py-2 text-4xl;
+  @apply mb-2 border-b border-gray-200 py-3 text-4xl font-bold dark:border-gray-500;
 }
 
 .blogpost article {
-  @apply p-0 text-dark dark:text-light;
+  @apply mt-0 p-0 text-dark dark:text-light;
 }
 
 .blogpost footer {
-  @apply flex items-center justify-between py-2 text-xs text-gray-400 dark:text-gray-300 md:py-3 md:text-sm;
+  @apply mt-12 flex items-center justify-between border-t border-gray-200 py-2 text-xs text-gray-400 dark:border-gray-700 dark:text-gray-300 md:py-3 md:text-sm;
 }
 
 .blogpost footer > span {
   @apply text-gray-400 dark:text-gray-500 sm:text-center;
 }
 
+.blogpost h1,
+.blogpost h2,
+.blogpost h3,
+.blogpost h4 {
+  @apply border-b border-gray-200 py-1 font-medium dark:border-gray-700;
+}
+
 .blogpost h1 {
-  @apply text-4xl;
+  @apply mt-10 mb-6 py-1 text-4xl;
 }
 
 .blogpost h2 {
-  @apply text-3xl;
+  @apply mt-9 mb-5 py-1 text-3xl;
 }
 
 .blogpost h3 {
-  @apply text-2xl;
+  @apply mt-8 mb-4 py-1 text-2xl;
 }
 
 .blogpost h4 {
-  @apply text-xl;
+  @apply mt-7 mb-3 py-1 text-xl;
 }
 
 .blogpost p,

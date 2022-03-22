@@ -5,7 +5,7 @@ import { Layout } from '../components/Layout'
 import Seo from '../components/Seo'
 
 const IndexPage = () => (
-  <Layout location="Home" padding={false}>
+  <Layout location="Home">
     <Seo title="Home" />
     <StaticImage src="../../static/images/hero.jpg" alt="Francisco Gonçalves" />
   </Layout>

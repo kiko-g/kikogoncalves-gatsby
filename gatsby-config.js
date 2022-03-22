@@ -40,13 +40,16 @@ module.exports = {
         gfm: true,
         plugins: [
           {
+            resolve: `gatsby-remark-classes`,
+          },
+          {
             resolve: `gatsby-remark-images`,
           },
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               terminal: 'carbon',
-              theme: 'blackboard',
+              theme: 'one-dark',
               editable: false,
               lineNumbers: false,
             },

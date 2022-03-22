@@ -1,12 +1,14 @@
 import React from 'react'
+import '../styles/blogpost.css'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/Layout'
-import '../styles/blogpost.css'
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  deckDeckGoHighlightElement()
 
   return (
     <Layout location={frontmatter.title}>

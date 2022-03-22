@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../components/Layout'
-import { PostLink } from '../components/PostLink'
+import { Postcard } from '../components/Postcard'
 
 const BlogPage = ({
   data: {
@@ -12,11 +12,11 @@ const BlogPage = ({
   return (
     <Layout location="Blog">
       <Seo title="Blog" />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-3 gap-4 md:gap-8">
         {edges
           .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
           .map((edge: { node: { id: React.Key } }) => (
-            <PostLink key={edge.node.id} post={edge.node} />
+            <Postcard key={edge.node.id} post={edge.node} />
           ))}
       </div>
     </Layout>

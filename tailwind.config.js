@@ -7,13 +7,14 @@ module.exports = {
     extend: {
       colors: {
         dark: '#1a202c',
-        'dark-aux': '#2d3748',
-        'dark-typo': '#cbd5e0',
         light: '#f8fafc',
         lilac: '#9f7aea',
         skyish: '#bae6fd',
         tealish: '#60ebbf',
         crimson: '#ff0046',
+      },
+      maxWidth: {
+        screen: '100vw',
       },
       fontSize: {
         xxs: '0.6rem',
