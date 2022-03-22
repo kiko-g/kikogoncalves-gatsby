@@ -3,14 +3,14 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export const Postcard = ({ post }) => (
-  <div className="aspect-square h-auto rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow">
-    <Link to={post.frontmatter.slug}>
-      <div className="flex flex-col">
-        <div className="flex-grow">
-          <StaticImage className="rounded-t-xl" src="../../static/images/avatar.png" alt="Francisco Gonçalves" />
-        </div>
-        <footer className="w-full px-2 py-1 font-normal">{post.frontmatter.title}</footer>
-      </div>
-    </Link>
-  </div>
+  <Link
+    className="h-auto w-full max-w-7xl space-y-2 rounded-xl bg-light3 p-3 shadow transition hover:bg-light3/30 dark:bg-dark3 hover:dark:bg-dark3/30"
+    to={post.frontmatter.slug}
+  >
+    <div className="flex h-auto flex-col items-center justify-between rounded-lg bg-purple-300 bg-opacity-90 p-4 md:col-span-1" />
+    <footer className="w-full">
+      <h3 className="font-medium">{post.frontmatter.title}</h3>
+      <p className="text-sm font-normal text-gray-400 dark:text-gray-400">{post.excerpt}</p>
+    </footer>
+  </Link>
 )

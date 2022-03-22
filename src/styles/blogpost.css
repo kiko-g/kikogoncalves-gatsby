@@ -1,9 +1,9 @@
 .blogpost {
-  @apply mb-5 flex min-w-[70vw] flex-col justify-between px-4 font-normal md:px-0;
+  @apply mb-5 flex max-w-full flex-col justify-between p-4 px-4 font-normal md:min-w-[55vw] md:max-w-[65vw] md:px-0;
 }
 
 .blogpost header {
-  @apply mb-2 border-b border-gray-200 py-3 text-4xl font-bold dark:border-gray-500;
+  @apply mb-2 py-3 text-[2rem] font-bold tracking-tight;
 }
 
 .blogpost article {
@@ -16,6 +16,10 @@
 
 .blogpost footer > span {
   @apply text-gray-400 dark:text-gray-500 sm:text-center;
+}
+
+.blogpost p {
+  @apply text-justify;
 }
 
 .blogpost h1,

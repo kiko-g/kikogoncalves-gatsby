@@ -3,6 +3,7 @@ import '../styles/blogpost.css'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/Layout'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -10,8 +11,10 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   deckDeckGoHighlightElement()
 
+  console.log(frontmatter.featuredImage)
+
   return (
-    <Layout location={frontmatter.title}>
+    <Layout location="Blogpost">
       <div className="blogpost">
         <header>{frontmatter.title}</header>
         <article dangerouslySetInnerHTML={{ __html: html }} />

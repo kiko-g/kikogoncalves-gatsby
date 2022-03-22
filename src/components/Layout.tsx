@@ -32,9 +32,7 @@ export const Layout: React.FC<Props> = ({ children, location }) => {
   return (
     <div className="layout">
       <Navbar location={location} siteTitle={title} />
-      <div className={classNames('mx-auto my-auto max-w-screen')}>
-        <div className="p-3">{children}</div>
-      </div>
+      <div className={classNames('mx-auto my-auto max-w-screen')}>{children}</div>
       <Footer />
     </div>
   )
