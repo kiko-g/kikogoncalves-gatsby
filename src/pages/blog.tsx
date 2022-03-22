@@ -18,7 +18,7 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h2>
           <p className="mt-4 text-lg font-normal">{description}</p>
         </header>
-        <div className="grid grid-flow-row grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-flow-row grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {edges
             .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
             .map((edge: { node: { id: React.Key } }) => (
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 125)
+          excerpt(pruneLength: 80)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug
