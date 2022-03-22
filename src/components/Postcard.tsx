@@ -6,7 +6,7 @@ export const Postcard = ({ post }) => (
   <Link
     to={post.frontmatter.slug}
     className="group max-w-7xl space-y-2 rounded-xl bg-light1 p-3 shadow transition 
-    hover:bg-light3 hover:text-dark dark:bg-dark3 hover:dark:bg-lilac/20 dark:hover:text-white"
+    hover:bg-violet-50 hover:text-dark dark:bg-dark3 hover:dark:bg-lilac/20 dark:hover:text-white"
   >
     <div className="flex h-auto flex-col items-center justify-between rounded-lg bg-purple-300 bg-opacity-90 p-4 md:col-span-1" />
     <footer className="w-full">
