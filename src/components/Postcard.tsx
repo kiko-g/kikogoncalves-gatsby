@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { daysDifference } from '../utils'
 
 export const Postcard = ({ post }) => {
   const difference = daysDifference(post.frontmatter.date)
+  const coverImage = getImage(post.frontmatter.featuredImage)
 
   return (
     <Link
@@ -13,7 +14,7 @@ export const Postcard = ({ post }) => {
     hover:bg-violet-50 hover:text-dark dark:bg-dark3 hover:dark:bg-lilac/20 dark:hover:text-white"
     >
       <div className="relative flex items-center justify-center rounded-lg bg-opacity-90">
-        <StaticImage className="h-48 w-full rounded-lg object-contain" src="../../static/images/hero.jpg" alt="cover" />
+        <GatsbyImage image={coverImage} alt="cover" className="h-48 w-full rounded-lg object-contain" />
 
         {post.frontmatter.pinned ? (
           <span className="absolute top-2 left-2 rounded-full bg-teal-800/80 p-1 text-xs leading-none text-white">
@@ -25,7 +26,6 @@ export const Postcard = ({ post }) => {
             </svg>
           </span>
         ) : null}
-
         <span className="invisible absolute bottom-2 left-2 rounded-full bg-gray-800/80 p-1 text-xs leading-none tracking-tighter text-white group-hover:visible">
           {post.frontmatter.date}
         </span>

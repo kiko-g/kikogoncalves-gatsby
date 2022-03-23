@@ -17,6 +17,7 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h2>
           <p className="mt-4 text-lg font-normal">{description}</p>
         </header>
+
         <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {edges
             .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
@@ -45,12 +46,8 @@ export const pageQuery = graphql`
             pinned
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
               }
-              publicURL
-              extension
             }
           }
         }
