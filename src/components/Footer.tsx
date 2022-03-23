@@ -16,7 +16,7 @@ export const Footer: React.FC<Props> = () => {
               href={social.url}
               key={`social-${socialIdx}`}
               aria-labelledby={social.label}
-              className="transition hover:text-gray-600"
+              className="transition hover:text-gray-600 dark:hover:text-white"
             >
               <svg
                 className="h-6 w-6"
