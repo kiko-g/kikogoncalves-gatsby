@@ -1,5 +1,6 @@
 ---
-date: 2022-03-22
+pinned: false
+date: 2022-03-30
 slug: /blog/python-for-absolute-beginners
 title: Python for Absolute Beginners
 featuredImage: ./featured.jpg

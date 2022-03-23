@@ -5,6 +5,14 @@ export const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ')
 }
 
+export const daysDifference = (dateString: string) => {
+  let now = new Date()
+  let date = new Date(dateString)
+  let difference = (now.getTime() - date.getTime()) / (1000 * 3600 * 24)
+
+  return difference
+}
+
 export const links = [
   { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 h-5 w-5" /> },
   { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="mr-1.5 h-[1.4rem] w-[1.4rem]" /> },
