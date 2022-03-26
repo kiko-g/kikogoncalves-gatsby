@@ -7,7 +7,7 @@ import Seo from '../components/Seo'
 const IndexPage = () => (
   <Layout location="Home">
     <Seo title="Home" />
-    <StaticImage src="../../static/images/hero.jpg" alt="Francisco Gonçalves" />
+    <div className="bg-[url('../../static/images/hero.jpg')]">1</div>
   </Layout>
 )
 
