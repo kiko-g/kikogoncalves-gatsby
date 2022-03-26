@@ -8,6 +8,14 @@
 }
 
 /* Layout */
+.background {
+  @apply h-screen bg-gradient-to-b from-lilac to-blue-500 opacity-30 dark:from-slate-800 dark:to-slate-800 dark:opacity-100;
+}
+
+.home {
+  @apply h-screen font-sans text-base font-medium text-dark dark:text-white;
+}
+
 .layout {
   @apply flex min-h-screen flex-col bg-light2 font-sans text-base font-medium text-dark opacity-[99%] dark:bg-dark2 dark:text-white;
 }

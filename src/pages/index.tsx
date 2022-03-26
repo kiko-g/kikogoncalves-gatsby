@@ -5,9 +5,8 @@ import { Layout } from '../layout'
 import Seo from '../components/Seo'
 
 const IndexPage = () => (
-  <Layout location="Home">
+  <Layout location="Home" homepage={true}>
     <Seo title="Home" />
-    <div className="bg-[url('../../static/images/hero.jpg')]">1</div>
   </Layout>
 )
 
