@@ -13,7 +13,7 @@
 }
 
 .navbar {
-  @apply sticky top-0 z-20 space-x-4 border-b border-zinc-200 bg-light1 px-3 py-4 text-dark opacity-95 shadow dark:border-zinc-800 dark:bg-dark1 dark:text-white md:py-0 md:px-3;
+  @apply sticky top-0 z-20 space-x-4 bg-light1 px-3 py-4 text-dark opacity-95 shadow dark:bg-dark1 dark:text-white md:py-0 md:px-3;
 }
 
 .hamburger {
