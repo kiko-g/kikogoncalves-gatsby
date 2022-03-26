@@ -105,7 +105,7 @@ const Header = ({ title, location }) => (
     </div>
 
     <div className="hidden self-center md:inline-flex">
-      <DarkModeSwitch />
+      <DarkModeSwitchMinimal />
     </div>
   </div>
 )

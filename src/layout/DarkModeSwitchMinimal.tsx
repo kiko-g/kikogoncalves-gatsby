@@ -9,15 +9,19 @@ export const DarkModeSwitchMinimal: React.FC = () => {
   return (
     <Switch.Group>
       <div className="flex items-center">
-        <Switch checked={enabled} onChange={() => setEnabled(!enabled)} className="rounded-full">
+        <Switch
+          className={`${enabled ? 'animate-dark' : 'animate-light'} rounded-full`}
+          checked={enabled}
+          onChange={() => setEnabled(!enabled)}
+        >
           {enabled ? (
             <MoonIcon
-              className="ease block h-6 w-6 text-sky-300 transition duration-100 hover:text-sky-200"
+              className="ease block h-6 w-6 text-light transition duration-100 hover:text-light/75 md:h-8 md:w-8"
               aria-hidden="true"
             />
           ) : (
             <SunIcon
-              className="ease block h-6 w-6 text-orange-400 transition duration-100 hover:text-orange-300"
+              className="ease block h-6 w-6 text-orange-300 transition duration-100 hover:text-orange-400/80 md:h-8 md:w-8"
               aria-hidden="true"
             />
           )}

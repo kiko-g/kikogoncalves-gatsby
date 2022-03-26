@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { Background } from './Background'
-import { DarkModeSwitchSublime } from './DarkModeSwitchSublime'
 import { useStaticQuery, graphql } from 'gatsby'
 
 type Props = {
@@ -23,21 +22,12 @@ export const Layout: React.FC<Props> = ({ children, location, homepage }) => {
   `)
 
   return (
-    <>
-      {homepage ? (
-        <div className="home">
-          <Background />
-          <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
-          {children}
-        </div>
-      ) : (
-        <div className="layout">
-          <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
-          <div className="mx-auto my-auto max-w-screen">{children}</div>
-          <Footer />
-        </div>
-      )}
-    </>
+    <div className="layout">
+      <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
+      {homepage ? <Background /> : null}
+      <div className="mx-auto my-auto max-w-screen">{children}</div>
+      {homepage ? null : <Footer />}
+    </div>
   )
 }
 
