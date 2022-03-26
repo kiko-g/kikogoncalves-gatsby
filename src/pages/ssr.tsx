@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import { Layout } from '../layout'
+import { Layout } from '../layout/Layout'
 import Seo from '../components/Seo'
 
 const UsingSSR = ({ serverData }) => {

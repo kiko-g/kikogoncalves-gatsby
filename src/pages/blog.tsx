@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
-import { Layout } from '../layout'
+import { Layout } from '../layout/Layout'
 import { Postcard } from '../components/Postcard'
 
 // prettier-ignore

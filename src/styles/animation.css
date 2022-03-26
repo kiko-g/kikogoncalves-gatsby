@@ -7,7 +7,7 @@
 }
 
 .area {
-  @apply h-screen w-full bg-lilac bg-gradient-to-l from-lilac to-lilac dark:from-dark dark:to-dark;
+  @apply h-screen w-full bg-lilac bg-gradient-to-l from-lilac to-lilac dark:from-dark2 dark:to-dark2;
 }
 
 .circles {

@@ -27,9 +27,7 @@ export const Layout: React.FC<Props> = ({ children, location, homepage }) => {
       {homepage ? (
         <div className="home">
           <Background />
-          <div className="absolute top-4 right-4">
-            <DarkModeSwitchSublime />
-          </div>
+          <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
           {children}
         </div>
       ) : (
