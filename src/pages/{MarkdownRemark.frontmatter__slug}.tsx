@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/blogpost.css'
 import { graphql } from 'gatsby'
-import { Layout } from '../components/Layout'
+import { Layout } from '../layout'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { StaticImage } from 'gatsby-plugin-image'
 
