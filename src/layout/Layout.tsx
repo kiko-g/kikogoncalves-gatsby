@@ -25,7 +25,7 @@ export const Layout: React.FC<Props> = ({ children, location, homepage }) => {
     <div className="layout">
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
       {homepage ? <Background /> : null}
-      <div className="mx-auto my-auto max-w-screen">{children}</div>
+      <div className="z-10 mx-auto container">{children}</div>
       {homepage ? null : <Footer />}
     </div>
   )

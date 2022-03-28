@@ -1,7 +1,7 @@
 import React from 'react'
 import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/outline'
 
-export const classNames = (...classes) => {
+export const classNames = (...classes: any[]) => {
   return classes.filter(Boolean).join(' ')
 }
 

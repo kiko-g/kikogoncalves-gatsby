@@ -1,7 +1,9 @@
 import React from 'react'
 import '../styles/animation.css'
 
-export const Background = () => {
+type Props = {}
+
+export const Background: React.FC<Props> = () => {
   return (
     <div className="background">
       <div className="area">

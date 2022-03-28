@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .background {
-  @apply absolute top-0 h-screen w-screen;
+  @apply absolute top-0 h-screen w-screen z-0;
 }
 
 .area {
