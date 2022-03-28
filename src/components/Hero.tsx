@@ -1,44 +1,36 @@
 import React, { useState } from 'react'
-import { classNames } from '../utils'
 import { Tab } from '@headlessui/react'
 import { Icon } from '@iconify/react'
 import { StaticImage } from 'gatsby-plugin-image'
+import { classNames, links } from '../utils'
+import '../styles/hero.css'
 
 type Props = {}
 
 export const Hero: React.FC<Props> = () => {
   const [focusRing] = useState(false)
-  const headers = ['About', 'Skills', 'Experiences']
-  const content = [<About />, <About />, <About />]
+  const headers = ['About', 'Skills', 'Experience']
+  const content = [<About />, <Skills />, <Experience />]
 
   return (
-    <div className="w-full px-4 py-16 sm:px-2">
+    <div className="wrapper">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-lilac/50 dark:bg-lilac/25 p-1">
+        <Tab.List className="tab-list">
           {headers.map(category => (
             <Tab
               key={category}
               className={({ selected }) =>
-                classNames(
-                  'w-full rounded-lg py-2.5 font-medium uppercase leading-5 tracking-wider text-lilac',
-                  focusRing ? 'ring-white ring-opacity-60 ring-offset-2 ring-offset-lilac/75 focus:outline-none focus:ring-2' : '',
-                  selected ? 'bg-white shadow' : 'text-[#fff] hover:bg-white/[0.12]'
-                )
+                classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
               }
             >
               {category}
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="mt-2">
+        <Tab.Panels className="tab-panels">
           {content.map((content, index) => (
-            <Tab.Panel
-              className={classNames(
-                'rounded-xl bg-white p-3',
-                focusRing ? 'ring-white ring-opacity-60 ring-offset-2 ring-offset-lilac/75 focus:outline-none focus:ring-2' : ''
-              )}
-            >
-              <About />
+            <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
+              {content}
             </Tab.Panel>
           ))}
         </Tab.Panels>
@@ -58,51 +50,83 @@ export const About: React.FC<Props> = () => {
     { key: 'Age', value: 22 },
     { key: 'City', value: 'Porto' },
     { key: 'Birthday', value: '3 August 1999' },
-    { key: 'Degree', value: 'BSc in Computer Eng' },
+    { key: 'Degree', value: 'Masters in Computer Engineering' },
   ]
 
   return (
-    <div className="grid grid-cols-12 grid-rows-1 gap-8 rounded-2xl p-2 text-2xl">
-      <div className="col-span-7 mr-2 sm:col-span-8 md:col-span-9">
-        <div className="text-xl font-semibold uppercase tracking-wide text-lilac/75">About</div>
-        <span className="mt-1 block text-lg font-medium leading-tight text-gray-800">
+    <div className="tab-panel-inner">
+      <div className="tab-panel-inner-left">
+        <div className="tab-inner-header">About</div>
+        <span className="tab-inner-subheader">
           Software Engineering Student @{' '}
-          <a
-            className="text-lilac hover:underline"
-            target="_blank"
-            rel="noreferrer"
-            href={
-              'https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_PLANOS_ESTUDOS_VIEW?pv_plano_id=31204&pv_ano_lectivo=2021'
-            }
-          >
+          <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
             FEUP-MEIC
           </a>
         </span>
 
-        <p className="mt-2 text-sm font-normal text-gray-500 md:text-lg">
+        <p className="tab-inner-prose">
           {about.general}
           {about.personal}
         </p>
 
-        <ul className="mt-3 text-sm text-gray-700 md:text-lg">
+        <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
             <li key={`detail-${index}`}>
               <Icon icon="codicon:triangle-right" color="#9f7aea" className="inline" />
-              <strong>{item.key}</strong>:&nbsp;<span className="font-normal text-gray-500">{item.value}</span>
+              <span>&nbsp;</span>
+              <strong className="text-gray-700 dark:text-light1">{item.key}</strong>
+              <span>&nbsp;&middot;&nbsp;</span>
+              <span className="font-normal text-gray-500 dark:text-gray-200">{item.value}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="col-span-5 sm:col-span-4 md:col-span-3">
-        <StaticImage
-          src={`../../../static/images/hero1.jpg`}
-          className="mb-2 rounded-lg shadow-xl"
-          alt="profile-picture"
-        />
-        <h1 className="mb-2 text-center text-xl font-bold leading-5 tracking-tight text-gray-800 md:text-2xl">
-          Francisco Gonçalves
-        </h1>
+      <div className="tab-panel-inner-right">
+        <StaticImage src={`../../static/images/hero1.jpg`} className="tab-inner-image" alt="profile-picture" />
+        <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+      </div>
+    </div>
+  )
+}
+
+export const Skills: React.FC<Props> = () => {
+  return (
+    <div className="tab-panel-inner">
+      <div className="tab-panel-inner-left">
+        <div className="tab-inner-header">Skills</div>
+        <span className="tab-inner-subheader">
+          Software Engineering Student @{' '}
+          <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
+            FEUP-MEIC
+          </a>
+        </span>
+      </div>
+
+      <div className="tab-panel-inner-right">
+        <StaticImage src={`../../static/images/hero2.jpg`} className="tab-inner-image" alt="profile-picture" />
+        <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+      </div>
+    </div>
+  )
+}
+
+export const Experience: React.FC<Props> = () => {
+  return (
+    <div className="tab-panel-inner">
+      <div className="tab-panel-inner-left">
+        <div className="tab-inner-header">Experience</div>
+        <span className="tab-inner-subheader">
+          Software Engineering Student @{' '}
+          <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
+            FEUP-MEIC
+          </a>
+        </span>
+      </div>
+
+      <div className="tab-panel-inner-right">
+        <StaticImage src={`../../static/images/hero.jpg`} className="tab-inner-image" alt="profile-picture" />
+        <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
       </div>
     </div>
   )

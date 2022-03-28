@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { DarkModeSwitch } from './DarkModeSwitch'
 import { DarkModeSwitchMinimal } from './DarkModeSwitchMinimal'
-import { links } from '../utils'
+import { navigation } from '../utils'
 
 type Props = {
   siteTitle: string
@@ -84,7 +84,7 @@ const Header = ({ title, location }) => (
     </div>
 
     <div className="hidden self-center md:inline-flex md:space-x-6">
-      {links.map((link, index) => (
+      {navigation.map((link, index) => (
         <Link to={link.location} key={`nav-${index}`} className="relative py-1">
           <button
             type="button"
@@ -112,7 +112,7 @@ const Header = ({ title, location }) => (
 
 const Mobile = ({ location }) => (
   <Disclosure.Panel className="flex flex-col space-y-3 py-2 md:hidden">
-    {links.map((link, index) => (
+    {navigation.map((link, index) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
         <button
           type="button"
