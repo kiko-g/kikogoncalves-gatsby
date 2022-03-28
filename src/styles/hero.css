@@ -8,7 +8,7 @@
 }
 
 .tab-list {
-  @apply flex space-x-1 rounded-xl bg-lilac/50 p-1 dark:bg-lilac/25;
+  @apply flex space-x-1 rounded-xl bg-lilac/50 p-1 dark:bg-lilac/75;
 }
 
 .tab {

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import { Icon } from '@iconify/react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { classNames, links } from '../utils'
+import { classNames, links, socials } from '../utils'
 import '../styles/hero.css'
 
 type Props = {}
@@ -39,7 +39,7 @@ export const Hero: React.FC<Props> = () => {
   )
 }
 
-export const About: React.FC<Props> = () => {
+const About: React.FC<Props> = () => {
   const about = {
     general:
       "Hi, I'm Francisco. Im currently taking my Masters's Degree in Informatics and Computing Engineering @ FEUP.",
@@ -85,12 +85,13 @@ export const About: React.FC<Props> = () => {
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero1.jpg`} className="tab-inner-image" alt="profile-picture" />
         <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+        <Socials />
       </div>
     </div>
   )
 }
 
-export const Skills: React.FC<Props> = () => {
+const Skills: React.FC<Props> = () => {
   return (
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
@@ -106,12 +107,13 @@ export const Skills: React.FC<Props> = () => {
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero2.jpg`} className="tab-inner-image" alt="profile-picture" />
         <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+        <Socials />
       </div>
     </div>
   )
 }
 
-export const Experience: React.FC<Props> = () => {
+const Experience: React.FC<Props> = () => {
   return (
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
@@ -127,7 +129,35 @@ export const Experience: React.FC<Props> = () => {
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero.jpg`} className="tab-inner-image" alt="profile-picture" />
         <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+        <Socials />
       </div>
+    </div>
+  )
+}
+
+const Socials: React.FC<Props> = () => {
+  return (
+    <div className="flex space-x-2 text-gray-400 dark:text-gray-300 sm:justify-center md:mt-0 md:space-x-4">
+      {socials
+        .filter(social => social.shown)
+        .map((social, socialIdx) => (
+          <a
+            target="_blank"
+            href={social.url}
+            key={`social-${socialIdx}`}
+            aria-labelledby={social.label}
+            className="transition hover:text-gray-600 dark:hover:text-white"
+          >
+            <svg
+              className="h-8 w-8"
+              fill="currentColor"
+              viewBox={social.viewBox ? social.viewBox : '0 0 24 24'}
+              aria-hidden="true"
+            >
+              <path fillRule="evenodd" d={social.svg} clipRule="evenodd" />
+            </svg>
+          </a>
+        ))}
     </div>
   )
 }
