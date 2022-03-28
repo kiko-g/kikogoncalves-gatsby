@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Tab } from '@headlessui/react'
+import { Tab, Transition } from '@headlessui/react'
 import { Icon } from '@iconify/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { classNames, links, socials } from '../utils'
@@ -30,7 +30,17 @@ export const Hero: React.FC<Props> = () => {
         <Tab.Panels className="tab-panels">
           {content.map((content, index) => (
             <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
-              {content}
+              <Transition
+                show={true}
+                enter="transform transition duration-[400ms]"
+                enterFrom="opacity-0 rotate-[-120deg] scale-50"
+                enterTo="opacity-100 rotate-0 scale-100"
+                leave="transform duration-200 transition ease-in-out"
+                leaveFrom="opacity-100 rotate-0 scale-100 "
+                leaveTo="opacity-0 scale-95 "
+              >
+                {content}
+              </Transition>
             </Tab.Panel>
           ))}
         </Tab.Panels>
@@ -84,8 +94,10 @@ const About: React.FC<Props> = () => {
 
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero1.jpg`} className="tab-inner-image" alt="profile-picture" />
-        <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
-        <Socials />
+        <div className="tab-inner-image-subbox">
+          <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+          <Socials />
+        </div>
       </div>
     </div>
   )
@@ -106,8 +118,10 @@ const Skills: React.FC<Props> = () => {
 
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero2.jpg`} className="tab-inner-image" alt="profile-picture" />
-        <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
-        <Socials />
+        <div className="tab-inner-image-subbox">
+          <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+          <Socials />
+        </div>
       </div>
     </div>
   )
@@ -128,8 +142,10 @@ const Experience: React.FC<Props> = () => {
 
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero.jpg`} className="tab-inner-image" alt="profile-picture" />
-        <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
-        <Socials />
+        <div className="tab-inner-image-subbox">
+          <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+          <Socials />
+        </div>
       </div>
     </div>
   )
@@ -137,7 +153,7 @@ const Experience: React.FC<Props> = () => {
 
 const Socials: React.FC<Props> = () => {
   return (
-    <div className="flex space-x-2 text-gray-400 dark:text-gray-300 sm:justify-center md:mt-0 md:space-x-4">
+    <div className="flex space-x-1 text-gray-400 dark:text-gray-300 sm:justify-center md:mt-0">
       {socials
         .filter(social => social.shown)
         .map((social, socialIdx) => (
@@ -149,7 +165,7 @@ const Socials: React.FC<Props> = () => {
             className="transition hover:text-gray-600 dark:hover:text-white"
           >
             <svg
-              className="h-8 w-8"
+              className="h-4 w-4 md:h-6 md:w-6"
               fill="currentColor"
               viewBox={social.viewBox ? social.viewBox : '0 0 24 24'}
               aria-hidden="true"
