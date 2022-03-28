@@ -11,8 +11,6 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   deckDeckGoHighlightElement()
 
-  console.log(frontmatter.featuredImage)
-
   return (
     <Layout location="Blogpost">
       <div className="blogpost">
@@ -37,9 +35,7 @@ export const pageQuery = graphql`
         title
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
           publicURL
           extension

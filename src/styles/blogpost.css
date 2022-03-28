@@ -11,7 +11,7 @@
 }
 
 .blogpost article {
-  @apply mt-0 p-0 text-dark dark:text-light;
+  @apply mt-0 p-0 text-dark1 dark:text-light1;
 }
 
 .blogpost footer {
@@ -60,7 +60,7 @@
 }
 
 .blogpost blockquote {
-  @apply my-8 border-lilac md:mx-12;
+  @apply my-8 border-primary md:mx-12;
 }
 
 .blogpost code {

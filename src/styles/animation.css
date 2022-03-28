@@ -22,7 +22,7 @@
   height: 20px;
   bottom: -150px;
   animation: animate 20s linear infinite;
-  @apply bg-lilac/20 dark:bg-white/20;
+  @apply bg-primary/20 dark:bg-white/20;
 }
 
 .circles li:nth-child(1) {

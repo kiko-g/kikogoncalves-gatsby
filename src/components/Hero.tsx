@@ -57,17 +57,17 @@ const About: React.FC<Props> = () => {
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
         <div className="tab-inner-header">About</div>
-        <span className="tab-inner-subheader">
+        <h3 className="tab-inner-subheader">
           Software Engineering Student @{' '}
           <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
             FEUP-MEIC
           </a>
-        </span>
+        </h3>
 
-        <p className="tab-inner-prose">
-          {about.general}
-          {about.personal}
-        </p>
+        <article className="tab-inner-prose">
+          <p>{about.general}</p>
+          <p>{about.personal}</p>
+        </article>
 
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
@@ -85,7 +85,7 @@ const About: React.FC<Props> = () => {
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero1.jpg`} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
-          <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+          <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />
         </div>
       </div>
@@ -98,18 +98,18 @@ const Skills: React.FC<Props> = () => {
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
         <div className="tab-inner-header">Skills</div>
-        <span className="tab-inner-subheader">
+        <h3 className="tab-inner-subheader">
           Software Engineering Student @{' '}
           <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
             FEUP-MEIC
           </a>
-        </span>
+        </h3>
       </div>
 
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero2.jpg`} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
-          <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+          <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />
         </div>
       </div>
@@ -122,18 +122,18 @@ const Experience: React.FC<Props> = () => {
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
         <div className="tab-inner-header">Experience</div>
-        <span className="tab-inner-subheader">
+        <h3 className="tab-inner-subheader">
           Software Engineering Student @{' '}
           <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
             FEUP-MEIC
           </a>
-        </span>
+        </h3>
       </div>
 
       <div className="tab-panel-inner-right">
         <StaticImage src={`../../static/images/hero.jpg`} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
-          <h1 className="tab-inner-image-header">Francisco Gonçalves</h1>
+          <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />
         </div>
       </div>

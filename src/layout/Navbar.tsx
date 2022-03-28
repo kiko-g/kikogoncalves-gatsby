@@ -56,12 +56,12 @@ const Hamburger = ({ open }) => (
         <span className="sr-only">Open nav menu</span>
         {open ? (
           <XIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-lilac/75 dark:group-hover:text-lilac/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
             aria-hidden="true"
           />
         ) : (
           <MenuIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-dark/75 dark:group-hover:text-light/75"
+            className="ease dark:group-hover:text-/75 block h-6 w-6 transition duration-200 group-hover:text-dark1/75"
             aria-hidden="true"
           />
         )}
@@ -90,8 +90,8 @@ const Header = ({ title, location }) => (
             type="button"
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title
-                ? 'text-lilac hover:text-lilac/75'
-                : 'text-dark/75 hover:text-dark dark:text-white/75 dark:hover:text-white'
+                ? 'text-primary hover:text-primary/75'
+                : 'text-dark1/75 hover:text-dark1 dark:text-white/75 dark:hover:text-white'
             }`}
           >
             <span className="flex items-center justify-center">
@@ -99,7 +99,7 @@ const Header = ({ title, location }) => (
               {link.title}
             </span>
           </button>
-          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-lilac" /> : null}
+          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary" /> : null}
         </Link>
       ))}
     </div>
@@ -118,8 +118,8 @@ const Mobile = ({ location }) => (
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
-              ? 'text-lilac hover:text-lilac/75'
-              : 'text-dark/75 hover:text-dark dark:text-white/75 dark:hover:text-white'
+              ? 'text-primary hover:text-primary/75'
+              : 'text-dark1/75 hover:text-dark1 dark:text-white/75 dark:hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">

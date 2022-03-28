@@ -8,11 +8,11 @@
 }
 
 .tab-list {
-  @apply flex space-x-1 rounded-xl bg-lilac/50 p-1 dark:bg-lilac/75;
+  @apply flex space-x-1 rounded-xl bg-primary/50 p-1 dark:bg-primary/75;
 }
 
 .tab {
-  @apply w-full rounded-lg py-2.5 text-sm font-medium uppercase leading-5 tracking-wider text-lilac md:text-base;
+  @apply w-full rounded-lg py-2.5 text-sm font-medium uppercase leading-5 tracking-wider text-primary md:text-base;
 }
 
 .tab-selected {
@@ -32,7 +32,7 @@
 }
 
 .tab-focus-ring {
-  @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-lilac/75 focus:outline-none focus:ring-2;
+  @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-primary/75 focus:outline-none focus:ring-2;
 }
 
 /* Content */
@@ -49,7 +49,7 @@
 }
 
 .tab-inner-header {
-  @apply text-xl font-semibold uppercase tracking-wide text-lilac;
+  @apply text-xl font-semibold uppercase tracking-wide text-primary;
 }
 
 .tab-inner-subheader {
@@ -57,11 +57,15 @@
 }
 
 .tab-inner-link {
-  @apply text-lilac transition hover:text-lilac/80 hover:underline;
+  @apply text-primary transition hover:text-primary/80 hover:underline;
 }
 
 .tab-inner-prose {
-  @apply mt-2 text-justify text-sm font-normal text-gray-600 dark:text-light1 md:text-lg;
+  @apply mt-2 text-justify text-sm font-normal text-gray-600 dark:text-light1 md:text-base;
+}
+
+.tab-inner-prose p {
+  @apply mt-1;
 }
 
 .tab-inner-bullet-facts {
