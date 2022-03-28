@@ -28,7 +28,7 @@
 }
 
 .tab-panel {
-  @apply rounded-xl bg-light1/75 p-3 dark:bg-dark3/75;
+  @apply overflow-hidden rounded-xl bg-light1/75 p-3 dark:bg-dark3/75;
 }
 
 .tab-focus-ring {

@@ -30,17 +30,7 @@ export const Hero: React.FC<Props> = () => {
         <Tab.Panels className="tab-panels">
           {content.map((content, index) => (
             <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
-              <Transition
-                show={true}
-                enter="transform transition duration-[400ms]"
-                enterFrom="opacity-0 rotate-[-120deg] scale-50"
-                enterTo="opacity-100 rotate-0 scale-100"
-                leave="transform duration-200 transition ease-in-out"
-                leaveFrom="opacity-100 rotate-0 scale-100 "
-                leaveTo="opacity-0 scale-95 "
-              >
-                {content}
-              </Transition>
+              {content}
             </Tab.Panel>
           ))}
         </Tab.Panels>
