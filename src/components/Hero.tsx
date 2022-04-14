@@ -3,39 +3,37 @@ import { Tab, Transition } from '@headlessui/react'
 import { Icon } from '@iconify/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { classNames, links, socials } from '../utils'
-import '../styles/hero.css'
+import '../styles/components/hero.css'
 
 type Props = {}
 
-export const Hero: React.FC<Props> = () => {
+export const Hero = ({}: Props) => {
   const [focusRing] = useState(false)
   const headers = ['About', 'Skills', 'Experience']
   const content = [<About />, <Skills />, <Experience />]
 
   return (
-    <div className="wrapper">
-      <Tab.Group>
-        <Tab.List className="tab-list">
-          {headers.map(category => (
-            <Tab
-              key={category}
-              className={({ selected }) =>
-                classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
-              }
-            >
-              {category}
-            </Tab>
-          ))}
-        </Tab.List>
-        <Tab.Panels className="tab-panels">
-          {content.map((content, index) => (
-            <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
-              {content}
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
-    </div>
+    <Tab.Group>
+      <Tab.List className="tab-list">
+        {headers.map(category => (
+          <Tab
+            key={category}
+            className={({ selected }) =>
+              classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
+            }
+          >
+            {category}
+          </Tab>
+        ))}
+      </Tab.List>
+      <Tab.Panels className="tab-panels">
+        {content.map((content, index) => (
+          <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
+            {content}
+          </Tab.Panel>
+        ))}
+      </Tab.Panels>
+    </Tab.Group>
   )
 }
 
@@ -74,7 +72,7 @@ const About: React.FC<Props> = () => {
             <li key={`detail-${index}`}>
               <Icon icon="codicon:triangle-right" color="#9f7aea" className="inline" />
               <span>&nbsp;</span>
-              <strong className="text-gray-700 dark:text-light1">{item.key}</strong>
+              <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&nbsp;&middot;&nbsp;</span>
               <span className="font-normal text-gray-500 dark:text-gray-200">{item.value}</span>
             </li>
@@ -160,7 +158,9 @@ const Socials: React.FC<Props> = () => {
               viewBox={social.viewBox ? social.viewBox : '0 0 24 24'}
               aria-hidden="true"
             >
-              <path fillRule="evenodd" d={social.svg} clipRule="evenodd" />
+              {social.svg.map((d, dIdx) => (
+                <path fillRule="evenodd" d={d} clipRule="evenodd" key={`social-${socialIdx}-svg-${dIdx}`} />
+              ))}
             </svg>
           </a>
         ))}

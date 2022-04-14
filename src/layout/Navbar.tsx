@@ -3,9 +3,16 @@ import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { DarkModeSwitch } from './DarkModeSwitch'
 import { DarkModeSwitchMinimal } from './DarkModeSwitchMinimal'
-import { navigation } from '../utils'
+import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/outline'
+
+const navigation = [
+  { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="mr-1.5 h-[1.4rem] w-[1.4rem]" /> },
+  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="mr-1.5 h-5 w-5" /> },
+]
 
 type Props = {
   siteTitle: string
@@ -18,7 +25,7 @@ export const Navbar: React.FC<Props> = ({ siteTitle, location }) => {
       {({ open }) => {
         return (
           <>
-            <div className="relative flex items-center justify-between">
+            <div className={`${open ? 'p-0' : 'p-2'} relative flex items-center justify-between md:py-0`}>
               <Hamburger open={open} />
               <Header title={siteTitle} location={location} />
             </div>
@@ -38,7 +45,7 @@ const Hamburger = ({ open }) => (
         : 'flex w-full items-center justify-between'
     }`}
   >
-    <a href="https://linktr.ee/kikogoncalves" target="_blank">
+    <Link to="/">
       {open ? (
         <StaticImage
           className="avatar top-0.5 h-5 w-5"
@@ -48,7 +55,7 @@ const Hamburger = ({ open }) => (
       ) : (
         <StaticImage className="avatar h-6 w-6" src="../../static/images/avatar.png" alt="Francisco Gonçalves" />
       )}
-    </a>
+    </Link>
 
     <div className="flex items-center space-x-1">
       <DarkModeSwitchMinimal />
@@ -61,7 +68,7 @@ const Hamburger = ({ open }) => (
           />
         ) : (
           <MenuIcon
-            className="ease dark:group-hover:text-/75 block h-6 w-6 transition duration-200 group-hover:text-dark1/75"
+            className="ease dark:group-hover:text-/75 block h-6 w-6 transition duration-200 group-hover:text-primary/75"
             aria-hidden="true"
           />
         )}
@@ -73,25 +80,25 @@ const Hamburger = ({ open }) => (
 const Header = ({ title, location }) => (
   <div className="header">
     <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
-      <a href="https://linktr.ee/kikogoncalves" target="_blank" className="flex items-center space-x-2">
+      <Link to="/" className="flex items-center space-x-2">
         <StaticImage
           className="z-20 inline-flex h-6 w-6 rounded-full transition"
           src="../../static/images/avatar.png"
           alt="Francisco Gonçalves"
         />
         <h2 className="text-xs font-bold tracking-tighter duration-150 lg:text-base">{title}</h2>
-      </a>
+      </Link>
     </div>
 
-    <div className="hidden self-center md:inline-flex md:space-x-6">
+    <div className="hidden space-x-6 self-center md:inline-flex">
       {navigation.map((link, index) => (
         <Link to={link.location} key={`nav-${index}`} className="relative py-1">
           <button
             type="button"
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title
-                ? 'text-primary hover:text-primary/75'
-                : 'text-dark1/75 hover:text-dark1 dark:text-white/75 dark:hover:text-white'
+                ? 'text-primary dark:text-primary'
+                : 'text-dark/50 hover:text-dark dark:text-white/50 dark:hover:text-white'
             }`}
           >
             <span className="flex items-center justify-center">
@@ -118,8 +125,8 @@ const Mobile = ({ location }) => (
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
-              ? 'text-primary hover:text-primary/75'
-              : 'text-dark1/75 hover:text-dark1 dark:text-white/75 dark:hover:text-white'
+              ? 'text-primary dark:text-primary'
+              : 'text-dark/50 hover:text-dark dark:text-white/50 dark:hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">

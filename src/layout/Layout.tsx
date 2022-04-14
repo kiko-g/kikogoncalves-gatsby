@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { Background } from './Background'
@@ -26,7 +26,7 @@ export const Layout: React.FC<Props> = ({ children, location, homepage }) => {
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
       {homepage ? <Background /> : null}
       <div className="container z-10 mx-auto my-auto">{children}</div>
-      {homepage ? null : <Footer />}
+      {homepage ? null : <Footer siteTitle={data.site.siteMetadata?.title} />}
     </div>
   )
 }

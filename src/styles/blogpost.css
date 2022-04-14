@@ -11,7 +11,7 @@
 }
 
 .blogpost article {
-  @apply mt-0 p-0 text-dark1 dark:text-light1;
+  @apply mt-0 p-0 text-darkest dark:text-light;
 }
 
 .blogpost footer {

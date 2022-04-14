@@ -2,20 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.home {
-  @apply h-screen font-sans text-base font-medium text-dark1 dark:text-white;
-}
-
 .layout {
-  @apply flex min-h-screen flex-col bg-light2 font-sans text-base font-medium text-dark1 opacity-[99%] dark:bg-dark2 dark:text-white;
+  @apply flex min-h-screen flex-col scroll-smooth bg-light font-prose font-medium text-dark opacity-[99%] dark:bg-darkest dark:text-white;
 }
 
 .navbar {
-  @apply sticky top-0 z-20 space-x-4 bg-light1 px-3 py-4 text-dark1 opacity-95 shadow dark:bg-dark1 dark:text-white md:py-0 md:px-3;
+  @apply sticky top-0 z-20 space-x-4 bg-lighter/75 px-3 py-2 text-dark shadow dark:bg-darkest/75 dark:text-white md:py-0 md:px-3;
 }
 
 .hamburger {
-  @apply text-dark1 transition duration-200 ease-in dark:text-white md:hidden;
+  @apply text-dark transition duration-200 ease-in dark:text-white md:hidden;
 }
 
 .header {

@@ -1,14 +1,15 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react'
+import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
 import { Hero } from '../components/Hero'
-import Seo from '../components/Seo'
+import '../styles/pages/index.css'
 
 const IndexPage = () => (
   <Layout location="Home" homepage={true}>
     <Seo title="Home" />
-    <Hero />
+    <div className="wrapper">
+      <Hero />
+    </div>
   </Layout>
 )
 
