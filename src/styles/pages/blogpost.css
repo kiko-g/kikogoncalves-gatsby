@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.blogpost {
-  @apply mb-5 flex max-w-full flex-col justify-between p-4 px-4 font-normal md:min-w-[55vw] md:max-w-[65vw] md:px-0;
+main.blogpost {
+  @apply mx-auto mb-5 flex w-full flex-col justify-between p-4 px-4 font-normal md:px-0;
 }
 
 .blogpost header {
   @apply mb-2 py-3 text-[2rem] font-bold tracking-tight;
 }
 
+.blogpost header > div {
+  @apply flex items-center justify-center;
+}
+
 .blogpost article {
-  @apply mt-0 p-0 text-darkest dark:text-light;
+  @apply mt-0 p-0 text-dark dark:text-light;
 }
 
 .blogpost footer {
-  @apply mt-12 flex items-center justify-between border-t border-gray-200 py-2 text-xs text-gray-400 dark:border-gray-700 dark:text-gray-300 md:py-3 md:text-sm;
+  @apply mt-12 flex items-center justify-between border-t border-gray-200 py-2 text-xs text-gray-400 dark:border-gray-600 dark:text-gray-300 md:py-3 md:text-sm;
 }
 
 .blogpost footer > span {
@@ -34,19 +38,19 @@
 }
 
 .blogpost h1 {
-  @apply mt-10 mb-6 py-1 text-4xl;
+  @apply mt-6 mb-2 py-1 text-4xl md:mt-8 md:mb-4;
 }
 
 .blogpost h2 {
-  @apply mt-9 mb-5 py-1 text-3xl;
+  @apply mt-7 mb-4 py-1 text-3xl;
 }
 
 .blogpost h3 {
-  @apply mt-8 mb-4 py-1 text-2xl;
+  @apply mt-6 mb-3 py-1 text-2xl;
 }
 
 .blogpost h4 {
-  @apply mt-7 mb-3 py-1 text-xl;
+  @apply mt-5 mb-2 py-1 text-xl;
 }
 
 .blogpost p,
@@ -63,6 +67,10 @@
   @apply my-8 border-primary md:mx-12;
 }
 
+.blogpost pre {
+  @apply font-code;
+}
+
 .blogpost code {
-  @apply p-2 text-xs;
+  @apply p-2 font-code text-xs;
 }

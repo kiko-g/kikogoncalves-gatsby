@@ -1,0 +1,15 @@
+.portfolio {
+  @apply container flex-1 flex-col justify-between space-y-6 p-4;
+}
+
+.portfolio header > h2 {
+  @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
+}
+
+.portfolio header > p {
+  @apply mt-4 text-lg font-normal;
+}
+
+.portfolio article {
+  @apply grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
