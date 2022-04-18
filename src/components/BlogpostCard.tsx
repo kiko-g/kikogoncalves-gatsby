@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { daysDifference } from '../utils'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import './styles/blogpostcard.css'
 
 export const BlogpostCard = ({ post }) => {
   const difference = daysDifference(post.frontmatter.date)

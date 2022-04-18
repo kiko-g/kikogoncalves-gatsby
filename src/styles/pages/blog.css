@@ -1,3 +1,19 @@
+.blog {
+  @apply container flex-1 flex-col justify-between space-y-6 p-4;
+}
+
+.blog header > h2 {
+  @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
+}
+
+.blog header > p {
+  @apply mt-4 text-lg font-normal;
+}
+
+.blog article {
+  @apply grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4;
+}
+
 .blogpost-card {
   @apply max-w-7xl space-y-2 rounded-xl bg-lightest p-4 shadow transition duration-300
     hover:bg-primary/30 hover:text-gray-800 dark:bg-dark hover:dark:bg-primary/20 dark:hover:text-white;

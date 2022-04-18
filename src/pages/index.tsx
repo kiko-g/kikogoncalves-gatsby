@@ -5,7 +5,7 @@ import { Tab, Transition } from '@headlessui/react'
 import { Icon } from '@iconify/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { classNames, links, socials } from '../utils'
-import './styles/index.css'
+import '../styles/pages/index.css'
 
 const IndexPage = () => (
   <Layout location="Home" homepage={true}>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
 import { ProjectCard } from '../components/ProjectCard'
-import './styles/portfolio.css'
+import '../styles/pages/portfolio.css'
 
 // prettier-ignore
 const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
@@ -14,9 +14,17 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
         <header>
           <h2>Portfolio</h2>
           <p>
-            In this page you can see my main software projects that I've developed or contributed to in the past, or
-            that I'm currently developing. The source code of the majority of these products is available on my GitHub,
-            so make sure you check that out and maybe drop a follow 👌
+            Welcome to the portfolio! This is where you can browse through the main (software) projects I've contributed
+            to or developed myself. The source code for most of these projects is available on{' '}
+            <a
+              target="_blank"
+              href="https://github.com/kiko-g?tab=repositories"
+              className="text-primary hover:underline hover:opacity-80"
+            >
+              my github
+            </a>{' '}
+            and each project has a link to that. of these products is available on my GitHub, so make sure you check
+            that out and maybe drop a follow :relaxed:
           </p>
         </header>
 
@@ -24,7 +32,7 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
           {edges
             .filter((edge: { node: { frontmatter: { startDate: any } } }) => !!edge.node.frontmatter.startDate)
             .map((edge: { node: { id: React.Key } }) => (
-              <ProjectCard key={edge.node.id} project={edge.node} />
+              <ProjectCard key={`project-${edge.node.id}`} project={edge.node} />
             ))}
         </article>
       </main>
@@ -39,13 +47,14 @@ export const pageQuery = graphql`
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(portfolio)/" } }) {
       edges {
         node {
+          id
           html
           frontmatter {
             pinned
             title
             slug
-            startDate(formatString: "MMMM DD, YYYY")
-            endDate(formatString: "MMMM DD, YYYY")
+            startDate(formatString: "MMM DD, YYYY")
+            endDate(formatString: "MMM DD YYYY")
             repo
             deploy
             featuredImage {

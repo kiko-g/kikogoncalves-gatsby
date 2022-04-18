@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/blogpost.css'
+import '../styles/pages/blogpost.css'
 import { graphql } from 'gatsby'
 import { Layout } from '../layout/Layout'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'

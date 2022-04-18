@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
 import { BlogpostCard } from '../components/BlogpostCard'
-import './styles/blog.css'
+import '../styles/pages/blog.css'
 
 // prettier-ignore
 const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
@@ -24,7 +24,7 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
           {edges
             .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
             .map((edge: { node: { id: React.Key } }) => (
-              <BlogpostCard key={edge.node.id} post={edge.node} />
+              <BlogpostCard key={`blogpost-${edge.node.id}`} post={edge.node} />
             ))}
         </article>
       </main>
