@@ -19,11 +19,11 @@
 }
 
 .project-card > header {
-  @apply relative max-w-full rounded-l-xl md:max-w-md md:rounded-t-xl lg:h-auto lg:max-h-full;
+  @apply relative max-w-full rounded-l-xl md:max-w-md md:rounded-xl lg:h-auto lg:max-h-full lg:max-w-lg;
 }
 
 .project-card > header .image {
-  @apply rounded-none rounded-t-xl object-cover md:rounded-none md:rounded-l-xl;
+  @apply h-full w-auto rounded-xl object-contain md:rounded-none md:rounded-l-xl;
 }
 
 .project-card > header .pinned {
@@ -48,6 +48,14 @@
 
 .project-card > section .content {
   @apply mt-2 text-gray-600 dark:text-gray-300;
+}
+
+.project-card > section .content {
+  @apply mt-2 text-gray-600 dark:text-gray-300;
+}
+
+.project-card > section .content a {
+  @apply text-primary hover:underline hover:opacity-80;
 }
 
 .project-card > section .techs {

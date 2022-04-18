@@ -1,15 +1,15 @@
 ---
-pinned: true
+pinned: false
 title: Health Checker
-slug: /blog/finishershub
-startDate: 2022-01-21
-endDate: 2021-11-01
-repo: https://github.com/kiko-g/finishershub
-deploy: https://finishershub.netlify.app
+startDate: 2021-11-01
+endDate: 2022-01-21
+repo: https://github.com/kiko-g/health-checker
+deploy: https://health-checker.netlify.app
 featuredImage: ./featured.jpg
-description: A better way to consult health information. Quickly learn about any disease and its context and surroundings.
+techs: [React, Express, Javascript, Tailwind]
+description: A better way to consult accurate health information.
 ---
 
-- Fact about development #1
-- Fact about development #2
-- Fact about development #3
+- Built a **semantic web** application that allows users to consult medically validated information related to health and diseases.
+- **DB Pedia** and **BioPortal** were used as datasets and sources of information.
+- Developed in the context of [WSDL](https://sigarra.up.pt/feup/pt/UCURR_GERAL.FICHA_UC_VIEW?pv_ocorrencia_id=486299), a FEUP course
