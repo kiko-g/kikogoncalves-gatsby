@@ -15,15 +15,15 @@
 }
 
 .project-card {
-  @apply flex w-full flex-col rounded-xl bg-white p-3 shadow-md dark:bg-dark md:flex-row;
+  @apply flex w-full flex-col space-y-3 rounded-xl bg-white p-3 shadow-md dark:bg-dark lg:flex-row lg:space-y-0;
 }
 
 .project-card > header {
-  @apply relative max-w-full rounded-l-xl md:max-w-md md:rounded-xl lg:h-auto lg:max-h-full lg:max-w-lg;
+  @apply relative rounded-l-xl md:rounded-xl;
 }
 
 .project-card > header .image {
-  @apply h-full w-auto rounded-xl object-contain md:rounded-none md:rounded-l-xl;
+  @apply h-full w-auto rounded-xl object-contain opacity-90 hover:opacity-100 lg:rounded-none lg:rounded-l-xl;
 }
 
 .project-card > header .pinned {
@@ -31,7 +31,7 @@
 }
 
 .project-card > section {
-  @apply relative flex w-auto grow flex-col justify-between space-y-4 rounded-r-xl p-2 text-sm font-normal md:px-4 md:py-0 lg:h-auto lg:max-h-full lg:w-3/4;
+  @apply relative flex w-auto grow flex-col justify-between space-y-4 rounded-r-xl px-1 py-1 text-sm font-normal lg:h-auto lg:max-h-full lg:w-3/4 lg:px-4 lg:py-0;
 }
 
 .project-card > section .title {
@@ -39,7 +39,7 @@
 }
 
 .project-card > section .dates {
-  @apply font-code font-medium text-gray-600 dark:text-gray-300;
+  @apply font-code font-medium text-gray-600 dark:text-gray-400;
 }
 
 .project-card > section .description {
@@ -47,11 +47,7 @@
 }
 
 .project-card > section .content {
-  @apply mt-2 text-gray-600 dark:text-gray-300;
-}
-
-.project-card > section .content {
-  @apply mt-2 text-gray-600 dark:text-gray-300;
+  @apply mt-2;
 }
 
 .project-card > section .content a {
@@ -63,7 +59,7 @@
 }
 
 .project-card > section .tech-stack > span {
-  @apply rounded bg-teal-600 px-2 py-1 text-xs font-medium text-white;
+  @apply rounded bg-teal-700 px-2 py-1 text-xs font-medium text-white;
 }
 
 .project-card > section .links {

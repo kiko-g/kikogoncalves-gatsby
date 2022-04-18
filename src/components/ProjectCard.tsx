@@ -42,7 +42,7 @@ export const ProjectCard = ({ project }) => {
               </a>
             ) : null}
             {info.deploy ? (
-              <a href={info.repo} target="_blank" className="deploy">
+              <a href={info.deploy} target="_blank" className="deploy">
                 <DeployLink />
                 <span className="hidden md:flex">Preview</span>
               </a>
