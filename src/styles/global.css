@@ -1,17 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter&display=swap');
 
 .layout {
-  @apply flex min-h-screen flex-col scroll-smooth bg-light font-prose font-medium text-dark opacity-[99%] dark:bg-darkest dark:text-white;
+  @apply flex min-h-screen flex-col bg-lighter font-prose font-medium text-gray-800 opacity-[99%] dark:bg-darkest dark:text-white;
 }
 
 .navbar {
-  @apply sticky top-0 z-20 space-x-4 bg-lightest/75 px-3 py-2 text-darkest shadow dark:bg-darkest/75 dark:text-white md:py-0 md:px-3;
+  @apply sticky top-0 z-20 space-x-4 bg-light/75 px-3 py-2 text-gray-800 dark:bg-darkest/75 dark:text-white md:py-0 md:px-3;
 }
 
 .hamburger {
-  @apply text-dark transition duration-200 ease-in dark:text-white md:hidden;
+  @apply text-gray-800 transition duration-200 ease-in dark:text-white md:hidden;
 }
 
 .header {

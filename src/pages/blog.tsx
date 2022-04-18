@@ -2,30 +2,32 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
-import { Postcard } from '../components/Postcard'
+import { BlogpostCard } from '../components/BlogpostCard'
+import '../styles/pages/blog.css'
 
 // prettier-ignore
 const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
-  const title = 'Blog'
-  const description = "I've written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to create maintain, but the truth is you're never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you'll wonder how you ever worked with CSS any other way."
-
   return (
     <Layout location="Blog">
       <Seo title="Blog" />
-      <div className="container flex-1 flex-col justify-between space-y-6 p-4">
+      <main className="blog">
         <header>
-          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h2>
-          <p className="mt-4 text-lg font-normal">{description}</p>
+          <h2>Blog</h2>
+          <p>
+            Welcome to my blog! This is where you'll find posts about things I want to talk about. Most posts will be
+            about software development, engineering and programming, but occasionally you might find some stuff related
+            to hobbies of mine and maybe some other random jibber-jabber!
+          </p>
         </header>
 
-        <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <article>
           {edges
             .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
             .map((edge: { node: { id: React.Key } }) => (
-              <Postcard key={edge.node.id} post={edge.node} />
+              <BlogpostCard key={`blogpost-${edge.node.id}`} post={edge.node} />
             ))}
-        </div>
-      </div>
+        </article>
+      </main>
     </Layout>
   )
 }
@@ -34,13 +36,16 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: [DESC, DESC], fields: [frontmatter___pinned, frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: [DESC, DESC], fields: [frontmatter___pinned, frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+    ) {
       edges {
         node {
           id
           excerpt(pruneLength: 85)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMM, YYYY")
             slug
             title
             pinned

@@ -1,9 +1,7 @@
 import React from 'react'
-import '../styles/components/background.css'
+import './styles/background.css'
 
-type Props = {}
-
-export const Background: React.FC<Props> = () => {
+export const Background = () => {
   return (
     <div className="background-wrapper">
       <div className="background-area">

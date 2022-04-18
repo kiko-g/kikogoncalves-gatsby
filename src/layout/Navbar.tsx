@@ -7,11 +7,11 @@ import { DarkModeSwitchMinimal } from './DarkModeSwitchMinimal'
 import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 h-5 w-5" /> },
-  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="mr-1.5 h-[1.4rem] w-[1.4rem]" /> },
-  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 h-5 w-5" /> },
-  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="mr-1.5 h-5 w-5" /> },
-  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="mr-1.5 h-5 w-5" /> },
+  { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="mr-1.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
 ]
 
 type Props = {
@@ -19,7 +19,7 @@ type Props = {
   location: string
 }
 
-export const Navbar: React.FC<Props> = ({ siteTitle, location }) => {
+export const Navbar = ({ siteTitle, location }: props) => {
   return (
     <Disclosure as="nav" className="navbar">
       {({ open }) => {
@@ -68,7 +68,7 @@ const Hamburger = ({ open }) => (
           />
         ) : (
           <MenuIcon
-            className="ease dark:group-hover:text-/75 block h-6 w-6 transition duration-200 group-hover:text-primary/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
             aria-hidden="true"
           />
         )}
@@ -90,7 +90,7 @@ const Header = ({ title, location }) => (
       </Link>
     </div>
 
-    <div className="hidden space-x-6 self-center md:inline-flex">
+    <div className="hidden space-x-8 self-center md:inline-flex">
       {navigation.map((link, index) => (
         <Link to={link.location} key={`nav-${index}`} className="relative py-1">
           <button
@@ -98,7 +98,7 @@ const Header = ({ title, location }) => (
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title
                 ? 'text-primary dark:text-primary'
-                : 'text-dark/50 hover:text-dark dark:text-white/50 dark:hover:text-white'
+                : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
             }`}
           >
             <span className="flex items-center justify-center">
@@ -126,7 +126,7 @@ const Mobile = ({ location }) => (
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
               ? 'text-primary dark:text-primary'
-              : 'text-dark/50 hover:text-dark dark:text-white/50 dark:hover:text-white'
+              : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">

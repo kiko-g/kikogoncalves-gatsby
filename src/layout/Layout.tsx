@@ -10,7 +10,7 @@ type Props = {
   homepage?: boolean
 }
 
-export const Layout: React.FC<Props> = ({ children, location, homepage }) => {
+export const Layout = ({ children, location, homepage }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

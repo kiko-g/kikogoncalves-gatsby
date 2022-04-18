@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout } from '../layout/Layout'
 import Seo from '../components/Seo'
+import '../styles/pages/me.css'
 
 const MePage = () => (
   <Layout location="Me">

@@ -1,8 +1,7 @@
 import React from 'react'
+import Seo from '../../components/Seo'
 import { Link } from 'gatsby'
-
-import { Layout } from '../layout/Layout'
-import Seo from '../components/Seo'
+import { Layout } from '../../layout/Layout'
 
 const UsingSSR = ({ serverData }) => {
   return (
