@@ -15,7 +15,7 @@
 }
 
 .project-card {
-  @apply flex w-full flex-col rounded-xl bg-white p-3 shadow dark:bg-dark md:flex-row;
+  @apply flex w-full flex-col rounded-xl bg-white p-3 shadow-md dark:bg-dark md:flex-row;
 }
 
 .project-card > header {
@@ -39,7 +39,7 @@
 }
 
 .project-card > section .dates {
-  @apply font-medium text-gray-600 dark:text-gray-300;
+  @apply font-code font-medium text-gray-600 dark:text-gray-300;
 }
 
 .project-card > section .description {
@@ -58,10 +58,12 @@
   @apply text-primary hover:underline hover:opacity-80;
 }
 
-.project-card > section .techs {
+.project-card > section .tech-stack {
+  @apply flex flex-wrap gap-2 font-code;
 }
 
-.project-card > section .techs > div {
+.project-card > section .tech-stack > span {
+  @apply rounded bg-teal-600 px-2 py-1 text-xs font-medium text-white;
 }
 
 .project-card > section .links {

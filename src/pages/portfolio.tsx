@@ -24,7 +24,7 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
               my github
             </a>{' '}
             and each project has a link to that. of these products is available on my GitHub, so make sure you check
-            that out and maybe drop a follow :relaxed:
+            that out and maybe drop a follow 😊
           </p>
         </header>
 
@@ -57,6 +57,7 @@ export const pageQuery = graphql`
             endDate(formatString: "MMM DD YYYY")
             repo
             deploy
+            techStack
             featuredImage {
               childImageSharp {
                 gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])

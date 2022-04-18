@@ -27,7 +27,11 @@ export const ProjectCard = ({ project }) => {
           <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
-        <div className="techs"></div>
+        <div className="tech-stack">
+          {info.techStack.map((tech: string, techIdx: number) => (
+            <span key={`technology-${techIdx}`}>{tech}</span>
+          ))}
+        </div>
 
         <div>
           <div className="links">
@@ -60,7 +64,7 @@ const PinIcon = () => (
 )
 
 const GithubIcon = () => (
-  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -70,18 +74,8 @@ const GithubIcon = () => (
 )
 
 const DeployLink = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-    />
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
   </svg>
 )

@@ -6,7 +6,7 @@ endDate: 2022-01-21
 repo: https://github.com/kiko-g/health-checker
 deploy: https://health-checker.netlify.app
 featuredImage: ./featured.jpg
-techs: [React, Express, Javascript, Tailwind]
+techStack: [React, Express, Javascript, Tailwind]
 description: A better way to consult accurate health information.
 ---
 

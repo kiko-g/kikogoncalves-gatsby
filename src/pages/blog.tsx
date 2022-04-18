@@ -45,7 +45,7 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 85)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMM, YYYY")
             slug
             title
             pinned
