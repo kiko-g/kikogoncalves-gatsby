@@ -1,0 +1,36 @@
+.blogpost-card {
+  @apply max-w-7xl space-y-2 rounded-xl bg-lightest p-4 shadow transition duration-300
+    hover:bg-primary/30 hover:text-gray-800 dark:bg-dark hover:dark:bg-primary/20 dark:hover:text-white;
+}
+
+.blogpost-card section {
+  @apply relative flex items-center justify-center rounded-lg bg-opacity-90;
+}
+
+.blogpost-card section .pinned {
+  @apply absolute top-2 left-2 rounded-full bg-teal-800/80 p-1 text-xs leading-none text-white;
+}
+
+.blogpost-card section .date {
+  @apply invisible absolute bottom-2 left-2 rounded-full bg-gray-800/80 p-1 text-xs leading-none tracking-tighter text-white;
+}
+
+.blogpost-card footer {
+  @apply w-full space-y-0.5;
+}
+
+.blogpost-card footer .header {
+  @apply flex items-start justify-start;
+}
+
+.blogpost-card footer .header .title {
+  @apply flex-grow font-medium;
+}
+
+.blogpost-card footer .header .new {
+  @apply inline-flex items-center justify-center rounded-full bg-rose-800/80 px-2 py-1 text-xs leading-none text-white;
+}
+
+.blogpost-card footer .excerpt {
+  @apply text-sm font-normal text-gray-400 transition dark:text-gray-400;
+}

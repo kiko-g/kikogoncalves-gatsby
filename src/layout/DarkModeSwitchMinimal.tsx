@@ -3,7 +3,7 @@ import { Switch } from '@headlessui/react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import useDarkMode from '../hooks/useDarkMode'
 
-export const DarkModeSwitchMinimal: React.FC = () => {
+export const DarkModeSwitchMinimal = () => {
   const [enabled, setEnabled] = useDarkMode()
 
   return (

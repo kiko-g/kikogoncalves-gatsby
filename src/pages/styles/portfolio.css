@@ -1,0 +1,53 @@
+.portfolio {
+  @apply container flex-1 flex-col justify-between space-y-6 p-4;
+}
+
+.portfolio header > h2 {
+  @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
+}
+
+.portfolio header > p {
+  @apply mt-4 text-lg font-normal;
+}
+
+.portfolio article {
+  @apply grid grid-cols-1 gap-4;
+}
+
+/* Markdown */
+.portfolio p {
+  @apply text-justify;
+}
+
+.portfolio h1,
+.portfolio h2,
+.portfolio h3,
+.portfolio h4 {
+  @apply font-medium;
+}
+
+.portfolio p,
+.portfolio .gatsby-resp-image-wrapper {
+  @apply my-3;
+}
+
+.portfolio ul,
+.portfolio ol {
+  @apply mt-1 mb-1 ml-4 list-disc;
+}
+
+.portfolio li {
+  @apply list-item;
+}
+
+.portfolio blockquote {
+  @apply my-8 border-primary md:mx-12;
+}
+
+.portfolio pre {
+  @apply font-code;
+}
+
+.portfolio code {
+  @apply p-2 font-code text-xs;
+}

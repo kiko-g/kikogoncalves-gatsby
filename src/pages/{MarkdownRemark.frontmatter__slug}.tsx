@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/pages/blogpost.css'
+import './styles/blogpost.css'
 import { graphql } from 'gatsby'
 import { Layout } from '../layout/Layout'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
@@ -15,15 +15,6 @@ export default function Template({ data }) {
     <Layout location="Blogpost">
       <main className="blogpost">
         <header>
-          <div>
-            <GatsbyImage
-              image={coverImage}
-              alt="cover"
-              objectFit="cover"
-              objectPosition="50% 40%"
-              className="h-48 rounded-lg opacity-80 shadow"
-            />
-          </div>
           <h1>{frontmatter.title}</h1>
         </header>
 
