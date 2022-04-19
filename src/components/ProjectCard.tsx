@@ -18,19 +18,20 @@ export const ProjectCard = ({ project }) => {
       </header>
 
       <section>
-        <div>
-          <h2 className="title">{info.title}</h2>
-          <h4 className="dates">
+        <div className="flex flex-col">
+          <span className="title">{info.title}</span>
+          <span className="dates">
             {info.startDate} - {info.endDate}
-          </h4>
-          <div className="description">{info.description}</div>
-          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
-        </div>
-
-        <div className="tech-stack">
-          {info.techStack.map((tech: string, techIdx: number) => (
-            <span key={`technology-${techIdx}`}>{tech}</span>
-          ))}
+          </span>
+          <div className="body">
+            <div className="description">{info.description}</div>
+            <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+            <div className="tech-stack">
+              {info.techStack.map((tech: string, techIdx: number) => (
+                <span key={`technology-${techIdx}`}>{tech}</span>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div>

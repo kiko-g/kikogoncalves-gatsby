@@ -19,7 +19,7 @@ type Props = {
   location: string
 }
 
-export const Navbar = ({ siteTitle, location }: props) => {
+export const Navbar = ({ siteTitle, location }: Props) => {
   return (
     <Disclosure as="nav" className="navbar">
       {({ open }) => {
@@ -63,12 +63,12 @@ const Hamburger = ({ open }) => (
         <span className="sr-only">Open nav menu</span>
         {open ? (
           <XIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary-900/75 dark:group-hover:text-primary-900/75"
             aria-hidden="true"
           />
         ) : (
           <MenuIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary-900/75 dark:group-hover:text-primary-900/75"
             aria-hidden="true"
           />
         )}
@@ -97,7 +97,7 @@ const Header = ({ title, location }) => (
             type="button"
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title
-                ? 'text-primary dark:text-primary'
+                ? 'text-primary-900 dark:text-white'
                 : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
             }`}
           >
@@ -106,7 +106,9 @@ const Header = ({ title, location }) => (
               {link.title}
             </span>
           </button>
-          {location === link.title ? <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary" /> : null}
+          {location === link.title ? (
+            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary-900 dark:bg-primary-800" />
+          ) : null}
         </Link>
       ))}
     </div>
@@ -125,7 +127,7 @@ const Mobile = ({ location }) => (
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
-              ? 'text-primary dark:text-primary'
+              ? 'text-primary-900 dark:text-primary-800'
               : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
           }`}
         >

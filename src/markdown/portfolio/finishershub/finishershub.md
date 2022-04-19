@@ -1,5 +1,5 @@
 ---
-pinned: false
+pinned: true
 title: Finishers Hub
 startDate: 2022-04-01
 endDate: 2022-04-15

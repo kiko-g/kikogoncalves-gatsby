@@ -7,10 +7,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 type Props = {
   children: any
   location: string
-  homepage?: boolean
+  background?: boolean
 }
 
-export const Layout = ({ children, location, homepage }: Props) => {
+export const Layout = ({ children, location, background }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,14 +24,14 @@ export const Layout = ({ children, location, homepage }: Props) => {
   return (
     <div className="layout">
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
-      {homepage ? <Background /> : null}
+      {background ? <Background /> : null}
       <div className="container z-10 mx-auto my-auto">{children}</div>
-      {homepage ? null : <Footer siteTitle={data.site.siteMetadata?.title} />}
+      <Footer siteTitle={data.site.siteMetadata?.title} />
     </div>
   )
 }
 
 Layout.defaultProps = {
   location: 'Unknown',
-  homepage: false,
+  background: false,
 }
