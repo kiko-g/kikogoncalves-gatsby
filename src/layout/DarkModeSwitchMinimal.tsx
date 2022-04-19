@@ -16,7 +16,7 @@ export const DarkModeSwitchMinimal = () => {
         >
           {enabled ? (
             <MoonIcon
-              className="ease block h-6 w-6 text-sky-200 transition duration-100 hover:text-sky-200/75 md:h-8 md:w-8"
+              className="ease block h-6 w-6 text-secondary-100 transition duration-100 hover:text-secondary-200/75 md:h-8 md:w-8"
               aria-hidden="true"
             />
           ) : (

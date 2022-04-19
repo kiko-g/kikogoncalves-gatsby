@@ -15,7 +15,7 @@
 }
 
 .project-card {
-  @apply flex w-full flex-col space-y-3 rounded-xl bg-white p-3 shadow-md dark:bg-dark lg:flex-row lg:space-y-0;
+  @apply flex w-full flex-col space-y-3 rounded-xl bg-white p-3 shadow-lg dark:bg-dark lg:flex-row lg:space-y-0;
 }
 
 .project-card > header {
@@ -23,15 +23,16 @@
 }
 
 .project-card > header .image {
-  @apply h-full w-auto rounded-xl object-contain opacity-90 hover:opacity-100 lg:rounded-none lg:rounded-l-xl;
+  @apply h-full w-auto rounded-xl object-contain opacity-90 lg:rounded-none lg:rounded-l-xl;
 }
 
 .project-card > header .pinned {
-  @apply absolute top-2 left-2 rounded-full bg-teal-800/80 p-1 text-xs leading-none text-white;
+  @apply absolute top-2 left-2 rounded-full bg-teal-700 p-1 text-xs leading-none text-white;
 }
 
 .project-card > section {
-  @apply relative flex w-auto grow flex-col justify-between space-y-4 rounded-r-xl px-1 py-1 text-sm font-normal lg:h-auto lg:max-h-full lg:w-3/4 lg:px-4 lg:py-0;
+  @apply relative flex w-auto grow flex-col justify-between space-y-4 rounded-r-xl px-1 py-1 text-sm font-normal 
+  lg:h-auto lg:max-h-full lg:w-3/4 lg:py-0 lg:pl-4 lg:pr-0;
 }
 
 .project-card > section .title {
@@ -39,11 +40,15 @@
 }
 
 .project-card > section .dates {
-  @apply font-code font-medium text-gray-600 dark:text-gray-400;
+  @apply font-medium italic text-gray-600 dark:text-gray-400;
+}
+
+.project-card > section .body {
+  @apply space-y-3;
 }
 
 .project-card > section .description {
-  @apply text-justify text-primary dark:text-primary;
+  @apply text-justify font-medium tracking-wide text-gray-500 dark:text-white;
 }
 
 .project-card > section .content {
@@ -51,23 +56,24 @@
 }
 
 .project-card > section .content a {
-  @apply text-primary hover:underline hover:opacity-80;
+  @apply font-semibold text-secondary-900 hover:opacity-80 dark:text-secondary-900;
 }
 
 .project-card > section .tech-stack {
-  @apply flex flex-wrap gap-2 font-code;
+  @apply flex flex-wrap gap-2;
 }
 
 .project-card > section .tech-stack > span {
-  @apply rounded bg-teal-700 px-2 py-1 text-xs font-medium text-white;
-}
+  @apply rounded-md bg-light px-2 py-1 text-xs font-medium tracking-wide shadow-inner dark:shadow-xl dark:bg-darker;
+} 
 
 .project-card > section .links {
   @apply space-x-2 rounded-xl;
 }
 
 .project-card > section .links .repo {
-  @apply inline-flex items-center space-x-2 rounded bg-primary py-2 px-2 text-center text-sm font-medium text-white transition hover:bg-primary/75 dark:bg-primary/80 dark:hover:bg-primary;
+  @apply inline-flex items-center space-x-2 rounded bg-primary-900 py-2 px-2 text-center text-sm font-medium 
+  text-white transition hover:bg-primary-900/75 dark:bg-primary-900/80 dark:hover:bg-primary-900;
 }
 
 .project-card > section .links .deploy {

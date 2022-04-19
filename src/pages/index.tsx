@@ -7,54 +7,44 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { classNames, links, socials } from '../utils'
 import '../styles/pages/index.css'
 
-const IndexPage = () => (
-  <Layout location="Home" homepage={true}>
-    <Seo title="Home" />
-    <div className="home-wrapper">
-      <Hero />
-    </div>
-  </Layout>
-)
-
-export default IndexPage
-
-const Hero = () => {
+const IndexPage = () => {
   const [focusRing] = useState(false)
   const headers = ['About', 'Skills', 'Experience']
   const content = [<About />, <Skills />, <Experience />]
 
   return (
-    <Tab.Group>
-      <Tab.List className="tab-list">
-        {headers.map(category => (
-          <Tab
-            key={category}
-            className={({ selected }) =>
-              classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
-            }
-          >
-            {category}
-          </Tab>
-        ))}
-      </Tab.List>
-      <Tab.Panels className="tab-panels">
-        {content.map((content, index) => (
-          <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
-            {content}
-          </Tab.Panel>
-        ))}
-      </Tab.Panels>
-    </Tab.Group>
+    <Layout location="Home" background={false}>
+      <Seo title="Home" />
+      <div className="home-wrapper">
+        <Tab.Group>
+          <Tab.List className="tab-list">
+            {headers.map(category => (
+              <Tab
+                key={category}
+                className={({ selected }) =>
+                  classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
+                }
+              >
+                {category}
+              </Tab>
+            ))}
+          </Tab.List>
+          <Tab.Panels className="tab-panels">
+            {content.map((content, index) => (
+              <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
+                {content}
+              </Tab.Panel>
+            ))}
+          </Tab.Panels>
+        </Tab.Group>
+      </div>
+    </Layout>
   )
 }
 
+export default IndexPage
+
 const About = () => {
-  const about = {
-    general:
-      "Hi, I'm Francisco. Im currently taking my Masters's Degree in Informatics and Computing Engineering @ FEUP.",
-    personal:
-      'I have a great passion for software engineering as a whole with a special interest in frontend development and data science. On the more personal side of things, I would describe myself as a passionate person, who believes in getting better every day and finding zeal in things. My interests are mostly music, gaming, football, media, and entertainment. As for hobbies, I often play the guitar, sing, game, program stuff, and exercise.',
-  }
   const details = [
     { key: 'Age', value: 22 },
     { key: 'City', value: 'Porto' },
@@ -74,14 +64,22 @@ const About = () => {
         </h3>
 
         <article className="tab-inner-prose">
-          <p>{about.general}</p>
-          <p>{about.personal}</p>
+          <p>
+            Hi, I'm Francisco. Im currently taking my Masters's Degree in Informatics and Computing Engineering @ FEUP.
+          </p>
+          <p>
+            I have a great passion for software engineering as a whole with a special interest in frontend development
+            and data science. On the more personal side of things, I would describe myself as a passionate person, who
+            believes in getting better every day and finding zeal in things. My interests are mostly music, gaming,
+            football, media, and entertainment. As for hobbies, I often play the guitar, sing, game, program stuff, and
+            exercise.
+          </p>
         </article>
 
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
             <li key={`detail-${index}`}>
-              <Icon icon="codicon:triangle-right" color="#9f7aea" className="inline" />
+              <Icon icon="codicon:triangle-right" className="inline text-secondary-900 dark:text-secondary-900" />
               <span>&nbsp;</span>
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&nbsp;&middot;&nbsp;</span>
@@ -152,7 +150,7 @@ const Experience = () => {
 
 const Socials = () => {
   return (
-    <div className="flex space-x-1 text-gray-400 dark:text-gray-300 sm:justify-center md:mt-0">
+    <div className="flex flex-wrap items-center justify-center gap-1 text-gray-400 dark:text-gray-300 md:mt-0">
       {socials
         .filter(social => social.shown)
         .map((social, socialIdx) => (

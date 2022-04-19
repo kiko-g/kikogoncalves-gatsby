@@ -19,7 +19,7 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
             <a
               target="_blank"
               href="https://github.com/kiko-g?tab=repositories"
-              className="text-primary hover:underline hover:opacity-80"
+              className="text-secondary-900 hover:opacity-80 dark:text-secondary-900"
             >
               my github
             </a>{' '}
@@ -44,7 +44,10 @@ export default PortfolioPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(portfolio)/" } }) {
+    allMarkdownRemark(
+      sort: { order: [DESC, DESC], fields: [frontmatter___pinned, frontmatter___startDate] }
+      filter: { fileAbsolutePath: { regex: "/(portfolio)/" } }
+    ) {
       edges {
         node {
           id
