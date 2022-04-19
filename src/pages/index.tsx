@@ -101,6 +101,32 @@ const About = () => {
 }
 
 const Skills = () => {
+  type Skill = {
+    name: string
+    score: string
+  }
+
+  const skills: Skill[] = [
+    { name: 'HTML/CSS', score: '95' },
+    { name: 'Javascript', score: '90' },
+    { name: 'NodeJS', score: '90' },
+    { name: 'ReactJS', score: '100' },
+    { name: 'GatsbyJS', score: '100' },
+    { name: 'TailwindCSS', score: '95' },
+    { name: 'Bootstrap', score: '90' },
+    { name: 'MaterialUI', score: '100' },
+    { name: 'PHP/Laravel', score: '60' },
+    { name: 'Git', score: '90' },
+    { name: 'Docker', score: '80' },
+    { name: 'C/C++', score: '70' },
+    { name: 'Java', score: '75' },
+    { name: 'Python', score: '80' },
+    { name: 'SQL', score: '70' },
+    { name: 'Haskell', score: '60' },
+    { name: 'Prolog', score: '50' },
+    { name: 'Flutter', score: '40' },
+  ]
+
   return (
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
@@ -111,6 +137,29 @@ const Skills = () => {
             FEUP-MEIC
           </a>
         </h3>
+
+        <article className="block text-sm font-normal">
+          <div className="mt-2 grid grid-cols-1 grid-rows-1 gap-y-4 gap-x-6 md:grid-cols-3 md:grid-rows-3">
+            {skills.map((skill: Skill, skillIdx: number) => (
+              <div key={`skill-${skillIdx}`} className="space-y-1">
+                <div className="flex items-center justify-between font-medium">
+                  <span>{skill.name}</span>
+                  <span>{skill.score}%</span>
+                </div>
+
+                <div className="relative h-[10px] w-full">
+                  <div
+                    style={{ width: `${skill.score}%` }}
+                    className={`${
+                      skill.score === '100' ? 'rounded-xl' : 'rounded-l-xl'
+                    } absolute top-0 z-10 h-[10px] bg-primary-900 dark:bg-secondary-900`}
+                  ></div>
+                  <div className="absolute top-0 h-[10px] w-full rounded-xl bg-gray-200"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </article>
       </div>
 
       <div className="tab-panel-inner-right">

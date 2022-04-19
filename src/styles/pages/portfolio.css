@@ -64,8 +64,8 @@
 }
 
 .project-card > section .tech-stack > span {
-  @apply rounded-md bg-light px-2 py-1 text-xs font-medium tracking-wide shadow-inner dark:shadow-xl dark:bg-darker;
-} 
+  @apply rounded-md bg-gradient-to-br from-teal-400 to-blue-500 px-2 py-1 text-xs font-medium tracking-wide text-white opacity-90 shadow-inner dark:shadow-xl;
+}
 
 .project-card > section .links {
   @apply space-x-2 rounded-xl;
