@@ -16,7 +16,7 @@
 }
 
 .content-home {
-  @apply z-10 flex min-h-screen w-full;
+  @apply z-10 mb-auto flex;
 }
 
 /* Navbar */

@@ -24,13 +24,15 @@ export const Layout = ({ children, location, background, home }: Props) => {
 
   return home ? (
     <div className="layout">
-      {background && <Background />}
+      <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
+      {background ? <Background /> : null}
       <div className="content-home">{children}</div>
+      <Footer siteTitle={data.site.siteMetadata?.title} />
     </div>
   ) : (
     <div className="layout">
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
-      {background && <Background />}
+      {background ? <Background /> : null}
       <div className="content">{children}</div>
       <Footer siteTitle={data.site.siteMetadata?.title} />
     </div>
