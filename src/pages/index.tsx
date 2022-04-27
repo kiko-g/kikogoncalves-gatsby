@@ -1,22 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Seo from '../components/Seo'
+import { Link } from 'gatsby'
 import { Icon } from '@iconify/react'
 import { Layout } from '../layout/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Tab, Transition } from '@headlessui/react'
 import { classNames, links, socials } from '../utils'
+import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
 import '../styles/index.css'
 
 const IndexPage = () => {
   const [focusRing] = useState(false)
   const headers = ['About', 'Skills', 'Experience']
   const content = [<About />, <Skills />, <Experience />]
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  const nextTab = () => {
+    setSelectedIndex((selectedIndex + 1) % content.length)
+  }
 
   return (
     <Layout location="Home" background={false}>
       <Seo title="Home" />
       <div className="index-wrapper">
-        <Tab.Group>
+        <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tab.List className="tab-list">
             {headers.map(category => (
               <Tab
@@ -37,6 +44,24 @@ const IndexPage = () => {
             ))}
           </Tab.Panels>
         </Tab.Group>
+
+        <div className="mt-4 flex items-center justify-between">
+          <div className="space-x-5"></div>
+          <div>
+            <Link
+              to="/me"
+              className="inline-flex rounded bg-gradient-to-r from-tertiary-900 via-indigo-400 to-secondary-900 p-[2px] transition focus:outline-none focus:ring active:text-opacity-75"
+            >
+              <span
+                className="hover flex items-center justify-center space-x-2 rounded-sm bg-white
+                px-6 py-3 font-medium transition hover:bg-transparent hover:text-white dark:text-gray-800 dark:hover:text-white"
+              >
+                <span>See more</span>
+                <ArrowNarrowRightIcon className="inline-flex h-5 w-5" />
+              </span>
+            </Link>
+          </div>
+        </div>
       </div>
     </Layout>
   )
@@ -133,7 +158,7 @@ const Skills = () => {
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
         <div className="tab-inner-header">Skills</div>
-        <div className="text-base font-normal">
+        <div className="tab-inner-prose">
           <p>
             Check out my{' '}
             <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.github}>
@@ -145,7 +170,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <article className="mt-3 block text-sm font-normal">
+        <article className="mt-6 block font-code text-sm font-normal">
           <div className="mt-2 grid grid-cols-1 gap-y-4 gap-x-6 md:grid-cols-3">
             {skills.map((skill: Skill, skillIdx: number) => (
               <div key={`skill-${skillIdx}`} className="space-y-1">

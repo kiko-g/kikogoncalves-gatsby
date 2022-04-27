@@ -4,11 +4,11 @@
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-2 rounded-xl bg-primary-900/75 p-1 shadow dark:bg-primary-900/75 md:p-1.5;
+  @apply flex space-x-1 rounded-xl bg-primary-900/75 p-1 shadow dark:bg-primary-900/75 md:p-1.5;
 }
 
 .tab {
-  @apply w-full rounded-lg px-1 py-2.5 text-xs font-medium uppercase leading-5 tracking-wider text-primary-900 md:text-sm xl:text-base;
+  @apply w-full rounded-lg px-1 py-2 text-xs font-medium uppercase leading-5 tracking-wider text-primary-900 md:py-2.5 md:text-sm xl:text-base;
 }
 
 .tab-selected {
@@ -45,11 +45,15 @@
 }
 
 .tab-inner-header {
-  @apply text-xl font-semibold uppercase tracking-wide text-primary-800 dark:text-blue-500;
+  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-800 dark:text-blue-500 md:flex;
 }
 
 .tab-inner-subheader {
-  @apply mt-1 block text-lg font-medium leading-tight;
+  @apply mt-3 block text-lg font-medium leading-tight md:mt-1;
+}
+
+.tab-inner-prose {
+  @apply mt-3 text-base font-normal md:mt-1;
 }
 
 .tab-inner-link {
@@ -57,7 +61,7 @@
 }
 
 .tab-inner-prose {
-  @apply mt-2 text-justify text-sm font-normal text-gray-600 dark:text-light md:text-base;
+  @apply mt-2 text-sm font-normal text-gray-600 dark:text-light md:text-base;
 }
 
 .tab-inner-prose p {
@@ -73,9 +77,9 @@
 }
 
 .tab-inner-image-subbox {
-  @apply flex flex-col items-center justify-between space-x-0 md:space-x-2 xl:flex-row;
+  @apply flex flex-wrap items-center justify-between space-x-0 md:space-x-2;
 }
 
 .tab-inner-image-header {
-  @apply my-1.5 flex-1 text-center text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
+  @apply my-1.5 flex-1 text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
 }
