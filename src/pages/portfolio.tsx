@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
 import { ProjectCard } from '../components/ProjectCard'
-import '../styles/pages/portfolio.css'
+import '../styles/portfolio.css'
 
 // prettier-ignore
 const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {

@@ -8,10 +8,10 @@ type Props = {
   children: any
   location: string
   background?: boolean
-  home?: boolean
+  liquid?: boolean
 }
 
-export const Layout = ({ children, location, background, home }: Props) => {
+export const Layout = ({ children, location, background, liquid }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,7 +22,7 @@ export const Layout = ({ children, location, background, home }: Props) => {
     }
   `)
 
-  return home ? (
+  return liquid ? (
     <div className="layout">
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
       {background ? <Background /> : null}
@@ -42,5 +42,5 @@ export const Layout = ({ children, location, background, home }: Props) => {
 Layout.defaultProps = {
   location: 'Unknown',
   background: false,
-  home: false,
+  liquid: false,
 }

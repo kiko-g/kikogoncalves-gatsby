@@ -8,23 +8,26 @@ export const ProjectCard = ({ project }) => {
 
   return (
     <div className="project-card">
-      <header>
+      <aside>
         <GatsbyImage image={coverImage} alt="cover" className="image" />
         {info.pinned ? (
           <span className="pinned">
             <PinIcon />
           </span>
         ) : null}
-      </header>
+      </aside>
 
       <section>
         <div className="flex flex-col">
-          <span className="title">{info.title}</span>
-          <span className="dates">
-            {info.startDate} - {info.endDate}
-          </span>
-          <div className="body">
+          <header>
+            <div className="title">{info.title}</div>
+            <div className="dates">
+              {info.startDate} - {info.endDate}
+            </div>
             <div className="description">{info.description}</div>
+          </header>
+
+          <div className="body">
             <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
             <div className="tech-stack">
               {info.techStack.map((tech: string, techIdx: number) => (
@@ -34,21 +37,19 @@ export const ProjectCard = ({ project }) => {
           </div>
         </div>
 
-        <div>
-          <div className="links">
-            {info.repo ? (
-              <a href={info.repo} target="_blank" className="repo">
-                <GithubIcon />
-                <span className="hidden md:flex">Code on Github</span>
-              </a>
-            ) : null}
-            {info.deploy ? (
-              <a href={info.deploy} target="_blank" className="deploy">
-                <DeployLink />
-                <span className="hidden md:flex">Preview</span>
-              </a>
-            ) : null}
-          </div>
+        <div className="links">
+          {info.repo ? (
+            <a href={info.repo} target="_blank" className="repo">
+              <GithubIcon />
+              <span className="hidden md:flex">Code on Github</span>
+            </a>
+          ) : null}
+          {info.deploy ? (
+            <a href={info.deploy} target="_blank" className="deploy">
+              <DeployLink />
+              <span className="hidden md:flex">Preview</span>
+            </a>
+          ) : null}
         </div>
       </section>
     </div>
