@@ -1,14 +1,14 @@
-.home-wrapper {
-  @apply w-full px-4 py-8 xl:px-0;
+.index-wrapper {
+  @apply w-full px-4 py-8 md:px-4 2xl:px-0;
 }
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-1 rounded-xl bg-primary-900/75 p-1 dark:bg-primary-900/75;
+  @apply flex space-x-2 rounded-xl bg-primary-900/75 p-1 shadow dark:bg-primary-900/75 md:p-1.5;
 }
 
 .tab {
-  @apply w-full rounded-lg py-2.5 text-sm font-medium uppercase leading-5 tracking-wider text-primary-900 md:text-base;
+  @apply w-full rounded-lg px-1 py-2.5 text-xs font-medium uppercase leading-5 tracking-wider text-primary-900 md:text-sm xl:text-base;
 }
 
 .tab-selected {
@@ -24,7 +24,7 @@
 }
 
 .tab-panel {
-  @apply overflow-hidden rounded-xl bg-lightest/80 p-1 dark:bg-dark/80 md:p-2;
+  @apply overflow-hidden rounded-xl bg-lightest p-1 shadow dark:bg-light/5 md:p-2;
 }
 
 .tab-focus-ring {
@@ -45,7 +45,7 @@
 }
 
 .tab-inner-header {
-  @apply text-xl font-semibold uppercase tracking-wide text-sky-800 dark:text-sky-700;
+  @apply text-xl font-semibold uppercase tracking-wide text-primary-800 dark:text-blue-500;
 }
 
 .tab-inner-subheader {
@@ -53,7 +53,7 @@
 }
 
 .tab-inner-link {
-  @apply text-secondary-900 transition hover:text-secondary-900/80;
+  @apply font-semibold text-primary-800 transition hover:underline hover:opacity-90 dark:text-blue-500;
 }
 
 .tab-inner-prose {
@@ -77,5 +77,5 @@
 }
 
 .tab-inner-image-header {
-  @apply my-1.5 flex-1 text-center text-sm font-bold tracking-tighter md:my-2 md:text-left md:text-sm xl:text-lg;
+  @apply my-1.5 flex-1 text-center text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
 }

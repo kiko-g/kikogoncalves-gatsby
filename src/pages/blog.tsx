@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
 import { BlogpostCard } from '../components/BlogpostCard'
-import '../styles/pages/blog.css'
+import '../styles/blog.css'
 
 // prettier-ignore
 const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {

@@ -18,8 +18,13 @@
   color: #0a66c2;
 }
 
+.github {
+  border-radius: 100px;
+}
+
 .github:hover {
   color: #333;
+  background: white;
 }
 
 .instagram:hover {

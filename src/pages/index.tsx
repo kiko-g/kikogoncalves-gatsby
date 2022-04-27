@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Seo from '../components/Seo'
-import { Layout } from '../layout/Layout'
-import { Tab, Transition } from '@headlessui/react'
 import { Icon } from '@iconify/react'
+import { Layout } from '../layout/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Tab, Transition } from '@headlessui/react'
 import { classNames, links, socials } from '../utils'
-import '../styles/pages/index.css'
+import '../styles/index.css'
 
 const IndexPage = () => {
   const [focusRing] = useState(false)
@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <Layout location="Home" background={false}>
       <Seo title="Home" />
-      <div className="home-wrapper">
+      <div className="index-wrapper">
         <Tab.Group>
           <Tab.List className="tab-list">
             {headers.map(category => (
@@ -30,7 +30,7 @@ const IndexPage = () => {
             ))}
           </Tab.List>
           <Tab.Panels className="tab-panels">
-            {content.map((content, index) => (
+            {content.map((content: JSX.Element, index: number) => (
               <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
                 {content}
               </Tab.Panel>
@@ -50,6 +50,7 @@ const About = () => {
     { key: 'City', value: 'Porto' },
     { key: 'Birthday', value: '3 August 1999' },
     { key: 'Degree', value: 'Masters in Computer Engineering' },
+    { key: 'Occupation', value: 'Software Engineering Student @ FEUP, MEIC' },
   ]
 
   return (
@@ -79,7 +80,7 @@ const About = () => {
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
             <li key={`detail-${index}`}>
-              <Icon icon="codicon:triangle-right" className="inline text-secondary-900 dark:text-secondary-900" />
+              <Icon icon="codicon:triangle-right" className="inline text-primary-800 dark:text-blue-500" />
               <span>&nbsp;</span>
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&nbsp;&middot;&nbsp;</span>
@@ -108,38 +109,44 @@ const Skills = () => {
 
   const skills: Skill[] = [
     { name: 'HTML/CSS', score: '95' },
-    { name: 'Javascript', score: '90' },
-    { name: 'NodeJS', score: '90' },
-    { name: 'ReactJS', score: '100' },
-    { name: 'GatsbyJS', score: '100' },
+    { name: 'JS/TS', score: '85' },
+    { name: 'NodeJS', score: '85' },
+    { name: 'ReactJS', score: '95' },
+    { name: 'GatsbyJS', score: '80' },
     { name: 'TailwindCSS', score: '95' },
-    { name: 'Bootstrap', score: '90' },
-    { name: 'MaterialUI', score: '100' },
-    { name: 'PHP/Laravel', score: '60' },
+    { name: 'Bootstrap', score: '85' },
+    { name: 'MaterialUI', score: '80' },
+    { name: 'PHP/Laravel', score: '65' },
+    { name: 'Flutter/Dart', score: '60' },
     { name: 'Git', score: '90' },
-    { name: 'Docker', score: '80' },
-    { name: 'C/C++', score: '70' },
-    { name: 'Java', score: '75' },
-    { name: 'Python', score: '80' },
+    { name: 'Docker', score: '75' },
+    { name: 'C/C++', score: '75' },
+    { name: 'Java', score: '80' },
+    { name: 'Python', score: '75' },
     { name: 'SQL', score: '70' },
     { name: 'Haskell', score: '60' },
     { name: 'Prolog', score: '50' },
-    { name: 'Flutter', score: '40' },
+    { name: 'Kotlin', score: '25' },
   ]
 
   return (
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
         <div className="tab-inner-header">Skills</div>
-        <h3 className="tab-inner-subheader">
-          Software Engineering Student @{' '}
-          <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
-            FEUP-MEIC
-          </a>
-        </h3>
+        <div className="text-base font-normal">
+          <p>
+            Check out my{' '}
+            <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.github}>
+              github
+            </a>{' '}
+            page to find out more about my skills and portfolio. Below you can find a set of programming languages and
+            technologies I have worked with, associated with a mildly accurate scale that measures familiarity,
+            comfortability, and frequency of use.
+          </p>
+        </div>
 
-        <article className="block text-sm font-normal">
-          <div className="mt-2 grid grid-cols-1 grid-rows-1 gap-y-4 gap-x-6 md:grid-cols-3 md:grid-rows-3">
+        <article className="mt-3 block text-sm font-normal">
+          <div className="mt-2 grid grid-cols-1 gap-y-4 gap-x-6 md:grid-cols-3">
             {skills.map((skill: Skill, skillIdx: number) => (
               <div key={`skill-${skillIdx}`} className="space-y-1">
                 <div className="flex items-center justify-between font-medium">
@@ -150,11 +157,9 @@ const Skills = () => {
                 <div className="relative h-[10px] w-full">
                   <div
                     style={{ width: `${skill.score}%` }}
-                    className={`${
-                      skill.score === '100' ? 'rounded-xl' : 'rounded-l-xl'
-                    } absolute top-0 z-10 h-[10px] bg-primary-900 dark:bg-secondary-900`}
+                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-br from-primary-700 to-primary-900 dark:from-primary-600 dark:to-primary-800"
                   ></div>
-                  <div className="absolute top-0 h-[10px] w-full rounded-xl bg-gray-200"></div>
+                  <div className="absolute top-0 h-[10px] w-full bg-gray-200"></div>
                 </div>
               </div>
             ))}
@@ -178,12 +183,6 @@ const Experience = () => {
     <div className="tab-panel-inner">
       <div className="tab-panel-inner-left">
         <div className="tab-inner-header">Experience</div>
-        <h3 className="tab-inner-subheader">
-          Software Engineering Student @{' '}
-          <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
-            FEUP-MEIC
-          </a>
-        </h3>
       </div>
 
       <div className="tab-panel-inner-right">
@@ -208,10 +207,10 @@ const Socials = () => {
             href={social.url}
             key={`social-${socialIdx}`}
             aria-labelledby={social.label}
-            className="transition hover:text-gray-600 dark:hover:text-white"
+            className={`transition ${social.label}`}
           >
             <svg
-              className="h-4 w-4 md:h-6 md:w-6"
+              className="h-5 w-5 md:h-6 md:w-6"
               fill="currentColor"
               viewBox={social.viewBox ? social.viewBox : '0 0 24 24'}
               aria-hidden="true"
