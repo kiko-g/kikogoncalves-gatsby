@@ -4,15 +4,15 @@
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-1 rounded-xl bg-primary-900/75 p-1 shadow dark:bg-primary-900/75 md:p-1.5;
+  @apply flex space-x-1 rounded-xl bg-primary/75 p-1 shadow dark:bg-primary/75 md:p-1.5;
 }
 
 .tab {
-  @apply w-full rounded-lg px-1 py-2 text-xs font-medium uppercase leading-5 tracking-wider text-primary-900 md:py-2.5 md:text-sm xl:text-base;
+  @apply w-full rounded-lg px-1 py-2 text-xs font-medium uppercase leading-5 tracking-wider text-primary md:py-2.5 md:text-sm xl:text-base;
 }
 
 .tab-selected {
-  @apply bg-white shadow;
+  @apply bg-lightest shadow;
 }
 
 .tab-not-selected {
@@ -24,11 +24,11 @@
 }
 
 .tab-panel {
-  @apply overflow-hidden rounded-xl bg-lightest p-1 shadow dark:bg-light/5 md:p-2;
+  @apply overflow-hidden rounded-xl bg-lightest p-1 dark:bg-light/5 md:p-2;
 }
 
 .tab-focus-ring {
-  @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-900/75 focus:outline-none focus:ring-2;
+  @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-primary/75 focus:outline-none focus:ring-2;
 }
 
 /* Content */
@@ -45,7 +45,7 @@
 }
 
 .tab-inner-header {
-  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-800 dark:text-blue-500 md:flex;
+  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-blue-500 md:flex;
 }
 
 .tab-inner-subheader {
@@ -57,7 +57,7 @@
 }
 
 .tab-inner-link {
-  @apply font-semibold text-primary-800 transition hover:underline hover:opacity-90 dark:text-blue-500;
+  @apply font-semibold text-primary-light transition hover:underline hover:opacity-90 dark:text-blue-500;
 }
 
 .tab-inner-prose {

@@ -19,7 +19,7 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
             <a
               target="_blank"
               href="https://github.com/kiko-g?tab=repositories"
-              className="text-secondary-900 hover:opacity-80 dark:text-secondary-900"
+              className="text-secondary hover:opacity-80 dark:text-secondary"
             >
               my github
             </a>{' '}

@@ -63,12 +63,12 @@ const Hamburger = ({ open }) => (
         <span className="sr-only">Open nav menu</span>
         {open ? (
           <XIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary-900/75 dark:group-hover:text-primary-900/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
             aria-hidden="true"
           />
         ) : (
           <MenuIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary-900/75 dark:group-hover:text-primary-900/75"
+            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
             aria-hidden="true"
           />
         )}
@@ -97,8 +97,8 @@ const Header = ({ title, location }) => (
             type="button"
             className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
               location === link.title
-                ? 'text-primary-900 dark:text-white'
-                : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
+                ? 'text-primary dark:text-white'
+                : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
             }`}
           >
             <span className="flex items-center justify-center">
@@ -107,7 +107,7 @@ const Header = ({ title, location }) => (
             </span>
           </button>
           {location === link.title ? (
-            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary-900 dark:bg-primary-800" />
+            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-primary-light" />
           ) : null}
         </Link>
       ))}
@@ -127,7 +127,7 @@ const Mobile = ({ location }) => (
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
-              ? 'text-primary-900 dark:text-primary-800'
+              ? 'text-primary dark:text-primary-light'
               : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
           }`}
         >

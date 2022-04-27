@@ -18,7 +18,7 @@
 /* Card */
 .blogpost-card {
   @apply max-w-7xl space-y-2 rounded-xl bg-lightest p-4 shadow transition duration-300
-    hover:bg-light hover:text-gray-800 dark:bg-light/5 hover:dark:bg-primary-900/50 dark:hover:text-white;
+    hover:bg-light hover:text-gray-800 dark:bg-light/5 hover:dark:bg-primary/50 dark:hover:text-white;
 }
 
 .blogpost-card section {
@@ -120,7 +120,7 @@ main.blogpost {
 }
 
 .blogpost blockquote {
-  @apply my-8 border-primary-900 md:mx-12;
+  @apply my-8 border-primary md:mx-12;
 }
 
 .blogpost pre {

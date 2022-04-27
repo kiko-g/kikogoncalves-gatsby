@@ -50,7 +50,7 @@ const IndexPage = () => {
           <div>
             <Link
               to="/me"
-              className="inline-flex rounded bg-gradient-to-r from-tertiary-900 via-indigo-400 to-secondary-900 p-[2px] transition focus:outline-none focus:ring active:text-opacity-75"
+              className="inline-flex rounded bg-gradient-to-r from-tertiary via-indigo-400 to-secondary p-[2px] transition focus:outline-none focus:ring active:text-opacity-75"
             >
               <span
                 className="hover flex items-center justify-center space-x-2 rounded-sm bg-white
@@ -105,7 +105,7 @@ const About = () => {
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
             <li key={`detail-${index}`}>
-              <Icon icon="codicon:triangle-right" className="inline text-primary-800 dark:text-blue-500" />
+              <Icon icon="codicon:triangle-right" className="inline text-primary-light dark:text-blue-500" />
               <span>&nbsp;</span>
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&nbsp;&middot;&nbsp;</span>
@@ -182,7 +182,7 @@ const Skills = () => {
                 <div className="relative h-[10px] w-full">
                   <div
                     style={{ width: `${skill.score}%` }}
-                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-br from-primary-700 to-primary-900 dark:from-primary-600 dark:to-primary-800"
+                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-primary to-primary-light dark:from-primary dark:to-primary-light"
                   ></div>
                   <div className="absolute top-0 h-[10px] w-full bg-gray-200"></div>
                 </div>
