@@ -4,7 +4,7 @@
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-1 rounded-xl bg-primary/75 p-1 shadow dark:bg-primary/75 md:space-x-2 md:p-1.5;
+  @apply flex space-x-2 rounded-xl bg-primary/75 p-1 shadow dark:bg-primary/75 md:p-1.5;
 }
 
 .tab {
@@ -12,7 +12,7 @@
 }
 
 .tab-selected {
-  @apply bg-lightest shadow;
+  @apply bg-lighter shadow;
 }
 
 .tab-not-selected {
@@ -82,4 +82,27 @@
 
 .tab-inner-image-header {
   @apply my-1.5 flex-1 text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
+}
+
+/* See More Footer */
+.see-more-wrapper {
+  @apply mt-4 flex items-center justify-between;
+}
+
+.see-more-left {
+  @apply space-x-5;
+}
+
+.see-more-left {
+  @apply space-x-0;
+}
+
+.see-more-button {
+  @apply inline-flex rounded bg-gradient-to-r from-tertiary via-indigo-400 to-secondary p-[2px] 
+  transition focus:outline-none focus:ring active:text-opacity-75;
+}
+
+.see-more-button > span {
+  @apply flex items-center justify-center space-x-2 rounded-sm bg-white px-6 py-3 
+  font-medium transition hover:bg-transparent hover:text-white dark:text-gray-800 dark:hover:text-white;
 }

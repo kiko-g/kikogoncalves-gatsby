@@ -1,32 +1,23 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 
-type Props = {}
-
-const Gallery = ({}: Props) => {
-  const gallery = [
-    `../../static/images/hero.jpg`,
-    `../../static/images/hero.jpg`,
-    `../../static/images/hero1.jpg`,
-    `../../static/images/hero2.jpg`,
-    `../../static/images/hero3.jpg`,
-    `../../static/images/hero6.jpg`,
-    `../../static/images/hero4.jpg`,
-    `../../static/images/hero3.jpg`,
-  ]
+const Gallery = () => {
+  const gallery = Array(10).fill(false)
 
   return (
-    <div className="grid w-full grid-cols-1 gap-4 p-1 md:grid-cols-4">
-      {gallery.map((imageSrc, imageIdx) => {
-        return (
-          <StaticImage
-            src={`../../static/images/hero4.jpg`}
-            key={`gallery-${imageIdx}`}
-            alt={`gallery-${imageIdx}`}
-            className="aspect-square h-auto w-auto rounded"
-          />
-        )
-      })}
+    <div className="px-2 py-2">
+      <div className="tab-inner-header">Gallery</div>
+      <div className="mt-2 grid w-full grid-cols-1 gap-4 md:grid-cols-5">
+        {gallery.map((image: string, imageIdx: number) => {
+          return (
+            <img
+              src={`/images/hero/hero${imageIdx}.jpg`}
+              key={`gallery-${imageIdx}`}
+              alt={`gallery-${imageIdx}`}
+              className="aspect-square h-full rounded-xl object-cover object-top"
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import Socials from './Socials'
 import { links } from '../../utils'
-import { StaticImage } from 'gatsby-plugin-image'
 
 type Props = {}
 
@@ -61,7 +60,7 @@ const Skills = ({}: Props) => {
                 <div className="relative h-[10px] w-full">
                   <div
                     style={{ width: `${skill.score}%` }}
-                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-primary to-primary-light dark:from-primary dark:to-primary-light"
+                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-tertiary via-indigo-400 to-secondary"
                   ></div>
                   <div className="absolute top-0 h-[10px] w-full bg-gray-200"></div>
                 </div>
@@ -72,7 +71,7 @@ const Skills = ({}: Props) => {
       </div>
 
       <div className="tab-panel-inner-right">
-        <StaticImage src={`../../static/images/hero2.jpg`} className="tab-inner-image" alt="profile-picture" />
+        <img src={'/images/hero/hero2.jpg'} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
           <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />

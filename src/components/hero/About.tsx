@@ -1,7 +1,6 @@
 import React from 'react'
 import Socials from './Socials'
 import { links } from '../../utils'
-import { StaticImage } from 'gatsby-plugin-image'
 import { Icon } from '@iconify/react'
 
 type Props = {}
@@ -53,7 +52,7 @@ const About = ({}: Props) => {
       </div>
 
       <div className="tab-panel-inner-right">
-        <StaticImage src={`../../static/images/hero1.jpg`} className="tab-inner-image" alt="profile-picture" />
+        <img src={'images/hero/hero1.jpg'} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
           <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />

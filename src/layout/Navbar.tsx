@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
-import { StaticImage } from 'gatsby-plugin-image'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { DarkModeSwitchMinimal } from './DarkModeSwitchMinimal'
 import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/outline'
@@ -47,13 +46,9 @@ const Hamburger = ({ open }) => (
   >
     <Link to="/">
       {open ? (
-        <StaticImage
-          className="avatar top-0.5 h-5 w-5"
-          src="../../static/images/avatar.png"
-          alt="Francisco Gonçalves"
-        />
+        <img className="avatar top-0.5 h-5 w-5" src={'/images/avatar.png'} alt="Francisco Gonçalves" />
       ) : (
-        <StaticImage className="avatar h-6 w-6" src="../../static/images/avatar.png" alt="Francisco Gonçalves" />
+        <img className="avatar h-6 w-6" src={'/images/avatar.png'} alt="Francisco Gonçalves" />
       )}
     </Link>
 
@@ -81,10 +76,10 @@ const Header = ({ title, location }) => (
   <div className="header">
     <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
       <Link to="/" className="flex items-center space-x-2">
-        <StaticImage
-          className="z-20 inline-flex h-6 w-6 rounded-full transition"
-          src="../../static/images/avatar.png"
+        <img
+          src={'/images/avatar.png'}
           alt="Francisco Gonçalves"
+          className="z-20 inline-flex h-6 w-6 rounded-full transition"
         />
         <h2 className="text-xs font-bold tracking-tighter duration-150 lg:text-base">{title}</h2>
       </Link>
@@ -107,7 +102,7 @@ const Header = ({ title, location }) => (
             </span>
           </button>
           {location === link.title ? (
-            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-tertiary" />
+            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-blue-600" />
           ) : null}
         </Link>
       ))}
@@ -136,7 +131,7 @@ const Mobile = ({ location }) => (
             {link.title}
           </span>
           {location === link.title ? (
-            <span className="absolute -left-4 h-full w-1 rounded-sm bg-primary dark:bg-tertiary" />
+            <span className="absolute -left-4 h-full w-1 rounded-sm bg-primary dark:bg-blue-600" />
           ) : null}
         </button>
       </Link>
