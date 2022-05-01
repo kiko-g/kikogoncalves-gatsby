@@ -4,7 +4,7 @@
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-1 rounded-xl bg-primary/75 p-1 shadow dark:bg-primary/75 md:p-1.5;
+  @apply flex space-x-1 rounded-xl bg-primary/75 p-1 shadow dark:bg-primary/75 md:space-x-2 md:p-1.5;
 }
 
 .tab {

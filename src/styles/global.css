@@ -12,7 +12,7 @@ html {
 }
 
 .layout {
-  @apply flex min-h-screen flex-col bg-ice font-prose font-medium text-gray-800 opacity-[99%] dark:bg-navy dark:text-white;
+  @apply flex min-h-screen flex-col overflow-hidden bg-ice font-prose font-medium text-gray-800 opacity-[99%] dark:bg-navy dark:text-white;
 }
 
 .content {

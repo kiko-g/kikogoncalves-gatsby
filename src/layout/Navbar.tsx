@@ -107,7 +107,7 @@ const Header = ({ title, location }) => (
             </span>
           </button>
           {location === link.title ? (
-            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-primary-light" />
+            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-tertiary" />
           ) : null}
         </Link>
       ))}
@@ -127,14 +127,17 @@ const Mobile = ({ location }) => (
           type="button"
           className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
             location === link.title
-              ? 'text-primary dark:text-primary-light'
-              : 'text-gray-800/70 hover:text-gray-800 dark:text-white/75 dark:hover:text-white'
+              ? 'text-primary dark:text-white'
+              : 'text-gray-800/70 hover:text-gray-800 dark:text-white/60 dark:hover:text-white'
           }`}
         >
           <span className="flex items-center justify-center">
             {link.icon}
             {link.title}
           </span>
+          {location === link.title ? (
+            <span className="absolute -left-4 h-full w-1 rounded-sm bg-primary dark:bg-tertiary" />
+          ) : null}
         </button>
       </Link>
     ))}
