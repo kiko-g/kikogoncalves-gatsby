@@ -19,7 +19,7 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout location="Home" background={false}>
+    <Layout location="Home" background liquid>
       <Seo title="Home" />
       <div className="index-wrapper">
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>

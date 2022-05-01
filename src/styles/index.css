@@ -4,11 +4,12 @@
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-2 rounded-xl bg-primary/75 p-1 shadow dark:bg-primary/75 md:p-1.5;
+  @apply flex space-x-2 rounded-xl bg-primary-light p-1 shadow dark:bg-primary/20 md:space-x-3 md:p-1.5;
 }
 
 .tab {
-  @apply w-full rounded-lg px-1 py-2 text-xs font-medium uppercase leading-5 tracking-wider text-primary md:py-2.5 md:text-sm xl:text-base;
+  @apply w-full rounded-lg px-2 py-2 text-xs font-medium uppercase leading-5 tracking-tight text-primary 
+  md:py-2.5 md:text-sm md:tracking-wide xl:text-base;
 }
 
 .tab-selected {
@@ -20,7 +21,7 @@
 }
 
 .tab-panels {
-  @apply mt-2;
+  @apply mt-3;
 }
 
 .tab-panel {

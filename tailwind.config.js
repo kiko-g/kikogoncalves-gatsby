@@ -23,6 +23,8 @@ module.exports = {
       },
       maxWidth: {
         screen: '100vw',
+        '8xl': '88rem',
+        '9xl': '96rem',
       },
       fontSize: {
         xxs: '0.6rem',

@@ -8,7 +8,7 @@ import '../styles/blog.css'
 // prettier-ignore
 const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
   return (
-    <Layout location="Blog">
+    <Layout location="Blog" liquid>
       <Seo title="Blog" />
       <main className="blog">
         <header>
@@ -43,9 +43,9 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 85)
+          excerpt(pruneLength: 80)
           frontmatter {
-            date(formatString: "DD MMM, YYYY")
+            date(formatString: "DD MMMM, YYYY")
             slug
             title
             pinned

@@ -2,7 +2,7 @@
 pinned: true
 date: 2022-03-25
 slug: /blog/vscode-settings-json
-title: Manipulating VS Code settings.json
+title: Manipulating VS Code Settings
 featuredImage: ./featured.png
 ---
 

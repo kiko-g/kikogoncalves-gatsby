@@ -29,7 +29,8 @@
 }
 
 .project-card > aside .pinned {
-  @apply absolute top-2 left-2 rounded-full bg-teal-700 p-1 text-xs leading-none text-white;
+  @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary 
+  p-1 text-xs leading-none text-white;
 }
 
 .project-card > section {

@@ -26,7 +26,7 @@ export const Layout = ({ children, location, background, liquid }: Props) => {
     <div className="layout">
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
       {background ? <Background /> : null}
-      <div className="content-home">{children}</div>
+      <div className="content-liquid">{children}</div>
       <Footer siteTitle={data.site.siteMetadata?.title} />
     </div>
   ) : (

@@ -20,8 +20,8 @@ html {
   @apply container z-10 mx-auto my-auto max-w-7xl;
 }
 
-.content-home {
-  @apply z-10 mb-auto flex;
+.content-liquid {
+  @apply container z-10 mx-auto my-auto;
 }
 
 /* Navbar */
