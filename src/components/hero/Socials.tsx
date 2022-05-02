@@ -1,8 +1,6 @@
 import React from 'react'
 import { socials, links } from '../../utils'
 
-type Props = {}
-
 const Socials = () => {
   return (
     <div className="flex flex-wrap items-center justify-center gap-1 text-gray-400 dark:text-gray-300 md:mt-0">

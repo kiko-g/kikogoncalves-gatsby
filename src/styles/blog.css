@@ -80,8 +80,12 @@ main.blogpost {
   @apply flex items-center justify-between;
 }
 
-.blogpost header span {
-  @apply flex text-sm font-semibold tracking-wide text-tertiary dark:text-tertiary;
+.blogpost header span.date {
+  @apply flex text-sm font-semibold text-secondary dark:text-secondary;
+}
+
+.blogpost header .go-back-button {
+  @apply flex rounded-full text-sm font-semibold text-primary transition hover:opacity-75 dark:text-white;
 }
 
 .blogpost article {
@@ -145,10 +149,13 @@ main.blogpost {
   @apply my-8 border-primary md:mx-12;
 }
 
-.blogpost pre {
-  @apply font-code;
+deckgo-highlight-code {
+  --deckgo-highlight-code-font-size: 0.65rem;
+  --deckgo-highlight-code-font-family: 'JetBrains Mono';
 }
 
-.blogpost code {
-  @apply p-2 font-code text-xs;
+@media (min-width: 768px) {
+  deckgo-highlight-code {
+    --deckgo-highlight-code-font-size: 0.8rem;
+  }
 }

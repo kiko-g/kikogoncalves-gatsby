@@ -10,7 +10,15 @@ const daysDifference = (dateString: string) => {
   return difference
 }
 
-const socials = [
+type Social = {
+  shown: boolean
+  label: string
+  url: string
+  svg: string[] // array of `d` entries for tag <path>
+  viewBox?: string // svg `viewBox` (optional, deefined by the ? operator)
+}
+
+const socials: Social[] = [
   {
     shown: false,
     label: 'facebook',

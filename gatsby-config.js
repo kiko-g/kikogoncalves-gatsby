@@ -42,19 +42,11 @@ module.exports = {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               terminal: 'carbon',
-              theme: 'one-dark',
+              theme: 'dracula',
               editable: false,
               lineNumbers: false,
             },
           },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        // In your gatsby-transformer-remark plugin array
-        plugins: [
           {
             resolve: 'gatsby-remark-emojis',
             options: {

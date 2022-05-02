@@ -17,7 +17,7 @@ export default function Template({ data }) {
           <h1>{frontmatter.title}</h1>
           <div>
             <GoBack />
-            <span>{frontmatter.date}</span>
+            <span className="date">{frontmatter.date}</span>
           </div>
         </header>
 
@@ -54,20 +54,17 @@ export const pageQuery = graphql`
 
 const GoBack = () => (
   <a
-    className="flex rounded-full transition bg-dark/5 hover:bg-dark/10 dark:bg-light/5 px-3 py-1 text-sm font-semibold leading-6 dark:hover:bg-white/20"
+    className="go-back-button"
     href="/blog"
   >
-    <svg
-      viewBox="0 -9 3 24"
-      className="mr-3 h-6 w-auto overflow-visible"
-    >
+    <svg viewBox="0 -7 3 24" className="mr-2.5 h-6 w-auto overflow-visible">
       <path
         d="M3 0L0 3L3 6"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></path>
     </svg>
     Go back
