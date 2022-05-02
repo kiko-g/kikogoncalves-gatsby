@@ -101,7 +101,7 @@ const Resume = () => {
         <div className="tab-inner-prose">
           <h2>
             Check out my{' '}
-            <a className="tab-inner-link" target="_blank" href="https://www.linkedin.com/in/kikogoncalves/">
+            <a className="link" target="_blank" href="https://www.linkedin.com/in/kikogoncalves/">
               linkedin
             </a>{' '}
             page to find out more about my path, carrer and technical profile

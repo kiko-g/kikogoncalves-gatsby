@@ -24,7 +24,7 @@ export const ProjectCard = ({ project }) => {
             <div className="dates">
               {info.startDate} - {info.endDate}
             </div>
-            <div className="description">{info.description}</div>
+            <em className="description">{info.description}</em>
           </header>
 
           <div className="body">

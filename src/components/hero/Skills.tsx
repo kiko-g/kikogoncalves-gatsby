@@ -39,7 +39,7 @@ const Skills = ({}: Props) => {
         <div className="tab-inner-prose">
           <p>
             Check out my{' '}
-            <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.github}>
+            <a className="link" target="_blank" rel="noreferrer" href={links.github}>
               github
             </a>{' '}
             page to find out more about my skills and portfolio. Below you can find a set of programming languages and

@@ -20,7 +20,7 @@ const About = ({}: Props) => {
         <div className="tab-inner-header">About</div>
         <h3 className="tab-inner-subheader">
           Software Engineering Student @{' '}
-          <a className="tab-inner-link" target="_blank" rel="noreferrer" href={links.meic}>
+          <a className="link" target="_blank" rel="noreferrer" href={links.meic}>
             FEUP-MEIC
           </a>
         </h3>

@@ -57,10 +57,6 @@
   @apply mt-3 text-base font-normal md:mt-1;
 }
 
-.tab-inner-link {
-  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
-}
-
 .tab-inner-prose {
   @apply mt-2 text-sm font-normal text-gray-600 dark:text-light md:text-base;
 }

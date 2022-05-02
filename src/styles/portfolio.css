@@ -3,6 +3,10 @@
   @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 2xl:px-0;
 }
 
+.portfolio a {
+  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
+}
+
 .portfolio header > h2 {
   @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
 }
@@ -43,15 +47,15 @@
 }
 
 .project-card > section header .title {
-  @apply text-xl font-semibold tracking-tight;
+  @apply text-xl font-semibold text-primary dark:text-blue-500;
 }
 
 .project-card > section header .dates {
-  @apply font-normal tracking-tight text-gray-600 dark:text-white;
+  @apply font-medium tracking-tight text-gray-500 dark:text-white;
 }
 
 .project-card > section header .description {
-  @apply font-medium tracking-tight text-primary dark:text-blue-500;
+  @apply tracking-tighter text-gray-600 dark:text-white;
 }
 
 .project-card > section .body {
@@ -62,16 +66,12 @@
   @apply my-3;
 }
 
-.project-card > section .content a {
-  @apply font-semibold text-secondary hover:opacity-80 dark:text-secondary;
-}
-
 .project-card > section .tech-stack {
   @apply flex flex-wrap gap-2;
 }
 
 .project-card > section .tech-stack > span {
-  @apply rounded-md bg-gradient-to-r from-primary-light to-primary-light
+  @apply rounded-md bg-gradient-to-br from-indigo-400 to-indigo-400
   px-2 py-1 text-xs font-medium tracking-wide text-white opacity-90 shadow;
 }
 

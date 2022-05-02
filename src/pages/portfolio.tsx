@@ -18,8 +18,8 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
             to or developed myself. The source code for most of these projects is available on{' '}
             <a
               target="_blank"
+              className="link"
               href="https://github.com/kiko-g?tab=repositories"
-              className="text-secondary hover:opacity-80 dark:text-secondary"
             >
               my github
             </a>{' '}
