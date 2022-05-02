@@ -155,7 +155,7 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="bg-sky-100 px-2 py-1 text-black">{entry.date}</span>
+                  <span className="bg-blue-500 rounded px-2 py-1 text-white">{entry.date}</span>
                 </div>
               ) : null}
 

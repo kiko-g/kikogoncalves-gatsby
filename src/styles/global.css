@@ -11,6 +11,10 @@ html {
   min-height: calc(100vh - 3.5rem);
 }
 
+.link {
+  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
+}
+
 /* Layout */
 .layout {
   @apply flex min-h-screen flex-col overflow-hidden bg-ice font-prose font-medium text-gray-800 opacity-[99%] dark:bg-navy dark:text-white;

@@ -1,4 +1,4 @@
-/* Blogpage */
+/* @@@ Blogpage */
 .blog {
   @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 xl:px-4 2xl:px-0;
 }
@@ -15,7 +15,7 @@
   @apply grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
 }
 
-/* Card */
+/* @@@ Card */
 .blogpost-card {
   @apply relative space-y-2 rounded-xl bg-lightest p-4 shadow transition duration-300
     hover:bg-light hover:text-gray-800 dark:bg-light/5 hover:dark:bg-primary/50 dark:hover:text-white;
@@ -59,9 +59,13 @@
   @apply absolute bottom-3 right-4 text-sm font-normal text-gray-400 transition dark:text-gray-500;
 }
 
-/* Post page */
+/* @@@ Post page */
 main.blogpost {
   @apply mx-auto flex w-full flex-col justify-between p-4 px-4 pb-28 font-normal sm:mt-16 sm:px-6 md:px-8 xl:max-w-6xl xl:px-12;
+}
+
+.blogpost article a {
+  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
 }
 
 .blogpost header {
@@ -77,7 +81,7 @@ main.blogpost {
 }
 
 .blogpost header span {
-  @apply flex text-sm font-semibold tracking-wide text-primary-light dark:text-tertiary;
+  @apply flex text-sm font-semibold tracking-wide text-tertiary dark:text-tertiary;
 }
 
 .blogpost article {
@@ -90,6 +94,14 @@ main.blogpost {
 
 .blogpost footer > span {
   @apply text-gray-400 dark:text-gray-500 sm:text-center;
+}
+
+.blogpost img {
+  @apply w-full rounded-xl border-0 bg-transparent shadow;
+}
+
+.blogpost .gatsby-resp-image-wrapper {
+  margin: 2rem 0 !important;
 }
 
 .blogpost p {

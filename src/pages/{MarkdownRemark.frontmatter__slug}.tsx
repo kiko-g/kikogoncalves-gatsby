@@ -54,12 +54,12 @@ export const pageQuery = graphql`
 
 const GoBack = () => (
   <a
-    className="group flex text-sm font-semibold leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+    className="flex rounded-full transition bg-dark/5 hover:bg-dark/10 dark:bg-light/5 px-3 py-1 text-sm font-semibold leading-6 dark:hover:bg-white/20"
     href="/blog"
   >
     <svg
       viewBox="0 -9 3 24"
-      className="mr-3 h-6 w-auto overflow-visible text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300"
+      className="mr-3 h-6 w-auto overflow-visible"
     >
       <path
         d="M3 0L0 3L3 6"

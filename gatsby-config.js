@@ -51,6 +51,46 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // In your gatsby-transformer-remark plugin array
+        plugins: [
+          {
+            resolve: 'gatsby-remark-emojis',
+            options: {
+              active: true,
+              class: 'emoji-icon', // Add a custom css class
+              escapeCharacter: '', // Default ('') ---> :poop:
+              size: 24, // Select the size (available size: 16, 24, 32, 64)
+              styles: {
+                margin: '0',
+                width: '24px',
+                bottom: '1px',
+                display: 'inline',
+                position: 'relative',
+              },
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1920,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Francisco Goncalves website`,
