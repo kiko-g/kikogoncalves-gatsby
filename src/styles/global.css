@@ -21,7 +21,7 @@ html {
 }
 
 .content-liquid {
-  @apply container z-10 mx-auto my-auto;
+  @apply container z-10 mx-auto my-auto max-w-8xl;
 }
 
 /* Navbar */

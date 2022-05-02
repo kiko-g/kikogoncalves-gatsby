@@ -4,7 +4,7 @@
 
 /* Tabs */
 .tab-list {
-  @apply flex space-x-2 rounded-xl bg-primary-light p-1 shadow dark:bg-primary/20 md:space-x-3 md:p-1.5;
+  @apply flex space-x-2 rounded-xl bg-primary-light p-1 shadow dark:bg-light/5 md:space-x-3 md:p-1.5;
 }
 
 .tab {
@@ -58,7 +58,7 @@
 }
 
 .tab-inner-link {
-  @apply font-semibold text-primary-light transition hover:underline hover:opacity-90 dark:text-blue-500;
+  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
 }
 
 .tab-inner-prose {
