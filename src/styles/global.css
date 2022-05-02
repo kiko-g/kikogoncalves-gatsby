@@ -8,7 +8,7 @@ html {
 }
 
 code {
-  @apply rounded-md px-1 font-code text-xs text-pink-600;
+  @apply rounded-md px-1 font-code text-pink-600;
 }
 
 .link {
