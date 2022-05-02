@@ -5,21 +5,21 @@ import { classNames } from '../utils'
 import { Tab } from '@headlessui/react'
 import { Layout } from '../layout/Layout'
 import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
-import { Gallery, About, Skills, Experience } from '../components/hero'
+import { Gallery, About, Skills, Resume } from '../components/hero'
 import '../styles/index.css'
 
 const IndexPage = () => {
   const [focusRing] = React.useState(false)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
-  const headers = ['About', 'Skills', 'Experience', 'Gallery']
-  const content = [<About />, <Skills />, <Experience />, <Gallery />]
+  const headers = ['About', 'Skills', 'Resume', 'Gallery']
+  const content = [<About />, <Skills />, <Resume />, <Gallery />]
 
   const nextTab = () => {
     setSelectedIndex((selectedIndex + 1) % content.length)
   }
 
   return (
-    <Layout location="Home" background liquid>
+    <Layout location="Home" liquid>
       <Seo title="Home" />
       <div className="index-wrapper">
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>

@@ -49,7 +49,7 @@ const Skills = ({}: Props) => {
         </div>
 
         <article className="mt-6 block font-code text-sm font-normal">
-          <div className="mt-2 grid grid-cols-1 gap-y-4 gap-x-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-y-4 gap-x-6 md:grid-cols-3">
             {skills.map((skill: Skill, skillIdx: number) => (
               <div key={`skill-${skillIdx}`} className="space-y-1">
                 <div className="flex items-center justify-between font-medium">
