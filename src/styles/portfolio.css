@@ -3,10 +3,6 @@
   @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 2xl:px-0;
 }
 
-.portfolio a {
-  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
-}
-
 .portfolio header > h2 {
   @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
 }
@@ -63,16 +59,20 @@
 }
 
 .project-card > section .content {
-  @apply my-3;
+  @apply my-2;
+}
+
+.portfolio .content a {
+  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
 }
 
 .project-card > section .tech-stack {
-  @apply flex flex-wrap gap-2;
+  @apply mt-2 flex flex-wrap gap-2;
 }
 
 .project-card > section .tech-stack > span {
-  @apply rounded-md bg-gradient-to-br from-indigo-400 to-indigo-400
-  px-2 py-1 text-xs font-medium tracking-wide text-white opacity-90 shadow;
+  @apply rounded bg-gradient-to-br from-tertiary-light to-tertiary px-2 py-1 text-xs font-medium
+  lowercase tracking-wide text-white shadow;
 }
 
 .project-card > section .links {
@@ -86,8 +86,8 @@
 }
 
 .project-card > section .links .deploy {
-  @apply inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-medium text-white
-  transition hover:bg-slate-600 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-100 sm:p-2;
+  @apply inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-medium text-white transition
+  hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 sm:p-2;
 }
 
 .project-card ul,

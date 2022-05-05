@@ -28,12 +28,12 @@ export const ProjectCard = ({ project }) => {
           </header>
 
           <div className="body">
-            <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
             <div className="tech-stack">
               {info.techStack.map((tech: string, techIdx: number) => (
                 <span key={`technology-${techIdx}`}>{tech}</span>
               ))}
             </div>
+            <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>
 
