@@ -53,10 +53,7 @@ export const pageQuery = graphql`
 `
 
 const GoBack = () => (
-  <a
-    className="go-back-button"
-    href="/blog"
-  >
+  <a className="go-back-button" href="/blog">
     <svg viewBox="0 -7 3 24" className="mr-2.5 h-6 w-auto overflow-visible">
       <path
         d="M3 0L0 3L3 6"

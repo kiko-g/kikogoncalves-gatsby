@@ -10,7 +10,7 @@ TailwindCSS is an extremely useful framework that saves you a lot of **time and 
 
 ## Getting Started
 
-Before installing Tailwind we should start by configuring our work environment. I strongly recommend that you use VS Code and then configure extensions for Tailwind. The ones I recommend the most are `Tailwind CSS IntelliSense` and `Tailwind Docs`. Feel free to add other extensions to your environment, but these two are the most common and I would say most useful. 
+Before installing Tailwind we should start by configuring our work environment. I strongly recommend that you use VS Code and then configure extensions for Tailwind. The ones I recommend the most are `Tailwind CSS IntelliSense` and `Tailwind Docs`. Feel free to add other extensions to your environment, but these two are the most common and I would say most useful.
 
 To get going with Tailwind checkout out the **tailwind docs** on [installation](https://tailwindcss.com/docs/installation). If you're familiar with **React** or **Vue** visit the section that combines [Tailwind with popular frameworks](https://tailwindcss.com/docs/installation/framework-guides) (e.g., NextJS, Gatsby, Create React App). You can also skip the installation and jump right into the action in Tailwind's [playground](play.tailwindcss.com/), but let me warn you that some of the components I will show you will use React.
 
@@ -57,7 +57,6 @@ module.exports = {
 ```
 
 As you can see, you can expand the classes that are available to you, which provides endless possibilities! If you're familiar with bootstrap, you know that the choices are made for you. In bootstrap you use `btn btn-primary` to define a main button which will have the default styles that bootstrap provides. If you want to change that blue bootstrappy color, you'll need to do css overrides using `!important`. This can quickly get out of hand if you want to stay away from bootstrap's theme. Tailwind gives is the complete opposite. Everything comes unstyled and it is up to you to create your own buttons, for example. Checkout how to [customize your theme](https://tailwindcss.com/docs/adding-custom-styles) in the tailwind docs.
-
 
 ## Creating awesome components
 
