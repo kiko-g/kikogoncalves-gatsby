@@ -9,7 +9,8 @@ export const ProjectCard = ({ project }) => {
   return (
     <div className="project-card">
       <aside>
-        <GatsbyImage image={coverImage} alt="cover" className="image" />
+        {coverImage ? <GatsbyImage image={coverImage} alt="cover" className="image" /> : <div className="dummy" />}
+
         {info.pinned ? (
           <span className="pinned">
             <PinIcon />
