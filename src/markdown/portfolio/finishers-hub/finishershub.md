@@ -7,7 +7,7 @@ repo: https://github.com/kiko-g/finishershub
 deploy: https://finishershub.netlify.app
 featuredImage: ./featured.jpg
 techStack: [Gatsby, React, Typescript, Tailwind]
-description: A videoclip musuem of finishing moves.
+description: A videoclip gallery of finishing moves over on Warzone.
 ---
 
 - Built a dynamic museum of fun COD videoclips using Gatsby

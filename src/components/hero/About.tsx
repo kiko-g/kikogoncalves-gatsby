@@ -41,7 +41,7 @@ const About = ({}: Props) => {
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
             <li key={`detail-${index}`}>
-              <Icon icon="codicon:triangle-right" className="inline text-blue-500 dark:text-blue-500" />
+              <Icon icon="codicon:triangle-right" className="inline text-tertiary dark:text-tertiary" />
               <span>&nbsp;</span>
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&nbsp;&middot;&nbsp;</span>

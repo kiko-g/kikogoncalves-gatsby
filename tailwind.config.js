@@ -29,6 +29,10 @@ module.exports = {
       fontSize: {
         xxs: '0.6rem',
       },
+      boxShadow: {
+        'inner-md': 'inset 0px 0px 2px 2px rgb(0 0 0 / 0.1)',
+        'inner-xl': 'inset 0px 0px 4px 4px rgb(0 0 0 / 0.1)',
+      },
       fontFamily: {
         prose: ['Inter', ...defaultTheme.fontFamily.sans],
         headings: ['Inter', ...defaultTheme.fontFamily.sans],

@@ -6,7 +6,7 @@ import { PortfolioEntry } from '../components/porfolio'
 import '../styles/portfolio.css'
 
 // prettier-ignore
-const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
+const PortfolioPage = ({ data: { allMarkdownRemark: { edges } } }) => {
   return (
     <Layout location="Portfolio">
       <Seo title="Portfolio" />
@@ -22,9 +22,8 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
               href="https://github.com/kiko-g?tab=repositories"
             >
               my github
-            </a>{' '}
-            and each project has a link to that. of these products is available on my GitHub, so make sure you check
-            that out and maybe drop a follow 😊
+            </a>, so make sure you check
+            that out and maybe drop a follow! 😊
           </p>
         </header>
 

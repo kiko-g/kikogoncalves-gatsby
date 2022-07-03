@@ -46,7 +46,7 @@
 }
 
 .tab-inner-header {
-  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-blue-500 md:flex;
+  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-tertiary md:flex;
 }
 
 .tab-inner-subheader {
