@@ -1,7 +1,11 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const PortfolioEntry = ({ project }) => {
+type Props = {
+  project: any
+}
+
+const PortfolioEntry = ({ project }: Props) => {
   const info = project.frontmatter
   const content = project.html
   const coverImage = getImage(project.frontmatter.featuredImage)
