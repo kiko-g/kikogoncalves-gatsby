@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { daysDifference } from '../utils'
+import { daysDifference } from '../../utils'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-export const BlogpostCard = ({ post }) => {
+const BlogPostCard = ({ post }) => {
   const difference = daysDifference(post.frontmatter.date)
   const coverImage = getImage(post.frontmatter.featuredImage)
 
@@ -34,6 +34,8 @@ export const BlogpostCard = ({ post }) => {
     </Link>
   ) : null
 }
+
+export default BlogPostCard
 
 const PinIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">

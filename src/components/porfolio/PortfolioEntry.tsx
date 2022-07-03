@@ -1,7 +1,7 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-export const ProjectCard = ({ project }) => {
+const PortfolioEntry = ({ project }) => {
   const info = project.frontmatter
   const content = project.html
   const coverImage = getImage(project.frontmatter.featuredImage)
@@ -56,6 +56,8 @@ export const ProjectCard = ({ project }) => {
     </div>
   )
 }
+
+export default PortfolioEntry
 
 const PinIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">

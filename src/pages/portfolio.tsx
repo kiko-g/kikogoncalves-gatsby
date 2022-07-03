@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
-import { ProjectCard } from '../components/ProjectCard'
+import { PortfolioEntry } from '../components/porfolio'
 import '../styles/portfolio.css'
 
 // prettier-ignore
@@ -32,7 +32,7 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
           {edges
             .filter((edge: { node: { frontmatter: { startDate: any } } }) => !!edge.node.frontmatter.startDate)
             .map((edge: { node: { id: React.Key } }) => (
-              <ProjectCard key={`project-${edge.node.id}`} project={edge.node} />
+              <PortfolioEntry key={`project-${edge.node.id}`} project={edge.node} />
             ))}
         </article>
       </main>
