@@ -28,6 +28,10 @@
   @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-lg lg:rounded-none lg:rounded-l-xl;
 }
 
+.project-card > aside .dummy {
+  @apply h-64 w-full rounded-xl bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow lg:h-full lg:w-80;
+}
+
 .project-card > aside .pinned {
   @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary 
   p-1 text-xs leading-none text-white;

@@ -10,7 +10,12 @@ export const BlogpostCard = ({ post }) => {
   return difference >= 0 ? (
     <Link to={post.frontmatter.slug} className="blogpost-card group">
       <header>
-        <GatsbyImage image={coverImage} alt="cover" className="h-48 w-full rounded-lg object-contain" />
+        {coverImage ? (
+          <GatsbyImage image={coverImage} alt="cover" className="h-48 w-full rounded-lg object-contain" />
+        ) : (
+          <div className="h-48 w-full rounded-lg bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow" />
+        )}
+
         {post.frontmatter.pinned ? (
           <span className="pinned">
             <PinIcon />
