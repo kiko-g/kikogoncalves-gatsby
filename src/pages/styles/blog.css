@@ -14,45 +14,45 @@
   @apply grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
 }
 
-.blogpost-card {
+.blog .blogpost-card {
   @apply relative space-y-2 rounded-xl bg-lightest p-4 shadow transition duration-300
     hover:bg-light hover:text-gray-800 dark:bg-light/5 hover:dark:bg-primary/50 dark:hover:text-white;
 }
 
-.blogpost-card header {
+.blog .blogpost-card header {
   @apply relative flex items-center justify-center rounded-lg bg-opacity-90;
 }
 
-.blogpost-card header .pinned {
+.blog .blogpost-card header .pinned {
   @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary
    p-1 text-xs leading-none text-white shadow;
 }
 
-.blogpost-card header .date {
+.blog .blogpost-card header .date {
   @apply absolute top-2 right-2 rounded-full bg-navy/50 px-2 py-1 text-xs 
   leading-none tracking-tight text-white dark:bg-ice/80 dark:text-gray-800;
 }
 
-.blogpost-card footer {
+.blog .blogpost-card footer {
   @apply w-full space-y-1;
 }
 
-.blogpost-card footer .header {
+.blog .blogpost-card footer .header {
   @apply flex items-start justify-start;
 }
 
-.blogpost-card footer .header .title {
+.blog .blogpost-card footer .header .title {
   @apply flex-grow font-medium;
 }
 
-.blogpost-card footer .header .new {
+.blog .blogpost-card footer .header .new {
   @apply inline-flex items-center justify-center rounded-full bg-rose-800/80 px-2 py-1 text-xs leading-none text-white;
 }
 
-.blogpost-card footer .excerpt {
+.blog .blogpost-card footer .excerpt {
   @apply text-sm font-normal tracking-tight text-gray-500 transition dark:text-gray-300;
 }
 
-.blogpost-card footer .date {
+.blog .blogpost-card footer .date {
   @apply absolute bottom-3 right-4 text-sm font-normal text-gray-400 transition dark:text-gray-500;
 }
