@@ -6,33 +6,38 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 const BlogPostCard = ({ post }) => {
   const difference = daysDifference(post.frontmatter.date)
   const coverImage = getImage(post.frontmatter.featuredImage)
+  const shown = difference >= 0
+  const isNew = difference < 60
 
-  return difference >= 0 ? (
-    <Link to={post.frontmatter.slug} className="blogpost-card group">
-      <header>
-        {coverImage ? (
-          <GatsbyImage image={coverImage} alt="cover" className="h-48 w-full rounded-lg object-contain" />
-        ) : (
-          <div className="h-48 w-full rounded-lg bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow" />
-        )}
+  return (
+    shown && (
+      <Link to={post.frontmatter.slug} className="postcard group">
+        <header>
+          {coverImage ? (
+            <GatsbyImage image={coverImage} alt="cover" className="h-48 w-full rounded-lg object-contain" />
+          ) : (
+            <div className="h-48 w-full rounded-lg bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow" />
+          )}
 
-        {post.frontmatter.pinned ? (
-          <span className="pinned">
-            <PinIcon />
-          </span>
-        ) : null}
-        <span className="date">{post.frontmatter.date}</span>
-      </header>
+          {post.frontmatter.pinned && (
+            <span className="pinned">
+              <PinIcon />
+            </span>
+          )}
 
-      <footer>
-        <div className="header">
-          <h3 className="title">{post.frontmatter.title}</h3>
-          {difference < 60 ? <span className="new">New</span> : null}
-        </div>
-        <p className="excerpt pb-0">{post.excerpt}</p>
-      </footer>
-    </Link>
-  ) : null
+          <span className="date">{post.frontmatter.date}</span>
+        </header>
+
+        <section>
+          <div className="top">
+            <h3 className="title">{post.frontmatter.title}</h3>
+            {isNew && <span className="new">New</span>}
+          </div>
+          <p className="excerpt">{post.excerpt}</p>
+        </section>
+      </Link>
+    )
+  )
 }
 
 export default BlogPostCard

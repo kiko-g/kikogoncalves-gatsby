@@ -1,25 +1,29 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const PortfolioEntry = ({ project }) => {
+type Props = {
+  project: any
+}
+
+const PortfolioEntry = ({ project }: Props) => {
   const info = project.frontmatter
   const content = project.html
   const coverImage = getImage(project.frontmatter.featuredImage)
 
   return (
-    <div className="portfolio-entry">
+    <div className="entry">
       <aside>
         {coverImage ? <GatsbyImage image={coverImage} alt="cover" className="image" /> : <div className="dummy" />}
 
-        {info.pinned ? (
+        {info.pinned && (
           <span className="pinned">
             <PinIcon />
           </span>
-        ) : null}
+        )}
       </aside>
 
       <section>
-        <div className="flex flex-col">
+        <div className="core">
           <header>
             <div className="title">{info.title}</div>
             <div className="dates">
@@ -39,18 +43,18 @@ const PortfolioEntry = ({ project }) => {
         </div>
 
         <div className="links">
-          {info.repo ? (
+          {info.repo && (
             <a href={info.repo} target="_blank" className="repo">
               <GithubIcon />
               <span className="hidden md:flex">Code on Github</span>
             </a>
-          ) : null}
-          {info.deploy ? (
+          )}
+          {info.deploy && (
             <a href={info.deploy} target="_blank" className="deploy">
               <DeployLink />
               <span className="hidden md:flex">Preview</span>
             </a>
-          ) : null}
+          )}
         </div>
       </section>
     </div>
