@@ -14,84 +14,88 @@
   @apply grid grid-cols-1 gap-6;
 }
 
-.portfolio .portfolio-entry {
+.portfolio .entry {
   @apply flex w-full flex-col space-y-3 rounded-xl bg-lightest p-3 shadow-inner-md dark:bg-white/5 lg:flex-row lg:space-y-0;
 }
 
-.portfolio .portfolio-entry > aside {
+.portfolio .entry > aside {
   @apply relative rounded-l-xl md:rounded-xl;
 }
 
-.portfolio .portfolio-entry > aside .image {
+.portfolio .entry > aside .image {
   @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-lg lg:rounded-none lg:rounded-l-xl;
 }
 
-.portfolio .portfolio-entry > aside .dummy {
+.portfolio .entry > aside .dummy {
   @apply h-64 w-full rounded-xl bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow lg:h-full lg:w-80;
 }
 
-.portfolio .portfolio-entry > aside .pinned {
+.portfolio .entry > aside .pinned {
   @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary 
   p-1 text-xs leading-none text-white;
 }
 
-.portfolio .portfolio-entry > section {
+.portfolio .entry > section {
   @apply relative flex w-auto grow flex-col justify-between space-y-6 rounded-r-xl px-1 py-1 text-base font-normal 
   lg:h-auto lg:max-h-full lg:w-3/4 lg:py-0 lg:pl-4 lg:pr-0;
 }
 
-.portfolio .portfolio-entry > section header {
+.portfolio .entry > section > .core {
+  @apply flex flex-col;
+}
+
+.portfolio .entry > section > .core > header {
   @apply mb-0;
 }
 
-.portfolio .portfolio-entry > section header .title {
+.portfolio .entry > section > .core > header > .title {
   @apply text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary;
 }
 
-.portfolio .portfolio-entry > section header .dates {
+.portfolio .entry > section > .core > header > .dates {
   @apply font-medium tracking-tighter text-primary dark:text-white;
 }
 
-.portfolio .portfolio-entry > section header .description {
+.portfolio .entry > section > .core > header > .description {
   @apply tracking-tighter text-gray-400 dark:text-white;
 }
 
-.portfolio .portfolio-entry > section .body {
+.portfolio .entry > section > .core > .body {
   @apply space-y-3;
 }
 
-.portfolio .portfolio-entry > section .content {
-  @apply my-2;
-}
-
-.portfolio .portfolio-entry > section .tech-stack {
+.portfolio .entry > section > .core > .body > .tech-stack {
   @apply mt-2 flex flex-wrap gap-2;
 }
 
-.portfolio .portfolio-entry > section .tech-stack > span {
+.portfolio .entry > section > .core > .body > .tech-stack > span {
   @apply rounded bg-primary px-2 py-1 text-xs font-medium lowercase tracking-wide text-white shadow dark:bg-tertiary;
 }
 
-.portfolio .portfolio-entry > section .links {
+.portfolio .entry > section > .core > .body > .content {
+  @apply my-2;
+}
+
+.portfolio .entry > section > .links {
   @apply absolute top-1 right-1 space-x-2 rounded-xl xl:flex;
   margin-top: 0 !important;
 }
 
-.portfolio .portfolio-entry > section .links .repo {
+.portfolio .entry > section > .links > .repo {
   @apply inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-medium text-white 
   transition hover:bg-primary/75 dark:bg-primary/80 dark:hover:bg-primary sm:p-2;
 }
 
-.portfolio .portfolio-entry > section .links .deploy {
+.portfolio .entry > section > .links > .deploy {
   @apply inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-medium text-white transition
   hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 sm:p-2;
 }
 
-.portfolio .portfolio-entry ul,
-.portfolio .portfolio-entry ol {
+.portfolio .entry ul,
+.portfolio .entry ol {
   @apply ml-4 list-disc;
 }
 
-.portfolio .portfolio-entry li {
+.portfolio .entry li {
   @apply list-item;
 }
