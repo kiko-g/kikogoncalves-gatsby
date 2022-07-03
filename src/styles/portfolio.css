@@ -47,11 +47,11 @@
 }
 
 .portfolio-entry > section header .title {
-  @apply text-xl font-semibold text-primary dark:text-tertiary leading-none;
+  @apply text-xl uppercase tracking-wide font-semibold text-primary dark:text-tertiary;
 }
 
 .portfolio-entry > section header .dates {
-  @apply font-medium tracking-tighter text-secondary dark:text-white;
+  @apply font-medium tracking-tighter text-primary dark:text-white;
 }
 
 .portfolio-entry > section header .description {
