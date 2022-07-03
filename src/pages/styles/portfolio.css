@@ -2,15 +2,19 @@
   @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 2xl:px-0;
 }
 
-.portfolio header > h2 {
+.portfolio > header {
+  @apply mt-2;
+}
+
+.portfolio > header > h2 {
   @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
 }
 
-.portfolio header > p {
+.portfolio > header > p {
   @apply mt-4 text-lg font-normal;
 }
 
-.portfolio article {
+.portfolio > article {
   @apply grid grid-cols-1 gap-6;
 }
 
