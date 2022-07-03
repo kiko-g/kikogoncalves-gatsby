@@ -66,7 +66,7 @@ const Resume = () => {
           description: <span>Faculdade de Engenharia da Universidade do Porto, MIEIC</span>,
           bulletPoints: [
             <span>
-              Current cumulative average <strong>17.00/20</strong>
+              Current cumulative average <strong>17.38/20</strong>
             </span>,
           ],
         },
@@ -132,8 +132,8 @@ type GroupProps = {
 
 const Group = ({ group }: GroupProps) => (
   <div className="mt-2">
-    <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-blue-500">{group.title}</h1>
-    <ol className="relative border-l-2 border-primary dark:border-primary-light">
+    <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-tertiary">{group.title}</h1>
+    <ol className="relative border-l-2 border-primary dark:border-tertiary">
       {group.entries.map((entry, entryIdx) => (
         <li
           key={`${group.title}-entry-${entryIdx}`}
@@ -142,7 +142,7 @@ const Group = ({ group }: GroupProps) => (
           <div className="ml-5">
             <span
               className="absolute left-[-8.8px] -top-[1px] flex h-4 w-4 rounded-full border-2 
-              border-primary bg-white dark:border-primary-light dark:bg-white"
+              border-primary bg-white dark:border-tertiary dark:bg-white"
             />
 
             <div className="flex flex-col space-y-1.5">
@@ -155,7 +155,7 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="rounded bg-blue-500 px-2 py-1 text-white">{entry.date}</span>
+                  <span className="rounded bg-secondary px-2 py-1 text-white dark:bg-tertiary">{entry.date}</span>
                 </div>
               ) : null}
 

@@ -102,7 +102,7 @@ const Header = ({ title, location }) => (
             </span>
           </button>
           {location === link.title ? (
-            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-blue-600" />
+            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-tertiary" />
           ) : null}
         </Link>
       ))}
@@ -131,7 +131,7 @@ const Mobile = ({ location }) => (
             {link.title}
           </span>
           {location === link.title ? (
-            <span className="absolute -left-4 h-full w-1 rounded-sm bg-primary dark:bg-blue-600" />
+            <span className="absolute -left-4 h-full w-1 rounded-sm bg-primary dark:bg-tertiary" />
           ) : null}
         </button>
       </Link>

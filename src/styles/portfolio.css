@@ -16,89 +16,84 @@
 }
 
 /* Portfolio Entry Card */
-.project-card {
-  @apply flex w-full flex-col space-y-3 rounded-xl bg-lightest p-3 dark:bg-light/5 lg:flex-row lg:space-y-0;
+.portfolio-entry {
+  @apply flex w-full flex-col space-y-3 rounded-xl bg-lightest p-3 shadow-inner-md dark:bg-white/5 lg:flex-row lg:space-y-0;
 }
 
-.project-card > aside {
+.portfolio-entry > aside {
   @apply relative rounded-l-xl md:rounded-xl;
 }
 
-.project-card > aside .image {
+.portfolio-entry > aside .image {
   @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-lg lg:rounded-none lg:rounded-l-xl;
 }
 
-.project-card > aside .dummy {
+.portfolio-entry > aside .dummy {
   @apply h-64 w-full rounded-xl bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow lg:h-full lg:w-80;
 }
 
-.project-card > aside .pinned {
+.portfolio-entry > aside .pinned {
   @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary 
   p-1 text-xs leading-none text-white;
 }
 
-.project-card > section {
+.portfolio-entry > section {
   @apply relative flex w-auto grow flex-col justify-between space-y-6 rounded-r-xl px-1 py-1 text-base font-normal 
   lg:h-auto lg:max-h-full lg:w-3/4 lg:py-0 lg:pl-4 lg:pr-0;
 }
 
-.project-card > section header {
+.portfolio-entry > section header {
   @apply mb-0;
 }
 
-.project-card > section header .title {
-  @apply text-xl font-semibold text-primary dark:text-blue-500;
+.portfolio-entry > section header .title {
+  @apply text-xl uppercase tracking-wide font-semibold text-primary dark:text-tertiary;
 }
 
-.project-card > section header .dates {
-  @apply font-medium tracking-tight text-gray-500 dark:text-white;
+.portfolio-entry > section header .dates {
+  @apply font-medium tracking-tighter text-primary dark:text-white;
 }
 
-.project-card > section header .description {
-  @apply tracking-tighter text-gray-600 dark:text-white;
+.portfolio-entry > section header .description {
+  @apply tracking-tighter text-gray-400 dark:text-white;
 }
 
-.project-card > section .body {
+.portfolio-entry > section .body {
   @apply space-y-3;
 }
 
-.project-card > section .content {
+.portfolio-entry > section .content {
   @apply my-2;
 }
 
-.portfolio .content a {
-  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
-}
-
-.project-card > section .tech-stack {
+.portfolio-entry > section .tech-stack {
   @apply mt-2 flex flex-wrap gap-2;
 }
 
-.project-card > section .tech-stack > span {
-  @apply rounded bg-gradient-to-br from-tertiary-light to-tertiary px-2 py-1 text-xs font-medium
-  lowercase tracking-wide text-white shadow;
+.portfolio-entry > section .tech-stack > span {
+  @apply rounded bg-primary px-2 py-1 text-xs font-medium lowercase tracking-wide text-white shadow dark:bg-tertiary;
 }
 
-.project-card > section .links {
+.portfolio-entry > section .links {
   @apply absolute top-1 right-1 space-x-2 rounded-xl xl:flex;
   margin-top: 0 !important;
 }
 
-.project-card > section .links .repo {
+.portfolio-entry > section .links .repo {
   @apply inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-medium text-white 
   transition hover:bg-primary/75 dark:bg-primary/80 dark:hover:bg-primary sm:p-2;
 }
 
-.project-card > section .links .deploy {
+.portfolio-entry > section .links .deploy {
   @apply inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-medium text-white transition
   hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 sm:p-2;
 }
 
-.project-card ul,
-.project-card ol {
+.portfolio-entry ul,
+.portfolio-entry ol {
   @apply ml-4 list-disc;
 }
 
-.project-card li {
+.portfolio-entry li {
   @apply list-item;
 }

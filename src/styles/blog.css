@@ -65,7 +65,7 @@ main.blogpost {
 }
 
 .blogpost article a {
-  @apply font-semibold text-blue-500 transition hover:underline hover:opacity-90 dark:text-blue-500;
+  @apply font-semibold text-tertiary transition hover:underline hover:opacity-90 dark:text-tertiary;
 }
 
 .blogpost header {

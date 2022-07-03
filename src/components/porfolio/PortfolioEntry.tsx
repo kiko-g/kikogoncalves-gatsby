@@ -7,7 +7,7 @@ const PortfolioEntry = ({ project }) => {
   const coverImage = getImage(project.frontmatter.featuredImage)
 
   return (
-    <div className="project-card">
+    <div className="portfolio-entry">
       <aside>
         {coverImage ? <GatsbyImage image={coverImage} alt="cover" className="image" /> : <div className="dummy" />}
 
@@ -25,7 +25,7 @@ const PortfolioEntry = ({ project }) => {
             <div className="dates">
               {info.startDate} - {info.endDate}
             </div>
-            <em className="description">{info.description}</em>
+            <span className="description">{info.description}</span>
           </header>
 
           <div className="body">
