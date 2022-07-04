@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Seo from '../components/Seo'
 import { Tabs } from '../components/home'
 import { Layout } from '../layout/Layout'
 import './styles/home.css'
 
 const IndexPage = () => {
+  const [condensed, setCondensed] = useState(false)
+
   return (
     <Layout location="Home" liquid>
       <Seo title="Home" />
@@ -14,7 +16,7 @@ const IndexPage = () => {
           <p>Welcome to my website. Here you can find more about me. Take a look around! 😄</p>
         </header>
 
-        <Tabs />
+        {condensed ? <Tabs /> : <Tabs />}
       </main>
     </Layout>
   )
