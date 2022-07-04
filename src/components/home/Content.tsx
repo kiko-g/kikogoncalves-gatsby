@@ -56,28 +56,14 @@ const Content = ({ condensed }: Props) => {
       </div>
     </div>
   ) : (
-    <div className="tabs">
-      <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-        <Tab.List className="tab-list">
-          {headers.map(category => (
-            <Tab
-              key={category}
-              className={({ selected }: { selected: any }) =>
-                classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
-              }
-            >
-              {category}
-            </Tab>
-          ))}
-        </Tab.List>
-        <Tab.Panels className="tab-panels">
-          {content.map((content: JSX.Element, index: number) => (
-            <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
-              {content}
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
+    <div className="blocks">
+      <div className="block-list">
+        {content.map((content: JSX.Element, index: number) => (
+          <div key={index} className="block-content">
+            {content}
+          </div>
+        ))}
+      </div>
 
       <div className="see-more-wrapper">
         <div className="see-more-left"></div>
