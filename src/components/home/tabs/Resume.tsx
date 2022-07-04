@@ -104,7 +104,11 @@ const Resume = () => {
             <a className="link" target="_blank" href="https://www.linkedin.com/in/kikogoncalves/">
               linkedin
             </a>{' '}
-            page to find out more about my path, carrer and technical profile
+            page to find out more about my path, carrer and technical profile or take a look at my CV in PDF format{' '}
+            <a className="link" target="_blank" href="https://www.kikogoncalves.com/cv.pdf">
+              here
+            </a>
+            .
           </h2>
 
           <div className="mt-1 grid grid-cols-1 gap-3 px-2 xl:grid-cols-2">
