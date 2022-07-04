@@ -32,7 +32,7 @@ const Resume = () => {
           headline: 'Portuguese Native Speaker',
         },
         {
-          headline: 'Cambridge C2 Advanced Certificate',
+          headline: 'Cambridge C1 Advanced Certificate',
           date: 'Dec 2016',
         },
       ],
