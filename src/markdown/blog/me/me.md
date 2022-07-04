@@ -1,6 +1,6 @@
 ---
 pinned: true
-date: 2022-05-02
+date: 2022-05-01
 slug: /blog/me
 title: Who am I?
 featuredImage: ./featured.jpg

@@ -15,7 +15,7 @@
 }
 
 .blog > article {
-  @apply grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
+  @apply grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4;
 }
 
 .blog .postcard {
@@ -38,7 +38,7 @@
 }
 
 .blog .postcard > section {
-  @apply w-full space-y-1;
+  @apply w-full;
 }
 
 .blog .postcard > section > .top {
@@ -49,10 +49,18 @@
   @apply flex-grow font-medium;
 }
 
-.blog .postcard > section > .top .new {
+.blog .postcard > section > .excerpt {
+  @apply pb-0 text-sm font-normal tracking-tight text-gray-500 transition dark:text-gray-300;
+}
+
+.blog .postcard > section > .bottom {
+  @apply mt-3 flex items-center justify-end;
+}
+
+.blog .postcard > section .new {
   @apply inline-flex items-center justify-center rounded-full bg-rose-800/80 px-2 py-1 text-xs leading-none text-white;
 }
 
-.blog .postcard > section > .excerpt {
-  @apply pb-0 text-sm font-normal tracking-tight text-gray-500 transition dark:text-gray-300;
+.blog .postcard > section .coming-soon {
+  @apply inline-flex items-center justify-center rounded-full bg-teal-800/80 px-2 py-1 text-xs leading-none text-white;
 }

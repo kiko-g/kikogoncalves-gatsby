@@ -10,16 +10,16 @@ type Props = {
 const BlogPostCard = ({ post }: Props) => {
   const difference = daysDifference(post.frontmatter.date)
   const coverImage = getImage(post.frontmatter.featuredImage)
-  const shown = difference >= 0
-  const isNew = difference < 60
+  const available = difference >= 0
+  const isNew = difference < 60 && available
 
-  return shown ? (
-    <Link to={post.frontmatter.slug} className="postcard group">
+  return (
+    <Link className="postcard group" to={available ? post.frontmatter.slug : undefined}>
       <header>
         {coverImage ? (
-          <GatsbyImage image={coverImage} alt="cover" className="h-48 w-full rounded-lg object-contain" />
+          <GatsbyImage image={coverImage} alt="cover" className="h-64 w-full rounded-lg object-contain" />
         ) : (
-          <div className="h-48 w-full rounded-lg bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow" />
+          <div className="h-64 w-full rounded-lg bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow" />
         )}
 
         {post.frontmatter.pinned && (
@@ -34,12 +34,15 @@ const BlogPostCard = ({ post }: Props) => {
       <section>
         <div className="top">
           <h3 className="title">{post.frontmatter.title}</h3>
-          {isNew && <span className="new">New</span>}
         </div>
         <p className="excerpt">{post.excerpt}</p>
+        <div className="bottom">
+          {isNew && <span className="new">New</span>}
+          {!available && <span className="coming-soon">Coming&nbsp;Soon</span>}
+        </div>
       </section>
     </Link>
-  ) : null
+  )
 }
 
 export default BlogPostCard
