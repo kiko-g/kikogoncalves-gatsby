@@ -26,7 +26,7 @@
   @apply transition hover:opacity-75 dark:hover:text-tertiary;
 }
 
-/* Tabs */
+/* Tabs View */
 .home .tabs {
   @apply w-full px-2 py-8 md:px-2 2xl:px-0;
 }
@@ -60,55 +60,7 @@
   @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-primary/75 focus:outline-none focus:ring-2;
 }
 
-.home .tabs .tab-panel-inner {
-  @apply grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl px-2 py-2 text-2xl transition md:gap-x-8;
-}
-
-.home .tabs .tab-panel-inner-left {
-  @apply order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9;
-}
-
-.home .tabs .tab-panel-inner-right {
-  @apply order-1 col-span-12 h-min sm:order-2 sm:col-span-6 md:col-span-5 lg:col-span-3 xl:col-span-3 2xl:col-span-3;
-}
-
-.home .tabs .tab-inner-header {
-  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-tertiary md:flex;
-}
-
-.home .tabs .tab-inner-subheader {
-  @apply mt-3 block text-lg font-medium leading-tight md:mt-1;
-}
-
-.home .tabs .tab-inner-prose {
-  @apply mt-3 text-base font-normal md:mt-1;
-}
-
-.home .tabs .tab-inner-prose {
-  @apply mt-2 text-sm font-normal text-gray-600 dark:text-light md:text-base;
-}
-
-.home .tabs .tab-inner-prose p {
-  @apply mt-1;
-}
-
-.home .tabs .tab-inner-bullet-facts {
-  @apply mt-3 text-sm md:text-lg;
-}
-
-.home .tabs .tab-inner-image {
-  @apply mb-1 aspect-square w-full rounded-lg shadow-xl md:mb-2;
-}
-
-.home .tabs .tab-inner-image-subbox {
-  @apply flex flex-wrap items-center justify-between space-x-0 md:space-x-2;
-}
-
-.home .tabs .tab-inner-image-header {
-  @apply my-1.5 flex-1 text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
-}
-
-/* Blocks */
+/* Blocks Column View */
 .home .blocks {
   @apply w-full px-2 py-8 md:px-2 2xl:px-0;
 }
@@ -121,55 +73,52 @@
   @apply overflow-hidden rounded-xl bg-lightest p-1 dark:bg-light/5 md:p-2;
 }
 
-.home .blocks .tab-focus-ring {
-  @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-primary/75 focus:outline-none focus:ring-2;
-}
-
-.home .blocks .tab-panel-inner {
+/* Panel */
+.home .tab-panel-inner {
   @apply grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl px-2 py-2 text-2xl transition md:gap-x-8;
 }
 
-.home .blocks .tab-panel-inner-left {
+.home .tab-panel-inner-left {
   @apply order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9;
 }
 
-.home .blocks .tab-panel-inner-right {
+.home .tab-panel-inner-right {
   @apply order-1 col-span-12 h-min sm:order-2 sm:col-span-6 md:col-span-5 lg:col-span-3 xl:col-span-3 2xl:col-span-3;
 }
 
-.home .blocks .tab-inner-header {
+.home .tab-inner-header {
   @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-tertiary md:flex;
 }
 
-.home .blocks .tab-inner-subheader {
+.home .tab-inner-subheader {
   @apply mt-3 block text-lg font-medium leading-tight md:mt-1;
 }
 
-.home .blocks .tab-inner-prose {
+.home .tab-inner-prose {
   @apply mt-3 text-base font-normal md:mt-1;
 }
 
-.home .blocks .tab-inner-prose {
+.home .tab-inner-prose {
   @apply mt-2 text-sm font-normal text-gray-600 dark:text-light md:text-base;
 }
 
-.home .blocks .tab-inner-prose p {
+.home .tab-inner-prose p {
   @apply mt-1;
 }
 
-.home .blocks .tab-inner-bullet-facts {
+.home .tab-inner-bullet-facts {
   @apply mt-3 text-sm md:text-lg;
 }
 
-.home .blocks .tab-inner-image {
+.home .tab-inner-image {
   @apply mb-1 aspect-square w-full rounded-lg shadow-xl md:mb-2;
 }
 
-.home .blocks .tab-inner-image-subbox {
+.home .tab-inner-image-subbox {
   @apply flex flex-wrap items-center justify-between space-x-0 md:space-x-2;
 }
 
-.home .blocks .tab-inner-image-header {
+.home .tab-inner-image-header {
   @apply my-1.5 flex-1 text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
 }
 
