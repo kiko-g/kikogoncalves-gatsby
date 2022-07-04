@@ -5,7 +5,7 @@ import { classNames } from '../utils'
 import { Tab } from '@headlessui/react'
 import { Layout } from '../layout/Layout'
 import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
-import { Gallery, About, Skills, Resume } from '../components/hero'
+import { Gallery, About, Skills, Resume } from '../components/home'
 import './styles/home.css'
 
 const IndexPage = () => {

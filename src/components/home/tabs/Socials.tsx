@@ -1,5 +1,5 @@
 import React from 'react'
-import { socials, links } from '../../utils'
+import { socials, links } from '../../../utils'
 
 const Socials = () => {
   return (

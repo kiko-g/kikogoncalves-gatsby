@@ -1,6 +1,6 @@
 import React from 'react'
 import Socials from './Socials'
-import { links } from '../../utils'
+import { links } from '../../../utils'
 
 type Props = {}
 
