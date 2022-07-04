@@ -1,105 +1,118 @@
-.index-wrapper {
+.home {
+  @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 2xl:px-0;
+}
+
+.home > header {
+  @apply mt-2;
+}
+
+.home > header > h2 {
+  @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
+}
+
+.home > header > p {
+  @apply mt-4 text-lg font-normal;
+}
+
+.home .tabs {
   @apply w-full px-4 py-8 md:px-4 2xl:px-0;
 }
 
-/* Tabs */
-.tab-list {
+.home .tabs .tab-list {
   @apply flex space-x-2 rounded-xl bg-primary-light p-1 shadow dark:bg-light/5 md:space-x-3 md:p-1.5;
 }
 
-.tab {
+.home .tabs .tab {
   @apply w-full rounded-lg px-2 py-2 text-xs font-medium uppercase leading-5 tracking-tight text-primary 
   md:py-2.5 md:text-sm md:tracking-wide xl:text-base;
 }
 
-.tab-selected {
+.home .tabs .tab-selected {
   @apply bg-lighter shadow;
 }
 
-.tab-not-selected {
+.home .tabs .tab-not-selected {
   @apply text-[#fff] transition hover:bg-white/[0.12];
 }
 
-.tab-panels {
+.home .tabs .tab-panels {
   @apply mt-3;
 }
 
-.tab-panel {
+.home .tabs .tab-panel {
   @apply overflow-hidden rounded-xl bg-lightest p-1 dark:bg-light/5 md:p-2;
 }
 
-.tab-focus-ring {
+.home .tabs .tab-focus-ring {
   @apply ring-white ring-opacity-60 ring-offset-2 ring-offset-primary/75 focus:outline-none focus:ring-2;
 }
 
-/* Content */
-.tab-panel-inner {
+.home .tabs .tab-panel-inner {
   @apply grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl px-2 py-2 text-2xl transition md:gap-x-8;
 }
 
-.tab-panel-inner-left {
+.home .tabs .tab-panel-inner-left {
   @apply order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9;
 }
 
-.tab-panel-inner-right {
+.home .tabs .tab-panel-inner-right {
   @apply order-1 col-span-12 h-min sm:order-2 sm:col-span-6 md:col-span-5 lg:col-span-3 xl:col-span-3 2xl:col-span-3;
 }
 
-.tab-inner-header {
+.home .tabs .tab-inner-header {
   @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-tertiary md:flex;
 }
 
-.tab-inner-subheader {
+.home .tabs .tab-inner-subheader {
   @apply mt-3 block text-lg font-medium leading-tight md:mt-1;
 }
 
-.tab-inner-prose {
+.home .tabs .tab-inner-prose {
   @apply mt-3 text-base font-normal md:mt-1;
 }
 
-.tab-inner-prose {
+.home .tabs .tab-inner-prose {
   @apply mt-2 text-sm font-normal text-gray-600 dark:text-light md:text-base;
 }
 
-.tab-inner-prose p {
+.home .tabs .tab-inner-prose p {
   @apply mt-1;
 }
 
-.tab-inner-bullet-facts {
+.home .tabs .tab-inner-bullet-facts {
   @apply mt-3 text-sm md:text-lg;
 }
 
-.tab-inner-image {
+.home .tabs .tab-inner-image {
   @apply mb-1 aspect-square w-full rounded-lg shadow-xl md:mb-2;
 }
 
-.tab-inner-image-subbox {
+.home .tabs .tab-inner-image-subbox {
   @apply flex flex-wrap items-center justify-between space-x-0 md:space-x-2;
 }
 
-.tab-inner-image-header {
+.home .tabs .tab-inner-image-header {
   @apply my-1.5 flex-1 text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
 }
 
-/* See More Footer */
-.see-more-wrapper {
+.home .tabs .see-more-wrapper {
   @apply mt-4 flex items-center justify-between;
 }
 
-.see-more-left {
+.home .tabs .see-more-left {
   @apply space-x-5;
 }
 
-.see-more-left {
+.home .tabs .see-more-left {
   @apply space-x-0;
 }
 
-.see-more-button {
+.home .tabs .see-more-button {
   @apply inline-flex rounded bg-gradient-to-r from-tertiary via-indigo-400 to-secondary p-[2px] 
   transition focus:outline-none focus:ring active:text-opacity-75;
 }
 
-.see-more-button > span {
+.home .tabs .see-more-button > span {
   @apply flex items-center justify-center space-x-2 rounded-sm bg-white px-6 py-3 
   font-medium transition hover:bg-transparent hover:text-white dark:text-gray-800 dark:hover:text-white;
 }
