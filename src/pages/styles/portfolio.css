@@ -53,7 +53,7 @@
 }
 
 .portfolio .entry > section > .core > header > .title {
-  @apply text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary;
+  @apply font-code text-xl font-bold uppercase tracking-wide text-primary dark:text-tertiary;
 }
 
 .portfolio .entry > section > .core > header > .dates {
