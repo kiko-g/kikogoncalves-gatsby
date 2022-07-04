@@ -6,14 +6,15 @@ type Props = {
 }
 
 const ViewToggler = ({ hook }: Props) => {
+  const tooltip = 'Toggle View Mode'
   const [condensed, setCondensed] = hook
 
   return condensed ? (
-    <button onClick={() => setCondensed(false)}>
+    <button title={tooltip} onClick={() => setCondensed(false)}>
       <MenuIcon className="h-8 w-8" />
     </button>
   ) : (
-    <button onClick={() => setCondensed(true)}>
+    <button title={tooltip} onClick={() => setCondensed(true)}>
       <CollectionIcon className="h-8 w-8" />
     </button>
   )

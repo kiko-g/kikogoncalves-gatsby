@@ -1,4 +1,4 @@
-import Tabs from './Tabs'
+import Content from './Content'
 import ViewToggler from './ViewToggler'
 
-export { Tabs, ViewToggler }
+export { Content, ViewToggler }

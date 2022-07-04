@@ -43,8 +43,8 @@ const Skills = ({}: Props) => {
               github
             </a>{' '}
             page to find out more about my skills and portfolio. Below you can find a set of programming languages and
-            technologies I have worked with, associated with a mildly accurate scale that measures familiarity,
-            comfortability, and frequency of use.
+            technologies I have worked with, associated with a mildly accurate scale that measures{' '}
+            <strong>familiarity</strong>, <strong>comfortability</strong>, and <strong>frequency of use</strong>.
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Seo from '../components/Seo'
 import { Layout } from '../layout/Layout'
-import { Tabs, ViewToggler } from '../components/home'
+import { Content, ViewToggler } from '../components/home'
 import './styles/home.css'
 
 const IndexPage = () => {
@@ -21,7 +21,7 @@ const IndexPage = () => {
           </div>
         </header>
 
-        {condensed ? <Tabs /> : <Tabs />}
+        <Content condensed={condensed} />
       </main>
     </Layout>
   )
