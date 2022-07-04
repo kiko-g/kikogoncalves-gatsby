@@ -5,7 +5,7 @@ import { Tab } from '@headlessui/react'
 import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
 import { Gallery, About, Skills, Resume } from './tabs'
 
-const IndexPage = () => {
+const Tabs = () => {
   const [focusRing] = React.useState(false)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
   const headers = ['About', 'Skills', 'Resume', 'Gallery']
@@ -54,4 +54,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Tabs

@@ -3,19 +3,31 @@
 }
 
 .home > header {
-  @apply mt-2;
+  @apply mt-2 flex items-start justify-between px-2 py-2 2xl:px-0;
 }
 
-.home > header > h2 {
+.home > header > .body {
+  @apply mt-0;
+}
+
+.home > header > .body > h2 {
   @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
 }
 
-.home > header > p {
+.home > header > .body > p {
   @apply mt-4 text-lg font-normal;
 }
 
+.home > header > .buttons {
+  @apply flex items-center justify-center space-x-2 text-primary-light dark:text-light;
+}
+
+.home > header > .buttons > button {
+  @apply transition hover:opacity-75 dark:hover:text-tertiary;
+}
+
 .home .tabs {
-  @apply w-full px-4 py-8 md:px-4 2xl:px-0;
+  @apply w-full px-2 py-8 md:px-2 2xl:px-0;
 }
 
 .home .tabs .tab-list {
