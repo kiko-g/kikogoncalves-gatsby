@@ -15,7 +15,7 @@ const PortfolioEntry = ({ project }: Props) => {
       <aside>
         {info.featuredVideo ? (
           <div className="video">
-            <video controls className="video-inner">
+            <video className="video-inner" controls muted>
               <source src={info.featuredVideo} type="video/mp4" />
             </video>
           </div>
@@ -37,7 +37,9 @@ const PortfolioEntry = ({ project }: Props) => {
           <header>
             <div className="title">{info.title}</div>
             <div className="subheader">
-              <span>{info.startDate} - {info.endDate}</span>
+              <span>
+                {info.startDate === info.endDate ? info.startDate : `${info.startDate} - ${info.endDate ?? 'Present'}`}
+              </span>
               <span className="mx-2">&middot;</span>
               <span>{info.team}</span>
             </div>
