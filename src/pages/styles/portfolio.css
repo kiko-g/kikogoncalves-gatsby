@@ -27,11 +27,11 @@
 }
 
 .portfolio .entry > aside .image {
-  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-xl lg:rounded-none lg:rounded-l-xl;
+  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-2xl lg:rounded-none lg:rounded-l-xl;
 }
 
 .portfolio .entry > aside .video {
-  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-xl lg:rounded-none lg:rounded-l-xl;
+  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-2xl lg:rounded-none lg:rounded-l-xl;
 }
 
 .portfolio .entry > aside .video-inner {
@@ -61,11 +61,11 @@
 }
 
 .portfolio .entry > section > .core > header > .title {
-  @apply font-code text-xl font-bold uppercase tracking-wide text-primary dark:text-tertiary;
+  @apply font-code text-xl font-extrabold uppercase tracking-wide text-primary dark:text-tertiary;
 }
 
-.portfolio .entry > section > .core > header > .dates {
-  @apply font-medium tracking-tighter text-primary dark:text-white;
+.portfolio .entry > section > .core > header > .subheader {
+  @apply font-medium tracking-tighter;
 }
 
 .portfolio .entry > section > .core > header > .description {
@@ -89,7 +89,7 @@
 }
 
 .portfolio .entry > section > .links {
-  @apply absolute top-1 right-1 space-x-2 rounded-xl xl:flex;
+  @apply absolute top-1 right-1 space-x-2 rounded-xl lg:top-0 lg:right-0 xl:flex;
   margin-top: 0 !important;
 }
 

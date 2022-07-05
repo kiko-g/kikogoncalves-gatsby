@@ -55,8 +55,8 @@ export const pageQuery = graphql`
             pinned
             title
             slug
-            startDate(formatString: "DD/MMM YYYY")
-            endDate(formatString: "DD/MMM YYYY")
+            startDate(formatString: "MMM YYYY")
+            endDate(formatString: "MMM YYYY")
             repo
             deploy
             techStack
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
             }
             featuredVideo
             description
+            team
           }
         }
       }

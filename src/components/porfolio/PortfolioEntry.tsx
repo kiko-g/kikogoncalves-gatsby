@@ -36,8 +36,10 @@ const PortfolioEntry = ({ project }: Props) => {
         <div className="core">
           <header>
             <div className="title">{info.title}</div>
-            <div className="dates">
-              {info.startDate} - {info.endDate}
+            <div className="subheader">
+              <span>{info.startDate} - {info.endDate}</span>
+              <span className="mx-2">&middot;</span>
+              <span>{info.team}</span>
             </div>
             <span className="description">{info.description}</span>
           </header>
