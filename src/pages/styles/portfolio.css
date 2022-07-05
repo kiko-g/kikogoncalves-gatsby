@@ -19,7 +19,7 @@
 }
 
 .portfolio .entry {
-  @apply flex w-full flex-col space-y-3 rounded-xl bg-lightest p-3 shadow-inner-md dark:bg-white/5 lg:flex-row lg:space-y-0;
+  @apply flex w-full flex-col space-y-3 rounded-xl bg-lightest p-3 shadow dark:bg-white/5 lg:flex-row lg:space-y-0;
 }
 
 .portfolio .entry > aside {
