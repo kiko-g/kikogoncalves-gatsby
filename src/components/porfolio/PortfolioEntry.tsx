@@ -8,12 +8,22 @@ type Props = {
 const PortfolioEntry = ({ project }: Props) => {
   const info = project.frontmatter
   const content = project.html
-  const coverImage = getImage(project.frontmatter.featuredImage)
+  const coverImage = getImage(info.featuredImage)
 
   return (
     <div className="entry">
       <aside>
-        {coverImage ? <GatsbyImage image={coverImage} alt="cover" className="image" /> : <div className="dummy" />}
+        {info.featuredVideo ? (
+          <div className="video">
+            <video controls className="video-inner">
+              <source src={info.featuredVideo} type="video/mp4" />
+            </video>
+          </div>
+        ) : coverImage ? (
+          <GatsbyImage image={coverImage} alt="cover" className="image" />
+        ) : (
+          <div className="dummy" />
+        )}
 
         {info.pinned && (
           <span className="pinned">

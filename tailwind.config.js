@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ice: '#e8ebf5',
+        ice: '#dce4f0', // e8ebf5
         navy: '#18222e',
         dark: '#252832',
         darker: '#1e2028',
