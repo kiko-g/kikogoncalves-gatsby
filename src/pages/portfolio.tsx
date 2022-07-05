@@ -55,8 +55,8 @@ export const pageQuery = graphql`
             pinned
             title
             slug
-            startDate(formatString: "MMM DD, YYYY")
-            endDate(formatString: "MMM DD YYYY")
+            startDate(formatString: "DD/MMM YYYY")
+            endDate(formatString: "DD/MMM YYYY")
             repo
             deploy
             techStack

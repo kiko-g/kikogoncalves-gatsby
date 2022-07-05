@@ -11,7 +11,7 @@
 }
 
 .blogpost header h1 {
-  @apply text-3xl font-extrabold tracking-tight text-primary dark:text-white sm:text-center sm:text-4xl xl:mb-16;
+  @apply text-3xl font-extrabold tracking-tight text-gray-700 dark:text-white sm:text-center sm:text-4xl xl:mb-16;
 }
 
 .blogpost header > div {
@@ -19,11 +19,11 @@
 }
 
 .blogpost header span.date {
-  @apply flex text-sm font-semibold text-gray-400 dark:text-tertiary;
+  @apply flex text-sm font-semibold text-gray-700 dark:text-tertiary;
 }
 
 .blogpost header .go-back-button {
-  @apply flex rounded-full text-sm font-semibold text-primary transition hover:opacity-75 dark:text-tertiary;
+  @apply flex rounded-full text-sm font-semibold text-gray-700 transition hover:opacity-75 dark:text-tertiary;
 }
 
 .blogpost article {
