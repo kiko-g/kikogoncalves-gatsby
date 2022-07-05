@@ -59,6 +59,7 @@ export const pageQuery = graphql`
             endDate(formatString: "MMM YYYY")
             repo
             deploy
+            preview
             techStack
             featuredImage {
               childImageSharp {

@@ -5,6 +5,7 @@ startDate: 2021-11-01
 endDate: 2022-01-21
 repo: https://github.com/kiko-g/health-checker
 deploy: https://health-checker.netlify.app
+preview: null
 featuredImage: ./featured.jpg
 featuredVideo: https://user-images.githubusercontent.com/40745490/150367733-d4e5b349-cae0-487e-9a82-685a3e376bd0.mp4
 techStack: [React, Express, Javascript, Tailwind]

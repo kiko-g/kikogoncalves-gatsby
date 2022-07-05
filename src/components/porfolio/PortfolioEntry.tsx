@@ -9,6 +9,7 @@ const PortfolioEntry = ({ project }: Props) => {
   const info = project.frontmatter
   const content = project.html
   const coverImage = getImage(info.featuredImage)
+  const dates = info.startDate === info.endDate ? info.startDate : `${info.startDate} - ${info.endDate ?? 'Present'}`
 
   return (
     <div className="entry">
@@ -37,9 +38,7 @@ const PortfolioEntry = ({ project }: Props) => {
           <header>
             <div className="title">{info.title}</div>
             <div className="subheader">
-              <span>
-                {info.startDate === info.endDate ? info.startDate : `${info.startDate} - ${info.endDate ?? 'Present'}`}
-              </span>
+              <span>{dates}</span>
               <span className="mx-2">&middot;</span>
               <span>{info.team}</span>
             </div>
@@ -65,7 +64,13 @@ const PortfolioEntry = ({ project }: Props) => {
           )}
           {info.deploy && (
             <a href={info.deploy} target="_blank" className="deploy">
-              <DeployLink />
+              <DeployIcon />
+              <span className="hidden md:flex">Try it</span>
+            </a>
+          )}
+          {info.preview && (
+            <a href={info.preview} target="_blank" className="deploy">
+              <PreviewIcon />
               <span className="hidden md:flex">Preview</span>
             </a>
           )}
@@ -96,7 +101,24 @@ const GithubIcon = () => (
   </svg>
 )
 
-const DeployLink = () => (
+const DeployIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w56 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
+    />
+  </svg>
+)
+
+const PreviewIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
     <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
     <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />

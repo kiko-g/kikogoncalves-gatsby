@@ -5,6 +5,7 @@ startDate: 2022-04-01
 endDate: 2022-04-15
 repo: https://github.com/kiko-g/finishershub
 deploy: https://finishershub.netlify.app
+preview: null
 featuredImage: ./featured.jpg
 featuredVideo: null
 techStack: [Gatsby, React, Typescript, Tailwind]

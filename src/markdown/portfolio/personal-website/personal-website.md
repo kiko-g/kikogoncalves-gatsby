@@ -5,6 +5,7 @@ startDate: 2021-12-15
 endDate: null
 repo: https://github.com/kiko-g/kikogoncalves.me
 deploy: https://kikogoncalves.com
+preview: null
 featuredImage: ./featured.png
 featuredVideo: null
 techStack: [Gatsby, React, Typescript, Tailwind]
