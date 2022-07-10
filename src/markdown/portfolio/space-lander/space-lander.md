@@ -1,8 +1,8 @@
 ---
 pinned: false
 title: Space Lander
-startDate: 2018-10-01
-endDate: 2019-01-08
+startDate: 2019-10-01
+endDate: 2020-01-08
 repo: https://github.com/kiko-g/feup-lcom
 deploy: null
 preview: https://github.com/kiko-g/feup-lcom#demo
