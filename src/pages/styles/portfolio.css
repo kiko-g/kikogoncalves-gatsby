@@ -69,7 +69,7 @@
 }
 
 .portfolio .entry > section > .core > header > .description {
-  @apply tracking-tighter text-gray-400 dark:text-white;
+  @apply tracking-tighter text-gray-400 dark:text-white font-bold;
 }
 
 .portfolio .entry > section > .core > .body {
