@@ -112,6 +112,7 @@
   @apply list-item;
 }
 
-.portfolio a {
+.portfolio .entry .body a,
+.portfolio .entry .subheader a {
   @apply font-semibold text-primary transition hover:underline hover:opacity-90 dark:text-tertiary;
 }
