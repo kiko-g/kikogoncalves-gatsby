@@ -3,6 +3,7 @@ import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { Background } from './Background'
 import { useStaticQuery, graphql } from 'gatsby'
+import { classNames } from '../utils'
 
 type Props = {
   children: any
@@ -22,18 +23,11 @@ export const Layout = ({ children, location, background, liquid }: Props) => {
     }
   `)
 
-  return liquid ? (
+  return (
     <div className="layout">
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
-      {background ? <Background /> : null}
-      <div className="content-liquid">{children}</div>
-      <Footer siteTitle={data.site.siteMetadata?.title} />
-    </div>
-  ) : (
-    <div className="layout">
-      <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
-      {background ? <Background /> : null}
-      <div className="content">{children}</div>
+      {background && <Background />}
+      <div className={classNames('content', liquid ? 'max-w-8xl' : 'max-w-7xl')}>{children}</div>
       <Footer siteTitle={data.site.siteMetadata?.title} />
     </div>
   )
@@ -41,6 +35,4 @@ export const Layout = ({ children, location, background, liquid }: Props) => {
 
 Layout.defaultProps = {
   location: 'Unknown',
-  background: false,
-  liquid: false,
 }

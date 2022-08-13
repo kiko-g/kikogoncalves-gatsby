@@ -26,11 +26,7 @@ code {
 }
 
 .content {
-  @apply container z-10 mx-auto my-auto max-w-7xl;
-}
-
-.content-liquid {
-  @apply container z-10 mx-auto my-auto max-w-8xl;
+  @apply container z-10 mx-auto my-auto;
 }
 
 /* Navbar */

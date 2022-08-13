@@ -6,7 +6,7 @@ import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
 import { Gallery, About, Skills, Resume } from './tabs'
 
 type Props = {
-  condensed: boolean
+  condensed?: boolean
 }
 
 const Content = ({ condensed }: Props) => {
@@ -26,7 +26,7 @@ const Content = ({ condensed }: Props) => {
           {headers.map(category => (
             <Tab
               key={category}
-              className={({ selected }: { selected: any }) =>
+              className={({ selected }: { selected: boolean }) =>
                 classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
               }
             >

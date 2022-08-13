@@ -90,7 +90,7 @@ const Header = ({ title, location }) => (
         <Link to={link.location} key={`nav-${index}`} className="relative py-1">
           <button
             type="button"
-            className={`flex h-12 items-center justify-center font-medium uppercase tracking-wider transition ${
+            className={`flex h-12 items-center justify-center font-medium capitalize tracking-wide transition ${
               location === link.title
                 ? 'text-primary dark:text-white'
                 : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
@@ -120,7 +120,7 @@ const Mobile = ({ location }) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
         <button
           type="button"
-          className={`flex h-auto items-center justify-center font-medium uppercase tracking-wider transition ${
+          className={`flex h-auto items-center justify-center font-medium capitalize tracking-wide transition ${
             location === link.title
               ? 'text-primary dark:text-white'
               : 'text-gray-800/70 hover:text-gray-800 dark:text-white/60 dark:hover:text-white'

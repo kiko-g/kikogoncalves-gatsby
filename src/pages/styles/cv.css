@@ -1,0 +1,11 @@
+.cv {
+  @apply grid h-full w-full grid-cols-4 gap-4 px-3 py-3 lg:gap-4 lg:px-0 lg:py-0;
+}
+
+.cv > .side {
+  @apply col-span-4 h-full w-full gap-2 rounded bg-light p-3 dark:bg-white/5 md:gap-3 lg:col-span-1;
+}
+
+.cv > .core {
+  @apply col-span-4 h-full w-full rounded bg-light p-3 dark:bg-white/5 lg:col-span-3;
+}
