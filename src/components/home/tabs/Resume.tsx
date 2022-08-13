@@ -1,5 +1,6 @@
 import React from 'react'
 import Socials from './Socials'
+import { Link } from 'gatsby'
 
 type GroupType = {
   title: string
@@ -87,6 +88,7 @@ const Resume = () => {
           headline: 'Other experiences',
           bulletPoints: [
             <span>5 Caminhos de Santiago</span>,
+            <span>Erasmus Student in Espoo, Finland @ Aalto University SCI</span>,
             <span>Volunteering focused on visiting and helping elderly people </span>,
           ],
         },
@@ -104,9 +106,13 @@ const Resume = () => {
             <a className="link" target="_blank" href="https://www.linkedin.com/in/kikogoncalves/">
               linkedin
             </a>{' '}
-            page to find out more about my path, carrer and technical profile or take a look at my CV in PDF format{' '}
-            <a className="link" target="_blank" href="https://www.kikogoncalves.com/cv.pdf">
-              here
+            page to find out more about my path, carrer and technical profile or take a look at my{' '}
+            <Link className="link" to="/cv">
+              CV page
+            </Link>{' '}
+            or{' '}
+            <a className="link" target="_blank" rel="noopener" href={'cv.pdf'}>
+              in PDF format
             </a>
             .
           </h2>

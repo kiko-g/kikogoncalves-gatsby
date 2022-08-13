@@ -3,11 +3,11 @@
 }
 
 .cv > .core {
-  @apply order-2 col-span-4 h-full w-full rounded bg-light p-3 dark:bg-white/5 lg:order-1 lg:col-span-3;
+  @apply order-2 col-span-4 flex h-full w-full flex-col gap-4 rounded bg-light p-3 dark:bg-white/5 lg:order-1 lg:col-span-3;
 }
 
 .cv > .side {
-  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-center gap-2 
+  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-start gap-2 
   rounded bg-light p-3 dark:bg-white/5 lg:order-2 lg:col-span-1 lg:gap-3;
 }
 
@@ -49,5 +49,79 @@
 
 .cv > .side > a {
   @apply w-full rounded bg-primary px-3 py-2 text-center font-normal capitalize tracking-tight
-  text-white transition hover:bg-[#0a66c2] hover:opacity-90 dark:bg-tertiary hover:cursor-pointer;
+  text-white transition hover:cursor-pointer hover:bg-[#0a66c2] hover:opacity-90 dark:bg-tertiary;
+}
+
+/* Group */
+.cv .group {
+  @apply flex flex-col gap-1 p-1;
+}
+
+.cv .group > header {
+  @apply flex items-center gap-3;
+}
+
+.cv .group > header h2 {
+  @apply text-2xl font-bold;
+}
+
+.cv .group > header .highlight {
+  @apply text-primary dark:text-tertiary;
+}
+
+.cv .group > .filler {
+  @apply h-[1px] w-full bg-gray-300;
+}
+
+/* Group Entry */
+.cv .group > .group-entries {
+  @apply flex flex-col gap-8 lg:gap-4;
+}
+
+.cv .group-entry {
+  @apply flex flex-col items-start justify-start gap-2 font-normal lg:flex-row;
+}
+
+.cv .group-entry a {
+  @apply text-primary hover:opacity-75 dark:text-white;
+}
+
+.cv .group-entry > .content {
+  @apply ml-0;
+}
+
+.cv .group-entry > .content > .title {
+  @apply flex items-start gap-1.5 lg:items-center;
+}
+
+.cv .group-entry > .content > .title h3 {
+  @apply text-base font-semibold dark:text-tertiary lg:text-lg;
+}
+
+.cv .group-entry > .content > .subtitle {
+  @apply flex items-start gap-1.5 lg:items-center;
+}
+
+.cv .group-entry > .content > .subtitle h5 {
+  @apply tracking-tighter;
+}
+
+.cv .group-entry > .content > .bullets {
+  @apply ml-3.5 mt-1 list-disc lg:ml-5;
+}
+
+.cv .group-entry > .content > .bullets > li {
+  @apply tracking-tight lg:tracking-normal;
+}
+
+.cv .group-entry > .details {
+  @apply flex w-full flex-row justify-end gap-2 text-xs lg:w-min lg:flex-col lg:items-end lg:gap-0 lg:text-sm;
+}
+
+.cv .group-entry > .details > .date {
+  @apply whitespace-nowrap italic;
+}
+
+.cv .group-entry > .details > .location {
+  @apply whitespace-nowrap font-medium text-primary dark:text-tertiary;
 }
