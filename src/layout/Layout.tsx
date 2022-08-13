@@ -1,9 +1,7 @@
 import React from 'react'
-import { Navbar } from './Navbar'
-import { Footer } from './Footer'
-import { Background } from './Background'
-import { useStaticQuery, graphql } from 'gatsby'
 import { classNames } from '../utils'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Navbar, Footer, Background } from '.'
 
 type Props = {
   children: any
@@ -12,7 +10,7 @@ type Props = {
   liquid?: boolean
 }
 
-export const Layout = ({ children, location, background, liquid }: Props) => {
+const Layout = ({ children, location, background, liquid }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,3 +34,5 @@ export const Layout = ({ children, location, background, liquid }: Props) => {
 Layout.defaultProps = {
   location: 'Unknown',
 }
+
+export default Layout

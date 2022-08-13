@@ -1,25 +1,20 @@
 import React from 'react'
-import './styles/background.css'
+import '../styles/background.css'
 
-export const Background = () => {
+const Background = () => {
   return (
     <div className="background-wrapper">
       <div className="background-area">
         <ul className="background-circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          {Array(12)
+            .fill(0)
+            .map((bubble, bubbleIdx) => (
+              <li key={`background-bubble-${bubbleIdx}`}></li>
+            ))}
         </ul>
       </div>
     </div>
   )
 }
+
+export default Background

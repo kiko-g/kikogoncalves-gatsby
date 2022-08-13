@@ -1,9 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Seo from '../components/Seo'
-import { Layout } from '../layout/Layout'
+import { Layout, Seo } from '../layout'
 import { PortfolioEntry } from '../components/porfolio'
-import './styles/portfolio.css'
+import '../styles/pages/portfolio.css'
 
 // prettier-ignore
 const PortfolioPage = ({ data: { allMarkdownRemark: { edges } } }) => {

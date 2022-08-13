@@ -1,7 +1,6 @@
 import React from 'react'
-import { Layout } from '../layout/Layout'
-import Seo from '../components/Seo'
-import './styles/404.css'
+import { Layout, Seo } from '../layout'
+import '../styles/pages/404.css'
 
 const NotFoundPage = () => (
   <Layout location="Oops!">

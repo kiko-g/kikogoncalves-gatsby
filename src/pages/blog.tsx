@@ -1,9 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Seo from '../components/Seo'
-import { Layout } from '../layout/Layout'
+import { Layout, Seo } from '../layout'
 import { BlogPostCard } from '../components/blog'
-import './styles/blog.css'
+import '../styles/pages/blog.css'
 
 // prettier-ignore
 const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {

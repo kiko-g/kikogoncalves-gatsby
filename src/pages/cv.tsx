@@ -1,7 +1,6 @@
 import React from 'react'
-import Seo from '../components/Seo'
-import { Layout } from '../layout/Layout'
-import './styles/cv.css'
+import { Layout, Seo } from '../layout'
+import '../styles/pages/cv.css'
 
 const CvPage = () => (
   <Layout liquid location="CV">

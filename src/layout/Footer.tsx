@@ -1,12 +1,11 @@
 import React from 'react'
 import { socials } from '../utils'
-import '../styles/utilities.css'
 
 type Props = {
   siteTitle: string
 }
 
-export const Footer = ({ siteTitle }: Props) => {
+const Footer = ({ siteTitle }: Props) => {
   return (
     <footer className="z-10 flex items-center justify-between p-2 text-xs text-gray-500 opacity-80 dark:text-gray-300 md:p-3 md:text-sm">
       <span className="text-gray-700 dark:text-gray-300 sm:text-center">© 2022 {siteTitle}™</span>
@@ -37,3 +36,5 @@ export const Footer = ({ siteTitle }: Props) => {
     </footer>
   )
 }
+
+export default Footer

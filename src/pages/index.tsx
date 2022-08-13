@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Seo from '../components/Seo'
-import { Layout } from '../layout/Layout'
+import { Layout, Seo } from '../layout'
 import { Content, ViewToggler } from '../components/home'
-import './styles/home.css'
+import '../styles/pages/home.css'
 
 const IndexPage = () => {
   const [condensed, setCondensed] = useState(false)

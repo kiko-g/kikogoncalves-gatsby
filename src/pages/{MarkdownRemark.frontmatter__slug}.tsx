@@ -1,9 +1,9 @@
 import React from 'react'
+import { Layout, Seo } from '../layout'
 import { graphql } from 'gatsby'
-import { Layout } from '../layout/Layout'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import './styles/blogpost.css'
+import '../styles/pages/blogpost.css'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -13,6 +13,7 @@ export default function Template({ data }) {
 
   return (
     <Layout location="Blogpost" liquid>
+      <Seo title={frontmatter.title} />
       <main className="blogpost">
         <header>
           <h1>{frontmatter.title}</h1>

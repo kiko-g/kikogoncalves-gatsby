@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { daysDifference } from '../../utils'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { PinIcon } from '../icons'
+import { classNames, daysDifference } from '../../utils'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type Props = {
   post: any
@@ -15,7 +15,15 @@ const BlogPostCard = ({ post }: Props) => {
   const isNew = difference < 60 && available
 
   return (
-    <Link className="postcard group" to={available ? post.frontmatter.slug : undefined}>
+    <Link
+      to={available ? post.frontmatter.slug : undefined}
+      className={classNames(
+        'postcard group',
+        available
+          ? 'bg-lightest hover:bg-teal-800/20 hover:text-gray-800 dark:bg-light/5 dark:hover:bg-teal-800/50 dark:hover:text-white'
+          : 'bg-lightest dark:bg-light/5 hover:cursor-not-allowed'
+      )}
+    >
       <header>
         {coverImage ? (
           <GatsbyImage image={coverImage} alt="cover" className="h-64 w-full rounded-lg object-contain" />

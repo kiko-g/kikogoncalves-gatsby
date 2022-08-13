@@ -19,8 +19,7 @@
 }
 
 .blog .postcard {
-  @apply relative space-y-2 rounded-xl bg-lightest p-4 shadow transition duration-300
-    hover:bg-primary/10 hover:text-gray-800 dark:bg-light/5 hover:dark:bg-primary/50 dark:hover:text-white;
+  @apply relative space-y-2 rounded-xl p-4 shadow transition duration-300;
 }
 
 .blog .postcard > header {

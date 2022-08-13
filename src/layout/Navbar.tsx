@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { DarkModeSwitchMinimal } from './DarkModeSwitchMinimal'
+import DarkModeSwitchMinimal from './DarkModeSwitchMinimal'
 import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/outline'
 
 const navigation = [
@@ -18,7 +18,7 @@ type Props = {
   location: string
 }
 
-export const Navbar = ({ siteTitle, location }: Props) => {
+const Navbar = ({ siteTitle, location }: Props) => {
   return (
     <Disclosure as="nav" className="navbar">
       {({ open }) => {
@@ -36,7 +36,7 @@ export const Navbar = ({ siteTitle, location }: Props) => {
   )
 }
 
-const Hamburger = ({ open }) => (
+const Hamburger = ({ open }: { open: boolean }) => (
   <div
     className={`z-50 md:hidden ${
       open
@@ -72,7 +72,7 @@ const Hamburger = ({ open }) => (
   </div>
 )
 
-const Header = ({ title, location }) => (
+const Header = ({ title, location }: { title: string; location: string }) => (
   <div className="header">
     <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
       <Link to="/" className="flex items-center space-x-2">
@@ -114,7 +114,7 @@ const Header = ({ title, location }) => (
   </div>
 )
 
-const Mobile = ({ location }) => (
+const Mobile = ({ location }: { location: string }) => (
   <Disclosure.Panel className="flex flex-col space-y-3 py-2 md:hidden">
     {navigation.map((link, index) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
@@ -138,3 +138,5 @@ const Mobile = ({ location }) => (
     ))}
   </Disclosure.Panel>
 )
+
+export default Navbar
