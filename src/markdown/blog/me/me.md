@@ -12,7 +12,7 @@ Hey there! My name is Francisco, I'm a Software Engineering student born and rai
 
 On the more personal side of things, I would say I am a passionate person, who believes in finding true zeal in things and getting better as a person every day. I am hopelessly and irretrievably [portista](https://twitter.com/FCPorto) 🔵⚪. My interests are mostly music, gaming, football, media, and entertainment. As for hobbies, I often play the guitar, sing, game, program, and exercise.
 
-![me](../../../../static/images/hero/hero1.jpg)
+![me](/images/hero/hero1.jpg)
 
 ## The roots
 

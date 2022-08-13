@@ -41,7 +41,7 @@ const About = ({}: Props) => {
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
             <li key={`detail-${index}`}>
-              <Icon icon="codicon:triangle-right" className="inline text-tertiary dark:text-tertiary" />
+              <Icon icon="codicon:triangle-right" className="inline text-primary dark:text-tertiary" />
               <span>&nbsp;</span>
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&nbsp;&middot;&nbsp;</span>
@@ -52,7 +52,7 @@ const About = ({}: Props) => {
       </div>
 
       <div className="tab-panel-inner-right">
-        <img src={'images/hero/hero1.jpg'} className="tab-inner-image" alt="profile-picture" />
+        <img src={'/images/hero/hero1.jpg'} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
           <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />

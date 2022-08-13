@@ -66,7 +66,7 @@ const Resume = () => {
           description: <span>Faculdade de Engenharia da Universidade do Porto, MIEIC</span>,
           bulletPoints: [
             <span>
-              Current cumulative average <strong>17.38/20</strong>
+              Current cumulative average <strong>18/20</strong>
             </span>,
           ],
         },
@@ -120,7 +120,7 @@ const Resume = () => {
       </div>
 
       <div className="tab-panel-inner-right">
-        <img src={'images/hero/hero3.jpg'} className="tab-inner-image" alt="profile-picture" />
+        <img src={'/images/hero/hero3.jpg'} className="tab-inner-image" alt="profile-picture" />
         <div className="tab-inner-image-subbox">
           <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
           <Socials />
@@ -159,7 +159,7 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="rounded bg-secondary px-2 py-1 text-white dark:bg-tertiary">{entry.date}</span>
+                  <span className="rounded bg-primary px-2 py-1 text-white dark:bg-tertiary">{entry.date}</span>
                 </div>
               ) : null}
 

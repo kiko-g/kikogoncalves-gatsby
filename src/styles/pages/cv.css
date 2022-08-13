@@ -1,11 +1,53 @@
 .cv {
-  @apply grid h-full w-full grid-cols-4 gap-4 px-3 py-3 lg:gap-4 lg:px-0 lg:py-0;
-}
-
-.cv > .side {
-  @apply col-span-4 h-full w-full gap-2 rounded bg-light p-3 dark:bg-white/5 md:gap-3 lg:col-span-1;
+  @apply grid h-full w-full grid-cols-4 gap-4 px-3 py-3 text-gray-700 dark:text-white lg:gap-4 lg:px-2 lg:py-2;
 }
 
 .cv > .core {
-  @apply col-span-4 h-full w-full rounded bg-light p-3 dark:bg-white/5 lg:col-span-3;
+  @apply order-2 col-span-4 h-full w-full rounded bg-light p-3 dark:bg-white/5 lg:order-1 lg:col-span-3;
+}
+
+.cv > .side {
+  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-center gap-2 
+  rounded bg-light p-3 dark:bg-white/5 lg:order-2 lg:col-span-1 lg:gap-3;
+}
+
+.cv > .side > header {
+  @apply flex flex-col gap-3;
+}
+
+.cv > .side > header > img {
+  @apply aspect-square w-full rounded-lg shadow;
+}
+
+.cv > .side > header h2 {
+  @apply text-lg font-normal tracking-wide lg:text-xl;
+}
+
+.cv > .side > header h4 {
+  @apply text-sm font-normal tracking-tighter lg:text-sm xl:text-base;
+}
+
+.cv > .side > header h5 {
+  @apply text-xs font-medium tracking-tighter lg:-mt-0.5 lg:text-sm;
+}
+
+.cv > .side > ul {
+  @apply mt-0 w-full space-y-0.5 py-1 px-1 text-[0.95rem] font-normal;
+}
+
+.cv > .side > ul > li {
+  @apply flex items-center justify-start gap-1.5;
+}
+
+.cv > .side > ul > li > svg {
+  @apply h-5 w-5 font-extrabold;
+}
+
+.cv > .side > ul > li > a {
+  @apply transition hover:text-[#0a66c2] hover:underline hover:opacity-90;
+}
+
+.cv > .side > a {
+  @apply w-full rounded bg-primary px-3 py-2 text-center font-normal capitalize tracking-tight
+  text-white transition hover:bg-[#0a66c2] hover:opacity-90 dark:bg-tertiary hover:cursor-pointer;
 }

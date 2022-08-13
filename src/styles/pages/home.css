@@ -19,7 +19,7 @@
 }
 
 .home > header > .buttons {
-  @apply flex items-center justify-center space-x-2 text-primary-light dark:text-light;
+  @apply flex items-center justify-center space-x-2 text-primary dark:text-light;
 }
 
 .home > header > .buttons > button {
@@ -32,7 +32,7 @@
 }
 
 .home .tabs .tab-list {
-  @apply flex space-x-2 rounded-xl bg-primary-light p-1 shadow dark:bg-light/5 md:space-x-3 md:p-1.5;
+  @apply flex space-x-2 rounded-xl bg-primary p-1 shadow dark:bg-light/5 md:space-x-3 md:p-1.5;
 }
 
 .home .tabs .tab {
@@ -87,7 +87,7 @@
 }
 
 .home .tab-inner-header {
-  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary-light dark:text-tertiary md:flex;
+  @apply hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex;
 }
 
 .home .tab-inner-subheader {

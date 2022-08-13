@@ -8,7 +8,7 @@ deploy: https://health-checker.netlify.app
 preview: null
 featuredImage: ./featured.jpg
 featuredVideo: https://user-images.githubusercontent.com/40745490/150367733-d4e5b349-cae0-487e-9a82-685a3e376bd0.mp4
-techStack: [React, Express, Javascript, Tailwind]
+techStack: [React, Express, Javascript, Tailwind, SPARQL]
 description: A better way to consult accurate health information.
 team: Team of 4 developers
 ---

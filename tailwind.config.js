@@ -14,12 +14,9 @@ module.exports = {
         light: '#f2f4f7',
         lighter: '#f7f7f7',
         lightest: '#ffffff',
-        primary: '#173b6c',
+        primary: '#124c8e',
         secondary: '#149ddd',
         tertiary: '#9f7aea',
-        'primary-light': '#2e4f7b',
-        'secondary-light': '#2ca7e0',
-        'tertiary-light': '#a481eb',
       },
       maxWidth: {
         screen: '100vw',
