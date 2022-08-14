@@ -53,7 +53,7 @@ const Hamburger = ({ open }: { open: boolean }) => (
     </Link>
 
     <div className="flex items-center space-x-1">
-      {/* <DarkModeSwitchMinimal /> */}
+      <DarkModeSwitchMinimal />
       <Disclosure.Button className="hamburger group">
         <span className="sr-only">Open nav menu</span>
         {open ? (
@@ -109,7 +109,7 @@ const Header = ({ title, location }: { title: string; location: string }) => (
     </div>
 
     <div className="hidden self-center md:inline-flex">
-      {/* <DarkModeSwitchMinimal /> */}
+      <DarkModeSwitchMinimal />
     </div>
   </div>
 )

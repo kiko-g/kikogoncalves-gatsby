@@ -4,7 +4,9 @@ import { Content, ViewToggler } from '../components/home'
 import '../styles/pages/home.css'
 
 const IndexPage = () => {
-  const [condensed, setCondensed] = useState(() => !window.matchMedia('(max-width: 1024px)').matches)
+  const [condensed, setCondensed] = useState(() =>
+    typeof window !== 'undefined' ? !window.matchMedia('(max-width: 1024px)').matches : false
+  )
 
   return (
     <Layout location="Home" liquid>
