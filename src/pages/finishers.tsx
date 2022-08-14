@@ -3,7 +3,7 @@ import { Layout, Seo } from '../layout'
 
 const FinishersPage = () => {
   useEffect(() => {
-    window.location.href = 'https://finishershub.netlify.app'
+    if (typeof window !== 'undefined') window.location.href = 'https://finishershub.netlify.app'
   }, [])
 
   return (
