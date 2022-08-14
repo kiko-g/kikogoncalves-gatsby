@@ -6,7 +6,7 @@ const useLocalStorage = (key: string, initialValue?: any) => {
       const item = window.localStorage.getItem(key)
       return item ? JSON.parse(item) : initialValue
     } catch (error) {
-      console.warn(error)
+      console.log(error)
       return initialValue
     }
   })
@@ -19,7 +19,7 @@ const useLocalStorage = (key: string, initialValue?: any) => {
 
       window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (error) {
-      console.warn(error)
+      console.log(error)
     }
   }
   return [storedValue, setValue]
@@ -32,10 +32,14 @@ const useDarkMode = () => {
   const isEnabled = typeof enabledState === 'undefined' && enabled
 
   useEffect(() => {
-    const className = 'dark'
-    const bodyClass = window.document.body.classList
+    try {
+      const className = 'dark'
+      const bodyClass = window.document.body.classList
 
-    isEnabled ? bodyClass.add(className) : bodyClass.remove(className)
+      isEnabled ? bodyClass.add(className) : bodyClass.remove(className)
+    } catch (error) {
+      console.log(error)
+    }
   }, [enabled, isEnabled])
 
   return [enabled, setEnabled]
