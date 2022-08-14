@@ -37,7 +37,7 @@ const Sidebar = () => {
           </h2>
           <h4>
             Software Engineering Student @{' '}
-            <a href="fe.up.pt" className="link">
+            <a href="https://fe.up.pt" className="link">
               FEUP
             </a>
           </h4>

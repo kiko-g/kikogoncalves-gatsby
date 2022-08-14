@@ -1,33 +1,86 @@
 import React from 'react'
-import { GithubIcon } from '../../icons'
+import { StaticQuery, graphql } from 'gatsby'
 import { Group, GroupEntry } from '../../../components/cv'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
+import { GithubIcon, LinkedinIcon } from '../../icons'
 
-const Projects = () => {
-  return (
-    <Group name="Projects">
-      {/*  */}
-      <GroupEntry date="Sep 2018 - Jan 2022" location="Porto, Portugal">
-        <div className="title">
-          <h3>TTS - Time Table Selector</h3>
-          <a rel="noopener" target="_blank" href="https://ni.fe.up.pt/tts">
-            <ExternalLinkIcon className="h-5 w-5" />
-          </a>
-          <a rel="noopener" target="_blank" href="https://github.com/NIAEFEUP/tts-revamp-fe">
-            <GithubIcon />
-          </a>
-        </div>
+const Projects = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allMarkdownRemark(
+          sort: { order: [DESC, DESC], fields: [frontmatter___shown, frontmatter___startDate] }
+          filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+        ) {
+          edges {
+            node {
+              id
+              html
+              frontmatter {
+                shown
+                startDate(formatString: "MMM YYYY")
+                endDate(formatString: "MMM YYYY")
+                location
+                github
+                title
+                linkedin
+                external
+                subtitle
+                externalSub
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Group name="Projects">
+        {data.allMarkdownRemark.edges
+          .filter((item: { node: { frontmatter: { shown: boolean } } }) => item.node.frontmatter.shown === true)
+          .map((entry: { node: { frontmatter: any; html: any } }, entryIdx: number) => {
+            const values = entry.node.frontmatter
+            const dates =
+              values.startDate === values.endDate
+                ? values.startDate
+                : `${values.startDate} - ${values.endDate ?? 'Present'}`
 
-        <div className="subtitle">
-          <h5>React, Typescript, TailwindCSS, Docker</h5>
-        </div>
+            return (
+              <GroupEntry key={`cv-projects-${entryIdx}`} date={dates} location={values.location}>
+                <div className="title">
+                  <h3>{values.title}</h3>
+                  {values.external && (
+                    <a rel="noopener" target="_blank" href={values.external}>
+                      <ExternalLinkIcon className="h-5 w-5" />
+                    </a>
+                  )}
+                  {values.github && (
+                    <a rel="noopener" target="_blank" href={values.github}>
+                      <GithubIcon />
+                    </a>
+                  )}
+                  {values.linkedin && (
+                    <a rel="noopener" target="_blank" href={values.linkedin}>
+                      <LinkedinIcon />
+                    </a>
+                  )}
+                </div>
 
-        <ul className="bullets">
-          <li>Developed platform for University of Porto students to build their schedules.</li>
-        </ul>
-      </GroupEntry>
-    </Group>
-  )
-}
+                <div className="subtitle">
+                  <h5>{values.subtitle}</h5>
+                  {values.externalSub && (
+                    <a rel="noopener" target="_blank" href={values.externalSub}>
+                      <ExternalLinkIcon className="h-5 w-5" />
+                    </a>
+                  )}
+                </div>
+
+                <div dangerouslySetInnerHTML={{ __html: entry.node.html }} />
+              </GroupEntry>
+            )
+          })}
+      </Group>
+    )}
+  />
+)
 
 export default Projects

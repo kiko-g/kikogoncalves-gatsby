@@ -90,27 +90,27 @@
   @apply ml-0;
 }
 
-.cv .group-entry > .content > .title {
+.cv .group-entry > .content .title {
   @apply flex items-start gap-1.5 lg:items-center;
 }
 
-.cv .group-entry > .content > .title h3 {
+.cv .group-entry > .content .title h3 {
   @apply text-base font-semibold dark:text-tertiary lg:text-lg;
 }
 
-.cv .group-entry > .content > .subtitle {
+.cv .group-entry > .content .subtitle {
   @apply flex items-start gap-1.5 lg:items-center;
 }
 
-.cv .group-entry > .content > .subtitle h5 {
+.cv .group-entry > .content .subtitle h5 {
   @apply tracking-tighter;
 }
 
-.cv .group-entry > .content > .bullets {
+.cv .group-entry > .content ul {
   @apply ml-3.5 mt-1 list-disc lg:ml-5;
 }
 
-.cv .group-entry > .content > .bullets > li {
+.cv .group-entry > .content ul > li {
   @apply tracking-tight lg:tracking-normal;
 }
 

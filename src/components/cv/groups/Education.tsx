@@ -1,68 +1,86 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import { Group, GroupEntry } from '../../../components/cv'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
+import { GithubIcon, LinkedinIcon } from '../../icons'
 
-const Education = () => {
-  return (
-    <Group name="Education">
-      {/* Bachelor Degree */}
-      <GroupEntry date="Sep 2018 - Jan 2022" location="Porto, Portugal">
-        <div className="title">
-          <h3>Faculty of Engineering of the University of Porto (FEUP)</h3>
-          <a rel="noopener" target="_blank" href="fe.up.pt">
-            <ExternalLinkIcon className="h-5 w-5" />
-          </a>
-        </div>
+const Education = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allMarkdownRemark(
+          sort: { order: [DESC, DESC], fields: [frontmatter___shown, frontmatter___startDate] }
+          filter: { fileAbsolutePath: { regex: "/(education)/" } }
+        ) {
+          edges {
+            node {
+              id
+              html
+              frontmatter {
+                shown
+                startDate(formatString: "MMM YYYY")
+                endDate(formatString: "MMM YYYY")
+                location
+                github
+                title
+                linkedin
+                external
+                subtitle
+                externalSub
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Group name="Education">
+        {data.allMarkdownRemark.edges
+          .filter((item: { node: { frontmatter: { shown: boolean } } }) => item.node.frontmatter.shown === true)
+          .map((entry: { node: { frontmatter: any; html: any } }, entryIdx: number) => {
+            const values = entry.node.frontmatter
+            const dates =
+              values.startDate === values.endDate
+                ? values.startDate
+                : `${values.startDate} - ${values.endDate ?? 'Present'}`
 
-        <div className="subtitle">
-          <h5>Bachelor in Informatics and Computer Engineering</h5>
-          <a
-            rel="noopener"
-            target="_blank"
-            href="https://sigarra.up.pt/feup/en/cur_geral.cur_planos_estudos_view?pv_plano_id=31224&pv_tipo_cur_sigla=&pv_origem=CUR&pv_ano_lectivo=2021"
-          >
-            <ExternalLinkIcon className="h-5 w-5" />
-          </a>
-        </div>
+            return (
+              <GroupEntry key={`cv-education-${entryIdx}`} date={dates} location={values.location}>
+                <div className="title">
+                  <h3>{values.title}</h3>
+                  {values.external && (
+                    <a rel="noopener" target="_blank" href={values.external}>
+                      <ExternalLinkIcon className="h-5 w-5" />
+                    </a>
+                  )}
+                  {values.github && (
+                    <a rel="noopener" target="_blank" href={values.github}>
+                      <GithubIcon />
+                    </a>
+                  )}
+                  {values.linkedin && (
+                    <a rel="noopener" target="_blank" href={values.linkedin}>
+                      <LinkedinIcon />
+                    </a>
+                  )}
+                </div>
 
-        <ul className="bullets">
-          <li>Completed degree with cumulative GPA 15/20</li>
-          <li>
-            Relevant coursework Web App Development, Algorithms and Data Structures, Databases, Artificial Intelligence
-          </li>
-        </ul>
-      </GroupEntry>
+                <div className="subtitle">
+                  <h5>{values.subtitle}</h5>
+                  {values.externalSub && (
+                    <a rel="noopener" target="_blank" href={values.externalSub}>
+                      <ExternalLinkIcon className="h-5 w-5" />
+                    </a>
+                  )}
+                </div>
 
-      {/* Master Degree */}
-      <GroupEntry date="Sep 2021 - Present" location="Porto, Portugal">
-        <div className="title">
-          <h3>Faculty of Engineering of the University of Porto (FEUP)</h3>
-          <a rel="noopener" target="_blank" href="fe.up.pt">
-            <ExternalLinkIcon className="h-5 w-5" />
-          </a>
-        </div>
-
-        <div className="subtitle">
-          <h5>Master in Informatics and Computer Engineering</h5>
-          <a
-            rel="noopener"
-            target="_blank"
-            href="https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_PLANOS_ESTUDOS_VIEW?pv_plano_id=31204&pv_ano_lectivo=2022"
-          >
-            <ExternalLinkIcon className="h-5 w-5" />
-          </a>
-        </div>
-
-        <ul className="bullets">
-          <li>Currently enrolled in year 2 out of 2 with cumulative GPA of 17.55/20</li>
-          <li>
-            Relevant coursework Full Stack Development, IOT for factory management, P2P Timeline, Semantic Web App
-            Development
-          </li>
-        </ul>
-      </GroupEntry>
-    </Group>
-  )
-}
+                <div dangerouslySetInnerHTML={{ __html: entry.node.html }} />
+              </GroupEntry>
+            )
+          })}
+      </Group>
+    )}
+  />
+)
 
 export default Education
