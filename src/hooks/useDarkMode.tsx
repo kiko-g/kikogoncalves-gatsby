@@ -29,7 +29,7 @@ const useDarkMode = () => {
   const [enabled, setEnabled] = useLocalStorage('dark-theme')
 
   const isBrowser = typeof window !== 'undefined'
-  if (!isBrowser) return
+  if (!isBrowser) return [enabled, setEnabled]
 
   // @ts-ignore
   const isEnabled = typeof enabledState === 'undefined' && enabled
