@@ -6,7 +6,7 @@ const useLocalStorage = (key: string, initialValue?: any) => {
       const item = window.localStorage.getItem(key)
       return item ? JSON.parse(item) : initialValue
     } catch (error) {
-      console.log(error)
+      console.warn(error)
       return initialValue
     }
   })
@@ -19,7 +19,7 @@ const useLocalStorage = (key: string, initialValue?: any) => {
 
       window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (error) {
-      console.log(error)
+      console.warn(error)
     }
   }
   return [storedValue, setValue]
@@ -27,9 +27,6 @@ const useLocalStorage = (key: string, initialValue?: any) => {
 
 const useDarkMode = () => {
   const [enabled, setEnabled] = useLocalStorage('dark-theme')
-
-  const isBrowser = typeof window !== 'undefined'
-  if (!isBrowser) return [enabled, setEnabled]
 
   // @ts-ignore
   const isEnabled = typeof enabledState === 'undefined' && enabled
