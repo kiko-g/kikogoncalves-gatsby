@@ -1,6 +1,6 @@
 ---
 pinned: false
-date: 2022-08-30
+date: 2023-03-01
 slug: /blog/vscode-extensions
 title: VS Code Extensions I Use
 featuredImage: ./featured.jpg

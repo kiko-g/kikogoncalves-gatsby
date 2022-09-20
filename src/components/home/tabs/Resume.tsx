@@ -17,28 +17,6 @@ type EntryType = {
 const Resume = () => {
   const groups: GroupType[] = [
     {
-      title: 'Summary',
-      entries: [
-        {
-          headline: 'Francisco Gonçalves, 22',
-          description: <span>Software Engineering Student</span>,
-          bulletPoints: [<span>FEUP, Porto, Portugal</span>],
-        },
-      ],
-    },
-    {
-      title: 'Languages',
-      entries: [
-        {
-          headline: 'Portuguese Native Speaker',
-        },
-        {
-          headline: 'Cambridge C1 Advanced Certificate',
-          date: 'Dec 2016',
-        },
-      ],
-    },
-    {
       title: 'Education',
       entries: [
         {
@@ -67,9 +45,31 @@ const Resume = () => {
           description: <span>Faculdade de Engenharia da Universidade do Porto, MIEIC</span>,
           bulletPoints: [
             <span>
-              Current cumulative average <strong>18/20</strong>
+              Completed degree averaging <strong>??/20</strong>
             </span>,
           ],
+        },
+      ],
+    },
+    {
+      title: 'Summary',
+      entries: [
+        {
+          headline: 'Francisco Gonçalves, 22',
+          description: <span>Software Engineering Student</span>,
+          bulletPoints: [<span>FEUP, Porto, Portugal</span>],
+        },
+      ],
+    },
+    {
+      title: 'Languages',
+      entries: [
+        {
+          headline: 'Portuguese Native Speaker',
+        },
+        {
+          headline: 'Cambridge C1 Advanced Certificate',
+          date: 'Dec 2016',
         },
       ],
     },
@@ -117,7 +117,7 @@ const Resume = () => {
             .
           </h2>
 
-          <div className="mt-1 grid grid-cols-1 gap-3 px-2 xl:grid-cols-2">
+          <div className="mt-1 p-2 gap-4 flex max-h-full flex-col flex-wrap lg:max-h-[32rem]">
             {groups.map((group: GroupType, groupIdx: number) => (
               <Group key={`group-${groupIdx}`} group={group} />
             ))}

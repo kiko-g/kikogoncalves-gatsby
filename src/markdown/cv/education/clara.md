@@ -11,4 +11,4 @@ subtitle: High school (Science and Technologies program)
 externalSub: ''
 ---
 
-- Finished high-school averaging 17.5/20
+<!-- - Finished high-school averaging 17.5/20 -->

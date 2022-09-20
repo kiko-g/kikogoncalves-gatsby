@@ -1,6 +1,6 @@
 ---
 pinned: false
-date: 2022-08-30
+date: 2023-02-01
 slug: /blog/vscode-settings-json
 title: Manipulating VS Code Settings
 featuredImage: ./featured.png

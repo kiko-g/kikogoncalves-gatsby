@@ -1,6 +1,6 @@
 ---
 pinned: false
-date: 2023-01-30
+date: 2023-03-01
 slug: /blog/react-tailwind
 title: Combining React and Tailwind
 featuredImage: ./featured.jpg
