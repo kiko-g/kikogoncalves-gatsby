@@ -5,7 +5,7 @@ import usePageVisits from '../hooks/usePageVisits'
 import '../styles/pages/home.css'
 
 const IndexPage = () => {
-  const pageVisits = usePageVisits('')
+  const domainVisits = usePageVisits('')
   const [condensed, setCondensed] = useState(() =>
     typeof window !== 'undefined' ? !window.matchMedia('(max-width: 1024px)').matches : false
   )
@@ -23,9 +23,7 @@ const IndexPage = () => {
             <ViewToggler hook={[condensed, setCondensed]} />
           </div>
         </header>
-
-        <Content condensed={condensed} />
-        <PageVisits count={pageVisits} />
+        <Content condensed={condensed} visits={domainVisits} />
       </main>
     </Layout>
   )

@@ -28,7 +28,7 @@
 
 /* Tabs View */
 .home .tabs {
-  @apply w-full px-2 py-8 md:px-2 2xl:px-0;
+  @apply w-full px-2 py-2 md:px-2 2xl:px-0;
 }
 
 .home .tabs .tab-list {
@@ -123,16 +123,8 @@
 }
 
 /* See More */
-.home .see-more-wrapper {
-  @apply mt-4 flex items-center justify-between;
-}
-
-.home .see-more-left {
-  @apply space-x-5;
-}
-
-.home .see-more-left {
-  @apply space-x-0;
+.home .see-more {
+  @apply mt-4 flex flex-col items-end justify-between gap-3 lg:flex-row lg:items-center;
 }
 
 .home .see-more-button {

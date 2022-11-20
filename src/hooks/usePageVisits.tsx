@@ -26,11 +26,13 @@ const useLocalStorage = (key: string, initialValue?: any) => {
 }
 
 const usePageVisits = (path: string) => {
-  const page = path[0] === '/' ? path.slice(1, path.length) : path
-  const url = `https://api.countapi.xyz/hit/kikogoncalves.com/${page}`
   const [count, setCount] = useState(0)
 
   useEffect(() => {
+    const page = path[0] === '/' ? path.slice(1, path.length) : path
+    const operation = process.env.NODE_ENV === 'development' ? 'get' : 'hit'
+    const url = `https://api.countapi.xyz/${operation}/kikogoncalves.com/${page}`
+
     fetch(url)
       .then(response => response.json())
       .then(response => setCount(parseInt(response.value)))
