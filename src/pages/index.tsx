@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { Layout, Seo } from '../layout'
+import { Layout, Seo, PageVisits } from '../layout'
 import { Content, ViewToggler } from '../components/home'
+import usePageVisits from '../hooks/usePageVisits'
 import '../styles/pages/home.css'
 
 const IndexPage = () => {
+  const domainVisits = usePageVisits('')
   const [condensed, setCondensed] = useState(() =>
     typeof window !== 'undefined' ? !window.matchMedia('(max-width: 1024px)').matches : false
   )
@@ -21,8 +23,7 @@ const IndexPage = () => {
             <ViewToggler hook={[condensed, setCondensed]} />
           </div>
         </header>
-
-        <Content condensed={condensed} />
+        <Content condensed={condensed} visits={domainVisits} />
       </main>
     </Layout>
   )
