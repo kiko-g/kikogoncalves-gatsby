@@ -1,6 +1,7 @@
 import React from 'react'
 import Socials from './Socials'
 import { Link } from 'gatsby'
+import classNames from 'classnames'
 
 type GroupType = {
   title: string
@@ -113,7 +114,7 @@ const Resume = () => {
             .
           </h2>
 
-          <div className="flex max-h-full flex-col flex-wrap gap-4 p-2 lg:max-h-[32rem]">
+          <div className="flex max-h-full flex-col flex-wrap gap-x-6 gap-y-3 p-2 lg:max-h-[32rem]">
             {groups.map((group: GroupType, groupIdx: number) => (
               <Group key={`group-${groupIdx}`} group={group} />
             ))}
@@ -137,7 +138,7 @@ type GroupProps = {
 }
 
 const Group = ({ group }: GroupProps) => (
-  <div className="mt-2">
+  <div className="mt-0.5">
     <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-tertiary">{group.title}</h1>
     <ol className="relative border-l-2 border-primary dark:border-tertiary">
       {group.entries.map((entry, entryIdx) => (
@@ -151,7 +152,7 @@ const Group = ({ group }: GroupProps) => (
               border-primary bg-white dark:border-tertiary dark:bg-white"
             />
 
-            <div className="flex flex-col space-y-1">
+            <div className={classNames('flex flex-col', entry.date ? 'space-y-1' : 'space-y-0.5')}>
               <span
                 className="mb-1 flex items-center text-base font-semibold uppercase 
               leading-none tracking-tight text-gray-900 dark:text-white"
@@ -161,7 +162,7 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="my-1 rounded bg-primary px-2 text-white dark:bg-tertiary">{entry.date}</span>
+                  <span className="my-1 rounded bg-primary py-0.5 px-1 text-white dark:bg-tertiary">{entry.date}</span>
                 </div>
               ) : null}
 

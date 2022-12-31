@@ -22,7 +22,7 @@ const Gallery = () => {
   return (
     <>
       <div className="tab-inner-header">Gallery</div>
-      <div className="mt-0 grid w-full grid-cols-2 gap-4 md:mt-2 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="mt-0 grid w-full grid-cols-2 gap-3 md:mt-1 lg:grid-cols-4 xl:grid-cols-5">
         {images.map((imageGatsby: { node: { img: ImageDataLike } }, imageIdx: number) => {
           const image = getImage(imageGatsby.node.img)
           return image ? (

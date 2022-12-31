@@ -70,7 +70,7 @@
 }
 
 .home .blocks .block-content {
-  @apply overflow-hidden rounded-xl bg-lightest p-1 dark:bg-light/5 md:p-2;
+  @apply overflow-hidden rounded-xl bg-lightest p-2 dark:bg-light/5 md:p-4;
 }
 
 /* Panel */
