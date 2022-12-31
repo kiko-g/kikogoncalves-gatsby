@@ -4,8 +4,11 @@ import { Layout, Seo } from '../layout'
 import { JournalPageCard } from '../components/journal'
 import '../styles/pages/journal.css'
 
-// prettier-ignore
-const JournalPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
+const JournalPage = ({
+  data: {
+    allMarkdownRemark: { nodes },
+  },
+}) => {
   return (
     <Layout location="Journal" liquid>
       <Seo title="Journal" />
@@ -20,7 +23,7 @@ const JournalPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
         </header>
 
         <article>
-          {edges
+          {nodes
             .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
             .map((edge: { node: { id: React.Key } }) => (
               <JournalPageCard key={`journalpage-${edge.node.id}`} post={edge.node} />
@@ -36,22 +39,20 @@ export default JournalPage
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      sort: { order: [DESC, ASC], fields: [frontmatter___pinned, frontmatter___date] }
+      sort: [{ frontmatter: { pinned: DESC } }, { frontmatter: { date: ASC } }]
       filter: { fileAbsolutePath: { regex: "/(journal)/" } }
     ) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 80)
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            slug
-            title
-            pinned
-            featuredImage {
-              childImageSharp {
-                gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-              }
+      nodes {
+        id
+        excerpt(pruneLength: 80)
+        frontmatter {
+          date(formatString: "DD MMMM, YYYY")
+          slug
+          title
+          pinned
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
           }
         }

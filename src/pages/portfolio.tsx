@@ -4,8 +4,11 @@ import { Layout, Seo } from '../layout'
 import { PortfolioEntry } from '../components/porfolio'
 import '../styles/pages/portfolio.css'
 
-// prettier-ignore
-const PortfolioPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+const PortfolioPage = ({
+  data: {
+    allMarkdownRemark: { nodes },
+  },
+}) => {
   return (
     <Layout location="Portfolio">
       <Seo title="Portfolio" />
@@ -15,19 +18,15 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { edges } } }) => {
           <p>
             Welcome to the portfolio! This is where you can browse through the main (software) projects I've contributed
             to or developed myself. The source code for most of these projects is available on{' '}
-            <a
-              target="_blank"
-              className="link"
-              href="https://github.com/kiko-g?tab=repositories"
-            >
+            <a target="_blank" className="link" href="https://github.com/kiko-g?tab=repositories">
               my github
-            </a>, so make sure you check
-            that out and maybe drop a follow! 😊
+            </a>
+            , so make sure you check that out and maybe drop a follow! 😊
           </p>
         </header>
 
         <article>
-          {edges
+          {nodes
             .filter((edge: { node: { frontmatter: { startDate: any } } }) => !!edge.node.frontmatter.startDate)
             .map((edge: { node: { id: React.Key } }) => (
               <PortfolioEntry key={`project-${edge.node.id}`} project={edge.node} />
@@ -43,32 +42,30 @@ export default PortfolioPage
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      sort: { order: [DESC, DESC], fields: [frontmatter___pinned, frontmatter___startDate] }
+      sort: [{ frontmatter: { pinned: DESC } }, { frontmatter: { startDate: DESC } }]
       filter: { fileAbsolutePath: { regex: "/(portfolio)/" } }
     ) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            pinned
-            title
-            slug
-            startDate(formatString: "MMM YYYY")
-            endDate(formatString: "MMM YYYY")
-            repo
-            deploy
-            preview
-            techStack
-            featuredImage {
-              childImageSharp {
-                gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-              }
+      nodes {
+        id
+        html
+        frontmatter {
+          pinned
+          title
+          slug
+          startDate(formatString: "MMM YYYY")
+          endDate(formatString: "MMM YYYY")
+          repo
+          deploy
+          preview
+          techStack
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
-            featuredVideo
-            description
-            team
           }
+          featuredVideo
+          description
+          team
         }
       }
     }

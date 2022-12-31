@@ -9,25 +9,23 @@ const Projects = () => (
     query={graphql`
       query {
         allMarkdownRemark(
-          sort: { order: [DESC, DESC], fields: [frontmatter___shown, frontmatter___startDate] }
+          sort: [{ frontmatter: { shown: DESC } }, { frontmatter: { startDate: DESC } }]
           filter: { fileAbsolutePath: { regex: "/(projects)/" } }
         ) {
-          edges {
-            node {
-              id
-              html
-              frontmatter {
-                shown
-                startDate(formatString: "MMM YYYY")
-                endDate(formatString: "MMM YYYY")
-                location
-                github
-                title
-                linkedin
-                external
-                subtitle
-                externalSub
-              }
+          nodes {
+            id
+            html
+            frontmatter {
+              shown
+              startDate(formatString: "MMM YYYY")
+              endDate(formatString: "MMM YYYY")
+              location
+              github
+              title
+              linkedin
+              external
+              subtitle
+              externalSub
             }
           }
         }
@@ -35,7 +33,7 @@ const Projects = () => (
     `}
     render={data => (
       <Group name="Projects" decoration>
-        {data.allMarkdownRemark.edges
+        {data.allMarkdownRemark.nodes
           .filter((item: { node: { frontmatter: { shown: boolean } } }) => item.node.frontmatter.shown === true)
           .map((entry: { node: { frontmatter: any; html: any } }, entryIdx: number) => {
             const values = entry.node.frontmatter
