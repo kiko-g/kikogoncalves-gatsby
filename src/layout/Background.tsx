@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/background.css'
 
 const Background = () => {
   return (
@@ -8,7 +7,7 @@ const Background = () => {
         <ul className="background-circles">
           {Array(12)
             .fill(0)
-            .map((bubble, bubbleIdx) => (
+            .map((_, bubbleIdx) => (
               <li key={`background-bubble-${bubbleIdx}`}></li>
             ))}
         </ul>
