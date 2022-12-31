@@ -44,15 +44,6 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-highlight-code`,
-            options: {
-              terminal: 'carbon',
-              theme: 'dracula',
-              editable: false,
-              lineNumbers: false,
-            },
-          },
-          {
             resolve: 'gatsby-remark-emojis',
             options: {
               active: true,
@@ -66,6 +57,15 @@ module.exports = {
                 display: 'inline',
                 position: 'relative',
               },
+            },
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'dracula',
+              editable: false,
+              lineNumbers: false,
             },
           },
         ],

@@ -27,9 +27,9 @@ const PortfolioPage = ({
 
         <article>
           {nodes
-            .filter((edge: { node: { frontmatter: { startDate: any } } }) => !!edge.node.frontmatter.startDate)
-            .map((edge: { node: { id: React.Key } }) => (
-              <PortfolioEntry key={`project-${edge.node.id}`} project={edge.node} />
+            .filter((node: { frontmatter: { startDate: any } }) => !!node.frontmatter.startDate)
+            .map((node: { id: React.Key }) => (
+              <PortfolioEntry key={`project-${node.id}`} project={node} />
             ))}
         </article>
       </main>

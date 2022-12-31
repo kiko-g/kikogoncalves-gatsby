@@ -1,16 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
   @apply scroll-smooth;
 }
 
 code {
-  @apply rounded-md bg-slate-300 py-[0.2rem] px-[0.35rem] font-code font-semibold text-pink-700 dark:bg-[#252b33];
-  font-size: 0.9rem !important;
+  @apply mx-0.5 rounded-md bg-slate-300 py-[0.2rem] px-[0.35rem] font-code font-semibold text-pink-700 dark:bg-[#252b33];
+  font-size: 0.8rem !important;
 }
 
 .link {
@@ -63,7 +63,7 @@ code {
   color: #3b5998;
 }
 
-/* Background */
+/* @@@ Background */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

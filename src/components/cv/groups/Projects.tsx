@@ -34,9 +34,9 @@ const Projects = () => (
     render={data => (
       <Group name="Projects" decoration>
         {data.allMarkdownRemark.nodes
-          .filter((item: { node: { frontmatter: { shown: boolean } } }) => item.node.frontmatter.shown === true)
-          .map((entry: { node: { frontmatter: any; html: any } }, entryIdx: number) => {
-            const values = entry.node.frontmatter
+          .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)
+          .map((node: { frontmatter: any; html: any }, entryIdx: number) => {
+            const values = node.frontmatter
             const dates =
               values.startDate === values.endDate
                 ? values.startDate
@@ -72,7 +72,7 @@ const Projects = () => (
                   )}
                 </div>
 
-                <div dangerouslySetInnerHTML={{ __html: entry.node.html }} />
+                <div dangerouslySetInnerHTML={{ __html: node.html }} />
               </GroupEntry>
             )
           })}
