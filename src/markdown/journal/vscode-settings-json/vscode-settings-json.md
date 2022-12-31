@@ -1,7 +1,7 @@
 ---
 pinned: false
 date: 2023-02-01
-slug: /blog/vscode-wizardry
+slug: /journal/vscode-wizardry
 title: Manipulating VS Code Settings
 featuredImage: ./featured.png
 ---

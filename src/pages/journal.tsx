@@ -1,19 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Seo } from '../layout'
-import { BlogPostCard } from '../components/blog'
-import '../styles/pages/blog.css'
+import { JournalPageCard } from '../components/journal'
+import '../styles/pages/journal.css'
 
 // prettier-ignore
-const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
+const JournalPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
   return (
-    <Layout location="Blog" liquid>
-      <Seo title="Blog" />
-      <main className="blog">
+    <Layout location="Journal" liquid>
+      <Seo title="Journal" />
+      <main className="journal">
         <header>
-          <h2>Blog</h2>
+          <h2>Journal</h2>
           <p>
-            Welcome to my blog! This is where you'll find posts about things I want to talk about. Most posts will be
+            Welcome to my journal! This is where you'll find posts about things I want to talk about. Most posts will be
             about software development, engineering and programming, but occasionally you might find some stuff related
             to hobbies of mine and maybe some other random jibber-jabber!
           </p>
@@ -23,7 +23,7 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
           {edges
             .filter((edge: { node: { frontmatter: { date: any } } }) => !!edge.node.frontmatter.date)
             .map((edge: { node: { id: React.Key } }) => (
-              <BlogPostCard key={`blogpost-${edge.node.id}`} post={edge.node} />
+              <JournalPageCard key={`journalpage-${edge.node.id}`} post={edge.node} />
             ))}
         </article>
       </main>
@@ -31,13 +31,13 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges }, }, }) => {
   )
 }
 
-export default BlogPage
+export default JournalPage
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: [DESC, ASC], fields: [frontmatter___pinned, frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+      filter: { fileAbsolutePath: { regex: "/(journal)/" } }
     ) {
       edges {
         node {

@@ -20,7 +20,7 @@ const Gallery = () => {
   `).allFile.edges
 
   return (
-    <div className="px-2 py-2">
+    <>
       <div className="tab-inner-header">Gallery</div>
       <div className="mt-0 grid w-full grid-cols-2 gap-4 md:mt-2 lg:grid-cols-4 xl:grid-cols-5">
         {images.map((imageGatsby: { node: { img: ImageDataLike } }, imageIdx: number) => {
@@ -38,7 +38,7 @@ const Gallery = () => {
           )
         })}
       </div>
-    </div>
+    </>
   )
 }
 

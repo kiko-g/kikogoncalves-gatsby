@@ -1,89 +1,89 @@
-.blogpost {
+.journalpage {
   @apply mx-auto flex w-full flex-col justify-between p-4 px-4 pb-28 font-normal sm:mt-16 sm:px-6 md:px-8 xl:max-w-6xl xl:px-12;
 }
 
-.blogpost article a {
+.journalpage article a {
   @apply font-semibold text-tertiary transition hover:underline hover:opacity-90 dark:text-tertiary;
 }
 
-.blogpost header {
+.journalpage header {
   @apply mb-2 py-3 text-[2rem] font-bold tracking-tight;
 }
 
-.blogpost header h1 {
+.journalpage header h1 {
   @apply text-3xl font-extrabold tracking-tight text-gray-700 dark:text-white sm:text-center sm:text-4xl xl:mb-16;
 }
 
-.blogpost header > div {
+.journalpage header > div {
   @apply flex items-center justify-between;
 }
 
-.blogpost header span.date {
+.journalpage header span.date {
   @apply flex text-sm font-semibold text-gray-700 dark:text-tertiary;
 }
 
-.blogpost header .go-back-button {
+.journalpage header .go-back-button {
   @apply flex rounded-full text-sm font-semibold text-gray-700 transition hover:opacity-75 dark:text-tertiary;
 }
 
-.blogpost article {
+.journalpage article {
   @apply mt-0 p-0 text-gray-800 dark:text-light;
 }
 
-.blogpost footer {
+.journalpage footer {
   @apply mt-12 flex items-center justify-between border-t border-gray-200 py-2 text-xs text-gray-400 dark:border-gray-600 dark:text-gray-300 md:py-3 md:text-sm;
 }
 
-.blogpost footer > span {
+.journalpage footer > span {
   @apply font-semibold text-gray-600 dark:text-gray-200 sm:text-center;
 }
 
-.blogpost img {
+.journalpage img {
   @apply w-full rounded-xl border-0 bg-transparent shadow;
 }
 
-.blogpost .gatsby-resp-image-wrapper {
+.journalpage .gatsby-resp-image-wrapper {
   margin: 2rem 0 !important;
 }
 
-.blogpost p {
+.journalpage p {
   @apply text-justify;
 }
 
-.blogpost h1,
-.blogpost h2,
-.blogpost h3,
-.blogpost h4 {
+.journalpage h1,
+.journalpage h2,
+.journalpage h3,
+.journalpage h4 {
   @apply py-1 font-medium;
 }
 
-.blogpost h1 {
+.journalpage h1 {
   @apply mt-6 mb-2 py-1 text-4xl md:mt-8 md:mb-4;
 }
 
-.blogpost h2 {
+.journalpage h2 {
   @apply mt-7 mb-4 py-1 text-3xl;
 }
 
-.blogpost h3 {
+.journalpage h3 {
   @apply mt-6 mb-3 py-1 text-2xl;
 }
 
-.blogpost h4 {
+.journalpage h4 {
   @apply mt-5 mb-2 py-1 text-xl;
 }
 
-.blogpost p,
-.blogpost .gatsby-resp-image-wrapper {
+.journalpage p,
+.journalpage .gatsby-resp-image-wrapper {
   @apply my-3;
 }
 
-.blogpost ul,
-.blogpost ol {
+.journalpage ul,
+.journalpage ol {
   @apply mt-5 mb-7;
 }
 
-.blogpost blockquote {
+.journalpage blockquote {
   @apply my-8 rounded border-l-4 border-primary bg-light py-1 pl-4 font-medium text-gray-800 
   dark:border-tertiary dark:bg-ice/5 dark:text-white;
 }

@@ -1,65 +1,65 @@
-.blog {
+.journal {
   @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 xl:px-4 2xl:px-0;
 }
 
-.blog > header {
+.journal > header {
   @apply mt-2;
 }
 
-.blog > header > h2 {
+.journal > header > h2 {
   @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
 }
 
-.blog > header > p {
+.journal > header > p {
   @apply mt-4 text-lg font-normal;
 }
 
-.blog > article {
+.journal > article {
   @apply grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4;
 }
 
-.blog .postcard {
+.journal .postcard {
   @apply relative space-y-2 rounded-xl p-4 shadow transition duration-300;
 }
 
-.blog .postcard > header {
+.journal .postcard > header {
   @apply relative flex items-center justify-center rounded-lg bg-opacity-90;
 }
 
-.blog .postcard > header .pinned {
+.journal .postcard > header .pinned {
   @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary
    p-1 text-xs leading-none text-white shadow;
 }
 
-.blog .postcard > header .date {
+.journal .postcard > header .date {
   @apply absolute top-2 right-2 rounded-full bg-navy/50 px-2 py-1 text-xs 
   leading-none tracking-tight text-white dark:bg-ice/80 dark:text-gray-800;
 }
 
-.blog .postcard > section {
+.journal .postcard > section {
   @apply w-full;
 }
 
-.blog .postcard > section > .top {
+.journal .postcard > section > .top {
   @apply flex items-start justify-start;
 }
 
-.blog .postcard > section > .top .title {
+.journal .postcard > section > .top .title {
   @apply flex-grow font-medium;
 }
 
-.blog .postcard > section > .excerpt {
+.journal .postcard > section > .excerpt {
   @apply pb-0 text-sm font-normal tracking-tight text-gray-500 transition dark:text-gray-300;
 }
 
-.blog .postcard > section > .bottom {
+.journal .postcard > section > .bottom {
   @apply mt-3 flex items-center justify-end;
 }
 
-.blog .postcard > section .new {
+.journal .postcard > section .new {
   @apply inline-flex items-center justify-center rounded-full bg-rose-800/80 px-2 py-1 text-xs leading-none text-white;
 }
 
-.blog .postcard > section .coming-soon {
+.journal .postcard > section .coming-soon {
   @apply inline-flex items-center justify-center rounded-full bg-teal-800/80 px-2 py-1 text-xs leading-none text-white;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Layout, Seo } from '../layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import '../styles/pages/blogpost.css'
+import '../styles/pages/journalpage.css'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -12,9 +12,9 @@ export default function Template({ data }) {
   deckDeckGoHighlightElement()
 
   return (
-    <Layout location="Blogpost" liquid>
+    <Layout location="Journal Page" liquid>
       <Seo title={frontmatter.title} />
-      <main className="blogpost">
+      <main className="journalpage">
         <header>
           <h1>{frontmatter.title}</h1>
           <div>
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
 `
 
 const GoBack = () => (
-  <a className="go-back-button" href="/blog">
+  <Link className="go-back-button" to="/journal">
     <svg viewBox="0 -7 3 24" className="mr-2.5 h-6 w-auto overflow-visible">
       <path
         d="M3 0L0 3L3 6"
@@ -67,5 +67,5 @@ const GoBack = () => (
       ></path>
     </svg>
     Go back
-  </a>
+  </Link>
 )

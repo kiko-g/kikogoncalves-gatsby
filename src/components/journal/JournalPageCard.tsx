@@ -8,7 +8,7 @@ type Props = {
   post: any
 }
 
-const BlogPostCard = ({ post }: Props) => {
+const JournalPageCard = ({ post }: Props) => {
   const difference = daysDifference(post.frontmatter.date)
   const coverImage = getImage(post.frontmatter.featuredImage)
   const available = difference >= 0
@@ -57,4 +57,4 @@ const BlogPostCard = ({ post }: Props) => {
   )
 }
 
-export default BlogPostCard
+export default JournalPageCard

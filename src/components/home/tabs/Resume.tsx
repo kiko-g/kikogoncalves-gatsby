@@ -106,18 +106,14 @@ const Resume = () => {
             <a className="link" target="_blank" href="https://www.linkedin.com/in/kikogoncalves/">
               linkedin
             </a>{' '}
-            page to find out more about my path, carrer and technical profile or take a look at my{' '}
+            page to find out more about my path, carrer and technical profile or head over to the{' '}
             <Link className="link" to="/cv">
               CV page
-            </Link>{' '}
-            or{' '}
-            <a className="link" target="_blank" rel="noopener" href={'cv.pdf'}>
-              in PDF format
-            </a>
+            </Link>
             .
           </h2>
 
-          <div className="mt-1 p-2 gap-4 flex max-h-full flex-col flex-wrap lg:max-h-[32rem]">
+          <div className="flex max-h-full flex-col flex-wrap gap-4 p-2 lg:max-h-[32rem]">
             {groups.map((group: GroupType, groupIdx: number) => (
               <Group key={`group-${groupIdx}`} group={group} />
             ))}
@@ -155,7 +151,7 @@ const Group = ({ group }: GroupProps) => (
               border-primary bg-white dark:border-tertiary dark:bg-white"
             />
 
-            <div className="flex flex-col space-y-1.5">
+            <div className="flex flex-col space-y-1">
               <span
                 className="mb-1 flex items-center text-base font-semibold uppercase 
               leading-none tracking-tight text-gray-900 dark:text-white"
@@ -165,7 +161,7 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="rounded bg-primary px-2 py-1 text-white dark:bg-tertiary">{entry.date}</span>
+                  <span className="my-1 rounded bg-primary px-2 text-white dark:bg-tertiary">{entry.date}</span>
                 </div>
               ) : null}
 

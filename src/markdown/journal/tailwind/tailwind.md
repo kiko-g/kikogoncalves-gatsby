@@ -1,7 +1,7 @@
 ---
 pinned: true
 date: 2022-05-30
-slug: /blog/tailwind
+slug: /journal/tailwind
 title: The magic of Tailwind
 featuredImage: ./featured.jpg
 ---

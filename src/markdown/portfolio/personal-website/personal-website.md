@@ -14,4 +14,4 @@ team: Individual project
 ---
 
 - Built a multi purpose personal website meant to last
-- Used Gatsby Remark to display blogposts and projects
+- Used Gatsby Remark to display journal pages and projects

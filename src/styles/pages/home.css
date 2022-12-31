@@ -1,9 +1,9 @@
 .home {
-  @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 2xl:px-0;
+  @apply container mx-auto flex-1 flex-col justify-between space-y-3;
 }
 
 .home > header {
-  @apply mt-2 flex items-start justify-between px-2 py-2 2xl:px-0;
+  @apply mt-2 flex items-start justify-between;
 }
 
 .home > header > .body {
@@ -15,7 +15,7 @@
 }
 
 .home > header > .body > p {
-  @apply mt-4 text-lg font-normal;
+  @apply mt-2 text-lg font-normal;
 }
 
 .home > header > .buttons {
@@ -28,7 +28,7 @@
 
 /* Tabs View */
 .home .tabs {
-  @apply w-full px-2 py-2 md:px-2 2xl:px-0;
+  @apply w-full;
 }
 
 .home .tabs .tab-list {
@@ -53,7 +53,7 @@
 }
 
 .home .tabs .tab-panel {
-  @apply overflow-hidden rounded-xl bg-lightest p-1 dark:bg-light/5 md:p-2;
+  @apply overflow-hidden rounded-xl bg-lightest p-2 dark:bg-light/5 md:p-4;
 }
 
 .home .tabs .tab-focus-ring {
@@ -75,7 +75,7 @@
 
 /* Panel */
 .home .tab-panel-inner {
-  @apply grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl px-2 py-2 text-2xl transition md:gap-x-8;
+  @apply grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl text-2xl transition md:gap-x-8;
 }
 
 .home .tab-panel-inner-left {
@@ -95,11 +95,7 @@
 }
 
 .home .tab-inner-prose {
-  @apply mt-3 text-base font-normal md:mt-1;
-}
-
-.home .tab-inner-prose {
-  @apply mt-2 text-sm font-normal text-gray-600 dark:text-light md:text-base;
+  @apply mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base;
 }
 
 .home .tab-inner-prose p {

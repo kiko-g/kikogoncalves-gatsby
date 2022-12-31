@@ -7,9 +7,8 @@ import { HomeIcon, FaceSmileIcon, BriefcaseIcon, NewspaperIcon, CommandLineIcon 
 
 const navigation = [
   { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'Me', location: '/me', icon: <FaceSmileIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
   { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'Blog', location: '/blog', icon: <NewspaperIcon className="mr-1.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Journal', location: '/journal', icon: <NewspaperIcon className="mr-1.5 h-[1.2rem] w-[1.2rem]" /> },
   {
     title: 'Portfolio',
     location: '/portfolio',
