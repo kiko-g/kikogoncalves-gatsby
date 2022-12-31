@@ -34,7 +34,7 @@ const Projects = () => (
       }
     `}
     render={data => (
-      <Group name="Projects">
+      <Group name="Projects" decoration>
         {data.allMarkdownRemark.edges
           .filter((item: { node: { frontmatter: { shown: boolean } } }) => item.node.frontmatter.shown === true)
           .map((entry: { node: { frontmatter: any; html: any } }, entryIdx: number) => {

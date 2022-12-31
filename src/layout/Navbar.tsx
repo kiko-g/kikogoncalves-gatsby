@@ -20,7 +20,10 @@ type Props = {
 
 const Navbar = ({ siteTitle, location }: Props) => {
   return (
-    <Disclosure as="nav" className="navbar">
+    <Disclosure
+      as="nav"
+      className="sticky top-0 z-20 space-x-4 bg-ice px-3 py-2 text-gray-800 dark:bg-navy dark:text-white md:py-0 md:px-3"
+    >
       {({ open }) => {
         return (
           <>
@@ -54,7 +57,7 @@ const Hamburger = ({ open }: { open: boolean }) => (
 
     <div className="flex items-center space-x-1">
       <DarkModeSwitchMinimal />
-      <Disclosure.Button className="hamburger group">
+      <Disclosure.Button className="group text-gray-800 transition duration-200 ease-in dark:text-white md:hidden">
         <span className="sr-only">Open nav menu</span>
         {open ? (
           <XIcon
@@ -73,7 +76,7 @@ const Hamburger = ({ open }: { open: boolean }) => (
 )
 
 const Header = ({ title, location }: { title: string; location: string }) => (
-  <div className="header">
+  <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-between">
     <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
       <Link to="/" className="flex items-center space-x-2">
         <img

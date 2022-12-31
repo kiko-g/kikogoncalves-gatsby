@@ -1,13 +1,20 @@
 import React from 'react'
+import { classNames } from '../../utils'
 
 type Props = {
   name: string
+  decoration?: boolean
   children?: JSX.Element | JSX.Element[]
 }
 
-const Group = ({ name, children }: Props) => {
+const Group = ({ name, decoration, children }: Props) => {
   return (
-    <div className="group">
+    <div
+      className={classNames(
+        'cv-group',
+        decoration ? 'border-t border-primary px-1 pb-1 pt-4 dark:border-white' : 'p-1'
+      )}
+    >
       <header>
         <h2>
           <span className="highlight">{name.substring(0, 3)}</span>
@@ -15,7 +22,7 @@ const Group = ({ name, children }: Props) => {
         </h2>
         <div className="filler"></div>
       </header>
-      <div className="group-entries">{children}</div>
+      <div className="cv-group-entries">{children}</div>
     </div>
   )
 }

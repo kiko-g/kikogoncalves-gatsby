@@ -22,10 +22,20 @@ const Layout = ({ children, location, background, liquid }: Props) => {
   `)
 
   return (
-    <div className="layout">
+    <div
+      className="flex min-h-screen flex-col overflow-clip bg-ice font-prose font-medium 
+    text-gray-800 opacity-[99%] dark:bg-navy dark:text-white"
+    >
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
       {background && <Background />}
-      <div className={classNames('content', liquid ? 'max-w-8xl' : 'max-w-7xl')}>{children}</div>
+      <div
+        className={classNames(
+          liquid ? 'max-w-8xl' : 'max-w-7xl',
+          'container z-10 mx-auto my-auto px-0 py-2 lg:px-4 lg:py-4'
+        )}
+      >
+        {children}
+      </div>
       <Footer siteTitle={data.site.siteMetadata?.title} />
     </div>
   )

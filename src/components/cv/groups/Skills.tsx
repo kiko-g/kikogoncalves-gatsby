@@ -31,7 +31,7 @@ const Skills = () => {
   ]
 
   return (
-    <Group name="Skills">
+    <Group name="Skills" decoration>
       <div className="text-base">
         <h2 className="font-semibold dark:text-tertiary">Technical</h2>
         <div className="mt-1 flex flex-wrap items-center justify-start gap-x-2 gap-y-0.5 text-sm font-normal lg:gap-x-3">

@@ -34,7 +34,7 @@ const Experiences = () => (
       }
     `}
     render={data => (
-      <Group name="Experiences">
+      <Group name="Experiences" decoration>
         {data.allMarkdownRemark.edges
           .filter((item: { node: { frontmatter: { shown: boolean } } }) => item.node.frontmatter.shown === true)
           .map((entry: { node: { frontmatter: any; html: any } }, entryIdx: number) => {

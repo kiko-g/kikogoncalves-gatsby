@@ -8,7 +8,7 @@ type Props = {
 
 const GroupEntry = ({ date, location, children }: Props) => {
   return (
-    <div className="group-entry">
+    <div className="cv-group-entry">
       <div className="content">{children}</div>
       <div className="details">
         <span className="date">{date}</span>
