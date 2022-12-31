@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Group, GroupEntry } from '../../../components/cv'
-import { ExternalLinkIcon } from '@heroicons/react/outline'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import { GithubIcon, LinkedinIcon } from '../../icons'
 
 const Education = () => (
@@ -50,7 +50,7 @@ const Education = () => (
                   <h3>{values.title}</h3>
                   {values.external && (
                     <a rel="noopener" target="_blank" href={values.external}>
-                      <ExternalLinkIcon className="h-5 w-5" />
+                      <ArrowTopRightOnSquareIcon className="h-5 w-5" />
                     </a>
                   )}
                   {values.github && (
@@ -69,7 +69,7 @@ const Education = () => (
                   <h5>{values.subtitle}</h5>
                   {values.externalSub && (
                     <a rel="noopener" target="_blank" href={values.externalSub}>
-                      <ExternalLinkIcon className="h-5 w-5" />
+                      <ArrowTopRightOnSquareIcon className="h-5 w-5" />
                     </a>
                   )}
                 </div>

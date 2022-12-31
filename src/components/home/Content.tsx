@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { classNames } from '../../utils'
 import { Tab } from '@headlessui/react'
-import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
+import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 import { Gallery, About, Skills, Resume } from './tabs'
 import { PageVisits } from '../../layout'
 
@@ -51,7 +51,7 @@ const Content = ({ condensed, visits }: Props) => {
         <Link to="/me" className="see-more-button">
           <span>
             <span>See more</span>
-            <ArrowNarrowRightIcon className="inline-flex h-5 w-5" />
+            <ArrowLongRightIcon className="inline-flex h-5 w-5" />
           </span>
         </Link>
       </div>
@@ -71,7 +71,7 @@ const Content = ({ condensed, visits }: Props) => {
         <Link to="/me" className="see-more-button">
           <span>
             <span>See more</span>
-            <ArrowNarrowRightIcon className="inline-flex h-5 w-5" />
+            <ArrowLongRightIcon className="inline-flex h-5 w-5" />
           </span>
         </Link>
       </div>

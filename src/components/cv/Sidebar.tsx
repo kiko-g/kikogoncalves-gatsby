@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GithubIcon, LinkedinIcon } from '../../components/icons'
-import { GlobeIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { GlobeEuropeAfricaIcon, InboxArrowDownIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
 const Sidebar = () => {
   const contacts = [
@@ -10,11 +10,11 @@ const Sidebar = () => {
       element: <span>(+351) 918271105</span>,
     },
     {
-      icon: <MailIcon />,
+      icon: <InboxArrowDownIcon />,
       element: <a href="mailto:kikojpgoncalves@gmail.com">kikojpgoncalves@gmail.com</a>,
     },
     {
-      icon: <GlobeIcon />,
+      icon: <GlobeEuropeAfricaIcon />,
       element: <Link to="/">kikogoncalves.com</Link>,
     },
     {

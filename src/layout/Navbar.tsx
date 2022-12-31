@@ -1,16 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import DarkModeSwitchMinimal from './DarkModeSwitchMinimal'
-import { HomeIcon, EmojiHappyIcon, BriefcaseIcon, DocumentDuplicateIcon, CodeIcon } from '@heroicons/react/outline'
+import { HomeIcon, FaceSmileIcon, BriefcaseIcon, NewspaperIcon, CommandLineIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'Me', location: '/me', icon: <EmojiHappyIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Me', location: '/me', icon: <FaceSmileIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
   { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'Blog', location: '/blog', icon: <DocumentDuplicateIcon className="mr-1.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'Portfolio', location: '/portfolio', icon: <CodeIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Blog', location: '/blog', icon: <NewspaperIcon className="mr-1.5 h-[1.2rem] w-[1.2rem]" /> },
+  {
+    title: 'Portfolio',
+    location: '/portfolio',
+    icon: <CommandLineIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" />,
+  },
 ]
 
 type Props = {
@@ -60,12 +64,12 @@ const Hamburger = ({ open }: { open: boolean }) => (
       <Disclosure.Button className="group text-gray-800 transition duration-200 ease-in dark:text-white md:hidden">
         <span className="sr-only">Open nav menu</span>
         {open ? (
-          <XIcon
+          <XMarkIcon
             className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
             aria-hidden="true"
           />
         ) : (
-          <MenuIcon
+          <Bars3Icon
             className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
             aria-hidden="true"
           />
