@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import DarkModeSwitchMinimal from './DarkModeSwitchMinimal'
+import DarkModeSwitch from './DarkModeSwitch'
 import { HomeIcon, FaceSmileIcon, BriefcaseIcon, NewspaperIcon, CommandLineIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
@@ -60,7 +60,7 @@ const Hamburger = ({ open }: { open: boolean }) => (
     </Link>
 
     <div className="flex items-center space-x-1">
-      <DarkModeSwitchMinimal />
+      <DarkModeSwitch />
       <Disclosure.Button className="group text-gray-800 transition duration-200 ease-in dark:text-white md:hidden">
         <span className="sr-only">Open nav menu</span>
         {open ? (
@@ -116,7 +116,7 @@ const Header = ({ title, location }: { title: string; location: string }) => (
     </div>
 
     <div className="hidden self-center md:inline-flex">
-      <DarkModeSwitchMinimal />
+      <DarkModeSwitch />
     </div>
   </div>
 )
