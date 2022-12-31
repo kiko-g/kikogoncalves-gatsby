@@ -1,6 +1,6 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Link } from 'gatsby'
-import { classNames } from '../../utils'
 import { Tab } from '@headlessui/react'
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 import { Gallery, About, Skills, Resume } from './tabs'

@@ -1,7 +1,3 @@
-const classNames = (...classes: any[]) => {
-  return classes.filter(Boolean).join(' ')
-}
-
 const daysDifference = (dateString: string) => {
   let now = new Date()
   let date = new Date(dateString)
@@ -76,4 +72,4 @@ const links = {
   github: 'https://github.com/kiko-g',
 }
 
-export { classNames, daysDifference, socials, links }
+export { daysDifference, socials, links }

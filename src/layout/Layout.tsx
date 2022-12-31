@@ -1,5 +1,5 @@
 import React from 'react'
-import { classNames } from '../utils'
+import classNames from 'classnames'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Navbar, Footer, Background } from '.'
 

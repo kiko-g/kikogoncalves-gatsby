@@ -1,7 +1,8 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Link } from 'gatsby'
 import { PinIcon } from '../icons'
-import { classNames, daysDifference } from '../../utils'
+import { daysDifference } from '../../utils'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type Props = {
