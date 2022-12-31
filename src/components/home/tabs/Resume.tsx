@@ -56,7 +56,7 @@ const Resume = () => {
       title: 'Summary',
       entries: [
         {
-          headline: 'Francisco Gonçalves, 22',
+          headline: 'Francisco Gonçalves, 23',
           description: <span>Software Engineering Student</span>,
           bulletPoints: [<span>FEUP, Porto, Portugal</span>],
         },

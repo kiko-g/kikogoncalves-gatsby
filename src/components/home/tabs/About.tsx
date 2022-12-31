@@ -7,8 +7,8 @@ type Props = {}
 
 const About = ({}: Props) => {
   const details = [
-    { key: 'Age', value: 22 },
-    { key: 'City', value: 'Porto' },
+    { key: 'Age', value: 23 },
+    { key: 'City', value: 'Porto, Portugal' },
     { key: 'Birthday', value: '3 August 1999' },
     { key: 'Degree', value: 'Masters in Computer Engineering' },
     { key: 'Occupation', value: 'Software Engineering Student @ FEUP, MEIC' },

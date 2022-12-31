@@ -24,8 +24,8 @@ const JournalPage = ({
 
         <article>
           {nodes
-            .filter((node: { frontmatter: { date: any } } ) => !!node.frontmatter.date)
-            .map(( node: { id: React.Key } ) => (
+            .filter((node: { frontmatter: { date: any } }) => !!node.frontmatter.date)
+            .map((node: { id: React.Key }) => (
               <JournalPageCard key={`journalpage-${node.id}`} post={node} />
             ))}
         </article>

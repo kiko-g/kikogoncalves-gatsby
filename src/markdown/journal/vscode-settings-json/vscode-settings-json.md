@@ -19,6 +19,3 @@ VS Code's settings are controlled by a file called `settings.json` that is somew
 In most systems there is a shortcut to access your settings which is `ctrl + ,` or perhaps `command + ,` if you're using a Macbook keyboard. Alternitively, you can navigate with the mouse to the top left to `File > Preferences > Settings`. In this page you can find a lot of UI configurations that will be appended to your `settings.json` file. Manually editing this file is possible and you can do it by pressing the icon seen below on the **top right of your settings page**.
 
 ![](https://i.imgur.com/qTb9Sdv.png)
-
-
-

@@ -34,8 +34,8 @@ const Experiences = () => (
     render={data => (
       <Group name="Experiences" decoration>
         {data.allMarkdownRemark.nodes
-          .filter((node: { frontmatter: { shown: boolean  } }) => node.frontmatter.shown === true)
-          .map(( node: { frontmatter: any; html: any  }, entryIdx: number) => {
+          .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)
+          .map((node: { frontmatter: any; html: any }, entryIdx: number) => {
             const values = node.frontmatter
             const dates =
               values.startDate === values.endDate
