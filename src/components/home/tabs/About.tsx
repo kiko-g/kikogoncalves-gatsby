@@ -1,7 +1,7 @@
 import React from 'react'
 import Socials from './Socials'
 import { links } from '../../../utils'
-import { Icon } from '@iconify/react'
+import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 type Props = {}
 
@@ -40,11 +40,10 @@ const About = ({}: Props) => {
 
         <ul className="tab-inner-bullet-facts">
           {details.map((item, index) => (
-            <li key={`detail-${index}`}>
-              <Icon icon="codicon:triangle-right" className="inline text-primary dark:text-tertiary" />
-              <span>&nbsp;</span>
+            <li key={`detail-${index}`} className="flex items-center gap-x-2">
+              <ChevronRightIcon className="h-4 w-4 text-primary dark:text-tertiary" />
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
-              <span>&nbsp;&middot;&nbsp;</span>
+              <span>&middot;</span>
               <span className="font-normal text-gray-500 dark:text-gray-200">{item.value}</span>
             </li>
           ))}
