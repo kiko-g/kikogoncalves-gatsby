@@ -1,4 +1,5 @@
 ---
+shown: true
 pinned: false
 date: 2023-02-01
 slug: /journal/vscode-wizardry

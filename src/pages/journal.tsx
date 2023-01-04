@@ -24,7 +24,10 @@ const JournalPage = ({
 
         <article>
           {nodes
-            .filter((node: { frontmatter: { date: any } }) => !!node.frontmatter.date)
+            .filter(
+              (node: { frontmatter: { date: any; shown: boolean } }) =>
+                !!node.frontmatter.date && node.frontmatter.shown
+            )
             .map((node: { id: React.Key }) => (
               <JournalPageCard key={`journalpage-${node.id}`} post={node} />
             ))}
@@ -49,6 +52,7 @@ export const pageQuery = graphql`
           date(formatString: "DD MMMM, YYYY")
           slug
           title
+          shown
           pinned
           featuredImage {
             childImageSharp {
