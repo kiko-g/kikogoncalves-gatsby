@@ -3,7 +3,7 @@ shown: true
 startDate: 2021-11-01
 endDate: 2022-01-15
 location: Porto, Portugal
-title: Health Checker
+title: 'Health Checker: Health Information Platform with Semantic Web data'
 github: https://github.com/kiko-g/health-checker
 external: https://health-checker.netlify.app
 linkedin: ''
