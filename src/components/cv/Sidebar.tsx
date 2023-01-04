@@ -54,7 +54,7 @@ const Sidebar = () => {
         ))}
       </ul>
 
-      <a target="_blank" rel="noopener" href={'cv.pdf'}>
+      <a target="_blank" rel="noopener" href={'/cv.pdf'}>
         View PDF version
       </a>
     </div>
