@@ -27,7 +27,7 @@
 }
 
 .journal .postcard > header .pinned {
-  @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary
+  @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-secondary to-violet-400
    p-1 text-xs leading-none text-white shadow;
 }
 

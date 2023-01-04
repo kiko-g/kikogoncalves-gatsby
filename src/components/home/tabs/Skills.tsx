@@ -60,7 +60,7 @@ const Skills = ({}: Props) => {
                 <div className="relative h-[10px] w-full">
                   <div
                     style={{ width: `${skill.score}%` }}
-                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-tertiary via-indigo-400 to-secondary"
+                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-tertiary via-secondary to-violet-400"
                   ></div>
                   <div className="absolute top-0 h-[10px] w-full bg-gray-200"></div>
                 </div>

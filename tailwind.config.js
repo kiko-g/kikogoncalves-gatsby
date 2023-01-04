@@ -16,7 +16,7 @@ module.exports = {
         lightest: '#ffffff',
         primary: '#124c8e',
         secondary: '#149ddd',
-        tertiary: '#9f7aea',
+        tertiary: '#0D9488',
       },
       maxWidth: {
         screen: '100vw',

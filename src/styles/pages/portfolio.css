@@ -39,11 +39,11 @@
 }
 
 .portfolio .entry > aside .dummy {
-  @apply h-64 w-full rounded-xl bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow lg:h-full lg:w-80;
+  @apply h-64 w-full rounded-xl bg-gradient-to-br from-tertiary via-secondary to-violet-400 shadow lg:h-full lg:w-80;
 }
 
 .portfolio .entry > aside .pinned {
-  @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-indigo-400 to-secondary 
+  @apply absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-secondary to-violet-400 
   p-1 text-xs leading-none text-white;
 }
 
@@ -95,7 +95,7 @@
 
 .portfolio .entry > section > .links > .repo {
   @apply inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-medium text-white 
-  transition hover:bg-primary/75 dark:bg-primary/80 dark:hover:bg-primary sm:p-2;
+  transition hover:bg-primary/75 dark:bg-tertiary/80 dark:hover:bg-tertiary sm:p-2;
 }
 
 .portfolio .entry > section > .links > .deploy {

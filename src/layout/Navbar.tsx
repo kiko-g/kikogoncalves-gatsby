@@ -4,15 +4,16 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import DarkModeSwitch from './DarkModeSwitch'
 import { HomeIcon, FaceSmileIcon, BriefcaseIcon, NewspaperIcon, CommandLineIcon } from '@heroicons/react/24/outline'
+import classNames from 'classnames'
 
 const navigation = [
-  { title: 'Home', location: '/', icon: <HomeIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" /> },
-  { title: 'Journal', location: '/journal', icon: <NewspaperIcon className="mr-1.5 h-[1.2rem] w-[1.2rem]" /> },
+  { title: 'Home', location: '/', icon: <HomeIcon className="h-5 w-5" /> },
+  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="h-5 w-5" /> },
+  { title: 'Journal', location: '/journal', icon: <NewspaperIcon className="h-5 w-5" /> },
   {
     title: 'Portfolio',
     location: '/portfolio',
-    icon: <CommandLineIcon className="mr-1.5 mt-0.5 h-[1.2rem] w-[1.2rem]" />,
+    icon: <CommandLineIcon className="h-5 w-5" />,
   },
 ]
 
@@ -91,25 +92,27 @@ const Header = ({ title, location }: { title: string; location: string }) => (
       </Link>
     </div>
 
-    <div className="hidden space-x-8 self-center md:inline-flex">
+    <div className="hidden gap-x-8 self-center md:inline-flex">
       {navigation.map((link, index) => (
         <Link to={link.location} key={`nav-${index}`} className="relative py-1">
           <button
             type="button"
-            className={`flex h-12 items-center justify-center font-medium capitalize tracking-wide transition ${
+            className={`flex h-12 items-center justify-center font-medium lowercase tracking-wide transition ${
               location === link.title
                 ? 'text-primary dark:text-white'
                 : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
             }`}
           >
-            <span className="flex items-center justify-center">
+            <span
+              className={classNames(
+                'flex items-center justify-center gap-x-1.5 text-base',
+                location === link.title ? 'font-bold' : 'font-medium'
+              )}
+            >
               {link.icon}
               {link.title}
             </span>
           </button>
-          {location === link.title ? (
-            <span className="absolute bottom-0 h-1 w-full rounded-t-sm bg-primary dark:bg-tertiary" />
-          ) : null}
         </Link>
       ))}
     </div>
@@ -121,7 +124,7 @@ const Header = ({ title, location }: { title: string; location: string }) => (
 )
 
 const Mobile = ({ location }: { location: string }) => (
-  <Disclosure.Panel className="flex flex-col space-y-3 py-2 md:hidden">
+  <Disclosure.Panel className="flex flex-col gap-y-3 py-2 md:hidden">
     {navigation.map((link, index) => (
       <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
         <button

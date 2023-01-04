@@ -88,7 +88,7 @@
 }
 
 .cv .cv-group-entry > .content {
-  @apply mx-auto ml-5;
+  @apply mx-auto ml-3 lg:ml-5;
 }
 
 .cv .cv-group-entry > .content .title {
@@ -108,7 +108,7 @@
 }
 
 .cv .cv-group-entry > .content ul {
-  @apply ml-3.5 mt-1 list-disc lg:ml-5;
+  @apply ml-3 mt-1 list-disc lg:ml-5;
 }
 
 .cv .cv-group-entry > .content ul > li {

@@ -1,5 +1,5 @@
 .home {
-  @apply container mx-auto flex-1 flex-col justify-between space-y-3;
+  @apply container mx-auto flex-1 flex-col justify-between space-y-3 px-4 md:px-0;
 }
 
 .home > header {
@@ -62,7 +62,7 @@
 
 /* Blocks Column View */
 .home .blocks {
-  @apply w-full px-2 py-8 md:px-2 2xl:px-0;
+  @apply w-full py-4;
 }
 
 .home .blocks .block-list {
@@ -124,7 +124,7 @@
 }
 
 .home .see-more-button {
-  @apply inline-flex rounded bg-gradient-to-r from-tertiary via-indigo-400 to-secondary p-[2px] 
+  @apply inline-flex rounded bg-gradient-to-r from-tertiary via-secondary to-indigo-500 p-[2px] 
   transition focus:outline-none focus:ring active:text-opacity-75;
 }
 

@@ -36,7 +36,7 @@ const Gallery = () => {
                 className="aspect-square h-full rounded-xl object-cover shadow"
               />
             ) : (
-              <div className="aspect-square w-full rounded-xl bg-gradient-to-br from-tertiary via-indigo-400 to-secondary shadow" />
+              <div className="aspect-square w-full rounded-xl bg-gradient-to-br from-tertiary via-secondary to-violet-400 shadow" />
             )
           })}
       </div>
