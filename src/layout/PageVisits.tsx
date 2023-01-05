@@ -6,7 +6,7 @@ type Props = {
 }
 
 const PageVists = ({ count }: Props) => {
-  const hide = process.env.NODE_ENV !== 'production' || count < 1
+  const hide = process.env.NODE_ENV === 'production' || count < 1
 
   return hide ? null : (
     <div className="flex w-full flex-wrap items-center justify-between rounded bg-primary/10 p-4 dark:bg-white/5 lg:w-min">
