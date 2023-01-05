@@ -48,7 +48,7 @@ const Content = ({ condensed, visits }: Props) => {
 
       <div className="see-more">
         <PageVisits count={domainVisits} />
-        <Link to="/me" className="see-more-button">
+        <Link to="/cv" className="see-more-button">
           <span>
             <span>See more</span>
             <ArrowLongRightIcon className="inline-flex h-5 w-5" />
@@ -68,7 +68,7 @@ const Content = ({ condensed, visits }: Props) => {
 
       <div className="see-more">
         <PageVisits count={domainVisits} />
-        <Link to="/me" className="see-more-button">
+        <Link to="/cv" className="see-more-button">
           <span>
             <span>See more</span>
             <ArrowLongRightIcon className="inline-flex h-5 w-5" />
