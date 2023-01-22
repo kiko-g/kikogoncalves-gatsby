@@ -1,14 +1,16 @@
 ---
-shown: true
+pinned: true
+title: Guerner & Irmãos - Website
 startDate: 2023-01-10
 endDate: null
-location: Gaia, Portugal
-title: Guerner & Irmãos - Website
-github: https://github.com/kiko-g/guerner
-external: https://guernerpt.netlify.app
-linkedin: ''
-subtitle: React, Typescript, Gatsby, GraphQL, TailwindCSS
-externalSub: ''
+repo: https://github.com/kiko-g/guerner
+deploy: https://guernerpt.netlify.app
+preview: null
+featuredImage: ./featured.jpg
+featuredVideo: null
+techStack: [React, Typescript, Gatsby, GraphQL, TailwindCSS]
+description: A videoclip gallery of finishing moves over on Warzone.
+team: Individual project
 ---
 
 - Developed a website for **Guerner & Irmãos**, a company that both high-performance textiles and technical fabrics and high-quality building materials.
