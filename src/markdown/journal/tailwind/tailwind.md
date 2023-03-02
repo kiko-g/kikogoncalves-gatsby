@@ -49,7 +49,6 @@ module.exports = {
         flow: 'Flow',
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: ['Fira Code', ...defaultTheme.fontFamily.mono],
-        code: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
     },
   },

@@ -9,8 +9,8 @@ html {
 }
 
 code {
-  @apply mx-0.5 rounded-sm bg-gray-50 py-[0.15rem] px-[0.3rem] font-code 
-  text-rose-600 dark:bg-[#212936] dark:text-codepink;
+  @apply mx-0.5 rounded-sm bg-inherit py-[0.15rem] px-[0.3rem] font-code 
+  text-codepink dark:bg-[#212936] dark:text-[#f59881];
   font-size: 0.8rem !important;
 }
 
