@@ -3,9 +3,9 @@ import { socials, links } from '../../../utils'
 
 const Socials = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-1 text-gray-400 dark:text-gray-300 md:mt-0">
+    <div className="flex flex-wrap items-center justify-center gap-1.5 text-gray-400 dark:text-gray-300">
       {socials
-        .filter(social => social.shown)
+        .filter((social) => social.shown)
         .map((social, socialIdx) => (
           <a
             target="_blank"
@@ -21,7 +21,12 @@ const Socials = () => {
               aria-hidden="true"
             >
               {social.svg.map((d, dIdx) => (
-                <path fillRule="evenodd" d={d} clipRule="evenodd" key={`social-${socialIdx}-svg-${dIdx}`} />
+                <path
+                  fillRule="evenodd"
+                  d={d}
+                  clipRule="evenodd"
+                  key={`social-${socialIdx}-svg-${dIdx}`}
+                />
               ))}
             </svg>
           </a>

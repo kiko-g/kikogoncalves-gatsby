@@ -11,7 +11,7 @@ const Footer = ({ siteTitle }: Props) => {
       <span className="text-gray-700 dark:text-gray-300 sm:text-center">© 2022 {siteTitle}™</span>
       <div className="flex space-x-1 sm:justify-center md:mt-0 md:space-x-2">
         {socials
-          .filter(social => social.shown)
+          .filter((social) => social.shown)
           .map((social, socialIdx) => (
             <a
               target="_blank"
@@ -27,7 +27,12 @@ const Footer = ({ siteTitle }: Props) => {
                 aria-hidden="true"
               >
                 {social.svg.map((d, dIdx) => (
-                  <path fillRule="evenodd" d={d} clipRule="evenodd" key={`social-${socialIdx}-svg-${dIdx}`} />
+                  <path
+                    fillRule="evenodd"
+                    d={d}
+                    clipRule="evenodd"
+                    key={`social-${socialIdx}-svg-${dIdx}`}
+                  />
                 ))}
               </svg>
             </a>

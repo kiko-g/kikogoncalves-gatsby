@@ -31,7 +31,7 @@ const Projects = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Group name="Projects" decoration>
         {data.allMarkdownRemark.nodes
           .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)

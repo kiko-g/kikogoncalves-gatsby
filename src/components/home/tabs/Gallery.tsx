@@ -5,7 +5,9 @@ import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 const Gallery = () => {
   const images = useStaticQuery(graphql`
     query AssetsPhotos {
-      allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, relativeDirectory: { eq: "hero" } }) {
+      allFile(
+        filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" }, relativeDirectory: { eq: "hero" } }
+      ) {
         edges {
           node {
             id

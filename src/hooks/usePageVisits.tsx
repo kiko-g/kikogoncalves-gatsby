@@ -34,8 +34,8 @@ const usePageVisits = (path: string) => {
     const url = `https://api.countapi.xyz/${operation}/kikogoncalves.com/${page}`
 
     fetch(url)
-      .then(response => response.json())
-      .then(response => setCount(parseInt(response.value)))
+      .then((response) => response.json())
+      .then((response) => setCount(parseInt(response.value)))
   }, [])
 
   return count

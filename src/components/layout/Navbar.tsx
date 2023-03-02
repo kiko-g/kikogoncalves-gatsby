@@ -1,151 +1,220 @@
 import React from 'react'
+import DarkModeSwitch from './DarkModeSwitch'
+import { socials } from '../../utils'
 import { Link } from 'gatsby'
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import DarkModeSwitch from './DarkModeSwitch'
-import { HomeIcon, FaceSmileIcon, BriefcaseIcon, NewspaperIcon, CommandLineIcon } from '@heroicons/react/24/outline'
-import classNames from 'classnames'
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeModernIcon,
+  BriefcaseIcon,
+  NewspaperIcon,
+  CommandLineIcon,
+} from '@heroicons/react/24/outline'
 
 const navigation = [
-  { title: 'Home', location: '/', icon: <HomeIcon className="h-5 w-5" /> },
-  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="h-5 w-5" /> },
-  { title: 'Journal', location: '/journal', icon: <NewspaperIcon className="h-5 w-5" /> },
+  { title: 'Home', location: '/', icon: <HomeModernIcon className="h-5 w-5" />, shown: true },
+  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="h-5 w-5" />, shown: true },
+  {
+    title: 'Journal',
+    location: '/journal',
+    icon: <NewspaperIcon className="h-5 w-5" />,
+    shown: true,
+  },
   {
     title: 'Portfolio',
     location: '/portfolio',
     icon: <CommandLineIcon className="h-5 w-5" />,
+    shown: true,
   },
 ]
+
+const avatar = '/images/avatar.png'
 
 type Props = {
   siteTitle: string
   location: string
 }
 
-const Navbar = ({ siteTitle, location }: Props) => {
+export default function Navbar({ siteTitle, location }: Props) {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-20 space-x-4 bg-ice px-3 py-2 text-gray-800 dark:bg-navy dark:text-white md:py-0 md:px-3"
+      className="background sticky top-0 z-20 bg-light/90 px-4 py-3 text-gray-800 
+      dark:bg-navy/90 dark:text-white md:py-0 md:px-4"
     >
       {({ open }) => {
         return (
-          <>
-            <div className={`${open ? 'p-0' : 'p-2'} relative flex items-center justify-between md:py-0`}>
-              <Hamburger open={open} />
+          <header>
+            <div
+              className={`${
+                open ? 'p-0' : 'p-2'
+              } relative flex items-center justify-between md:py-0`}
+            >
+              <Hamburger title={siteTitle} open={open} />
               <Header title={siteTitle} location={location} />
             </div>
             <Mobile location={location} />
-          </>
+          </header>
         )
       }}
     </Disclosure>
   )
 }
 
-const Hamburger = ({ open }: { open: boolean }) => (
-  <div
-    className={`z-50 md:hidden ${
-      open
-        ? 'absolute top-2 right-2 my-auto flex h-6 items-center justify-end space-x-2'
-        : 'flex w-full items-center justify-between'
-    }`}
-  >
-    <Link to="/">
-      {open ? (
-        <img className="avatar top-0.5 h-5 w-5" src={'/images/avatar.png'} alt="Francisco Gonçalves" />
-      ) : (
-        <img className="avatar h-6 w-6" src={'/images/avatar.png'} alt="Francisco Gonçalves" />
-      )}
-    </Link>
+type HamburgerProps = {
+  title: string
+  open: boolean
+}
 
-    <div className="flex items-center space-x-1">
-      <DarkModeSwitch />
-      <Disclosure.Button className="group text-gray-800 transition duration-200 ease-in dark:text-white md:hidden">
-        <span className="sr-only">Open nav menu</span>
-        {open ? (
-          <XMarkIcon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
-            aria-hidden="true"
-          />
-        ) : (
-          <Bars3Icon
-            className="ease block h-6 w-6 transition duration-200 group-hover:text-primary/75 dark:group-hover:text-primary/75"
-            aria-hidden="true"
-          />
-        )}
-      </Disclosure.Button>
-    </div>
-  </div>
-)
-
-const Header = ({ title, location }: { title: string; location: string }) => (
-  <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-between">
-    <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
-      <Link to="/" className="flex items-center space-x-2">
-        <img
-          src={'/images/avatar.png'}
-          alt="Francisco Gonçalves"
-          className="z-20 inline-flex h-6 w-6 rounded-full transition"
-        />
-        <h2 className="text-xs font-bold tracking-tighter duration-150 lg:text-base">{title}</h2>
-      </Link>
-    </div>
-
-    <div className="hidden gap-x-8 self-center md:inline-flex">
-      {navigation.map((link, index) => (
-        <Link to={link.location} key={`nav-${index}`} className="relative py-1">
-          <button
-            type="button"
-            className={`flex h-12 items-center justify-center font-medium lowercase tracking-wide transition ${
-              location === link.title
-                ? 'text-primary dark:text-white'
-                : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
-            }`}
-          >
-            <span
-              className={classNames(
-                'flex items-center justify-center gap-x-1.5 text-base',
-                location === link.title ? 'font-bold' : 'font-medium'
-              )}
-            >
-              {link.icon}
-              {link.title}
-            </span>
-          </button>
+function Hamburger({ title, open }: HamburgerProps) {
+  return (
+    <div
+      className={`z-50 md:hidden ${
+        open
+          ? 'absolute top-2 right-2 my-auto flex h-6 items-center justify-end gap-x-3'
+          : 'flex w-full items-center justify-between gap-x-3'
+      }`}
+    >
+      {open ? null : (
+        <Link to="/" className="flex items-center gap-x-2">
+          <img className="avatar h-6 w-6 rounded-full" src={avatar} alt="Finishers Hub" />
+          <h3 className="tracking-tight">{title}</h3>
         </Link>
-      ))}
-    </div>
-
-    <div className="hidden self-center md:inline-flex">
-      <DarkModeSwitch />
-    </div>
-  </div>
-)
-
-const Mobile = ({ location }: { location: string }) => (
-  <Disclosure.Panel className="flex flex-col gap-y-3 py-2 md:hidden">
-    {navigation.map((link, index) => (
-      <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
-        <button
-          type="button"
-          className={`flex h-auto items-center justify-center font-medium capitalize tracking-wide transition ${
-            location === link.title
-              ? 'text-primary dark:text-white'
-              : 'text-gray-800/70 hover:text-gray-800 dark:text-white/60 dark:hover:text-white'
-          }`}
+      )}
+      <div className="flex items-center gap-x-2">
+        <DarkModeSwitch />
+        <Disclosure.Button
+          className="group -ml-[3px] py-[3px] text-gray-800 transition duration-200 
+        ease-in dark:text-white md:hidden"
         >
-          <span className="flex items-center justify-center">
-            {link.icon}
-            {link.title}
-          </span>
-          {location === link.title ? (
-            <span className="absolute -left-4 h-full w-1 rounded-sm bg-primary dark:bg-tertiary" />
-          ) : null}
-        </button>
-      </Link>
-    ))}
-  </Disclosure.Panel>
-)
+          <span className="sr-only">Open nav menu</span>
+          {open ? (
+            <XMarkIcon
+              className="ease block h-7 w-7 transition duration-200 
+              group-hover:text-rose-600 dark:group-hover:text-rose-500"
+              aria-hidden="true"
+            />
+          ) : (
+            <Bars3Icon
+              className="ease block h-7 w-7 transition duration-200 
+            group-hover:text-primary dark:group-hover:text-secondary"
+              aria-hidden="true"
+            />
+          )}
+        </Disclosure.Button>
+      </div>
+    </div>
+  )
+}
 
-export default Navbar
+type HeaderProps = {
+  title: string
+  location: string
+}
+
+function Header({ title, location }: HeaderProps) {
+  return (
+    <div className="z-50 flex flex-1 items-center justify-between md:items-stretch md:justify-between">
+      <div className="relative hidden h-auto self-center duration-200 hover:opacity-80 md:flex md:gap-x-8">
+        <Link to="/" className="flex items-center gap-x-2">
+          <img
+            src={avatar}
+            alt="Finishers Hub"
+            className="z-20 inline-flex h-6 w-6 rounded-full transition"
+          />
+          <h3 className="text-sm font-bold tracking-tighter duration-150 lg:text-base">{title}</h3>
+        </Link>
+      </div>
+
+      <div className="hidden self-center md:flex md:gap-x-8">
+        {navigation.map((link, index) =>
+          link.shown ? (
+            <Link to={link.location} key={`nav-${index}`} className="relative py-1">
+              <button
+                type="button"
+                className={`flex h-12 items-center justify-center lowercase transition ${
+                  location === link.title
+                    ? 'font-bold text-primary dark:text-white'
+                    : 'font-normal text-gray-800/50 hover:text-gray-800 dark:text-white/40 dark:hover:text-white'
+                }`}
+              >
+                <span className="flex items-center justify-center gap-x-1.5">
+                  <span>{link.icon}</span>
+                  <span>{link.title}</span>
+                </span>
+              </button>
+            </Link>
+          ) : null
+        )}
+      </div>
+
+      <div className="hidden self-center md:inline-flex md:items-center md:justify-center md:gap-x-2">
+        <DarkModeSwitch />
+      </div>
+    </div>
+  )
+}
+
+type MobileProps = {
+  location: string
+}
+
+function Mobile({ location }: MobileProps) {
+  return (
+    <Disclosure.Panel className="flex flex-col gap-y-3 py-2 md:hidden">
+      {navigation.map((link, index) =>
+        link.shown ? (
+          <Link to={link.location} className="relative h-auto" key={`mobile-nav-${index}`}>
+            <button
+              type="button"
+              className={`flex h-auto items-center justify-center lowercase transition ${
+                location === link.title
+                  ? 'font-bold text-primary dark:text-white'
+                  : 'font-normal text-gray-800/50 hover:text-gray-800 dark:text-white/40 dark:hover:text-white'
+              }`}
+            >
+              <span className="flex items-center justify-center gap-x-3">
+                <span>{link.icon}</span>
+                <span>{link.title}</span>
+              </span>
+            </button>
+          </Link>
+        ) : null
+      )}
+      <div
+        className="relative flex h-auto items-center justify-end gap-x-4 border-t border-primary/25 
+        pt-4 dark:border-secondary/25"
+      >
+        {socials.map((social, socialIdx) =>
+          social.shown ? (
+            <Link
+              target="_blank"
+              to={social.url}
+              key={`social-${socialIdx}`}
+              title={social.label}
+              aria-label={social.label}
+              className={`transition ${social.label}`}
+            >
+              <svg
+                className="h-6 w-6"
+                fill="currentColor"
+                viewBox={social.viewBox ? social.viewBox : '0 0 24 24'}
+                aria-hidden="true"
+              >
+                {social.svg.map((d, dIdx) => (
+                  <path
+                    fillRule="evenodd"
+                    d={d}
+                    clipRule="evenodd"
+                    key={`social-${socialIdx}-svg-${dIdx}`}
+                  />
+                ))}
+              </svg>
+            </Link>
+          ) : null
+        )}
+      </div>
+    </Disclosure.Panel>
+  )
+}

@@ -34,7 +34,10 @@ const Skills = () => {
         <h2 className="font-semibold dark:text-tertiary">Technical</h2>
         <div className="mt-1 flex flex-wrap items-center justify-start gap-x-2 gap-y-0.5 text-sm font-normal lg:gap-x-3">
           {tech.map((skill, skillIdx) => (
-            <div key={`cv-skill-tech-${skillIdx}`} className="flex items-center justify-center gap-1">
+            <div
+              key={`cv-skill-tech-${skillIdx}`}
+              className="flex items-center justify-center gap-1"
+            >
               <strong>{skill.name}</strong>
               {skill.time !== '' && <span>{skill.time}y</span>}
             </div>
@@ -46,7 +49,10 @@ const Skills = () => {
         <h2 className="font-semibold dark:text-tertiary">Languages</h2>
         <div className="mt-1 flex flex-wrap items-center justify-start gap-x-3 gap-y-0.5 text-sm font-normal">
           {lang.map((skill, skillIdx) => (
-            <div key={`cv-skill-lang-${skillIdx}`} className="flex items-center justify-center gap-1">
+            <div
+              key={`cv-skill-lang-${skillIdx}`}
+              className="flex items-center justify-center gap-1"
+            >
               <strong>{skill.name}</strong>
               <span>{skill.level}</span>
             </div>

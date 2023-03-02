@@ -26,11 +26,15 @@ const Content = ({ condensed, visits }: Props) => {
     <div className="tabs">
       <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
         <Tab.List className="tab-list">
-          {headers.map(category => (
+          {headers.map((category) => (
             <Tab
               key={category}
               className={({ selected }: { selected: boolean }) =>
-                classNames('tab', focusRing ? 'tab-focus-ring' : '', selected ? 'tab-selected' : 'tab-not-selected')
+                classNames(
+                  'tab',
+                  focusRing ? 'tab-focus-ring' : '',
+                  selected ? 'tab-selected' : 'tab-not-selected'
+                )
               }
             >
               {category}
@@ -39,7 +43,10 @@ const Content = ({ condensed, visits }: Props) => {
         </Tab.List>
         <Tab.Panels className="tab-panels">
           {content.map((content: JSX.Element, index: number) => (
-            <Tab.Panel key={index} className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}>
+            <Tab.Panel
+              key={index}
+              className={classNames('tab-panel', focusRing ? 'tab-focus-ring' : '')}
+            >
               {content}
             </Tab.Panel>
           ))}

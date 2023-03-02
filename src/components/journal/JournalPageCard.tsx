@@ -18,7 +18,7 @@ const JournalPageCard = ({ post }: Props) => {
   return (
     <Link
       to={post.frontmatter.slug}
-      onClick={e => {
+      onClick={(e) => {
         if (!available) e.preventDefault()
       }}
       className={classNames(
@@ -30,7 +30,11 @@ const JournalPageCard = ({ post }: Props) => {
     >
       <header>
         {coverImage ? (
-          <GatsbyImage image={coverImage} alt="cover" className="h-64 w-full rounded-lg object-contain" />
+          <GatsbyImage
+            image={coverImage}
+            alt="cover"
+            className="h-64 w-full rounded-lg object-contain"
+          />
         ) : (
           <div className="h-64 w-full rounded-lg bg-gradient-to-br from-tertiary via-secondary to-violet-400 shadow" />
         )}

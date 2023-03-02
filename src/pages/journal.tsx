@@ -16,9 +16,10 @@ const JournalPage = ({
         <header>
           <h2>Journal</h2>
           <p>
-            Welcome to my journal! This is where you'll find posts about things I want to talk about. Most posts will be
-            about software development, engineering and programming, but occasionally you might find some stuff related
-            to hobbies of mine and maybe some other random jibber-jabber!
+            Welcome to my journal! This is where you'll find posts about things I want to talk
+            about. Most posts will be about software development, engineering and programming, but
+            occasionally you might find some stuff related to hobbies of mine and maybe some other
+            random jibber-jabber!
           </p>
         </header>
 

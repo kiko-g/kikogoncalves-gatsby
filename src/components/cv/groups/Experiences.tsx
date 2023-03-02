@@ -31,7 +31,7 @@ const Experiences = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Group name="Experiences" decoration>
         {data.allMarkdownRemark.nodes
           .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)
@@ -43,7 +43,11 @@ const Experiences = () => (
                 : `${values.startDate} - ${values.endDate ?? 'Present'}`
 
             return (
-              <GroupEntry key={`cv-experiences-${entryIdx}`} date={dates} location={values.location}>
+              <GroupEntry
+                key={`cv-experiences-${entryIdx}`}
+                date={dates}
+                location={values.location}
+              >
                 <div className="title">
                   <h3>{values.title}</h3>
                   {values.external && (

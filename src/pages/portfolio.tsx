@@ -16,8 +16,9 @@ const PortfolioPage = ({
         <header>
           <h2>Portfolio</h2>
           <p>
-            Welcome to the portfolio! This is where you can browse through the main (software) projects I've contributed
-            to or developed myself. The source code for most of these projects is available on{' '}
+            Welcome to the portfolio! This is where you can browse through the main (software)
+            projects I've contributed to or developed myself. The source code for most of these
+            projects is available on{' '}
             <a target="_blank" className="link" href="https://github.com/kiko-g?tab=repositories">
               my github
             </a>

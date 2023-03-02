@@ -12,7 +12,9 @@ export default function Frankie({ square }: Props) {
       alt={title}
       title={title}
       src="/images/404/frankie.jpeg"
-      className={`${square ? 'aspect-square' : ''} h-full w-full rounded object-cover shadow lg:h-5/6 lg:w-full`}
+      className={`${
+        square ? 'aspect-square' : ''
+      } h-full w-full rounded object-cover shadow lg:h-5/6 lg:w-full`}
     />
   )
 }

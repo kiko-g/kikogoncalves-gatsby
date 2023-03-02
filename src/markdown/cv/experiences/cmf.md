@@ -11,5 +11,5 @@ subtitle: Product Development Team Intern
 externalSub: ''
 ---
 
-- Interned at Critical Manufacturing in the context of a dissertation for my Master's degree in Informatics and  Computing Engineering.
+- Interned at Critical Manufacturing in the context of a dissertation for my Master's degree in Informatics and Computing Engineering.
 - Interned as a member of the Product Development Team, working on developing a system to help assess the usability of the company's Manufacturing Execution System (MES).

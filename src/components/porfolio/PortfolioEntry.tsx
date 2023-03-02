@@ -10,7 +10,10 @@ const PortfolioEntry = ({ project }: Props) => {
   const info = project.frontmatter
   const content = project.html
   const coverImage = getImage(info.featuredImage)
-  const dates = info.startDate === info.endDate ? info.startDate : `${info.startDate} - ${info.endDate ?? 'Present'}`
+  const dates =
+    info.startDate === info.endDate
+      ? info.startDate
+      : `${info.startDate} - ${info.endDate ?? 'Present'}`
 
   return (
     <div className="entry">

@@ -31,7 +31,7 @@ const Education = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Group name="Education">
         {data.allMarkdownRemark.nodes
           .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)

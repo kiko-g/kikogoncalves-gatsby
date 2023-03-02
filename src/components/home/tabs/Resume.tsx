@@ -138,7 +138,9 @@ type GroupProps = {
 
 const Group = ({ group }: GroupProps) => (
   <div className="mt-0.5">
-    <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-tertiary">{group.title}</h1>
+    <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-tertiary">
+      {group.title}
+    </h1>
     <ol className="relative border-l-2 border-primary dark:border-tertiary">
       {group.entries.map((entry, entryIdx) => (
         <li
@@ -161,12 +163,16 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="my-1 rounded bg-primary py-0.5 px-1 text-white dark:bg-tertiary">{entry.date}</span>
+                  <span className="my-1 rounded bg-primary py-0.5 px-1 text-white dark:bg-tertiary">
+                    {entry.date}
+                  </span>
                 </div>
               ) : null}
 
               {entry.description ? (
-                <p className="text-sm font-normal text-gray-500 dark:text-gray-300">{entry.description}</p>
+                <p className="text-sm font-normal text-gray-500 dark:text-gray-300">
+                  {entry.description}
+                </p>
               ) : null}
 
               {entry.bulletPoints ? (

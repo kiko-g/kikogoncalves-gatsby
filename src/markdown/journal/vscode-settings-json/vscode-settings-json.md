@@ -286,6 +286,10 @@ Have you ever felt like your theme is cool but doesn't have the best color schem
 
 You may be wondering "Wow this is cool, but how the hell do i get the scope of a specific piece of text in my code?". Well, I wondered that for a long time, but I eventually found you can use the `Developer: Inspect Editor Tokens and Scopes` command in your command palette. Just put your cursor where you want and do this action to get a grasp of what tokens are targetting that piece of text.
 
+![image](https://user-images.githubusercontent.com/40745490/222464284-de491f3b-8e89-42a4-8522-736463f6aff1.png)
+
+Keep reading the next chapter to automate this process and actually make the changes.
+
 ## 4. Tips and tricks
 
 Ok, so that was pretty long and possibly overwhelming and lackluster. Here is a **TLDR** with the key takeways from this post which I wrote with knowledge I've gained over the past 5 years of using VS Code:
@@ -304,6 +308,10 @@ To make it quicker you can add a shortcut in your `keybindings.json` file and no
 ```
 
 Now just test out the scope in your settings like this:
+
+https://user-images.githubusercontent.com/40745490/222465577-c58c6822-5424-472e-bba8-a0d4ea9b3c9a.mp4
+
+Here is my whole configuration for overriding the default `textMateRules` (don't pay much attention to the name tags, they are not necessarily up to date):
 
 ```json
 "editor.tokenColorCustomizations": {

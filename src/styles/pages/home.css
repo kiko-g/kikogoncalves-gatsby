@@ -111,11 +111,11 @@
 }
 
 .home .tab-inner-image-subbox {
-  @apply flex flex-wrap items-center justify-between space-x-0 md:space-x-2;
+  @apply flex flex-col items-end gap-1;
 }
 
 .home .tab-inner-image-header {
-  @apply my-1.5 flex-1 text-base font-bold tracking-tighter md:my-2 md:text-left md:text-base xl:text-lg;
+  @apply my-0.5 flex-1 text-base font-bold tracking-tighter md:text-left md:text-base xl:text-lg;
 }
 
 /* See More */

@@ -15,7 +15,10 @@ const IndexPage = () => {
         <header>
           <div className="body">
             <h2>Francisco Gonçalves</h2>
-            <p>Welcome to my website. Take a look around to find more about me. Hope you enjoy your stay! 😄</p>
+            <p>
+              Welcome to my website. Take a look around to find more about me. Hope you enjoy your
+              stay! 😄
+            </p>
           </div>
           <div className="buttons">
             <ViewToggler hook={[condensed, setCondensed]} />
