@@ -1,0 +1,124 @@
+/* Twitch */
+.twitch {
+  color: #6441a570;
+}
+
+.dark .twitch {
+  color: #6441a5a0;
+}
+
+.twitch:hover {
+  color: #6441a5;
+}
+
+/* Twitter */
+.twitter {
+  color: #1da1f270;
+}
+
+.dark .twitter {
+  color: #1da1f2a0;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+/* Youtube */
+.youtube {
+  color: #ff000070;
+}
+
+.dark .youtube {
+  color: #ff0000a0;
+}
+
+.youtube:hover {
+  color: #ff0000;
+}
+
+/* Linktree */
+.linktree {
+  color: #40e09e70;
+}
+
+.dark .linktree {
+  color: #40e09ea0;
+}
+
+.linktree:hover {
+  color: #40e09e;
+}
+
+/* Github */
+.github {
+  color: #33333370;
+}
+
+.github:hover {
+  color: #333333a0;
+}
+
+.dark .github {
+  color: #ffffffa0;
+  background-color: #333333a0;
+  border-radius: 9999px;
+}
+
+.dark .github:hover {
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 9999px;
+}
+
+/* Spotify */
+.spotify {
+  color: #1db95470;
+}
+
+.dark .spotify {
+  color: #1db954a0;
+}
+
+.spotify:hover {
+  color: #1db954;
+}
+
+/* Linkedin */
+.linkedin {
+  color: #0a66c270;
+}
+
+.dark .linkedin {
+  color: #0a66c2a0;
+}
+
+.linkedin:hover {
+  color: #0a66c2;
+}
+
+/* Instagram */
+.instagram {
+  color: #c1358470;
+}
+
+.dark .instagram {
+  color: #c13584a0;
+}
+
+.instagram:hover {
+  color: #c13584;
+}
+
+/* Facebook */
+.facebook {
+  color: #3b599870;
+}
+
+.dark .facebook {
+  color: #3b5998a0;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
