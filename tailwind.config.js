@@ -6,17 +6,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ice: '#e8ebf5', // dce4f0
+        ice: '#E8EBF5', // dce4f0
         navy: '#18222e',
         dark: '#252832',
-        darker: '#1e2028',
-        darkest: '#1a1c23',
-        light: '#f2f4f7',
-        lighter: '#f7f7f7',
-        lightest: '#ffffff',
-        primary: '#124c8e',
-        secondary: '#149ddd',
-        tertiary: '#0D9488',
+        darker: '#1E2028',
+        darkest: '#1A1C23',
+        light: '#F2F4F7',
+        lighter: '#F7F7F7',
+        lightest: '#FFFFFF',
+        primary: '#124C8E',
+        secondary: '#149DDD',
+        tertiary: '#14B8A6',
+        codepink: '#EB72A1',
       },
       maxWidth: {
         screen: '100vw',

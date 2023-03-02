@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, Seo } from '../layout'
+import { Layout, Seo } from '../components/layout'
 import { PortfolioEntry } from '../components/porfolio'
 import '../styles/pages/portfolio.css'
 

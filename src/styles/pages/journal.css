@@ -45,7 +45,7 @@
 }
 
 .journal .postcard > section > .top .title {
-  @apply flex-grow font-medium;
+  @apply flex-grow font-medium text-pink-700 dark:text-codepink;
 }
 
 .journal .postcard > section > .excerpt {
@@ -57,7 +57,7 @@
 }
 
 .journal .postcard > section .new {
-  @apply inline-flex items-center justify-center rounded-full bg-rose-800/80 px-2 py-1 text-xs leading-none text-white;
+  @apply inline-flex items-center justify-center bg-gradient-to-br from-rose-600 to-rose-700 px-2 py-2 text-xs leading-none text-white;
 }
 
 .journal .postcard > section .coming-soon {

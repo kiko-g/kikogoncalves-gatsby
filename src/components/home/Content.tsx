@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { Tab } from '@headlessui/react'
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 import { Gallery, About, Skills, Resume } from './tabs'
-import { PageVisits } from '../../layout'
+import { PageVisits } from '../../components/layout'
 
 type Props = {
   condensed?: boolean
@@ -14,8 +14,8 @@ type Props = {
 const Content = ({ condensed, visits }: Props) => {
   const [focusRing] = React.useState(false)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
-  const headers = ['About', 'Skills', 'Resume', 'Gallery']
-  const content = [<About />, <Skills />, <Resume />, <Gallery />]
+  const headers = ['About', 'Skills', 'Gallery', 'Resume']
+  const content = [<About />, <Skills />, <Gallery />, <Resume />]
   const domainVisits = visits || 0
 
   const nextTab = () => {

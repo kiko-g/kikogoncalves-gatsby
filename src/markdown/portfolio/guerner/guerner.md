@@ -2,7 +2,7 @@
 pinned: true
 title: Guerner & Irmãos - Website
 startDate: 2023-01-10
-endDate: null
+endDate: 2023-03-31
 repo: https://github.com/kiko-g/guerner
 deploy: https://guernerpt.netlify.app
 preview: null

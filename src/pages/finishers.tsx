@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Layout, Seo } from '../layout'
+import { Layout, Seo } from '../components/layout'
 
 const FinishersPage = () => {
   useEffect(() => {

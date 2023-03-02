@@ -80,9 +80,8 @@ const Resume = () => {
         {
           headline: 'Professional experience',
           bulletPoints: [
-            <span>
-              Member of <a>NIAEFEUP</a> (Informatics Student Branch @ FEUP)
-            </span>,
+            <span>Member of NIAEFEUP (Informatics Student Branch @ FEUP)</span>,
+            <span>Intern at Critical Manufacturing</span>,
           ],
         },
         {

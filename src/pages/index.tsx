@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import { Layout, Seo, PageVisits } from '../layout'
+import { Layout, Seo, PageVisits } from '../components/layout'
 import { Content, ViewToggler } from '../components/home'
 import usePageVisits from '../hooks/usePageVisits'
 import '../styles/pages/home.css'
 
 const IndexPage = () => {
   const domainVisits = usePageVisits('')
-  const [condensed, setCondensed] = useState(() =>
-    typeof window !== 'undefined' ? !window.matchMedia('(max-width: 1024px)').matches : false
-  )
+  const [condensed, setCondensed] = useState(false)
 
   return (
     <Layout location="Home" liquid>

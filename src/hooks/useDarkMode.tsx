@@ -26,7 +26,8 @@ const useLocalStorage = (key: string, initialValue?: any) => {
 }
 
 const useDarkMode = () => {
-  const [enabled, setEnabled] = useLocalStorage('dark-theme')
+  const initialValue = true
+  const [enabled, setEnabled] = useLocalStorage('dark-theme', initialValue)
 
   // @ts-ignore
   const isEnabled = typeof enabledState === 'undefined' && enabled

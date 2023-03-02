@@ -9,7 +9,8 @@ html {
 }
 
 code {
-  @apply mx-0.5 rounded-md bg-slate-300 py-[0.2rem] px-[0.35rem] font-code font-semibold text-pink-700 dark:bg-[#252b33];
+  @apply mx-0.5 rounded-sm bg-gray-50 py-[0.15rem] px-[0.3rem] font-code 
+  text-rose-600 dark:bg-[#212936] dark:text-codepink;
   font-size: 0.8rem !important;
 }
 

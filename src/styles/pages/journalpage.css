@@ -1,5 +1,13 @@
 .journalpage {
-  @apply mx-auto flex w-full flex-col justify-between p-4 px-4 pb-28 font-normal sm:mt-16 sm:px-6 md:px-8 xl:max-w-6xl xl:px-12;
+  @apply mx-auto mt-0 flex w-full flex-col justify-between p-4 px-4 pb-28 font-normal md:mt-4 md:px-8 xl:max-w-6xl xl:px-12;
+}
+
+.journalpage strong {
+  @apply text-blue-600 dark:text-blue-500;
+}
+
+.journalpage em {
+  @apply text-emerald-600 dark:text-emerald-400;
 }
 
 .journalpage article a {
@@ -11,7 +19,8 @@
 }
 
 .journalpage header h1 {
-  @apply text-3xl font-extrabold tracking-tight text-gray-700 dark:text-white sm:text-center sm:text-4xl xl:mb-16;
+  @apply text-3xl font-bold tracking-tight text-pink-700 dark:text-white 
+  md:text-center md:text-4xl xl:mb-16;
 }
 
 .journalpage header > div {
@@ -35,7 +44,7 @@
 }
 
 .journalpage footer > span {
-  @apply font-semibold text-gray-600 dark:text-gray-200 sm:text-center;
+  @apply font-semibold text-gray-600 dark:text-gray-200 md:text-center;
 }
 
 .journalpage img {
@@ -58,19 +67,19 @@
 }
 
 .journalpage h1 {
-  @apply mt-6 mb-2 py-1 text-4xl md:mt-8 md:mb-4;
+  @apply mt-5 mb-3 py-1 text-4xl md:mt-8 md:mb-4;
 }
 
 .journalpage h2 {
-  @apply mt-7 mb-4 py-1 text-3xl;
+  @apply mt-4 mb-3 py-1 text-3xl;
 }
 
 .journalpage h3 {
-  @apply mt-6 mb-3 py-1 text-2xl;
+  @apply mt-3 mb-2 py-1 text-2xl;
 }
 
 .journalpage h4 {
-  @apply mt-5 mb-2 py-1 text-xl;
+  @apply mt-2 mb-1 py-1 text-xl;
 }
 
 .journalpage p,
@@ -84,7 +93,7 @@
 }
 
 .journalpage blockquote {
-  @apply my-8 rounded border-l-4 border-primary bg-light py-1 pl-4 font-medium text-gray-800 
+  @apply my-8 border-l-4 border-primary bg-light py-1 pl-4 font-medium text-gray-800 
   dark:border-tertiary dark:bg-ice/5 dark:text-white;
 }
 

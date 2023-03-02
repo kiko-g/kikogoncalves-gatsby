@@ -11,22 +11,20 @@ const Skills = () => {
     { name: 'ReactJS', time: '2' },
     { name: 'TailwindCSS', time: '2' },
     { name: 'NodeJS', time: '2' },
-    { name: 'GatsbyJS', time: '1.5' },
+    { name: 'Next.js', time: '2' },
+    { name: 'Gatsby.js', time: '2' },
     { name: 'Python', time: '3' },
     { name: 'Java', time: '2' },
     { name: 'C/C++', time: '3' },
     { name: 'Docker', time: '1.5' },
     { name: 'Flutter/Dart', time: '1' },
     { name: 'Haskell', time: '0.5' },
-    { name: 'Prolog', time: '0.5' },
-    { name: 'Kotlin', time: '0.5' },
-    { name: 'REST API, OOP, Agile/Scrum, Linux', time: '' },
   ]
 
   const lang = [
     { name: 'Portuguese', level: 'Native' },
     { name: 'English', level: 'Proficient | CAE C1 Level, 2016' },
-    { name: 'Spanish', level: 'Decent understanding' },
+    { name: 'Spanish', level: 'Decent understanding and speaking ability' },
     { name: 'French', level: 'Basic understanding' },
   ]
 

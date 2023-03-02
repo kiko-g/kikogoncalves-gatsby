@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Seo } from '../layout'
+import { Layout, Seo } from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'

@@ -1,8 +1,8 @@
 ---
 pinned: true
 title: Finishers Hub
-startDate: 2022-04-01
-endDate: 2022-04-15
+startDate: 2022-05-08
+endDate: null
 repo: https://github.com/kiko-g/finishershub
 deploy: https://finishershub.netlify.app
 preview: null

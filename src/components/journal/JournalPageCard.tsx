@@ -24,7 +24,7 @@ const JournalPageCard = ({ post }: Props) => {
       className={classNames(
         'postcard group',
         available
-          ? 'bg-lightest hover:bg-teal-800/20 hover:text-gray-800 dark:bg-light/5 dark:hover:bg-teal-800/50 dark:hover:text-white'
+          ? 'bg-lightest hover:bg-pink-100 hover:text-gray-800 dark:bg-light/5 dark:hover:bg-pink-500/20 dark:hover:text-white'
           : 'bg-lightest hover:cursor-not-allowed dark:bg-light/5'
       )}
     >
