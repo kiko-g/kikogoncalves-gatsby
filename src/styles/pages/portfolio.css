@@ -27,15 +27,15 @@
 }
 
 .portfolio .entry > aside .image {
-  @apply h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl lg:rounded-none lg:rounded-l-xl;
+  @apply h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl;
 }
 
 .portfolio .entry > aside .video {
-  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-2xl lg:rounded-none lg:rounded-l-xl;
+  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-2xl;
 }
 
 .portfolio .entry > aside .video-inner {
-  @apply rounded-xl lg:rounded-none lg:rounded-l-xl;
+  @apply rounded-xl;
 }
 
 .portfolio .entry > aside .dummy {
