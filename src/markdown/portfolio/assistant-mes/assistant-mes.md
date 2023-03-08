@@ -4,7 +4,7 @@ title: Virtual Assistant for MES
 startDate: 2022-03-01
 endDate: 2022-06-15
 repo: null
-deploy: https://robinlgp.netlify.app
+deploy: https://robinlgp.netlify.app/about#showcase
 preview: null
 featuredImage: ./featured.jpg
 featuredVideo: https://robinlgp.netlify.app/static/change-resource-state-auto-0acbdbc8d8cce72094f83810c41c7a4c.mp4

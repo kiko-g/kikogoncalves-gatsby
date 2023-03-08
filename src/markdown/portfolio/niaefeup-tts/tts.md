@@ -4,7 +4,7 @@ title: Time Table Selector
 startDate: 2022-04-15
 endDate: 2022-08-24
 repo: https://github.com/NIAEFEUP/tts-revamp-fe
-deploy: https://finishershub.netlify.app
+deploy: https://ni.fe.up.pt/tts
 preview: null
 featuredImage: null
 featuredVideo: https://user-images.githubusercontent.com/40745490/183784200-742c3556-ee0a-4eb7-9994-dcac6dffd440.mp4

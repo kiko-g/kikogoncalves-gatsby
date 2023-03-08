@@ -40,6 +40,27 @@ const PortfolioEntry = ({ project }: Props) => {
       <section>
         <div className="core">
           <header>
+            <div className="links">
+              {info.repo && (
+                <a href={info.repo} target="_blank" className="repo">
+                  <GithubIcon />
+                  <span className="hidden md:flex">Code on Github</span>
+                </a>
+              )}
+              {info.deploy && (
+                <a href={info.deploy} target="_blank" className="deploy">
+                  <DeployIcon />
+                  <span className="hidden md:flex">Try it</span>
+                </a>
+              )}
+              {info.preview && (
+                <a href={info.preview} target="_blank" className="deploy">
+                  <PreviewIcon />
+                  <span className="hidden md:flex">Preview</span>
+                </a>
+              )}
+            </div>
+
             <div className="title">{info.title}</div>
             <div className="subheader">
               <span>{dates}</span>
@@ -57,27 +78,6 @@ const PortfolioEntry = ({ project }: Props) => {
             </div>
             <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
-        </div>
-
-        <div className="links">
-          {info.repo && (
-            <a href={info.repo} target="_blank" className="repo">
-              <GithubIcon />
-              <span className="hidden md:flex">Code on Github</span>
-            </a>
-          )}
-          {info.deploy && (
-            <a href={info.deploy} target="_blank" className="deploy">
-              <DeployIcon />
-              <span className="hidden md:flex">Try it</span>
-            </a>
-          )}
-          {info.preview && (
-            <a href={info.preview} target="_blank" className="deploy">
-              <PreviewIcon />
-              <span className="hidden md:flex">Preview</span>
-            </a>
-          )}
         </div>
       </section>
     </div>

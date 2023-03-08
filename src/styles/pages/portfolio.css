@@ -1,5 +1,5 @@
 .portfolio {
-  @apply container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 2xl:px-0;
+  @apply container mx-auto flex-1 flex-col justify-between gap-4 px-4 py-4 lg:px-0;
 }
 
 .portfolio > header {
@@ -7,27 +7,27 @@
 }
 
 .portfolio > header > h2 {
-  @apply text-4xl font-extrabold tracking-tight sm:text-5xl;
+  @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
 }
 
 .portfolio > header > p {
-  @apply mt-4 text-lg font-normal;
+  @apply mt-4 text-lg font-light;
 }
 
 .portfolio > article {
-  @apply grid grid-cols-1 gap-6;
+  @apply mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2;
 }
 
 .portfolio .entry {
-  @apply flex w-full flex-col space-y-3 rounded-xl bg-lightest p-3 shadow dark:bg-white/5 lg:flex-row lg:space-y-0;
+  @apply flex w-full flex-col gap-y-3 rounded-xl bg-lightest p-4 shadow dark:bg-white/5;
 }
 
 .portfolio .entry > aside {
-  @apply relative rounded-l-xl md:rounded-xl;
+  @apply relative w-full rounded-l-xl md:rounded-xl;
 }
 
 .portfolio .entry > aside .image {
-  @apply h-full w-auto max-w-full rounded-xl object-contain lg:max-w-2xl lg:rounded-none lg:rounded-l-xl;
+  @apply h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl lg:rounded-none lg:rounded-l-xl;
 }
 
 .portfolio .entry > aside .video {
@@ -48,8 +48,7 @@
 }
 
 .portfolio .entry > section {
-  @apply relative flex w-auto grow flex-col justify-between space-y-6 rounded-r-xl px-1 py-1 text-base font-normal 
-  lg:h-auto lg:max-h-full lg:w-3/4 lg:py-0 lg:pl-4 lg:pr-0;
+  @apply relative flex w-full grow flex-col justify-between gap-y-6 rounded-r-xl py-1 text-base font-light lg:h-auto lg:max-h-full lg:py-0;
 }
 
 .portfolio .entry > section > .core {
@@ -57,7 +56,7 @@
 }
 
 .portfolio .entry > section > .core > header {
-  @apply mb-0;
+  @apply mb-0 flex flex-col;
 }
 
 .portfolio .entry > section > .core > header > .title {
@@ -65,11 +64,11 @@
 }
 
 .portfolio .entry > section > .core > header > .subheader {
-  @apply font-medium tracking-tighter;
+  @apply font-normal tracking-tighter;
 }
 
 .portfolio .entry > section > .core > header > .description {
-  @apply font-medium tracking-tight text-gray-600 dark:text-white;
+  @apply font-normal tracking-tight text-gray-600 dark:text-white;
 }
 
 .portfolio .entry > section > .core > .body {
@@ -81,26 +80,25 @@
 }
 
 .portfolio .entry > section > .core > .body > .tech-stack > span {
-  @apply rounded bg-primary px-2 py-1 text-xs font-medium lowercase tracking-wide text-white shadow dark:bg-tertiary;
+  @apply rounded bg-primary px-2 py-1 text-xs font-normal lowercase tracking-wide text-white shadow dark:bg-tertiary;
 }
 
 .portfolio .entry > section > .core > .body > .content {
   @apply my-2;
 }
 
-.portfolio .entry > section > .links {
-  @apply absolute top-1 right-1 space-x-2 rounded-xl lg:top-0 lg:right-0 xl:flex;
-  margin-top: 0 !important;
+.portfolio .entry > section > .core > header > .links {
+  @apply mb-3 flex gap-x-2 self-end rounded-xl lg:top-0 lg:right-0;
 }
 
-.portfolio .entry > section > .links > .repo {
-  @apply inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-medium text-white 
-  transition hover:bg-primary/75 dark:bg-tertiary/80 dark:hover:bg-tertiary sm:p-2;
+.portfolio .entry > section > .core > header > .links > .repo {
+  @apply inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-normal text-white 
+  transition hover:bg-primary/75 dark:bg-tertiary/80 dark:hover:bg-tertiary lg:p-2;
 }
 
-.portfolio .entry > section > .links > .deploy {
-  @apply inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-medium text-white transition
-  hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 sm:p-2;
+.portfolio .entry > section > .core > header > .links > .deploy {
+  @apply inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-normal text-white transition
+  hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 lg:p-2;
 }
 
 .portfolio .entry ul,
