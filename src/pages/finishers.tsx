@@ -3,14 +3,12 @@ import { Layout, Seo } from '../components/layout'
 
 const FinishersPage = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined') window.location.href = 'https://finishershub.netlify.app'
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://finishershub.vercel.app'
+    }
   }, [])
 
-  return (
-    <Layout location="Finishers" liquid>
-      <Seo title="Finishers" />
-    </Layout>
-  )
+  return <></>
 }
 
 export default FinishersPage
