@@ -7,13 +7,14 @@ repo: https://github.com/kiko-g/finishershub
 deploy: https://finishershub.vercel.app
 preview: null
 featuredImage: ./featured.jpg
-featuredVideo: null
-techStack: [Gatsby, React, Typescript, Tailwind, Express, MongoDB]
+featuredVideo: ./finishers-hub-showcase-sped-up.mp4
+techStack: [NextJS, React, Typescript, Tailwind, Express, MongoDB, Google Sheets API]
 description: A videoclip gallery of finishing moves over on Warzone.
 team: Individual project
 ---
 
-- Built a dynamic museum of fun COD videoclips using Gatsby.
-- Videos are pulled and processed from the **Twitch API**.
-- Implemented a registry feature for the team to be able to **track and manage stats**.
-- There are plans for **future releases**, migrating from the Twitch API and using a large storage system (e.g. S3) and manage the content from an admin page. This way the clips could be curated and from other sources.
+- Built a dynamic museum of fun COD videoclips with just finishing moves.
+- For v1 videos were pulled from the **Twitch API**.
+- For v2 videos are stored in S3 Buckets and pulled from the **AWS API**.
+- Implemented a [registry](https://finishershub.vercel.app/registry) feature for the team to be able to **track and manage stats**.
+- Developed a [lab system](https://finishershub.vercel.app/lab) to keep track of stats and characteristics of finishing moves.
