@@ -6,8 +6,8 @@ endDate: null
 repo: https://github.com/kiko-g/finishershub
 deploy: https://finishershub.vercel.app
 preview: null
-featuredImage: ./featured.jpg
-featuredVideo: ./finishers-hub-showcase-sped-up.mp4
+featuredImage: null
+featuredVideo: https://user-images.githubusercontent.com/40745490/230927052-362d6bd0-0abe-495d-9cbf-bd2524354e6e.mp4
 techStack: [NextJS, React, Typescript, Tailwind, Express, MongoDB, Google Sheets API]
 description: A videoclip gallery of finishing moves over on Warzone.
 team: Individual project
