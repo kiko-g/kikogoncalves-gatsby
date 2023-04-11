@@ -32,15 +32,21 @@ module.exports = {
         'inner-xl': 'inset 0px 0px 4px 4px rgb(0 0 0 / 0.1)',
       },
       fontFamily: {
-        prose: ['Inter', ...defaultTheme.fontFamily.sans],
-        headings: ['Inter', ...defaultTheme.fontFamily.sans],
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'Inter var, sans-serif',
+          {
+            fontFeatureSettings: '"cv11", "ss01"',
+            fontVariationSettings: '"opsz" 32',
+          },
+        ],
+        headings: [
+          'Inter var, sans-serif',
+          {
+            fontFeatureSettings: '"cv11", "ss01"',
+            fontVariationSettings: '"opsz" 32',
+          },
+        ],
         code: ['Fira Code', ...defaultTheme.fontFamily.mono],
-        mono: ['Fira Code', ...defaultTheme.fontFamily.mono],
-        source: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
-        'ubuntu-mono': ['Ubuntu Mono', ...defaultTheme.fontFamily.mono],
-        system: defaultTheme.fontFamily.sans,
-        flow: 'Flow',
       },
       keyframes: {
         dark: {
