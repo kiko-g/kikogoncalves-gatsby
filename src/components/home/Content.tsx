@@ -14,8 +14,8 @@ type Props = {
 const Content = ({ condensed, visits }: Props) => {
   const [focusRing] = React.useState(false)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
-  const headers = ['About', 'Skills', 'Gallery', 'Resume']
-  const content = [<About />, <Skills />, <Gallery />, <Resume />]
+  const headers = ['About', 'Skills']
+  const content = [<About />, <Skills />]
   const domainVisits = visits || 0
 
   const nextTab = () => {
