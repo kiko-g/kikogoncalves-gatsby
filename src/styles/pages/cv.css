@@ -1,15 +1,13 @@
 .cv {
-  @apply grid h-full w-full grid-cols-4 gap-4 px-3 py-3 text-gray-700 dark:text-white lg:gap-4 lg:px-2 lg:py-2;
+  @apply grid h-full w-full grid-cols-4 gap-4 text-gray-700 dark:text-white lg:gap-4;
 }
 
 .cv > .core {
-  @apply order-2 col-span-4 flex h-full w-full flex-col gap-4 rounded bg-light p-3 
-  dark:bg-white/5 lg:order-1 lg:col-span-3;
+  @apply order-2 col-span-4 flex h-full w-full flex-col gap-4 rounded-xl bg-white p-3 dark:bg-white/5 lg:order-1 lg:col-span-3;
 }
 
 .cv > .side {
-  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-start gap-2 
-  rounded bg-light p-3 dark:bg-white/5 lg:order-2 lg:col-span-1 lg:gap-3;
+  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-start gap-2 rounded-xl bg-white p-3 dark:bg-white/5 lg:order-2 lg:col-span-1 lg:gap-3;
 }
 
 .cv > .side > header {

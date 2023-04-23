@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Layout, Seo, PageVisits } from '../components/layout'
-import { Content, ViewToggler } from '../components/home'
+import { About, Skills } from '../components/home'
+import Cv from '../components/cv/cv'
 import usePageVisits from '../hooks/usePageVisits'
 import '../styles/pages/home.css'
+import '../styles/pages/cv.css'
 
 const IndexPage = () => {
   const domainVisits = usePageVisits('')
-  const [condensed, setCondensed] = useState(false)
 
   return (
     <Layout location="Home" liquid>
@@ -20,11 +21,11 @@ const IndexPage = () => {
               stay! 😄
             </p>
           </div>
-          <div className="buttons">
-            <ViewToggler hook={[condensed, setCondensed]} />
-          </div>
         </header>
-        <Content condensed={condensed} visits={domainVisits} />
+
+        <About />
+        <Skills />
+        <Cv />
       </main>
     </Layout>
   )

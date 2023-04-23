@@ -7,14 +7,12 @@ import {
   Bars3Icon,
   XMarkIcon,
   HomeModernIcon,
-  BriefcaseIcon,
   NewspaperIcon,
   CommandLineIcon,
 } from '@heroicons/react/24/outline'
 
 const navigation = [
   { title: 'Home', location: '/', icon: <HomeModernIcon className="h-5 w-5" />, shown: true },
-  { title: 'CV', location: '/cv', icon: <BriefcaseIcon className="h-5 w-5" />, shown: true },
   {
     title: 'Journal',
     location: '/journal',
@@ -133,14 +131,14 @@ function Header({ title, location }: HeaderProps) {
             <Link to={link.location} key={`nav-${index}`} className="relative py-1">
               <button
                 type="button"
-                className={`flex h-12 items-center justify-center lowercase transition ${
+                className={`flex h-12 items-center justify-center transition ${
                   location === link.title
                     ? 'font-bold text-primary dark:text-white'
                     : 'font-normal text-gray-800/50 hover:text-gray-800 dark:text-white/40 dark:hover:text-white'
                 }`}
               >
                 <span className="flex items-center justify-center gap-x-1.5">
-                  <span>{link.icon}</span>
+                  {/* <span>{link.icon}</span> */}
                   <span>{link.title}</span>
                 </span>
               </button>

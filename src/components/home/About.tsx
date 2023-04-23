@@ -1,6 +1,6 @@
 import React from 'react'
 import Socials from './Socials'
-import { links } from '../../../utils'
+import { links } from '../../utils'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 type Props = {}
