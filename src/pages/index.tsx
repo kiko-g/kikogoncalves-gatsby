@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Layout, Seo, PageVisits } from '../components/layout'
 import { About, Skills } from '../components/home'
-import Cv from '../components/cv/cv'
+import Cv from '../components/cv/Cv'
 import usePageVisits from '../hooks/usePageVisits'
 import '../styles/pages/home.css'
 import '../styles/pages/cv.css'
