@@ -23,7 +23,9 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="tab-inner-header">Gallery</div>
+      <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex">
+        Gallery
+      </div>
       <div className="mt-0 grid w-full grid-cols-2 gap-3 md:mt-1 lg:grid-cols-4 xl:grid-cols-5">
         {images
           .sort(() => Math.random() - 0.5) // random order every time

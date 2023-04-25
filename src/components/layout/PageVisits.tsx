@@ -11,7 +11,7 @@ const PageVists = ({ count }: Props) => {
   const show = process.env.NODE_ENV === 'development'
 
   return show ? (
-    <div className="flex w-full flex-wrap items-center justify-between rounded bg-primary/10 p-4 dark:bg-white/5 lg:w-min">
+    <div className="flex w-full flex-wrap items-center justify-between rounded-xl bg-white p-4 dark:bg-white/5 lg:w-min">
       <div className="flex flex-1 items-center justify-between">
         <div className="flex items-center justify-center">
           <InformationCircleIcon className="h-4 w-4 lg:h-5 lg:w-5" aria-hidden="true" />

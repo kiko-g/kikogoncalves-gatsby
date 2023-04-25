@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Seo } from '../components/layout'
 import { JournalPageCard } from '../components/journal'
-import '../styles/pages/journal.css'
+import '../styles/journal.css'
 
 const JournalPage = ({
   data: {

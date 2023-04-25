@@ -33,11 +33,13 @@ const Skills = ({}: Props) => {
   ]
 
   return (
-    <div className="tab-panel-inner">
-      <div className="tab-panel-inner-left">
-        <div className="tab-inner-header">Skills</div>
-        <div className="tab-inner-prose">
-          <p>
+    <div className="grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl bg-white p-4 text-2xl transition dark:bg-white/5 md:gap-x-8">
+      <div className="order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9">
+        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex">
+          Skills
+        </div>
+        <div className="mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base">
+          <p className="my-1">
             Check out my{' '}
             <a className="link" target="_blank" rel="noreferrer" href={links.github}>
               github
@@ -63,7 +65,7 @@ const Skills = ({}: Props) => {
                     style={{ width: `${skill.score}%` }}
                     className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-tertiary via-secondary to-violet-400"
                   ></div>
-                  <div className="absolute top-0 h-[10px] w-full bg-gray-200"></div>
+                  <div className="absolute top-0 h-[10px] w-full bg-gray-200" />
                 </div>
               </div>
             ))}
@@ -71,10 +73,12 @@ const Skills = ({}: Props) => {
         </article>
       </div>
 
-      <div className="tab-panel-inner-right">
+      <div className="order-1 col-span-12 h-min sm:order-2 sm:col-span-6 md:col-span-5 lg:col-span-3 xl:col-span-3 2xl:col-span-3">
         <img src={'/images/hero/hero2.jpg'} className="tab-inner-image" alt="profile-picture" />
-        <div className="tab-inner-image-subbox">
-          <h2 className="tab-inner-image-header">Francisco Gonçalves</h2>
+        <div className="flex flex-col items-end gap-1">
+          <h2 className="my-0.5 flex-1 text-base font-bold tracking-tighter md:text-left md:text-base xl:text-lg">
+            Francisco Gonçalves
+          </h2>
           <Socials />
         </div>
       </div>

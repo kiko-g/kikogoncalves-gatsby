@@ -3,7 +3,7 @@ import { Layout, Seo } from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import '../styles/pages/journalpage.css'
+import '../styles/journalpage.css'
 
 export default function Template({ data }) {
   const { markdownRemark } = data

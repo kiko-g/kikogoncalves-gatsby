@@ -1,13 +1,13 @@
 .cv {
-  @apply grid h-full w-full grid-cols-4 gap-4 text-gray-700 dark:text-white lg:gap-4;
+  @apply grid h-full w-full grid-cols-4 gap-4 rounded-xl bg-white p-4 text-gray-700 dark:bg-white/5 dark:text-white lg:gap-8;
 }
 
 .cv > .core {
-  @apply order-2 col-span-4 flex h-full w-full flex-col gap-4 rounded-xl bg-white p-3 dark:bg-white/5 lg:order-1 lg:col-span-3;
+  @apply order-2 col-span-4 flex h-full w-full flex-col gap-4 lg:order-1 lg:col-span-3;
 }
 
 .cv > .side {
-  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-start gap-2 rounded-xl bg-white p-3 dark:bg-white/5 lg:order-2 lg:col-span-1 lg:gap-3;
+  @apply order-1 col-span-4 flex h-full w-full flex-col items-start justify-start gap-2 rounded-xl lg:order-2 lg:col-span-1 lg:gap-3;
 }
 
 .cv > .side > header {
@@ -94,7 +94,7 @@
 }
 
 .cv .cv-group-entry > .content .title h3 {
-  @apply text-base font-semibold dark:text-tertiary lg:text-lg;
+  @apply text-base font-bold dark:text-white lg:text-lg;
 }
 
 .cv .cv-group-entry > .content .subtitle {
