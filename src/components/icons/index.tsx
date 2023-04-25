@@ -10,7 +10,7 @@ const LinkedinIcon = () => (
   </svg>
 )
 
-const GithubIcon = () => (
+const GithubIcon = ({}) => (
   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
     <path
       fillRule="evenodd"

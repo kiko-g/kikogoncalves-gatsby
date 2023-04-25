@@ -18,7 +18,7 @@ export default function Template({ data }) {
           <h1 className="text-3xl font-bold tracking-tight text-pink-700 dark:text-white md:text-center md:text-4xl xl:mb-16">
             {frontmatter.title}
           </h1>
-          <div>
+          <div className="flex w-full items-center justify-between">
             <GoBack />
             <span className="flex text-sm font-semibold text-gray-700 dark:text-tertiary">
               {frontmatter.date}

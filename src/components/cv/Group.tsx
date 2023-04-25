@@ -11,18 +11,18 @@ const Group = ({ name, decoration, children }: Props) => {
   return (
     <div
       className={classNames(
-        'cv-group',
+        'flex flex-col gap-1',
         decoration ? 'border-t border-primary px-1 pb-1 pt-4 dark:border-white' : 'p-1'
       )}
     >
-      <header>
-        <h2>
-          <span className="highlight">{name.substring(0, 3)}</span>
+      <header className="flex items-center gap-3">
+        <h2 className="text-2xl font-bold">
+          <span className="text-primary dark:text-tertiary">{name.substring(0, 3)}</span>
           <span>{name.substring(3)}</span>
         </h2>
-        <div className="filler"></div>
+        <div className="h-[1px] w-full bg-gray-300"></div>
       </header>
-      <div className="cv-group-entries">{children}</div>
+      <div className="flex flex-col gap-8 lg:gap-4">{children}</div>
     </div>
   )
 }
