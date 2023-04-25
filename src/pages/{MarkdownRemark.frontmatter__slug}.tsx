@@ -2,8 +2,7 @@ import React from 'react'
 import { Layout, Seo } from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import '../styles/journalpage.css'
+import { getImage } from 'gatsby-plugin-image'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -14,20 +13,28 @@ export default function Template({ data }) {
   return (
     <Layout location="Journal Page" liquid>
       <Seo title={frontmatter.title} />
-      <main className="journalpage">
-        <header>
-          <h1>{frontmatter.title}</h1>
+      <main className="mx-auto mt-0 flex w-full flex-col justify-between p-4 px-4 pb-28 font-normal md:mt-4 md:px-8 xl:max-w-6xl xl:px-12">
+        <header className="mb-2 text-[2rem] font-bold tracking-tight">
+          <h1 className="text-3xl font-bold tracking-tight text-pink-700 dark:text-white md:text-center md:text-4xl xl:mb-16">
+            {frontmatter.title}
+          </h1>
           <div>
             <GoBack />
-            <span className="date">{frontmatter.date}</span>
+            <span className="flex text-sm font-semibold text-gray-700 dark:text-tertiary">
+              {frontmatter.date}
+            </span>
           </div>
         </header>
 
-        <article dangerouslySetInnerHTML={{ __html: html }} />
+        <article dangerouslySetInnerHTML={{ __html: html }} className="markdown" />
 
-        <footer>
-          <span>{frontmatter.title}</span>
-          <span>{frontmatter.date}</span>
+        <footer className="mt-12 flex items-center justify-between border-t border-gray-200 py-2 text-xs text-gray-400 dark:border-gray-600 dark:text-gray-300 md:py-3 md:text-sm">
+          <span className="font-semibold text-gray-600 dark:text-gray-200 md:text-center">
+            {frontmatter.title}
+          </span>
+          <span className="font-semibold text-gray-600 dark:text-gray-200 md:text-center">
+            {frontmatter.date}
+          </span>
         </footer>
       </main>
     </Layout>
@@ -55,7 +62,10 @@ export const pageQuery = graphql`
 `
 
 const GoBack = () => (
-  <Link className="go-back-button" to="/journal">
+  <Link
+    to="/journal"
+    className="flex rounded-full text-sm font-semibold text-gray-700 transition hover:opacity-75 dark:text-tertiary"
+  >
     <svg viewBox="0 -7 3 24" className="mr-2.5 h-6 w-auto overflow-visible">
       <path
         d="M3 0L0 3L3 6"

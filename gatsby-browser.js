@@ -5,4 +5,5 @@
 
 import './src/styles/global.css'
 import './src/styles/colors.css'
+import './src/styles/markdown.css'
 import './src/styles/background.css'

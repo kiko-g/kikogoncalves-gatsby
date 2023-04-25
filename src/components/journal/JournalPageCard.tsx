@@ -22,13 +22,13 @@ const JournalPageCard = ({ post }: Props) => {
         if (!available) e.preventDefault()
       }}
       className={classNames(
-        'postcard group',
+        'group relative space-y-2 rounded-xl p-4 shadow transition duration-300',
         available
           ? 'bg-lightest hover:bg-pink-100 hover:text-gray-800 dark:bg-light/5 dark:hover:bg-pink-500/20 dark:hover:text-white'
           : 'bg-lightest hover:cursor-not-allowed dark:bg-light/5'
       )}
     >
-      <header>
+      <header className="relative flex items-center justify-center rounded-lg bg-opacity-90">
         {coverImage ? (
           <GatsbyImage
             image={coverImage}
@@ -40,22 +40,36 @@ const JournalPageCard = ({ post }: Props) => {
         )}
 
         {post.frontmatter.pinned && (
-          <span className="pinned">
+          <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-secondary to-violet-400 p-1 text-xs leading-none text-white shadow">
             <PinIcon />
           </span>
         )}
 
-        <span className="date">{post.frontmatter.date}</span>
+        <span className="absolute top-2 right-2 rounded-full bg-navy/50 px-2 py-1 text-xs leading-none tracking-tight text-white dark:bg-ice/80 dark:text-gray-800">
+          {post.frontmatter.date}
+        </span>
       </header>
 
-      <section>
-        <div className="top">
-          <h3 className="title">{post.frontmatter.title}</h3>
+      <section className="w-full">
+        <div className="flex items-start justify-start">
+          <h3 className="flex-grow font-medium text-pink-700 dark:text-codepink">
+            {post.frontmatter.title}
+          </h3>
         </div>
-        <p className="excerpt">{post.excerpt}</p>
-        <div className="bottom">
-          {isNew && <span className="new">New</span>}
-          {!available && <span className="coming-soon">Coming&nbsp;Soon</span>}
+        <p className="pb-0 text-sm font-normal tracking-tight text-gray-500 transition dark:text-gray-300">
+          {post.excerpt}
+        </p>
+        <div className="mt-3 flex items-center justify-end">
+          {isNew && (
+            <span className="inline-flex items-center justify-center bg-gradient-to-br from-rose-600 to-rose-700 px-2 py-2 text-xs leading-none text-white">
+              New
+            </span>
+          )}
+          {!available && (
+            <span className="inline-flex items-center justify-center rounded-full bg-teal-800/80 px-2 py-1 text-xs leading-none text-white">
+              Coming&nbsp;Soon
+            </span>
+          )}
         </div>
       </section>
     </Link>

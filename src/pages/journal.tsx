@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Seo } from '../components/layout'
 import { JournalPageCard } from '../components/journal'
-import '../styles/journal.css'
 
 const JournalPage = ({
   data: {
@@ -12,10 +11,10 @@ const JournalPage = ({
   return (
     <Layout location="Journal" liquid>
       <Seo title="Journal" />
-      <main className="journal">
-        <header>
-          <h2>Journal</h2>
-          <p>
+      <main className="container mx-auto flex-1 flex-col justify-between space-y-6 px-4 py-4 xl:px-4 2xl:px-0">
+        <header className="mt-2">
+          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Journal</h2>
+          <p className="mt-4 text-lg font-normal">
             Welcome to my journal! This is where you'll find posts about things I want to talk
             about. Most posts will be about software development, engineering and programming, but
             occasionally you might find some stuff related to hobbies of mine and maybe some other
@@ -23,7 +22,7 @@ const JournalPage = ({
           </p>
         </header>
 
-        <article>
+        <article className="grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4">
           {nodes
             .filter(
               (node: { frontmatter: { date: any; shown: boolean } }) =>
