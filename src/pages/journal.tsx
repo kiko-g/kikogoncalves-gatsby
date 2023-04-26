@@ -22,7 +22,7 @@ const JournalPage = ({
           </p>
         </header>
 
-        <article className="grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4">
+        <article className="grid grid-flow-row grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {nodes
             .filter(
               (node: { frontmatter: { date: any; shown: boolean } }) =>

@@ -1,9 +1,9 @@
 .markdown strong {
-  @apply text-blue-600 dark:text-blue-500;
+  @apply text-blue-600 dark:text-white;
 }
 
 .markdown em {
-  @apply text-blue-600 dark:text-blue-500;
+  @apply text-blue-600 dark:text-white;
 }
 
 .markdown article a {
@@ -14,12 +14,13 @@
   @apply mt-0 p-0 text-gray-800 dark:text-light;
 }
 
-.markdown img {
-  @apply w-full rounded-xl border-0 bg-transparent shadow;
+.markdown img,
+.markdown video {
+  @apply my-3 w-full rounded-xl border-0 bg-transparent shadow;
 }
 
 .markdown .gatsby-resp-image-wrapper {
-  margin: 2rem 0 !important;
+  margin: 3rem 0 !important;
 }
 
 .markdown h1,
@@ -30,19 +31,19 @@
 }
 
 .markdown h1 {
-  @apply mt-0 mb-4 py-1 text-4xl font-bold md:mt-2 md:mb-2;
+  @apply mt-0 mb-3 py-1 text-4xl font-bold md:mt-2 md:mb-2;
 }
 
 .markdown h2 {
-  @apply mt-9 mb-3 py-1 text-3xl font-bold dark:text-codepink;
+  @apply mt-9 mb-2 py-1 text-3xl font-bold text-slate-700 dark:text-white;
 }
 
 .markdown h3 {
-  @apply mt-8 mb-3 py-1 text-2xl font-bold dark:text-sky-200;
+  @apply mt-8 mb-2 py-1 text-2xl font-bold text-slate-700 dark:text-gray-200;
 }
 
 .markdown h4 {
-  @apply mt-7 mb-2 py-1 text-xl font-bold;
+  @apply mt-7 mb-1 py-1 text-xl font-bold;
 }
 
 .markdown p {
@@ -63,7 +64,7 @@
 }
 
 .markdown blockquote {
-  @apply my-8 border-l-4 border-primary bg-light py-1 px-5 font-medium text-gray-800 dark:border-tertiary dark:bg-ice/5 dark:text-white;
+  @apply my-8 border-l-4 border-primary bg-white py-1 px-5 font-medium text-gray-800 dark:border-slate-600 dark:bg-slate-500 dark:text-white;
 }
 
 .markdown blockquote p {
