@@ -19,7 +19,7 @@ const PortfolioEntry = ({ project }: Props) => {
     <div className="flex w-full flex-col gap-y-3 rounded-xl bg-lightest p-4 shadow dark:bg-white/5">
       <aside className="relative w-full rounded-l-xl md:rounded-xl">
         {info.featuredVideo ? (
-          <div className="h-full w-auto max-w-full rounded-xl object-contain lg:max-w-2xl">
+          <div className="h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl">
             <video className="rounded-xl" controls muted>
               <source src={info.featuredVideo} type="video/mp4" />
             </video>

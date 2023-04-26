@@ -13,15 +13,15 @@ export default function Template({ data }) {
   return (
     <Layout location="Journal Page" liquid>
       <Seo title={frontmatter.title} />
-      <main className="mx-auto mt-0 flex w-full max-w-3xl flex-col justify-between p-4 px-4 pb-28 font-normal md:mt-4 md:px-8 xl:px-12">
+      <main className="mx-auto mt-0 flex w-full max-w-4xl flex-col justify-between p-4 px-4 pb-28 font-normal md:mt-4 md:px-8 xl:px-12">
         <header className="mb-2 text-[2rem] font-bold tracking-tight">
           <h1 className="text-3xl font-bold tracking-tight text-pink-700 dark:text-white md:text-center md:text-4xl xl:mb-16">
             {frontmatter.title}
           </h1>
-          <div className="flex w-full items-center justify-between text-gray-400 dark:text-white">
+          <div className="flex w-full items-center justify-between text-base text-gray-400 dark:text-white">
             <Link
               to="/journal"
-              className="flex rounded-full text-sm font-semibold transition hover:opacity-75"
+              className="flex rounded-full font-semibold transition hover:opacity-75"
             >
               <svg viewBox="0 -7 3 24" className="mr-2.5 h-6 w-auto overflow-visible">
                 <path
