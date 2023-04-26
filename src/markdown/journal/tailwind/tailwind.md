@@ -1,5 +1,5 @@
 ---
-shown: false
+shown: true
 pinned: true
 date: 2022-01-04
 slug: /journal/tailwind
