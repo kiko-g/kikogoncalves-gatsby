@@ -1,5 +1,5 @@
 import React from 'react'
-import { Group } from '../../../components/cv'
+import { Group } from '../'
 
 const Skills = () => {
   const tech = [
@@ -29,7 +29,7 @@ const Skills = () => {
   ]
 
   return (
-    <Group name="Skills" decoration>
+    <Group name="Skills">
       <div className="text-base">
         <h2 className="font-semibold dark:text-tertiary">Technical</h2>
         <div className="mt-1 flex flex-wrap items-center justify-start gap-x-2 gap-y-0.5 text-sm font-normal lg:gap-x-3">

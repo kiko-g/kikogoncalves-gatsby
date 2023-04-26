@@ -1,16 +1,16 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Group, GroupEntry } from '../../../components/cv'
+import { Group, GroupEntry } from '../'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
-import { GithubIcon, LinkedinIcon } from '../../icons'
+import { GithubIcon, LinkedinIcon } from '../../../icons'
 
-const Projects = () => (
+const Education = () => (
   <StaticQuery
     query={graphql`
       query {
         allMarkdownRemark(
           sort: [{ frontmatter: { shown: DESC } }, { frontmatter: { startDate: DESC } }]
-          filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+          filter: { fileAbsolutePath: { regex: "/(education)/" } }
         ) {
           nodes {
             id
@@ -32,7 +32,7 @@ const Projects = () => (
       }
     `}
     render={(data) => (
-      <Group name="Projects" decoration>
+      <Group name="Education">
         {data.allMarkdownRemark.nodes
           .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)
           .map((node: { frontmatter: any; html: any }, entryIdx: number) => {
@@ -43,7 +43,7 @@ const Projects = () => (
                 : `${values.startDate} - ${values.endDate ?? 'Present'}`
 
             return (
-              <GroupEntry key={`cv-projects-${entryIdx}`} date={dates} location={values.location}>
+              <GroupEntry key={`cv-education-${entryIdx}`} date={dates} location={values.location}>
                 <div className="flex items-start gap-1.5 lg:items-center">
                   <h3 className="text-base font-bold dark:text-white lg:text-lg">{values.title}</h3>
                   {values.external && (
@@ -92,7 +92,7 @@ const Projects = () => (
                   )}
                 </div>
 
-                <div dangerouslySetInnerHTML={{ __html: node.html }} />
+                <div dangerouslySetInnerHTML={{ __html: node.html }} className="markdown" />
               </GroupEntry>
             )
           })}
@@ -101,4 +101,4 @@ const Projects = () => (
   />
 )
 
-export default Projects
+export default Education

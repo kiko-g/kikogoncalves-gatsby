@@ -1,7 +1,6 @@
 import React from 'react'
 import { Layout, Seo } from '../components/layout'
-import { About, Skills } from '../components/home'
-import Cv from '../components/cv/Cv'
+import { About, Skills, Cv as CV } from '../components/home'
 import SeeMore from '../components/SeeMore'
 
 const IndexPage = () => {
@@ -24,7 +23,7 @@ const IndexPage = () => {
         <section className="space-y-8">
           <About />
           <Skills />
-          <Cv />
+          <CV />
         </section>
 
         <SeeMore />

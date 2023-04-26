@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Group, GroupEntry } from '../../../components/cv'
+import { Group, GroupEntry } from '../'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
-import { GithubIcon, LinkedinIcon } from '../../icons'
+import { GithubIcon, LinkedinIcon } from '../../../icons'
 
 const Experiences = () => (
   <StaticQuery
@@ -32,7 +32,7 @@ const Experiences = () => (
       }
     `}
     render={(data) => (
-      <Group name="Experiences" decoration>
+      <Group name="Experiences">
         {data.allMarkdownRemark.nodes
           .filter((node: { frontmatter: { shown: boolean } }) => node.frontmatter.shown === true)
           .map((node: { frontmatter: any; html: any }, entryIdx: number) => {

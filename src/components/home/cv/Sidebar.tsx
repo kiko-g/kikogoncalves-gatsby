@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { GithubIcon, LinkedinIcon } from '../../components/icons'
+import { GithubIcon, LinkedinIcon } from '../../../components/icons'
 import { GlobeEuropeAfricaIcon, InboxArrowDownIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
 const Sidebar = () => {

@@ -50,11 +50,6 @@
   @apply mt-1 mb-3 text-justify;
 }
 
-.markdown ul,
-.markdown ol {
-  @apply mt-5 mb-7;
-}
-
 .markdown ul {
   @apply ml-3 mt-1 list-disc lg:ml-5;
 }

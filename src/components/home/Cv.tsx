@@ -1,6 +1,6 @@
 import React from 'react'
-import Sidebar from './Sidebar'
-import Core from './Core'
+import Core from './cv/Core'
+import Sidebar from './cv/Sidebar'
 
 type Props = {}
 
