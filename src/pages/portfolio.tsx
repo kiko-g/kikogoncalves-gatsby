@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Seo } from '../components/layout'
 import { PortfolioEntry } from '../components/porfolio'
-import '../styles/portfolio.css'
 
 const PortfolioPage = ({
   data: {
@@ -13,9 +12,9 @@ const PortfolioPage = ({
     <Layout location="Portfolio">
       <Seo title="Portfolio" />
       <main className="portfolio">
-        <header>
-          <h2>Portfolio</h2>
-          <p>
+        <header className="mt-2">
+          <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Portfolio</h2>
+          <p className="mt-4 text-lg font-light">
             Welcome to the portfolio! This is where you can browse through the main (software)
             projects I've contributed to or developed myself. The source code for most of these
             projects is available on{' '}
@@ -26,7 +25,7 @@ const PortfolioPage = ({
           </p>
         </header>
 
-        <article>
+        <article className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {nodes
             .filter((node: { frontmatter: { startDate: any } }) => !!node.frontmatter.startDate)
             .map((node: { id: React.Key }) => (
