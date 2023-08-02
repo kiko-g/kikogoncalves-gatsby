@@ -7,7 +7,7 @@ type Props = {}
 
 const About = ({}: Props) => {
   const details = [
-    { key: 'Age', value: 23 },
+    { key: 'Age', value: 24 },
     { key: 'City', value: 'Porto, Portugal' },
     { key: 'Birthday', value: '3 August 1999' },
     { key: 'Degree', value: 'Masters in Computer Engineering' },
@@ -29,8 +29,9 @@ const About = ({}: Props) => {
 
         <article className="mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base">
           <p>
-            Hi, I'm Francisco. Im currently taking my Masters's Degree in Informatics and Computing
-            Engineering @ FEUP.
+            Hi, I'm Francisco. I'm a Software Engineer based in Porto. I have a Masters Degree in
+            Informatics and Computer Engineering, from FEUP, the Factulty of Engineering of the
+            University of Porto.
           </p>
           <p>
             I have a great passion for software engineering as a whole with a special interest in
@@ -57,7 +58,7 @@ const About = ({}: Props) => {
       </div>
 
       <div className="order-1 col-span-12 h-min sm:order-2 sm:col-span-6 md:col-span-5 lg:col-span-3 xl:col-span-3 2xl:col-span-3">
-        <img src={'/images/hero/hero1.jpg'} className="tab-inner-image" alt="profile-picture" />
+        <img src={'/images/hero/hero17.jpg'} className="aspect-square" alt="profile-picture" />
         <div className="flex flex-col items-end gap-1">
           <h2 className="my-0.5 flex-1 text-base font-bold tracking-tighter md:text-left md:text-base xl:text-lg">
             Francisco Gonçalves

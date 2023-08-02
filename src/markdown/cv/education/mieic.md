@@ -1,7 +1,7 @@
 ---
 shown: false
 startDate: 2018-09-23
-endDate: 2023-07-18
+endDate: 2023-07-14
 location: Porto, Portugal
 title: Faculty of Engineering of the University of Porto (FEUP)
 github: ''

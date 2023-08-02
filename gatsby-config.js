@@ -76,7 +76,7 @@ module.exports = {
       options: {
         name: `Francisco Goncalves website`,
         short_name: `kikogoncalves`,
-        description: `Francisco Goncalves, 23 year old Software Engineer.`,
+        description: `Francisco Goncalves, 24 year old Software Engineer.`,
         lang: `en`,
         start_url: `/`,
         display: `standalone`,
