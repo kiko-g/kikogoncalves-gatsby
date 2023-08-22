@@ -1,17 +1,17 @@
 import React from 'react'
 import Socials from './Socials'
-import { links } from '../../utils'
+import { calculateAge, links } from '../../utils'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 type Props = {}
 
 const About = ({}: Props) => {
   const details = [
-    { key: 'Age', value: 24 },
+    { key: 'Age', value: calculateAge() },
     { key: 'City', value: 'Porto, Portugal' },
     { key: 'Birthday', value: '3 August 1999' },
     { key: 'Degree', value: 'Masters in Computer Engineering' },
-    { key: 'Occupation', value: 'Software Engineering Student @ FEUP, MEIC' },
+    { key: 'Occupation', value: 'Software Engineer' },
   ]
 
   return (
@@ -20,19 +20,19 @@ const About = ({}: Props) => {
         <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex">
           About
         </div>
-        <h3 className="mt-3 block text-lg font-medium leading-tight md:mt-1">
-          Software Engineering Student @{' '}
-          <a className="link" target="_blank" rel="noreferrer" href={links.meic}>
-            FEUP-MEIC
-          </a>
-        </h3>
+        <h3 className="mt-3 block text-lg font-medium leading-tight md:mt-1">Software Engineer</h3>
 
         <article className="mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base">
           <p>
             Hi, I'm Francisco. I'm a Software Engineer based in Porto. I have a Masters Degree in
             Informatics and Computer Engineering, from FEUP, the Factulty of Engineering of the
-            University of Porto.
+            University of Porto (
+            <a className="link" target="_blank" rel="noreferrer" href={links.meic}>
+              FEUP-MEIC
+            </a>
+            ).
           </p>
+
           <p>
             I have a great passion for software engineering as a whole with a special interest in
             frontend development and data science. On the more personal side of things, I would
@@ -40,6 +40,13 @@ const About = ({}: Props) => {
             finding zeal in things. My interests are mostly music, gaming, football, media, and
             entertainment. As for hobbies, I often play the guitar, sing, game, program stuff, and
             exercise.
+          </p>
+
+          <p>
+            My preferred and best technologies are{' '}
+            <strong>React.js, Javascript, Typescript, Next.js and TailwindCSS</strong>. If you're
+            interested in my profile reach me on LinkedIn, as I'm searching for a frontend or
+            full-stack position, preferably using React! ‼️
           </p>
         </article>
 

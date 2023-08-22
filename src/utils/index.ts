@@ -1,4 +1,16 @@
-const daysDifference = (dateString: string) => {
+export function calculateAge(dateOfBirth: string = '03-08-1999'): number {
+  let [day, month, year] = dateOfBirth.split('-').map(Number) // dd-mm-yyyy
+  let today = new Date()
+  let birthDate = new Date(year, month - 1, day)
+  let age = today.getFullYear() - birthDate.getFullYear()
+  let m = today.getMonth() - birthDate.getMonth()
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--
+
+  return age
+}
+
+export function daysDifference(dateString: string) {
   let now = new Date()
   let date = new Date(dateString)
   let difference = (now.getTime() - date.getTime()) / (1000 * 3600 * 24)
@@ -14,7 +26,7 @@ type Social = {
   viewBox?: string // svg `viewBox` (optional, deefined by the ? operator)
 }
 
-const socials: Social[] = [
+export const socials: Social[] = [
   {
     shown: false,
     label: 'facebook',
@@ -67,9 +79,7 @@ const socials: Social[] = [
   },
 ]
 
-const links = {
+export const links = {
   meic: 'https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_PLANOS_ESTUDOS_VIEW?pv_plano_id=31204&pv_ano_lectivo=2021',
   github: 'https://github.com/kiko-g',
 }
-
-export { daysDifference, socials, links }
