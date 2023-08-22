@@ -1,5 +1,5 @@
 ---
-pinned: true
+pinned: false
 title: Internet of Everything
 startDate: 2021-10-25
 endDate: 2022-01-30

@@ -1,5 +1,5 @@
 ---
-pinned: true
+pinned: false
 title: Virtual Assistant for MES
 startDate: 2022-03-01
 endDate: 2022-06-15
