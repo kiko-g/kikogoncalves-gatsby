@@ -7,7 +7,7 @@ repo: https://github.com/kiko-g/usability-dashboard-mes
 deploy: https://usability-dashboard-mes.vercel.app
 preview: https://www.youtube.com/watch?v=5uJzntcn500
 featuredImage: null
-featuredVideo: https://user-images.githubusercontent.com/40745490/139429861-0b86db10-d1d3-46b5-814b-a8b5cc563da3.mp4
+featuredVideo: https://user-images.githubusercontent.com/40745490/246076879-659c8170-4f10-42ec-a67f-03f66dc2e3e7.mp4
 techStack: [Angular, React, Typescript, Next.js, TailwindCSS, Docker, Matomo, MySQL]
 description: A dashboard to identify custom user behavior patterns related to web components and improve the usability of Critical Manufacturing's MES.
 team: Individual
