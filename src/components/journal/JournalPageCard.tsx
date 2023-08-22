@@ -36,11 +36,11 @@ const JournalPageCard = ({ post }: Props) => {
             className="h-64 w-full rounded-lg object-contain"
           />
         ) : (
-          <div className="h-64 w-full rounded-lg bg-gradient-to-br from-tertiary via-secondary to-violet-400 shadow" />
+          <div className="h-64 w-full rounded-lg bg-gradient-to-br from-secondary via-secondary to-violet-400 shadow" />
         )}
 
         {post.frontmatter.pinned && (
-          <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-secondary to-violet-400 p-1 text-xs leading-none text-white shadow">
+          <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-secondary via-secondary to-violet-400 p-1 text-xs leading-none text-white shadow">
             <PinIcon />
           </span>
         )}

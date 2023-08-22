@@ -7,7 +7,7 @@
 }
 
 .markdown article a {
-  @apply font-semibold text-tertiary transition hover:underline hover:opacity-90 dark:text-tertiary;
+  @apply font-semibold text-secondary transition hover:underline hover:opacity-90 dark:text-secondary;
 }
 
 .markdown article {

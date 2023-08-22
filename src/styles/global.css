@@ -14,7 +14,7 @@ code {
 }
 
 .link {
-  @apply font-medium text-[#0a66c2] transition hover:underline hover:opacity-90 dark:text-tertiary;
+  @apply font-medium text-[#0a66c2] transition hover:underline hover:opacity-90 dark:text-secondary;
 }
 
 .avatar {

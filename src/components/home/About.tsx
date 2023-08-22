@@ -17,7 +17,7 @@ const About = ({}: Props) => {
   return (
     <div className="grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl bg-white p-4 text-2xl transition dark:bg-white/5 md:gap-x-8">
       <div className="order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9">
-        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex">
+        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-secondary md:flex">
           About
         </div>
         <h3 className="mt-3 block text-lg font-medium leading-tight md:mt-1">Software Engineer</h3>
@@ -56,7 +56,7 @@ const About = ({}: Props) => {
         <ul className="mt-3 text-sm md:text-base">
           {details.map((item, index) => (
             <li key={`detail-${index}`} className="flex items-center gap-x-1 md:gap-x-2">
-              <ChevronRightIcon className="flex-0 h-4 w-4 text-primary dark:text-tertiary" />
+              <ChevronRightIcon className="flex-0 h-4 w-4 text-primary dark:text-secondary" />
               <strong className="text-gray-700 dark:text-light">{item.key}</strong>
               <span>&middot;</span>
               <span className="flex-1 truncate font-normal text-gray-500 dark:text-gray-200">

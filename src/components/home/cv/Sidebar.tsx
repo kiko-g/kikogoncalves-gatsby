@@ -55,7 +55,7 @@ const Sidebar = () => {
         {contacts.map((contact, contactIdx) => (
           <li key={`cv-contact-${contactIdx}`} className="flex items-center justify-start gap-1.5">
             {contact.icon}
-            <span className="hover:text-[#0a66c2] hover:underline hover:opacity-90 dark:hover:text-tertiary">
+            <span className="hover:text-[#0a66c2] hover:underline hover:opacity-90 dark:hover:text-secondary">
               {contact.element}
             </span>
           </li>
@@ -66,7 +66,7 @@ const Sidebar = () => {
         target="_blank"
         rel="noopener"
         href="/cv.pdf"
-        className="w-full rounded bg-primary px-3 py-2 text-center font-normal capitalize tracking-tight text-white transition hover:cursor-pointer hover:bg-[#0a66c2] hover:opacity-90 dark:bg-tertiary"
+        className="w-full rounded bg-primary px-3 py-2 text-center font-normal capitalize tracking-tight text-white transition hover:cursor-pointer hover:bg-[#0a66c2] hover:opacity-90 dark:bg-secondary"
       >
         View PDF version
       </a>

@@ -35,7 +35,7 @@ const Skills = ({}: Props) => {
   return (
     <div className="grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl bg-white p-4 text-2xl transition dark:bg-white/5 md:gap-x-8">
       <div className="order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9">
-        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex">
+        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-secondary md:flex">
           Skills
         </div>
         <div className="mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base">
@@ -63,7 +63,7 @@ const Skills = ({}: Props) => {
                 <div className="relative h-[10px] w-full">
                   <div
                     style={{ width: `${skill.score}%` }}
-                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-tertiary via-secondary to-violet-400"
+                    className="absolute top-0 z-10 h-[10px] bg-gradient-to-r from-sky-500 via-indigo-400 to-violet-400"
                   ></div>
                   <div className="absolute top-0 h-[10px] w-full bg-gray-200" />
                 </div>

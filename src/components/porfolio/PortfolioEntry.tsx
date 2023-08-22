@@ -31,11 +31,11 @@ const PortfolioEntry = ({ project }: Props) => {
             className="h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl"
           />
         ) : (
-          <div className="h-64 w-full rounded-xl bg-gradient-to-br from-tertiary via-secondary to-violet-400 shadow lg:h-full lg:w-80" />
+          <div className="h-64 w-full rounded-xl bg-gradient-to-br from-secondary via-secondary to-violet-400 shadow lg:h-full lg:w-80" />
         )}
 
         {info.pinned && (
-          <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-tertiary via-secondary to-violet-400 p-1 text-xs leading-none text-white">
+          <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-secondary via-secondary to-violet-400 p-1 text-xs leading-none text-white">
             <PinIcon />
           </span>
         )}
@@ -49,7 +49,7 @@ const PortfolioEntry = ({ project }: Props) => {
                 <a
                   href={info.repo}
                   target="_blank"
-                  className="inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-normal text-white transition hover:bg-primary/75 dark:bg-tertiary/80 dark:hover:bg-tertiary lg:p-2"
+                  className="inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-normal text-white transition hover:bg-primary/75 dark:bg-secondary/80 dark:hover:bg-secondary lg:p-2"
                 >
                   <GithubIcon />
                   <span className="hidden md:flex">Code on Github</span>
@@ -77,7 +77,7 @@ const PortfolioEntry = ({ project }: Props) => {
               )}
             </div>
 
-            <div className="text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary">
+            <div className="text-xl font-semibold uppercase tracking-wide text-primary dark:text-secondary">
               {info.title}
             </div>
             <div className="font-normal tracking-tighter">
@@ -95,7 +95,7 @@ const PortfolioEntry = ({ project }: Props) => {
               {info.techStack.map((tech: string, techIdx: number) => (
                 <span
                   key={`technology-${techIdx}`}
-                  className="rounded bg-primary px-2 py-1 text-xs font-normal lowercase tracking-wide text-white shadow dark:bg-tertiary"
+                  className="rounded bg-primary px-2 py-1 text-xs font-normal lowercase tracking-wide text-white shadow dark:bg-secondary"
                 >
                   {tech}
                 </span>

@@ -99,7 +99,7 @@ const Resume = () => {
   return (
     <div className="grid grid-cols-12 grid-rows-1 gap-x-4 rounded-2xl bg-white p-4 text-2xl transition md:gap-x-8">
       <div className="order-2 col-span-12 sm:order-1 sm:col-span-6 md:col-span-7 lg:col-span-9 xl:col-span-9 2xl:col-span-9">
-        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-tertiary md:flex">
+        <div className="hidden text-xl font-semibold uppercase tracking-wide text-primary dark:text-secondary md:flex">
           Resume
         </div>
         <div className="mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base">
@@ -142,10 +142,10 @@ type GroupProps = {
 
 const Group = ({ group }: GroupProps) => (
   <div className="mt-0.5">
-    <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-tertiary">
+    <h1 className="-ml-2 mb-2 font-headings text-xl font-bold text-primary dark:text-secondary">
       {group.title}
     </h1>
-    <ol className="relative border-l-2 border-primary dark:border-tertiary">
+    <ol className="relative border-l-2 border-primary dark:border-secondary">
       {group.entries.map((entry, entryIdx) => (
         <li
           key={`${group.title}-entry-${entryIdx}`}
@@ -154,7 +154,7 @@ const Group = ({ group }: GroupProps) => (
           <div className="ml-5">
             <span
               className="absolute left-[-8.8px] -top-[1px] flex h-4 w-4 rounded-full border-2 
-              border-primary bg-white dark:border-tertiary dark:bg-white"
+              border-primary bg-white dark:border-secondary dark:bg-white"
             />
 
             <div className={classNames('flex flex-col', entry.date ? 'space-y-1' : 'space-y-0.5')}>
@@ -167,7 +167,7 @@ const Group = ({ group }: GroupProps) => (
 
               {entry.date ? (
                 <div className="rounded-xl text-xs font-semibold tracking-tight">
-                  <span className="my-1 rounded bg-primary py-0.5 px-1 text-white dark:bg-tertiary">
+                  <span className="my-1 rounded bg-primary py-0.5 px-1 text-white dark:bg-secondary">
                     {entry.date}
                   </span>
                 </div>

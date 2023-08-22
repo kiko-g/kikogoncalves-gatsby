@@ -14,7 +14,7 @@ export default function SeeMore({}: Props) {
       <PageVisits count={domainVisits} />
       <Link
         to="/cv"
-        className="inline-flex rounded bg-gradient-to-r from-tertiary via-secondary to-indigo-500 p-[2px] transition focus:outline-none focus:ring active:text-opacity-75"
+        className="inline-flex rounded bg-gradient-to-r from-secondary via-secondary to-indigo-500 p-[2px] transition focus:outline-none focus:ring active:text-opacity-75"
       >
         <span className="flex items-center justify-center space-x-2 rounded-sm bg-white px-6 py-3 font-medium transition hover:bg-transparent hover:text-white dark:text-gray-800 dark:hover:text-white">
           <span>See more</span>

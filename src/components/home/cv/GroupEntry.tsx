@@ -12,7 +12,7 @@ const GroupEntry = ({ date, location, children }: Props) => {
       <div className="mx-auto ml-3 lg:ml-5">{children}</div>
       <div className="flex w-full flex-row justify-end gap-2 text-xs lg:w-min lg:flex-col lg:items-end lg:gap-0 lg:text-sm">
         <span className="whitespace-nowrap italic">{date}</span>
-        <span className="whitespace-nowrap font-medium text-primary dark:text-tertiary">
+        <span className="whitespace-nowrap font-medium text-primary dark:text-secondary">
           {location}
         </span>
       </div>
