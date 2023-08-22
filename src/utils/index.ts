@@ -81,5 +81,6 @@ export const socials: Social[] = [
 
 export const links = {
   meic: 'https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_PLANOS_ESTUDOS_VIEW?pv_plano_id=31204&pv_ano_lectivo=2021',
+  linkedin: 'https://linkedin.com/in/kikogoncalves',
   github: 'https://github.com/kiko-g',
 }

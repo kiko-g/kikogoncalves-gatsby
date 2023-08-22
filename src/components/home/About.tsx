@@ -23,7 +23,7 @@ const About = ({}: Props) => {
         <h3 className="mt-3 block text-lg font-medium leading-tight md:mt-1">Software Engineer</h3>
 
         <article className="mt-0 text-sm font-normal text-gray-600 dark:text-light md:text-base">
-          <p>
+          <p className="mb-1">
             Hi, I'm Francisco. I'm a Software Engineer based in Porto. I have a Masters Degree in
             Informatics and Computer Engineering, from FEUP, the Factulty of Engineering of the
             University of Porto (
@@ -33,7 +33,7 @@ const About = ({}: Props) => {
             ).
           </p>
 
-          <p>
+          <p className="mb-1">
             I have a great passion for software engineering as a whole with a special interest in
             frontend development and data science. On the more personal side of things, I would
             describe myself as a passionate person, who believes in getting better every day and
@@ -42,11 +42,14 @@ const About = ({}: Props) => {
             exercise.
           </p>
 
-          <p>
+          <p className="mb-1">
             My preferred and best technologies are{' '}
             <strong>React.js, Javascript, Typescript, Next.js and TailwindCSS</strong>. If you're
-            interested in my profile reach me on LinkedIn, as I'm searching for a frontend or
-            full-stack position, preferably using React! ‼️
+            interested in my profile{' '}
+            <a className="link" rel="noreferrer" href={links.linkedin} target="_blank">
+              reach me on LinkedIn
+            </a>
+            , as I'm searching for a frontend or full-stack position, preferably using React! ‼️
           </p>
         </article>
 
