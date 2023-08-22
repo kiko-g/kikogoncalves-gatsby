@@ -18,11 +18,11 @@ const Sidebar = () => {
       element: <Link to="/">kikogoncalves.com</Link>,
     },
     {
-      icon: <GithubIcon />,
+      icon: <GithubIcon className="h-5 w-5" />,
       element: <a href="https://github.com/kiko-g">kiko-g</a>,
     },
     {
-      icon: <LinkedinIcon />,
+      icon: <LinkedinIcon className="h-5 w-5" />,
       element: <a href="https://linkedin.com/in/kikogoncalves">kikogoncalves</a>,
     },
   ]
