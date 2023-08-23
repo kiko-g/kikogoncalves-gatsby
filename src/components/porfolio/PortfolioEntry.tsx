@@ -36,7 +36,7 @@ const PortfolioEntry = ({ project }: Props) => {
 
         {info.pinned && (
           <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-secondary via-secondary to-violet-400 p-1 text-xs leading-none text-white">
-            <PinIcon />
+            <PinIcon className="h-4 w-4" />
           </span>
         )}
       </aside>
@@ -51,7 +51,7 @@ const PortfolioEntry = ({ project }: Props) => {
                   target="_blank"
                   className="inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-normal text-white transition hover:bg-primary/75 dark:bg-secondary/80 dark:hover:bg-secondary lg:p-2"
                 >
-                  <GithubIcon />
+                  <GithubIcon className="h-5 w-5" />
                   <span className="hidden md:flex">Code on Github</span>
                 </a>
               )}
@@ -61,7 +61,7 @@ const PortfolioEntry = ({ project }: Props) => {
                   target="_blank"
                   className="inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-normal text-white transition hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 lg:p-2"
                 >
-                  <DeployIcon />
+                  <DeployIcon className="h-5 w-5" />
                   <span className="hidden md:flex">Try it</span>
                 </a>
               )}
@@ -71,7 +71,7 @@ const PortfolioEntry = ({ project }: Props) => {
                   target="_blank"
                   className="inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-normal text-white transition hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 lg:p-2"
                 >
-                  <PreviewIcon />
+                  <PreviewIcon className="h-5 w-5" />
                   <span className="hidden md:flex">Preview</span>
                 </a>
               )}

@@ -41,7 +41,7 @@ const JournalPageCard = ({ post }: Props) => {
 
         {post.frontmatter.pinned && (
           <span className="absolute top-2 left-2 rounded-full bg-gradient-to-br from-secondary via-secondary to-violet-400 p-1 text-xs leading-none text-white shadow">
-            <PinIcon />
+            <PinIcon className="h-5 w-5" />
           </span>
         )}
 

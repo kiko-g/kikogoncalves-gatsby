@@ -63,7 +63,7 @@ const Projects = () => (
                       href={values.github}
                       className="text-primary hover:opacity-75 dark:text-white"
                     >
-                      <GithubIcon />
+                      <GithubIcon className="h-5 w-5" />
                     </a>
                   )}
                   {values.linkedin && (
@@ -73,7 +73,7 @@ const Projects = () => (
                       href={values.linkedin}
                       className="text-primary hover:opacity-75 dark:text-white"
                     >
-                      <LinkedinIcon />
+                      <LinkedinIcon className="h-5 w-5" />
                     </a>
                   )}
                 </div>
