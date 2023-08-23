@@ -98,7 +98,7 @@ const Projects = () => (
                   )}
                 </div>
 
-                <div dangerouslySetInnerHTML={{ __html: node.html }} />
+                <div dangerouslySetInnerHTML={{ __html: node.html }} className="markdown" />
               </GroupEntry>
             )
           })}
