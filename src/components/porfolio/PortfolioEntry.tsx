@@ -19,8 +19,8 @@ const PortfolioEntry = ({ project }: Props) => {
     <div className="flex w-full flex-col gap-y-3 rounded-xl bg-lightest p-4 shadow dark:bg-white/5">
       <aside className="relative w-full rounded-l-xl md:rounded-xl">
         {info.featuredVideo ? (
-          <div className="h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl">
-            <video className="rounded-xl" controls muted>
+          <div className="h-[20rem] w-auto max-w-full overflow-hidden rounded-xl object-contain lg:max-w-2xl">
+            <video className="h-full w-full rounded-xl object-cover" controls muted>
               <source src={info.featuredVideo} type="video/mp4" />
             </video>
           </div>
@@ -52,9 +52,10 @@ const PortfolioEntry = ({ project }: Props) => {
                   className="inline-flex items-center space-x-2 rounded bg-primary p-1 text-center text-sm font-normal text-white transition hover:bg-primary/75 dark:bg-secondary/80 dark:hover:bg-secondary lg:p-2"
                 >
                   <GithubIcon className="h-5 w-5" />
-                  <span className="hidden md:flex">Code on Github</span>
+                  <span className="hidden lg:flex">Code on Github</span>
                 </a>
               )}
+
               {info.deploy && (
                 <a
                   href={info.deploy}
@@ -62,9 +63,10 @@ const PortfolioEntry = ({ project }: Props) => {
                   className="inline-flex items-center space-x-2 rounded bg-slate-700 p-1 text-center text-sm font-normal text-white transition hover:bg-slate-500 dark:bg-lightest dark:text-slate-700 dark:hover:bg-gray-200 lg:p-2"
                 >
                   <DeployIcon className="h-5 w-5" />
-                  <span className="hidden md:flex">Try it</span>
+                  <span className="hidden lg:flex">Try it</span>
                 </a>
               )}
+
               {info.preview && (
                 <a
                   href={info.preview}

@@ -10,7 +10,7 @@ featuredImage: ./featured.png
 featuredVideo: null
 techStack: [Gatsby, React, Typescript, Tailwind]
 description: A personal website to host all the contents about me in one place.
-team: Individual project
+team: Individual
 ---
 
 - Built a multi purpose personal website meant to last

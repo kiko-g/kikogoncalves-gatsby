@@ -3,11 +3,11 @@ shown: true
 startDate: 2019-10-01
 endDate: 2020-01-30
 location: Porto, Portugal
-title: 'Internet of Everything: "Everything is connected, not just the devices"'
+title: OpenCX - Mobile App for Conferences
 github: https://github.com/kiko-g/feup-esof
-external: null
+external: https://github.com/open-cx/open-cx
 linkedin: ''
-subtitle: Flutter, Dart, SQLite, Gherkin
+subtitle: Flutter, Dart, SQLite, Gherkin, Bluetooth
 externalSub: ''
 ---
 

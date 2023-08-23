@@ -11,14 +11,15 @@ export default function SeeMore({}: Props) {
 
   return (
     <div className="mt-4 flex flex-col items-end justify-between gap-3 lg:flex-row lg:items-center">
-      <PageVisits count={domainVisits} />
+      <div>{/* <PageVisits count={domainVisits} /> */}</div>
+
       <Link
-        to="/cv"
-        className="inline-flex rounded bg-gradient-to-r from-secondary via-secondary to-indigo-500 p-[2px] transition focus:outline-none focus:ring active:text-opacity-75"
+        to="/portfolio"
+        className="group inline-flex rounded bg-gradient-to-r from-sky-500 via-indigo-400 to-violet-400 p-[2px] transition-all focus:outline-none focus:ring active:text-opacity-75"
       >
-        <span className="flex items-center justify-center space-x-2 rounded-sm bg-white px-6 py-3 font-medium transition hover:bg-transparent hover:text-white dark:text-gray-800 dark:hover:text-white">
+        <span className="flex items-center justify-center space-x-2 rounded-sm bg-gradient-to-r from-sky-500 via-indigo-400 to-violet-400 px-6 py-3 font-medium text-white transition-all hover:bg-transparent hover:opacity-90">
           <span>See more</span>
-          <ArrowLongRightIcon className="inline-flex h-5 w-5" />
+          <ArrowLongRightIcon className="inline-flex h-5 w-5 transition group-hover:-rotate-45" />
         </span>
       </Link>
     </div>

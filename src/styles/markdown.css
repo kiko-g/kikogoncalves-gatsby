@@ -1,9 +1,9 @@
 .markdown strong {
-  @apply text-blue-600 dark:text-white;
+  @apply text-primary dark:text-secondary;
 }
 
 .markdown em {
-  @apply text-blue-600 dark:text-white;
+  @apply font-light text-primary dark:text-secondary;
 }
 
 .markdown article a {

@@ -49,7 +49,10 @@ const Experiences = () => (
                 location={values.location}
               >
                 <div className="flex items-start gap-1.5 lg:items-center">
-                  <h3 className="text-base font-bold dark:text-white lg:text-lg">{values.title}</h3>
+                  <h3 className="text-base font-bold dark:text-secondary lg:text-lg">
+                    {values.title}
+                  </h3>
+
                   {values.external && (
                     <a
                       rel="noopener"

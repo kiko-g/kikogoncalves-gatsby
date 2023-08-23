@@ -69,7 +69,7 @@ export const socials: Social[] = [
     viewBox: '0 0 512 512',
   },
   {
-    shown: true,
+    shown: false,
     label: 'linktree',
     url: 'https://linktr.ee/kikogoncalves',
     svg: [

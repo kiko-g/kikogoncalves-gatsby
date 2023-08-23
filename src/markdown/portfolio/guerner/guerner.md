@@ -4,13 +4,13 @@ title: Guerner & Irmãos - Website
 startDate: 2023-01-10
 endDate: 2023-08-31
 repo: https://github.com/kiko-g/guerner
-deploy: https://guernerpt.vercel.app
+deploy: https://guerner.vercel.app
 preview: null
 featuredImage: ./featured.jpg
 featuredVideo: null
 techStack: [React, Typescript, TailwindCSS, Gatsby 5, MDX, GraphQL]
-description: A videoclip gallery of finishing moves over on Warzone.
-team: Individual project
+description: Guerner & Irmãos - Agrotextiles and fabrics company website
+team: Individual
 ---
 
 - Created a marketing and display website for **Guerner & Irmãos**, offering high-performance textiles, technical fabrics, and quality building materials. Utilized GraphQL for product and service display.

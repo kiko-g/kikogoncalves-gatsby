@@ -19,7 +19,7 @@ module.exports = {
           150: '#eaeef4',
         },
         primary: {
-          DEFAULT: '#3c8edf', // Approximate midpoint between sky-500 and blue-500
+          DEFAULT: '#3c8edf',
           50: '#eef5fc',
           100: '#dcebf9',
           200: '#b9d1f7',
@@ -32,7 +32,7 @@ module.exports = {
           900: '#00306f',
         },
         secondary: {
-          DEFAULT: '#a672f2', // Lightened version of the previous midpoint between violet-500 and purple-500
+          DEFAULT: '#cf8fff',
           50: '#faf4fe',
           100: '#f2e0fd',
           200: '#e4bdfb',

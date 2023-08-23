@@ -23,7 +23,7 @@ const Layout = ({ children, location, background, liquid }: Props) => {
 
   return (
     <div
-      className="flex min-h-screen flex-col overflow-clip bg-ice font-prose font-medium 
+      className="font-prose flex min-h-screen flex-col overflow-clip bg-ice font-medium 
     text-gray-800 opacity-[99%] dark:bg-navy dark:text-white"
     >
       <Navbar location={location} siteTitle={data.site.siteMetadata?.title} />
@@ -31,7 +31,7 @@ const Layout = ({ children, location, background, liquid }: Props) => {
       <div
         className={classNames(
           liquid ? 'max-w-8xl' : 'max-w-7xl',
-          'container z-10 mx-auto mb-auto px-2 py-2 lg:px-4 lg:py-4'
+          'container z-10 mx-auto mb-auto px-4 py-4 lg:px-4 lg:py-4'
         )}
       >
         {children}

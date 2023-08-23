@@ -45,7 +45,7 @@ const Projects = () => (
             return (
               <GroupEntry key={`cv-projects-${entryIdx}`} date={dates} location={values.location}>
                 <div className="flex items-start gap-1.5 lg:items-center">
-                  <h3 className="text-base font-bold text-primary-900 dark:text-secondary-300 lg:text-lg">
+                  <h3 className="text-base font-bold dark:text-secondary lg:text-lg">
                     {values.title}
                   </h3>
 
@@ -82,7 +82,7 @@ const Projects = () => (
                 </div>
 
                 <div className="flex items-start gap-1.5 lg:items-center">
-                  <h5 className="font-medium capitalize tracking-tight text-gray-500 dark:text-gray-400">
+                  <h5 className="font-semibold tracking-tight text-gray-500 dark:text-gray-300">
                     {values.subtitle}
                   </h5>
 

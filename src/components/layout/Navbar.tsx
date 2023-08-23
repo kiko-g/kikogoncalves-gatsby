@@ -38,7 +38,7 @@ export default function Navbar({ siteTitle, location }: Props) {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-20 bg-ice/70 px-4 py-3 text-gray-800 backdrop-blur dark:bg-navy/70 dark:text-white md:py-0 md:px-4"
+      className="sticky top-0 z-20 bg-ice/70 px-2 py-3 text-gray-800 backdrop-blur dark:bg-navy/70 dark:text-white md:py-0 md:px-4"
     >
       {({ open }) => {
         return (
