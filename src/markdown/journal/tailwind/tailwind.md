@@ -1,6 +1,6 @@
 ---
 shown: true
-pinned: true
+pinned: false
 date: 2022-01-04
 slug: /journal/tailwind
 title: The magic of Tailwind

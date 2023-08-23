@@ -7,7 +7,7 @@ title: TTS - Time Table Selector
 github: https://github.com/NIAEFEUP/tts-revamp-fe
 external: https://ni.fe.up.pt/tts
 linkedin: ''
-subtitle: React, Typescript, TailwindCSS, Docker
+subtitle: React, Typescript, Tailwind, Docker
 externalSub: ''
 ---
 

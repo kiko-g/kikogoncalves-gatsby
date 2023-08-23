@@ -7,7 +7,7 @@ title: 'Internet of Everything: "Everything is connected, not just the devices"'
 github: https://github.com/kiko-g/tech-council
 external: null
 linkedin: ''
-subtitle: Docker, Javascript, React, TailwindCSS, Java, Python, NodeJS
+subtitle: Docker, Javascript, React, Tailwind, Java, Python, NodeJS
 externalSub: ''
 ---
 

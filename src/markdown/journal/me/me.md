@@ -1,6 +1,6 @@
 ---
-shown: true
-pinned: true
+shown: false
+pinned: false
 date: 2022-05-01
 slug: /journal/me
 title: Who am I?

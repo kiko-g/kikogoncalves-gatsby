@@ -1,19 +1,37 @@
 import React from 'react'
+import classNames from 'classnames'
 import { graphql } from 'gatsby'
 import { Layout, Seo } from '../components/layout'
 import { PortfolioEntry } from '../components/porfolio'
+import { Listbox } from '@headlessui/react'
+import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
 const PortfolioPage = ({
   data: {
     allMarkdownRemark: { nodes },
   },
 }) => {
+  const [searchQuery, setSearchQuery] = React.useState('')
+  const [pickedCategories, setPickedCategories] = React.useState<string[]>([])
+  const categories = React.useMemo(() => {
+    const uniqueCategories = new Set<string>()
+
+    nodes.forEach((node) => {
+      node.frontmatter.techStack.forEach((tech: string) => {
+        uniqueCategories.add(tech)
+      })
+    })
+
+    return Array.from(uniqueCategories)
+  }, [nodes])
+
   return (
     <Layout location="Portfolio">
       <Seo title="Portfolio" />
       <main className="portfolio">
         <header className="mt-2">
           <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Portfolio</h2>
+
           <p className="mt-4 text-lg font-light">
             Welcome to the portfolio! This is where you can browse through the main (software)
             projects I've contributed to or developed myself. The source code for most of these
@@ -23,11 +41,29 @@ const PortfolioPage = ({
             </a>
             , so make sure you check that out and maybe drop a follow! 😊
           </p>
+
+          <div className="mt-3 flex gap-x-3">
+            <Search hook={[searchQuery, setSearchQuery]} />
+            <CategoryFilter
+              categories={categories}
+              hook={[pickedCategories, setPickedCategories]}
+            />
+          </div>
         </header>
 
         <article className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {nodes
             .filter((node: { frontmatter: { startDate: any } }) => !!node.frontmatter.startDate)
+            .filter((node: { frontmatter: { title: string } }) =>
+              node.frontmatter.title.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+            .filter((node: { frontmatter: { techStack: string[] } }) => {
+              if (pickedCategories.length === 0) return true
+
+              return pickedCategories.every((tech: string) =>
+                node.frontmatter.techStack.includes(tech)
+              )
+            })
             .map((node: { id: React.Key }) => (
               <PortfolioEntry key={`project-${node.id}`} project={node} />
             ))}
@@ -71,3 +107,109 @@ export const pageQuery = graphql`
     }
   }
 `
+
+type SearchProps = {
+  hook: [string, React.Dispatch<React.SetStateAction<string>>]
+}
+
+function Search({ hook }: SearchProps) {
+  const [searchQuery, setSearchQuery] = hook
+
+  return (
+    <input
+      type="search"
+      id="searchProject"
+      name="searchProject"
+      placeholder="Search"
+      className="flex-1 px-4 py-2"
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+  )
+}
+
+type CategoryFilterProps = {
+  categories: string[]
+  hook: [string[], React.Dispatch<React.SetStateAction<string[]>>]
+}
+
+function CategoryFilter({ categories, hook }: CategoryFilterProps) {
+  const [pickedCategories, setPickedCategories] = hook
+
+  return (
+    <Listbox
+      as="div"
+      multiple
+      value={pickedCategories}
+      onChange={setPickedCategories}
+      className="relative h-full"
+    >
+      {({ open }) => (
+        <>
+          <Listbox.Button
+            className="flex w-full items-center justify-center gap-x-0.5 rounded border border-primary bg-primary/80 
+            px-4 py-2 text-white transition hover:opacity-80 dark:border-white/10 dark:bg-white/10"
+          >
+            <span className="text-sm font-normal">Categories</span>
+          </Listbox.Button>
+
+          <Listbox.Options
+            className={classNames(
+              'z-40 rounded-md px-0 py-1 text-sm shadow-xl',
+              'max-h-96 overflow-scroll border-2 border-white bg-white dark:border-[#434b51] dark:bg-[#2e373d]',
+              open ? 'absolute right-0 mt-2 w-full lg:w-64' : 'hidden'
+            )}
+          >
+            {/* Option box header */}
+            <div
+              className="flex w-full items-center justify-between border-b 
+              px-3 pb-2 pt-1 font-normal tracking-tighter"
+            >
+              <span>{pickedCategories.length} selected</span>
+              <button
+                type="button"
+                className="dark:text-tertiary tracking-tighter text-primary underline hover:font-bold hover:opacity-80"
+                onClick={() => setPickedCategories([])}
+              >
+                Reset
+              </button>
+            </div>
+
+            {/* Option box body (options list) */}
+            <div className="py-1">
+              {categories.map((category: string, categoryIdx: number) => {
+                return (
+                  <Listbox.Option
+                    key={`category-${categoryIdx}`}
+                    value={category}
+                    className={({ active }) =>
+                      classNames(
+                        'relative cursor-default select-none py-2 pl-3 pr-3',
+                        active ? 'bg-slate-200 dark:bg-slate-600' : ''
+                      )
+                    }
+                  >
+                    {({ selected }) => (
+                      <span className="flex items-center gap-2">
+                        {selected ? (
+                          <CheckCircleIcon className="h-5 w-5 text-teal-500" aria-hidden="true" />
+                        ) : (
+                          <span className="h-5 w-5 text-teal-500"></span>
+                        )}
+                        <span
+                          className={`block truncate ${selected ? 'font-bold' : 'font-normal'}`}
+                        >
+                          {category}
+                        </span>
+                      </span>
+                    )}
+                  </Listbox.Option>
+                )
+              })}
+            </div>
+          </Listbox.Options>
+        </>
+      )}
+    </Listbox>
+  )
+}
