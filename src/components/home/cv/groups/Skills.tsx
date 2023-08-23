@@ -33,7 +33,7 @@ export default function CvSkills() {
     <div className={classNames('flex flex-col gap-1 p-1')}>
       <header className="flex items-center gap-3">
         <h2 className="text-2xl font-bold">
-          <span className="text-blue-600 dark:text-blue-500">{name.substring(0, 3)}</span>
+          <span className="text-primary dark:text-secondary">{name.substring(0, 3)}</span>
           <span>{name.substring(3)}</span>
         </h2>
         <div className="h-[1px] w-full bg-gray-300"></div>
@@ -41,7 +41,7 @@ export default function CvSkills() {
 
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-16">
         <div>
-          <h2 className="text-lg font-semibold text-blue-600 dark:text-blue-500">Technical</h2>
+          <h2 className="text-lg font-semibold text-primary dark:text-secondary">Technical</h2>
           <ul className="flex flex-col items-start justify-start gap-x-2 gap-y-0.5 text-sm font-normal lg:gap-x-3">
             {tech.map((skill, skillIdx) => (
               <li
@@ -56,7 +56,7 @@ export default function CvSkills() {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold text-blue-600 dark:text-blue-500">Languages</h2>
+          <h2 className="text-lg font-semibold text-primary dark:text-secondary">Languages</h2>
           <ul className="flex flex-col items-start justify-start gap-x-3 gap-y-2 text-sm font-normal lg:gap-y-0.5">
             {lang.map((skill, skillIdx) => (
               <li

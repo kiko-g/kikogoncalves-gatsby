@@ -22,7 +22,8 @@ const Group = ({ name, decoration, children }: Props) => {
         </h2>
         <div className="h-[1px] w-full bg-gray-300"></div>
       </header>
-      <div className="flex flex-col gap-8 lg:gap-4">{children}</div>
+
+      <div className="flex flex-col gap-16 lg:gap-6">{children}</div>
     </div>
   )
 }

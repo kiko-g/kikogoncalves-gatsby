@@ -83,9 +83,7 @@ const Experiences = () => (
                 </div>
 
                 <div className="flex items-start gap-1.5 lg:items-center">
-                  <h5 className="font-semibold uppercase tracking-tighter text-gray-500 dark:text-gray-300">
-                    {values.subtitle}
-                  </h5>
+                  <h5 className="tracking-tighter">{values.subtitle}</h5>
 
                   {values.externalSub && (
                     <a
