@@ -13,6 +13,7 @@ const PortfolioPage = ({
 }) => {
   const [searchQuery, setSearchQuery] = React.useState('')
   const [pickedCategories, setPickedCategories] = React.useState<string[]>([])
+
   const categories = React.useMemo(() => {
     const uniqueCategories = new Set<string>()
 
@@ -24,6 +25,21 @@ const PortfolioPage = ({
 
     return Array.from(uniqueCategories)
   }, [nodes])
+
+  const projects = React.useMemo(
+    () =>
+      nodes
+        .filter((node: { frontmatter: { startDate: any } }) => !!node.frontmatter.startDate)
+        .filter((node: { frontmatter: { title: string } }) =>
+          node.frontmatter.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+        .filter((node: { frontmatter: { techStack: string[] } }) => {
+          if (pickedCategories.length === 0) return true
+
+          return pickedCategories.every((tech: string) => node.frontmatter.techStack.includes(tech))
+        }),
+    [nodes, pickedCategories]
+  )
 
   return (
     <Layout location="Portfolio">
@@ -49,24 +65,14 @@ const PortfolioPage = ({
               hook={[pickedCategories, setPickedCategories]}
             />
           </div>
+
+          <div className="mt-2">{projects.length} projects matching filtering options.</div>
         </header>
 
         <article className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {nodes
-            .filter((node: { frontmatter: { startDate: any } }) => !!node.frontmatter.startDate)
-            .filter((node: { frontmatter: { title: string } }) =>
-              node.frontmatter.title.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-            .filter((node: { frontmatter: { techStack: string[] } }) => {
-              if (pickedCategories.length === 0) return true
-
-              return pickedCategories.every((tech: string) =>
-                node.frontmatter.techStack.includes(tech)
-              )
-            })
-            .map((node: { id: React.Key }) => (
-              <PortfolioEntry key={`project-${node.id}`} project={node} />
-            ))}
+          {projects.map((node: { id: React.Key }) => (
+            <PortfolioEntry key={`project-${node.id}`} project={node} />
+          ))}
         </article>
       </main>
     </Layout>

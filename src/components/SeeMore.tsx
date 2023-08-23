@@ -7,7 +7,7 @@ import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 type Props = {}
 
 export default function SeeMore({}: Props) {
-  const domainVisits = usePageVisits('')
+  // const domainVisits = usePageVisits('')
 
   return (
     <div className="mt-4 flex flex-col items-end justify-between gap-3 lg:flex-row lg:items-center">
