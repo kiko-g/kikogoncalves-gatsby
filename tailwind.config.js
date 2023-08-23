@@ -32,17 +32,17 @@ module.exports = {
           900: '#00306f',
         },
         secondary: {
-          DEFAULT: '#8a4edf', // Approximate midpoint between violet-500 and purple-500
-          50: '#f2e5fc',
-          100: '#e4ccf9',
-          200: '#d0aaf5',
-          300: '#bd88f2',
-          400: '#aa66ef',
-          500: '#8a4edf',
-          600: '#6a36cf',
-          700: '#4a1ebf',
-          800: '#2a06af',
-          900: '#0a009f',
+          DEFAULT: '#a672f2', // Lightened version of the previous midpoint between violet-500 and purple-500
+          50: '#faf4fe',
+          100: '#f2e0fd',
+          200: '#e4bdfb',
+          300: '#d69af9',
+          400: '#c877f7',
+          500: '#a672f2',
+          600: '#8a5ee0',
+          700: '#6e4acd',
+          800: '#5236ba',
+          900: '#3622a7',
         },
       },
 
