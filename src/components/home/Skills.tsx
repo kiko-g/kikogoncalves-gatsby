@@ -75,7 +75,9 @@ const Skills = ({}: Props) => {
       </div>
 
       <div className="order-1 col-span-12 h-min sm:order-2 sm:col-span-6 md:col-span-5 lg:col-span-3 xl:col-span-3 2xl:col-span-3">
-        <img src={imagePath} className="tab-inner-image" alt="profile-picture" />
+        <div className="aspect-square">
+          <img src={imagePath} className="h-full w-full object-cover" alt="profile-picture" />
+        </div>
         <div className="flex flex-col items-end gap-1">
           <h2 className="my-0.5 flex-1 text-base font-bold tracking-tighter md:text-left md:text-base xl:text-lg">
             Francisco Gonçalves
