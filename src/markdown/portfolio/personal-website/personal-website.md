@@ -8,7 +8,7 @@ deploy: https://kikogoncalves.com
 preview: null
 featuredImage: ./featured.png
 featuredVideo: null
-techStack: [React.js, Gatsby, Typescript, Tailwind]
+techStack: [React.js, Gatsby.js, Typescript, Tailwind]
 description: A personal website to host all the contents about me in one place.
 team: Individual
 ---

@@ -169,7 +169,7 @@ function CategoryFilter({ categories, hook }: CategoryFilterProps) {
           <Listbox.Options
             className={classNames(
               'z-40 rounded-md px-0 py-1 text-sm shadow-xl',
-              'max-h-96 overflow-scroll border-2 border-white bg-white dark:border-[#434b51] dark:bg-[#2e373d]',
+              'max-h-[30rem] overflow-scroll border-2 border-white bg-white dark:border-[#434b51] dark:bg-[#2e373d]',
               open ? 'absolute right-0 mt-2 w-full min-w-[12rem] lg:w-64' : 'hidden'
             )}
           >
@@ -190,35 +190,42 @@ function CategoryFilter({ categories, hook }: CategoryFilterProps) {
 
             {/* Option box body (options list) */}
             <div className="py-1">
-              {categories.map((category: CategoryEntry, categoryIdx: number) => {
-                return (
-                  <Listbox.Option
-                    key={`category-${categoryIdx}`}
-                    value={category.name}
-                    className={({ active }) =>
-                      classNames(
-                        'relative cursor-default select-none py-2 pl-3 pr-3',
-                        active ? 'bg-slate-200 dark:bg-slate-600' : ''
-                      )
-                    }
-                  >
-                    {({ selected }) => (
-                      <span className="flex items-center gap-2">
-                        {selected ? (
-                          <CheckCircleIcon className="h-5 w-5 text-teal-500" aria-hidden="true" />
-                        ) : (
-                          <span className="h-5 w-5 text-teal-500"></span>
-                        )}
-                        <span
-                          className={`block truncate ${selected ? 'font-bold' : 'font-normal'}`}
-                        >
-                          {category.name} ({category.count})
+              {categories
+                .sort((a: CategoryEntry, b: CategoryEntry) => {
+                  if (a.count > b.count) return -1
+                  if (a.count < b.count) return 1
+
+                  return a.name.localeCompare(b.name) // if equal compare alphabetically by name
+                })
+                .map((category: CategoryEntry, categoryIdx: number) => {
+                  return (
+                    <Listbox.Option
+                      key={`category-${categoryIdx}`}
+                      value={category.name}
+                      className={({ active }) =>
+                        classNames(
+                          'relative cursor-default select-none py-2 pl-3 pr-3',
+                          active ? 'bg-slate-200 dark:bg-slate-600' : ''
+                        )
+                      }
+                    >
+                      {({ selected }) => (
+                        <span className="flex items-center gap-2">
+                          {selected ? (
+                            <CheckCircleIcon className="h-5 w-5 text-teal-500" aria-hidden="true" />
+                          ) : (
+                            <span className="h-5 w-5 text-teal-500"></span>
+                          )}
+                          <span
+                            className={`block truncate ${selected ? 'font-bold' : 'font-normal'}`}
+                          >
+                            {category.name} ({category.count})
+                          </span>
                         </span>
-                      </span>
-                    )}
-                  </Listbox.Option>
-                )
-              })}
+                      )}
+                    </Listbox.Option>
+                  )
+                })}
             </div>
           </Listbox.Options>
         </>

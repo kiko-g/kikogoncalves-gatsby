@@ -7,7 +7,7 @@ title: 'Guerner & Irmãos - Agrotextiles and fabrics company website'
 github: hhttps://github.com/kiko-g/guerners
 external: https://guerner.vercel.app
 linkedin: ''
-subtitle: React.js, Typescript, Gatsby 5, MDX, GraphQL, TailwindCSS
+subtitle: React.js, Typescript, Gatsby.js, MDX, GraphQL, TailwindCSS
 externalSub: ''
 ---
 
