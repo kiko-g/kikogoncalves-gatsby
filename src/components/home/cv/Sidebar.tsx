@@ -31,9 +31,9 @@ const Sidebar = () => {
     <div className="order-1 col-span-4 flex h-full w-full flex-col items-start justify-start gap-2 rounded-xl lg:order-2 lg:col-span-1 lg:gap-3">
       <header className="flex flex-col gap-3">
         <img
-          src={'/images/hero/hero1.jpg'}
+          src={'/images/hero/hero0.jpg'}
           alt="profile-picture"
-          className="aspect-square w-full rounded-lg shadow"
+          className="aspect-square w-full rounded-lg object-cover object-[0%_23%]"
         />
         <div>
           <h2 className="text-lg font-normal tracking-wide lg:text-xl">

@@ -8,7 +8,7 @@ deploy: null
 preview: https://github.com/kiko-g/feup-sdle/tree/master#feup-sdle
 featuredImage: null
 featuredVideo: https://user-images.githubusercontent.com/40745490/153337905-d65b4866-5cb3-4f9c-b2bd-4ad312c93344.mp4
-techStack: [React, Tailwind, Python, Flask, Kademlia]
+techStack: [React.js, Tailwind, Python, Flask, Kademlia]
 description: Peer to peer Twitter clone using Kademlia DHT.
 team: Team of 4 people
 ---

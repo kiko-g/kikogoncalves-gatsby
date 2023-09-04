@@ -8,7 +8,7 @@ deploy: https://guerner.vercel.app
 preview: null
 featuredImage: ./featured.jpg
 featuredVideo: null
-techStack: [React, Typescript, Tailwind, Gatsby 5, MDX, GraphQL]
+techStack: [React.js, Typescript, Tailwind, Gatsby 5, MDX, GraphQL]
 description: Guerner & Irmãos - Agrotextiles and fabrics company website
 team: Individual
 ---

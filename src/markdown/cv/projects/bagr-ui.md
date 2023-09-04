@@ -7,7 +7,7 @@ title: Bagr.ui - Components library for React, Typescript, and TailwindCSS
 github: https://github.com/kiko-g/bagr-ui
 external: https://bagr-ui.vercel.app
 linkedin: ''
-subtitle: Next.js, React, Typescript, TailwindCSS
+subtitle: Next.js, React.js, Typescript, TailwindCSS
 externalSub: ''
 ---
 

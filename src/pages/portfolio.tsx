@@ -6,24 +6,28 @@ import { PortfolioEntry } from '../components/porfolio'
 import { Listbox } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
-const PortfolioPage = ({
+export default function PortfolioPage({
   data: {
     allMarkdownRemark: { nodes },
   },
-}) => {
+}) {
   const [searchQuery, setSearchQuery] = React.useState('')
   const [pickedCategories, setPickedCategories] = React.useState<string[]>([])
 
   const categories = React.useMemo(() => {
-    const uniqueCategories = new Set<string>()
+    const categoryCounts = new Map<string, number>()
 
     nodes.forEach((node) => {
       node.frontmatter.techStack.forEach((tech: string) => {
-        uniqueCategories.add(tech)
+        if (categoryCounts.has(tech)) {
+          categoryCounts.set(tech, categoryCounts.get(tech)! + 1)
+        } else {
+          categoryCounts.set(tech, 1)
+        }
       })
     })
 
-    return Array.from(uniqueCategories)
+    return Array.from(categoryCounts).map(([name, count]) => ({ name, count }))
   }, [nodes])
 
   const projects = React.useMemo(
@@ -44,7 +48,7 @@ const PortfolioPage = ({
   return (
     <Layout location="Portfolio">
       <Seo title="Portfolio" />
-      <main className="portfolio">
+      <main>
         <header className="mt-2">
           <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Portfolio</h2>
 
@@ -78,8 +82,6 @@ const PortfolioPage = ({
     </Layout>
   )
 }
-
-export default PortfolioPage
 
 export const pageQuery = graphql`
   query {
@@ -134,8 +136,13 @@ function Search({ hook }: SearchProps) {
   )
 }
 
+type CategoryEntry = {
+  name: string
+  count: number
+}
+
 type CategoryFilterProps = {
-  categories: string[]
+  categories: CategoryEntry[]
   hook: [string[], React.Dispatch<React.SetStateAction<string[]>>]
 }
 
@@ -163,7 +170,7 @@ function CategoryFilter({ categories, hook }: CategoryFilterProps) {
             className={classNames(
               'z-40 rounded-md px-0 py-1 text-sm shadow-xl',
               'max-h-96 overflow-scroll border-2 border-white bg-white dark:border-[#434b51] dark:bg-[#2e373d]',
-              open ? 'absolute right-0 mt-2 w-full lg:w-64' : 'hidden'
+              open ? 'absolute right-0 mt-2 w-full min-w-[12rem] lg:w-64' : 'hidden'
             )}
           >
             {/* Option box header */}
@@ -183,11 +190,11 @@ function CategoryFilter({ categories, hook }: CategoryFilterProps) {
 
             {/* Option box body (options list) */}
             <div className="py-1">
-              {categories.map((category: string, categoryIdx: number) => {
+              {categories.map((category: CategoryEntry, categoryIdx: number) => {
                 return (
                   <Listbox.Option
                     key={`category-${categoryIdx}`}
-                    value={category}
+                    value={category.name}
                     className={({ active }) =>
                       classNames(
                         'relative cursor-default select-none py-2 pl-3 pr-3',
@@ -205,7 +212,7 @@ function CategoryFilter({ categories, hook }: CategoryFilterProps) {
                         <span
                           className={`block truncate ${selected ? 'font-bold' : 'font-normal'}`}
                         >
-                          {category}
+                          {category.name} ({category.count})
                         </span>
                       </span>
                     )}

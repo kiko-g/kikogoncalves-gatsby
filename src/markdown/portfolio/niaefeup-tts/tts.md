@@ -8,7 +8,7 @@ deploy: https://ni.fe.up.pt/tts
 preview: null
 featuredImage: null
 featuredVideo: https://user-images.githubusercontent.com/40745490/183784200-742c3556-ee0a-4eb7-9994-dcac6dffd440.mp4
-techStack: [React, Typescript, Tailwind, Docker]
+techStack: [React.js, Typescript, Tailwind, Docker]
 description: A schedule planner for the UPorto community.
 team: 3 active developers
 ---

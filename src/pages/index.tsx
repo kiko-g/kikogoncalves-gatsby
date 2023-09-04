@@ -3,11 +3,11 @@ import { Layout, Seo } from '../components/layout'
 import { About, Skills, Cv as CV } from '../components/home'
 import SeeMore from '../components/SeeMore'
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
     <Layout location="Home" liquid>
       <Seo title="Home" />
-      <main className="container mx-auto mb-8 flex-1 flex-col justify-between space-y-6 px-4 md:px-0">
+      <main className="container mx-auto mb-8 flex-1 flex-col justify-between space-y-6">
         <header className="mt-2 flex items-start justify-between">
           <div className="mt-0">
             <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
@@ -31,5 +31,3 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
-export default IndexPage

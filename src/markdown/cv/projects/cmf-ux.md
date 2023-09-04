@@ -7,7 +7,7 @@ title: "Custom UX Dashboard - Improving Usability of Critical Manufacturing's ME
 github: https://github.com/kiko-g/usability-dashboard-mes
 external: https://usability-dashboard-mes.vercel.app
 linkedin: ''
-subtitle: Angular 15, Matomo, MySQL, Docker, Typescript, React, Next.js, TailwindCSS
+subtitle: Angular 15, Matomo, MySQL, Docker, Typescript, React.js, Next.js, TailwindCSS
 externalSub: ''
 ---
 

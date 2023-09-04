@@ -7,7 +7,7 @@ title: 'Health Checker: Health Information Platform with Semantic Web data'
 github: https://github.com/kiko-g/health-checker
 external: https://health-checker.netlify.app
 linkedin: ''
-subtitle: NodeJS, Express, React, Tailwind, SparQL
+subtitle: NodeJS, Express, React.js, Tailwind, SparQL
 externalSub: ''
 ---
 

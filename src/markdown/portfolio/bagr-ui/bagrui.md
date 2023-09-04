@@ -8,8 +8,8 @@ deploy: https://bagr-ui.vercel.app
 preview: null
 featuredImage: ./featured.png
 featuredVideo: null
-techStack: [React, Next.js, Typescript, Tailwind]
-description: React, Typescript and Tailwind reusable components library.
+techStack: [React.js, Next.js, Typescript, Tailwind]
+description: React.js, Typescript and Tailwind reusable components library.
 team: Individual
 ---
 

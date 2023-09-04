@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Layout, Seo } from '../components/layout'
 
-const FinishersPage = () => {
+export default function FinishersPage() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.href = 'https://finishershub.vercel.app'
@@ -10,5 +10,3 @@ const FinishersPage = () => {
 
   return <></>
 }
-
-export default FinishersPage
