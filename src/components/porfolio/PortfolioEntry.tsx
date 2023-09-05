@@ -19,7 +19,7 @@ const PortfolioEntry = ({ project }: Props) => {
     <div className="flex w-full flex-col gap-y-3 rounded-xl bg-lightest p-4 shadow dark:bg-white/5">
       <aside className="relative w-full rounded-l-xl md:rounded-xl">
         {info.featuredVideo ? (
-          <div className="h-[20rem] w-auto max-w-full overflow-hidden rounded-xl object-contain lg:max-w-2xl">
+          <div className="h-[12rem] w-auto max-w-full overflow-hidden rounded-xl object-contain lg:h-[20rem] lg:max-w-2xl">
             <video className="h-full w-full rounded-xl object-cover" controls muted>
               <source src={info.featuredVideo} type="video/mp4" />
             </video>
@@ -28,10 +28,10 @@ const PortfolioEntry = ({ project }: Props) => {
           <GatsbyImage
             image={coverImage}
             alt="cover"
-            className="h-[20rem] w-auto max-w-full rounded-xl object-contain lg:max-w-2xl"
+            className="h-[12rem] w-auto max-w-full rounded-xl object-contain lg:h-[20rem] lg:max-w-2xl"
           />
         ) : (
-          <div className="h-64 w-full rounded-xl bg-gradient-to-br from-secondary via-secondary to-violet-400 shadow lg:h-full lg:w-80" />
+          <div className="h-[12rem] w-full rounded-xl bg-gradient-to-br from-secondary via-secondary to-violet-400 shadow lg:h-[20rem] lg:w-full" />
         )}
 
         {info.pinned && (
