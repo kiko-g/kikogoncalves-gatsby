@@ -1,5 +1,5 @@
 .markdown a {
-  @apply text-gray-500 underline hover:opacity-80 dark:text-sky-400;
+  @apply text-primary underline hover:opacity-80 dark:text-secondary;
 }
 
 .markdown strong {

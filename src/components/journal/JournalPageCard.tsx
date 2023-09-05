@@ -24,16 +24,16 @@ const JournalPageCard = ({ post }: Props) => {
       className={classNames(
         'group relative space-y-2 rounded-xl p-4 shadow transition duration-300',
         available
-          ? 'bg-lightest hover:bg-pink-100 hover:text-gray-800 dark:bg-light/5 dark:hover:bg-pink-500/20 dark:hover:text-white'
+          ? 'bg-lightest hover:bg-primary-50 hover:text-gray-800 dark:bg-light/5 dark:hover:bg-secondary/20 dark:hover:text-white'
           : 'bg-lightest hover:cursor-not-allowed dark:bg-light/5'
       )}
     >
-      <header className="relative flex items-center justify-center rounded-lg bg-opacity-90">
+      <header className="relative flex items-center justify-center overflow-hidden rounded-lg transition-all">
         {coverImage ? (
           <GatsbyImage
             image={coverImage}
             alt="cover"
-            className="h-64 w-full rounded-lg object-contain"
+            className="h-64 w-full rounded-lg object-contain transition-all group-hover:scale-110"
           />
         ) : (
           <div className="h-64 w-full rounded-lg bg-gradient-to-br from-secondary via-secondary to-violet-400 shadow" />
@@ -52,11 +52,11 @@ const JournalPageCard = ({ post }: Props) => {
 
       <section className="w-full">
         <div className="flex items-start justify-start">
-          <h3 className="flex-grow font-medium text-pink-700 dark:text-codepink">
+          <h3 className="flex-grow font-medium text-primary dark:text-secondary">
             {post.frontmatter.title}
           </h3>
         </div>
-        <p className="pb-0 text-sm font-normal tracking-tight text-gray-500 transition dark:text-gray-300">
+        <p className="pb-0 text-sm font-normal tracking-tight text-gray-500 transition hover:text-gray-600 dark:text-gray-300">
           {post.excerpt}
         </p>
         <div className="mt-3 flex items-center justify-end">

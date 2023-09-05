@@ -14,7 +14,7 @@ html {
 }
 
 code {
-  @apply mx-0.5 rounded-sm bg-inherit py-[0.15rem] px-[0.3rem] font-code text-sm text-codepink dark:bg-[#212936] dark:text-[#f59881];
+  @apply mx-[1px] rounded-sm bg-primary/10 py-0.5 px-1.5 font-code text-sm text-primary-700 dark:bg-secondary/10 dark:text-secondary;
 }
 
 textarea,
