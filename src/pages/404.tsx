@@ -5,6 +5,8 @@ import { Frankie } from '../components/404'
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 
 export default function NotFoundPage() {
+  const showMeme = false
+
   return (
     <Layout location="Oops">
       <main className="mx-auto mt-0 flex h-full max-w-lg flex-col items-start justify-start gap-y-4 md:mt-3">
@@ -27,9 +29,11 @@ export default function NotFoundPage() {
           </div>
         </div>
 
-        <div className="mb-2 flex w-full">
-          <Frankie />
-        </div>
+        {showMeme ? (
+          <div className="mb-2 flex w-full">
+            <Frankie />
+          </div>
+        ) : null}
       </main>
     </Layout>
   )
